@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+@import 'tailwindcss';
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --green-dark: #0D2B1D;
+  --green-mid: #1B3A2B;
+  --green-light: #2A5C40;
+  --yellow: #F5C842;
+  --yellow-dark: #D4A820;
+  --white: #FFFFFF;
+  --off-white: #F7F7F3;
+  --gray-light: #F0F0EC;
+  --text-dark: #1a1a1a;
+  --text-mid: #444444;
+  --text-muted: #888888;
+}
+
+* { box-sizing: border-box; }
+
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: ticker 25s linear infinite;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-pause:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbars */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 3px; }
+
+/* Transitions */
+a, button { transition: all 0.2s ease; }
