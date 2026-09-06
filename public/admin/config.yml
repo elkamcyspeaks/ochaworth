@@ -34,15 +34,12 @@ collections:
           - label: "Navigation Menu"
             name: "nav"
             widget: "object"
-            hint: "Text shown in the top navigation bar on every page. 'Services', 'Projects', 'Volunteer' and 'Blog' are placeholders until those pages are built, so their labels can be edited but they won't be clickable yet."
+            hint: "Text shown in the top navigation bar on every page. 'Programs' is a placeholder until that page is built, so its label can be edited but it won't be clickable yet."
             fields:
               - { label: '"Home" Link Text', name: "homeLabel", widget: "string" }
               - { label: '"About" Link Text', name: "aboutLabel", widget: "string" }
-              - { label: '"Services" Link Text', name: "servicesLabel", widget: "string" }
-              - { label: '"Projects" Link Text', name: "projectsLabel", widget: "string" }
-              - { label: '"Volunteer" Link Text', name: "volunteerLabel", widget: "string" }
-              - { label: '"Blog" Link Text', name: "blogLabel", widget: "string" }
-              - { label: '"Pages" Dropdown Text', name: "pagesDropdownLabel", widget: "string" }
+              - { label: '"Programs" Link Text', name: "servicesLabel", widget: "string" }
+              - { label: '"Gallery" Link Text', name: "galleryLabel", widget: "string" }
               - { label: '"Contact" Link Text', name: "contactLabel", widget: "string" }
               - { label: '"Donate Now" Button Text', name: "donateButtonText", widget: "string" }
 
@@ -636,3 +633,26 @@ collections:
             hint: 'Advanced: paste a new "embed" link from openstreetmap.org (Share → Embed) to move the pin. Leave as-is if unsure.'
             fields:
               - { label: "Map Embed URL", name: "embedUrl", widget: "string" }
+
+      - file: "src/data/gallery.json"
+        label: "Gallery Page"
+        name: "gallery"
+        hint: "Content shown only on the /gallery page. Add, remove, or reorder photos below — the grid and lightbox update automatically for any number of photos."
+        fields:
+          - label: "Page Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Banner Background Photo", name: "image", widget: "image" }
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: 'Breadcrumb — "Home" Link Text', name: "breadcrumbHome", widget: "string" }
+              - { label: "Breadcrumb — Current Page Text", name: "breadcrumbCurrent", widget: "string" }
+
+          - label: "Photos"
+            name: "photos"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Caption", name: "caption", widget: "string" }
+              - { label: "Category Tag", name: "category", widget: "string" }

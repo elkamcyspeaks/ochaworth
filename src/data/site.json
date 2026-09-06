@@ -485,11 +485,8 @@
   "nav": {
     "homeLabel": "Home",
     "aboutLabel": "About",
-    "servicesLabel": "Services",
-    "projectsLabel": "Projects",
-    "volunteerLabel": "Volunteer",
-    "blogLabel": "Blog",
-    "pagesDropdownLabel": "Pages",
+    "servicesLabel": "Programs",
+    "galleryLabel": "Gallery",
     "contactLabel": "Contact",
     "donateButtonText": "Donate Now"
   },

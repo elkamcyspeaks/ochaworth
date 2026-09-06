@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&h=700&fit=crop&auto=format",
+    "title": "Gallery",
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Gallery"
+  },
+  "photos": [
+    {
+      "image": "/images/uploads/whatsapp-image-2026-05-04-at-13.50.22.jpeg",
+      "caption": "Empower Women, End Violence Campaign",
+      "category": "Advocacy"
+    },
+    {
+      "image": "/images/uploads/830ce53f-d40e-4c7b-af26-f2be09f90fa3.jpg",
+      "caption": "United By Unique Community Walk",
+      "category": "Community"
+    },
+    {
+      "image": "/images/uploads/73253843-9ecd-4b69-b886-41a01c06703c.jpg",
+      "caption": "World Cancer Day Awareness Walk",
+      "category": "Health"
+    },
+    {
+      "image": "/images/uploads/349d5ccc-8492-428f-8509-64491fc2afa9.jpg",
+      "caption": "Together We Feed Thousands",
+      "category": "Food Distribution"
+    }
+  ]
+}

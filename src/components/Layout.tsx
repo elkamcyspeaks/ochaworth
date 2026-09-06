@@ -31,14 +31,12 @@ function TopBar() {
 
 // ── Main navigation ───────────────────────────────────────────────────────────
 
-// Pages that exist so far link for real; the rest are placeholders until built.
+// Pages that exist so far link for real; "Programs" is a placeholder until built.
 const NAV_LINKS: { label: string; to?: string }[] = [
   { label: site.nav.homeLabel, to: "/" },
   { label: site.nav.aboutLabel, to: "/about" },
   { label: site.nav.servicesLabel },
-  { label: site.nav.projectsLabel },
-  { label: site.nav.volunteerLabel },
-  { label: site.nav.blogLabel },
+  { label: site.nav.galleryLabel, to: "/gallery" },
 ];
 
 function NavItem({ label, to, onClick }: { label: string; to?: string; onClick?: () => void }) {
@@ -67,7 +65,6 @@ function Navbar() {
         </Link>
         <div className="hidden lg:flex items-center gap-8 text-sm text-white font-medium">
           {NAV_LINKS.map(n => <NavItem key={n.label} {...n}/>)}
-          <a href="#" className="flex items-center gap-1 hover:text-[var(--yellow)]">{site.nav.pagesDropdownLabel} <ChevronRight className="w-3 h-3 rotate-90"/></a>
           <NavLink to="/contact" className={({ isActive }) => "transition-colors " + (isActive ? "text-[var(--yellow)]" : "hover:text-[var(--yellow)]")}>{site.nav.contactLabel}</NavLink>
         </div>
         <div className="hidden lg:flex"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></div>
