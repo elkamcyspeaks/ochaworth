@@ -60,7 +60,10 @@
         "title": "Donate Online",
         "desc": "Secure, instant donations that reach those in need fast."
       }
-    ]
+    ],
+    "sectionLabel": "Our Mission",
+    "ourWorkButtonText": "Our Work",
+    "watchStoryButtonText": "Watch Story"
   },
   "org": {
     "name": "Ochaworth Leadership and Community Development Initiative",
@@ -70,7 +73,8 @@
     "missionHighlight": "Cornerstone",
     "missionLine3": "Of Prosperity.",
     "missionAttribution": "— Ochaworth Foundation Mission Statement",
-    "copyright": "© 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved."
+    "copyright": "© 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved.",
+    "philosophyLabel": "Our Philosophy"
   },
   "volunteers": [
     {
@@ -103,7 +107,15 @@
       "WFP",
       "Save The Children",
       "OXFAM"
-    ]
+    ],
+    "sectionLabel": "Join Our Network",
+    "headingPrefix": "Join Our",
+    "headingHighlight": "Community",
+    "paragraph": "Become part of a global movement. Whether you donate, volunteer, or spread the word, every action counts.",
+    "getInvolvedButtonText": "Get Involved",
+    "learnMoreButtonText": "Learn More",
+    "donorsLabel": "Happy Donors",
+    "trustedPartnersLabel": "Trusted Partners"
   },
   "worldMap": {
     "intro": "Our projects span 6 continents, touching lives in 40+ countries across the developing world.",
@@ -124,6 +136,49 @@
         "v": "6",
         "l": "Continents"
       }
+    ],
+    "sectionLabel": "Global Reach",
+    "headingPrefix": "Global Project",
+    "headingItalic": "Locations",
+    "regionTabs": [
+      "All Regions",
+      "Africa",
+      "Asia",
+      "Americas",
+      "Europe",
+      "Oceania"
+    ],
+    "pins": [
+      {
+        "top": "35%",
+        "left": "22%",
+        "label": "USA"
+      },
+      {
+        "top": "28%",
+        "left": "48%",
+        "label": "Europe"
+      },
+      {
+        "top": "48%",
+        "left": "52%",
+        "label": "Africa"
+      },
+      {
+        "top": "38%",
+        "left": "68%",
+        "label": "South Asia"
+      },
+      {
+        "top": "55%",
+        "left": "75%",
+        "label": "SE Asia"
+      },
+      {
+        "top": "62%",
+        "left": "32%",
+        "label": "South America"
+      }
     ]
   },
   "ticker": [
@@ -140,7 +195,12 @@
     "image": "https://images.unsplash.com/photo-1710093072228-8c3129f27357?w=700&h=600&fit=crop&auto=format",
     "title": "Next Fundraiser Gala",
     "desc": "Join us for an evening of inspiration, music, and impact. All proceeds go directly to our field programs.",
-    "date": "April 25, 2026"
+    "date": "April 25, 2026",
+    "sectionLabel": "Upcoming Events",
+    "headingLine1": "Join Our Latest",
+    "headingItalic": "Upcoming Events",
+    "viewAllButtonText": "View All Events",
+    "registerButtonText": "Register"
   },
   "about": {
     "images": {
@@ -170,7 +230,10 @@
         "title": "Support Worldwide",
         "desc": "Our reach spans 40+ countries, creating impact where it matters most."
       }
-    ]
+    ],
+    "sectionLabel": "About Our Organization",
+    "learnMoreButtonText": "Learn More",
+    "ourImpactButtonText": "Our Impact"
   },
   "donation": {
     "bgImage": "/images/uploads/73253843-9ecd-4b69-b886-41a01c06703c.jpg",
@@ -189,7 +252,23 @@
       "Child Education",
       "Medical Support",
       "Poverty Reduction"
-    ]
+    ],
+    "sectionLabel": "Make A Donation",
+    "headingLine1": "Making A Difference,",
+    "headingLine2Prefix": "One",
+    "headingHighlight": "Donation",
+    "headingSuffix": "At A Time.",
+    "amountLabel": "Donation Amount",
+    "customAmountPlaceholder": "Custom amount",
+    "firstNamePlaceholder": "First Name",
+    "lastNamePlaceholder": "Last Name",
+    "emailPlaceholder": "Email Address",
+    "selectCauseDefault": "Select a cause",
+    "donateButtonPrefix": "Donate",
+    "donateButtonSuffix": "Now",
+    "secureCaption": "Secure & encrypted donation",
+    "totalRaisedLabel": "Total Funds Raised",
+    "donationsLabel": "Donations"
   },
   "testimonials": [
     {
@@ -257,7 +336,18 @@
         "value": "₦500,000+",
         "label": "Funds Raised"
       }
-    ]
+    ],
+    "card1": {
+      "heading": "Become a Volunteer",
+      "paragraph": "Join our growing network of compassionate volunteers making a real difference every day.",
+      "buttonText": "Join Us"
+    },
+    "card2": {
+      "heading": "Ready To Change The World?",
+      "paragraph": "Your support fuels projects that feed, educate, and heal communities across the globe.",
+      "buttonText": "Get Started"
+    },
+    "inActionLabel": "In Action"
   },
   "projects": [
     {
@@ -325,7 +415,9 @@
         "value": "5+",
         "label": "Year Organization"
       }
-    ]
+    ],
+    "donateButtonText": "Donate Now",
+    "learnMoreButtonText": "Learn More"
   },
   "services": [
     {
@@ -349,113 +441,90 @@
       "desc": "Empowering communities with sustainable programs that break the cycle of poverty for generations."
     }
   ],
-  "aboutPage": {
-    "hero": {
-      "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=600&fit=crop&auto=format"
-    },
-    "intro": {
-      "statBadgeValue": "3,800+",
-      "statBadgeLabel": "Donations Made",
-      "features": [
-        {
-          "icon": "fundraising",
-          "title": "Fundraising",
-          "desc": "We raise funds transparently, ensuring every naira goes directly to the families and communities who need it most."
-        },
-        {
-          "icon": "donation",
-          "title": "Donation Making",
-          "desc": "Our donation system is secure, efficient, and built around trust — with regular impact reports for every contributor."
-        },
-        {
-          "icon": "hand",
-          "title": "Volunteer Initiatives",
-          "desc": "We mobilise skilled volunteers from across Nigeria and beyond to deliver hands-on support in underserved communities."
-        }
-      ]
-    },
-    "stats": [
-      {
-        "value": "100+",
-        "label": "Community Reviews"
-      },
-      {
-        "value": "100%",
-        "label": "Customer Satisfaction"
-      },
-      {
-        "value": "5+",
-        "label": "Years Of Experience"
-      },
-      {
-        "value": "20+",
-        "label": "Projects Delivered"
-      },
-      {
-        "value": "50+",
-        "label": "Team & Volunteers"
-      }
+  "journey": {
+    "sectionLabel": "What We Offer",
+    "headingPrefix": "Our Journey Of",
+    "headingItalic": "Compassion",
+    "readMoreButtonText": "Read More"
+  },
+  "featuredProjects": {
+    "sectionLabel": "Our Projects",
+    "headingPrefix": "Featured Projects &",
+    "headingItalic": "Causes",
+    "viewAllButtonText": "View All Projects",
+    "activeBadgeText": "Active",
+    "raisedLabel": "Raised:",
+    "goalLabel": "Goal:",
+    "donateButtonText": "Donate",
+    "learnMoreButtonText": "Learn More",
+    "bottomParagraph": "We Are Pursuing 80+ Additional Goals In Support Of Transparency"
+  },
+  "volunteersSection": {
+    "homeSectionLabel": "Our Team",
+    "headingPrefix": "Meet Our",
+    "headingItalic": "Volunteers",
+    "badgeText": "VOLUNTEER"
+  },
+  "testimonialsSection": {
+    "sectionLabel": "Testimonials",
+    "headingPrefix": "What Our",
+    "headingItalic": "Community",
+    "headingSuffix": "Is Saying!"
+  },
+  "blogSection": {
+    "sectionLabel": "News & Blog",
+    "headingPrefix": "Our Latest News",
+    "headingItalic": "& Blogs",
+    "filterTabs": [
+      "Latest",
+      "Popular",
+      "Featured"
     ],
-    "missionVisionValues": {
-      "intro": "Three pillars that define who we are, what we are working towards, and the principles that guide every decision we make.",
-      "mission": {
-        "desc": "To empower underserved communities across Nigeria and Africa through sustainable leadership development, quality education, healthcare access, and poverty alleviation programmes — ensuring that no individual is left behind.",
-        "points": [
-          "Community-led development",
-          "Sustainable programmes",
-          "Inclusive outreach"
-        ]
-      },
-      "vision": {
-        "desc": "A Nigeria and Africa where every community thrives with dignity, opportunity, and hope — where strong, compassionate leaders rise from within to sustain lasting change for generations to come.",
-        "points": [
-          "Thriving communities",
-          "Generational impact",
-          "Dignified living for all"
-        ]
-      },
-      "values": {
-        "desc": "Integrity, compassion, transparency, and community ownership guide everything we do. We believe in building trust at every level — from our donors to our field teams to the communities we serve.",
-        "points": [
-          "Integrity & transparency",
-          "Compassion-first approach",
-          "Community ownership"
-        ]
-      }
+    "readMoreButtonText": "Read More"
+  },
+  "nav": {
+    "homeLabel": "Home",
+    "aboutLabel": "About",
+    "servicesLabel": "Services",
+    "projectsLabel": "Projects",
+    "volunteerLabel": "Volunteer",
+    "blogLabel": "Blog",
+    "pagesDropdownLabel": "Pages",
+    "contactLabel": "Contact",
+    "donateButtonText": "Donate Now"
+  },
+  "footer": {
+    "quickLinksHeading": "Quick Links",
+    "quickLinks": {
+      "homeLabel": "Home",
+      "aboutLabel": "About Us",
+      "servicesLabel": "Our Services",
+      "projectsLabel": "Projects",
+      "volunteerLabel": "Volunteer",
+      "donateLabel": "Donate"
     },
-    "touchingLives": {
-      "progressBars": [
-        {
-          "label": "Service Care",
-          "pct": 82
-        },
-        {
-          "label": "Communities Rebuilt",
-          "pct": 67
-        }
-      ],
-      "yearsBadgeNumber": "5+"
-    },
-    "faq": {
-      "image": "https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=700&h=600&fit=crop&auto=format",
-      "items": [
-        {
-          "q": "What Motivates You To Donate To Our Charity?",
-          "a": "Every donation to Ochaworth directly funds life-changing programmes in education, healthcare, and community development. We publish detailed impact reports so you can see exactly where your naira goes — from school supplies to medical outreaches to vocational training for youth."
-        },
-        {
-          "q": "How Did You Hear About Our Organisation?",
-          "a": "Ochaworth has been reaching communities across Nigeria and beyond for over a decade. You may have discovered us through a community event, social media, a partner organisation, or a friend who has experienced our work firsthand."
-        },
-        {
-          "q": "How Frequently Do You Prefer To Volunteer?",
-          "a": "Volunteering schedules are flexible and tailored to your availability. Whether you can commit to a one-day outreach or a six-month programme, we have a role that fits your skills and calendar. Reach out to our volunteer coordination team to find your best fit."
-        },
-        {
-          "q": "What Types Of Projects Does Ochaworth Focus On?",
-          "a": "Our core programme areas include food distribution, child education, medical support, leadership development, poverty reduction, and emergency relief. Every project is designed with community input to ensure it addresses real, local needs."
-        }
-      ]
-    }
+    "causesHeading": "Our Causes",
+    "causes": [
+      "Food Distribution",
+      "Child Education",
+      "Medical Support",
+      "Poverty Reduction",
+      "Clean Water",
+      "Emergency Relief"
+    ],
+    "contactHeading": "Contact Us",
+    "workingHoursLabel": "Working Hours",
+    "policyLinks": [
+      "Privacy Policy",
+      "Terms of Service",
+      "Cookie Policy"
+    ]
+  },
+  "newsletter": {
+    "headingPrefix": "Subscribe To Our",
+    "headingHighlight": "Newsletter",
+    "paragraph": "Stay updated with our latest projects, events, and impact stories from around the world.",
+    "placeholder": "Enter your email address",
+    "buttonText": "Subscribe Now"
   }
 }

@@ -7,16 +7,6 @@ import {
   Icon, SectionLabel, YellowBtn, GreenBtn, OutlineBtn, ProgressBar, Newsletter,
 } from "@/components/shared";
 
-// Fixed layout data (positions, not really content an editor would change often)
-const mapPins = [
-  { top: "35%", left: "22%", label: "USA" },
-  { top: "28%", left: "48%", label: "Europe" },
-  { top: "48%", left: "52%", label: "Africa" },
-  { top: "38%", left: "68%", label: "South Asia" },
-  { top: "55%", left: "75%", label: "SE Asia" },
-  { top: "62%", left: "32%", label: "South America" },
-];
-
 function Hero() {
   const heroSlides = site.hero.slides;
   const [current, setCurrent] = useState(0);
@@ -47,8 +37,8 @@ function Hero() {
           </h1>
           <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-lg">{s.sub}</p>
           <div className="flex flex-wrap gap-4">
-            <YellowBtn className="flex items-center gap-2"><HeartIcon className="w-4 h-4"/> Donate Now</YellowBtn>
-            <OutlineBtn light className="flex items-center gap-2">Learn More <ArrowRight className="w-4 h-4"/></OutlineBtn>
+            <YellowBtn className="flex items-center gap-2"><HeartIcon className="w-4 h-4"/> {site.hero.donateButtonText}</YellowBtn>
+            <OutlineBtn light className="flex items-center gap-2">{site.hero.learnMoreButtonText} <ArrowRight className="w-4 h-4"/></OutlineBtn>
           </div>
           <div className="flex flex-wrap gap-8 mt-14">
             {site.hero.stats.map(stat => (
@@ -75,31 +65,32 @@ function Hero() {
 }
 
 function VolunteerCards() {
+  const vc = site.volunteerCards;
   return (
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-[var(--green-mid)] rounded-2xl p-8 flex flex-col items-start gap-4 text-white hover:shadow-xl transition-shadow">
             <div className="w-14 h-14 bg-[var(--yellow)] rounded-full flex items-center justify-center"><HandIcon className="w-7 h-7 text-[var(--green-dark)]"/></div>
-            <h3 className="text-xl font-bold">Become a Volunteer</h3>
-            <p className="text-white/70 text-sm leading-relaxed">Join our growing network of compassionate volunteers making a real difference every day.</p>
-            <button className="text-[var(--yellow)] font-semibold text-sm flex items-center gap-1">Join Us <ArrowRight className="w-4 h-4"/></button>
+            <h3 className="text-xl font-bold">{vc.card1.heading}</h3>
+            <p className="text-white/70 text-sm leading-relaxed">{vc.card1.paragraph}</p>
+            <button className="text-[var(--yellow)] font-semibold text-sm flex items-center gap-1">{vc.card1.buttonText} <ArrowRight className="w-4 h-4"/></button>
           </div>
           <div className="bg-[var(--yellow)] rounded-2xl p-8 flex flex-col items-start gap-4 hover:shadow-xl transition-shadow">
             <div className="w-14 h-14 bg-[var(--green-mid)] rounded-full flex items-center justify-center"><GlobeIcon className="w-7 h-7 text-[var(--yellow)]"/></div>
-            <h3 className="text-xl font-bold text-[var(--green-dark)]">Ready To Change The World?</h3>
-            <p className="text-[var(--green-dark)]/70 text-sm leading-relaxed">Your support fuels projects that feed, educate, and heal communities across the globe.</p>
-            <button className="text-[var(--green-mid)] font-semibold text-sm flex items-center gap-1">Get Started <ArrowRight className="w-4 h-4"/></button>
+            <h3 className="text-xl font-bold text-[var(--green-dark)]">{vc.card2.heading}</h3>
+            <p className="text-[var(--green-dark)]/70 text-sm leading-relaxed">{vc.card2.paragraph}</p>
+            <button className="text-[var(--green-mid)] font-semibold text-sm flex items-center gap-1">{vc.card2.buttonText} <ArrowRight className="w-4 h-4"/></button>
           </div>
           <div className="rounded-2xl overflow-hidden relative min-h-[280px] group">
-            <img src={site.volunteerCards.actionImage} alt="Volunteers" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+            <img src={vc.actionImage} alt="Volunteers" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--green-dark)]/80 to-transparent flex items-end p-6">
-              <div><div className="text-[var(--yellow)] text-xs font-bold tracking-widest uppercase mb-1">In Action</div><p className="text-white font-semibold">{site.volunteerCards.actionCaption}</p></div>
+              <div><div className="text-[var(--yellow)] text-xs font-bold tracking-widest uppercase mb-1">{vc.inActionLabel}</div><p className="text-white font-semibold">{vc.actionCaption}</p></div>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 border-t border-gray-100 pt-10">
-          {site.volunteerCards.stats.map(s => (
+          {vc.stats.map(s => (
             <div key={s.label} className="text-center">
               <div className="text-3xl font-black text-[var(--green-mid)]">{s.value}</div>
               <div className="text-sm text-gray-500 mt-1">{s.label}</div>
@@ -130,7 +121,7 @@ function About() {
           </div>
         </div>
         <div>
-          <SectionLabel text="About Our Organization"/>
+          <SectionLabel text={a.sectionLabel}/>
           <h2 className="text-4xl lg:text-5xl font-black text-[var(--green-dark)] leading-tight mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
             {a.headingPrefix} <span className="text-[var(--green-mid)]">{a.headingHighlight}</span> {a.headingSuffix}
           </h2>
@@ -143,7 +134,7 @@ function About() {
               </div>
             ))}
           </div>
-          <div className="flex gap-4 mt-8"><YellowBtn>Learn More</YellowBtn><GreenBtn>Our Impact</GreenBtn></div>
+          <div className="flex gap-4 mt-8"><YellowBtn>{a.learnMoreButtonText}</YellowBtn><GreenBtn>{a.ourImpactButtonText}</GreenBtn></div>
         </div>
       </div>
     </section>
@@ -151,12 +142,13 @@ function About() {
 }
 
 function Journey() {
+  const j = site.journey;
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <SectionLabel text="What We Offer"/>
-          <h2 className="text-4xl font-black text-[var(--green-dark)] mt-2" style={{ fontFamily: "'Playfair Display', serif" }}>Our Journey Of <span className="text-[var(--green-mid)] italic">Compassion</span></h2>
+          <SectionLabel text={j.sectionLabel}/>
+          <h2 className="text-4xl font-black text-[var(--green-dark)] mt-2" style={{ fontFamily: "'Playfair Display', serif" }}>{j.headingPrefix} <span className="text-[var(--green-mid)] italic">{j.headingItalic}</span></h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {site.services.map((s, i) => (
@@ -164,7 +156,7 @@ function Journey() {
               <div className={"w-16 h-16 rounded-xl flex items-center justify-center mb-5 transition-colors " + (i % 2 === 0 ? "bg-[var(--yellow)]/20 text-[var(--green-mid)] group-hover:bg-[var(--yellow)] group-hover:text-[var(--green-dark)]" : "bg-[var(--green-mid)]/10 text-[var(--green-mid)] group-hover:bg-[var(--yellow)] group-hover:text-[var(--green-dark)]")}><Icon name={s.icon} className="w-10 h-10"/></div>
               <h3 className="text-lg font-bold text-[var(--green-dark)] mb-3 group-hover:text-white">{s.title}</h3>
               <p className="text-sm text-gray-500 leading-relaxed group-hover:text-white/70">{s.desc}</p>
-              <button className="mt-4 text-[var(--green-mid)] group-hover:text-[var(--yellow)] text-sm font-semibold flex items-center gap-1">Read More <ArrowRight className="w-4 h-4"/></button>
+              <button className="mt-4 text-[var(--green-mid)] group-hover:text-[var(--yellow)] text-sm font-semibold flex items-center gap-1">{j.readMoreButtonText} <ArrowRight className="w-4 h-4"/></button>
             </div>
           ))}
         </div>
@@ -193,52 +185,54 @@ function Ticker() {
 }
 
 function FeaturedProjects() {
+  const fp = site.featuredProjects;
   return (
     <section className="py-20 bg-[#F7F7F3]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-wrap justify-between items-end mb-12 gap-4">
-          <div><SectionLabel text="Our Projects"/><h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>Featured Projects & <span className="italic">Causes</span></h2></div>
-          <OutlineBtn>View All Projects</OutlineBtn>
+          <div><SectionLabel text={fp.sectionLabel}/><h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>{fp.headingPrefix} <span className="italic">{fp.headingItalic}</span></h2></div>
+          <OutlineBtn>{fp.viewAllButtonText}</OutlineBtn>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {site.projects.map(p => (
             <div key={p.title} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group">
               <div className="overflow-hidden h-52 relative">
                 <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-                <div className="absolute top-4 left-4 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-3 py-1 rounded-full">Active</div>
+                <div className="absolute top-4 left-4 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-3 py-1 rounded-full">{fp.activeBadgeText}</div>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-1 text-gray-400 text-xs mb-2"><MapPinIcon className="w-3 h-3"/> {p.location}</div>
                 <h3 className="font-bold text-[var(--green-dark)] text-lg mb-4">{p.title}</h3>
                 <ProgressBar raised={p.raised} goal={p.goal}/>
-                <div className="flex gap-3 mt-5"><YellowBtn className="flex-1 py-2 text-sm text-center">Donate</YellowBtn><OutlineBtn className="flex-1 py-2 text-sm text-center">Learn More</OutlineBtn></div>
+                <div className="flex gap-3 mt-5"><YellowBtn className="flex-1 py-2 text-sm text-center">{fp.donateButtonText}</YellowBtn><OutlineBtn className="flex-1 py-2 text-sm text-center">{fp.learnMoreButtonText}</OutlineBtn></div>
               </div>
             </div>
           ))}
         </div>
-        <p className="text-center text-gray-400 text-sm mt-8">We Are Pursuing 80+ Additional Goals In Support Of Transparency</p>
+        <p className="text-center text-gray-400 text-sm mt-8">{fp.bottomParagraph}</p>
       </div>
     </section>
   );
 }
 
 function Community() {
+  const c = site.community;
   return (
     <section className="bg-[var(--green-mid)] py-20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           <div>
-            <SectionLabel text="Join Our Network" light/>
-            <h2 className="text-4xl lg:text-5xl font-black text-white mt-2" style={{ fontFamily: "'Playfair Display', serif" }}>Join Our <span className="text-[var(--yellow)]">Community</span></h2>
-            <p className="text-white/70 mt-4 max-w-md leading-relaxed">Become part of a global movement. Whether you donate, volunteer, or spread the word, every action counts.</p>
-            <div className="flex gap-4 mt-6"><YellowBtn>Get Involved</YellowBtn><OutlineBtn light>Learn More</OutlineBtn></div>
+            <SectionLabel text={c.sectionLabel} light/>
+            <h2 className="text-4xl lg:text-5xl font-black text-white mt-2" style={{ fontFamily: "'Playfair Display', serif" }}>{c.headingPrefix} <span className="text-[var(--yellow)]">{c.headingHighlight}</span></h2>
+            <p className="text-white/70 mt-4 max-w-md leading-relaxed">{c.paragraph}</p>
+            <div className="flex gap-4 mt-6"><YellowBtn>{c.getInvolvedButtonText}</YellowBtn><OutlineBtn light>{c.learnMoreButtonText}</OutlineBtn></div>
           </div>
-          <div className="text-center"><div className="text-8xl font-black text-[var(--yellow)]">{site.community.donorsCount}</div><div className="text-white text-lg font-semibold mt-2">Happy Donors</div></div>
+          <div className="text-center"><div className="text-8xl font-black text-[var(--yellow)]">{c.donorsCount}</div><div className="text-white text-lg font-semibold mt-2">{c.donorsLabel}</div></div>
         </div>
         <div className="mt-16 pt-10 border-t border-white/10">
-          <p className="text-white/40 text-xs uppercase tracking-widest text-center mb-8">Trusted Partners</p>
+          <p className="text-white/40 text-xs uppercase tracking-widest text-center mb-8">{c.trustedPartnersLabel}</p>
           <div className="flex flex-wrap justify-center gap-8 items-center">
-            {site.community.partners.map(p => <div key={p} className="text-white/40 font-bold text-sm tracking-widest hover:text-[var(--yellow)] transition-colors cursor-pointer">{p}</div>)}
+            {c.partners.map(p => <div key={p} className="text-white/40 font-bold text-sm tracking-widest hover:text-[var(--yellow)] transition-colors cursor-pointer">{p}</div>)}
           </div>
         </div>
       </div>
@@ -247,10 +241,11 @@ function Community() {
 }
 
 function Volunteers() {
+  const vs = site.volunteersSection;
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12"><SectionLabel text="Our Team"/><h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>Meet Our <span className="text-[var(--green-mid)] italic">Volunteers</span></h2></div>
+        <div className="text-center mb-12"><SectionLabel text={vs.homeSectionLabel}/><h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>{vs.headingPrefix} <span className="text-[var(--green-mid)] italic">{vs.headingItalic}</span></h2></div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {site.volunteers.map(v => (
             <div key={v.name} className="group text-center">
@@ -262,7 +257,7 @@ function Volunteers() {
                     <a href="#" className="w-8 h-8 bg-[var(--yellow)] rounded-full flex items-center justify-center"><TwitterIcon className="w-3 h-3 text-[var(--green-dark)]"/></a>
                   </div>
                 </div>
-                <div className="absolute top-3 right-3 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-2 py-1 rounded-full">VOLUNTEER</div>
+                <div className="absolute top-3 right-3 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-2 py-1 rounded-full">{vs.badgeText}</div>
               </div>
               <h4 className="font-bold text-[var(--green-dark)]">{v.name}</h4>
               <p className="text-sm text-gray-400">{v.role}</p>
@@ -285,12 +280,12 @@ function TouchingLives() {
       <div className="relative max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <SectionLabel text="Our Mission" light/>
+            <SectionLabel text={t.sectionLabel} light/>
             <h2 className="text-4xl lg:text-5xl font-black text-white mt-2 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
               {t.headingLine1}<br/>{t.headingLine2Prefix} <span className="text-[var(--yellow)]">{t.headingHighlight}</span><br/>{t.headingLine3}
             </h2>
             <p className="text-white/70 mt-5 leading-relaxed max-w-md">{t.paragraph}</p>
-            <div className="flex gap-4 mt-8"><YellowBtn>Our Work</YellowBtn><OutlineBtn light>Watch Story</OutlineBtn></div>
+            <div className="flex gap-4 mt-8"><YellowBtn>{t.ourWorkButtonText}</YellowBtn><OutlineBtn light>{t.watchStoryButtonText}</OutlineBtn></div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {t.cards.map(c => (
@@ -318,39 +313,39 @@ function DonationForm() {
           <img src={d.bgImage} alt="" className="rounded-3xl w-full h-[500px] object-cover"/>
           <div className="absolute -top-6 -right-6 bg-[var(--yellow)] rounded-2xl px-8 py-5 shadow-xl hidden lg:block">
             <div className="text-4xl font-black text-[var(--green-dark)]">{d.totalRaised}</div>
-            <div className="text-sm font-semibold text-[var(--green-dark)]/70">Total Funds Raised</div>
+            <div className="text-sm font-semibold text-[var(--green-dark)]/70">{d.totalRaisedLabel}</div>
           </div>
           <div className="absolute -bottom-6 left-6 bg-[var(--green-mid)] rounded-2xl px-6 py-4 shadow-xl hidden lg:block">
             <div className="text-2xl font-black text-white">{d.donationsCount}</div>
-            <div className="text-xs font-semibold text-white/60">Donations</div>
+            <div className="text-xs font-semibold text-white/60">{d.donationsLabel}</div>
           </div>
         </div>
         <div>
-          <SectionLabel text="Make A Donation"/>
-          <h2 className="text-4xl font-black text-[var(--green-dark)] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Making A Difference,<br/>One <span className="text-[var(--green-mid)] italic">Donation</span> At A Time.</h2>
+          <SectionLabel text={d.sectionLabel}/>
+          <h2 className="text-4xl font-black text-[var(--green-dark)] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{d.headingLine1}<br/>{d.headingLine2Prefix} <span className="text-[var(--green-mid)] italic">{d.headingHighlight}</span> {d.headingSuffix}</h2>
           <p className="text-gray-500 mb-8 leading-relaxed">{d.paragraph}</p>
           <div className="mb-5">
-            <label className="block text-sm font-semibold text-[var(--green-dark)] mb-2">Donation Amount</label>
+            <label className="block text-sm font-semibold text-[var(--green-dark)] mb-2">{d.amountLabel}</label>
             <div className="flex flex-wrap gap-3 mb-3">
               {d.presetAmounts.map(a => (
                 <button key={a} onClick={() => { setAmount(a); setCustom(""); }} className={"px-5 py-2 rounded-full border-2 font-bold text-sm transition-colors " + (amount === a && !custom ? "bg-[var(--green-mid)] text-white border-[var(--green-mid)]" : "border-gray-300 text-gray-600 hover:border-[var(--green-mid)]")}>₦{a}</button>
               ))}
             </div>
-            <input type="number" placeholder="Custom amount" value={custom} onChange={e => { setCustom(e.target.value); setAmount(""); }} className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
+            <input type="number" placeholder={d.customAmountPlaceholder} value={custom} onChange={e => { setCustom(e.target.value); setAmount(""); }} className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
           </div>
           <div className="grid grid-cols-2 gap-4 mb-4">
-            <input placeholder="First Name" className="border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
-            <input placeholder="Last Name" className="border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
+            <input placeholder={d.firstNamePlaceholder} className="border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
+            <input placeholder={d.lastNamePlaceholder} className="border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
           </div>
-          <input placeholder="Email Address" className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] mb-4"/>
+          <input placeholder={d.emailPlaceholder} className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] mb-4"/>
           <select className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] text-gray-600 mb-6">
-            <option>Select a cause</option>
+            <option>{d.selectCauseDefault}</option>
             {d.causes.map(c => <option key={c}>{c}</option>)}
           </select>
           <YellowBtn className="w-full flex items-center justify-center gap-2 py-4 text-base">
-            <HeartIcon className="w-5 h-5"/> Donate ₦{custom || amount} Now
+            <HeartIcon className="w-5 h-5"/> {d.donateButtonPrefix} ₦{custom || amount} {d.donateButtonSuffix}
           </YellowBtn>
-          <p className="text-center text-xs text-gray-400 mt-3 flex items-center justify-center gap-1"><CheckIcon className="w-3 h-3"/> Secure & encrypted donation</p>
+          <p className="text-center text-xs text-gray-400 mt-3 flex items-center justify-center gap-1"><CheckIcon className="w-3 h-3"/> {d.secureCaption}</p>
         </div>
       </div>
     </section>
@@ -368,7 +363,7 @@ function TestimonialBanner() {
       <div className="relative max-w-4xl mx-auto px-4 text-center">
         <div className="flex items-center justify-center gap-2 mb-3 text-[var(--yellow)]">
           <LeafIcon className="w-4 h-4"/>
-          <span className="text-sm font-semibold tracking-widest uppercase">Our Philosophy</span>
+          <span className="text-sm font-semibold tracking-widest uppercase">{o.philosophyLabel}</span>
         </div>
         <blockquote className="text-4xl lg:text-6xl font-black text-white leading-tight mt-4" style={{ fontFamily: "'Playfair Display', serif" }}>
           "{o.missionLine1}<br/>
@@ -384,13 +379,14 @@ function TestimonialBanner() {
 function Testimonials() {
   const [active, setActive] = useState(0);
   const testimonials = site.testimonials;
+  const ts = site.testimonialsSection;
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <SectionLabel text="Testimonials"/>
+          <SectionLabel text={ts.sectionLabel}/>
           <h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>
-            What Our <span className="italic text-[var(--green-mid)]">Community</span> Is Saying!
+            {ts.headingPrefix} <span className="italic text-[var(--green-mid)]">{ts.headingItalic}</span> {ts.headingSuffix}
           </h2>
         </div>
 
@@ -435,9 +431,9 @@ function Events() {
     <section className="py-20 bg-[#F7F7F3]">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div>
-          <SectionLabel text="Upcoming Events"/>
+          <SectionLabel text={p.sectionLabel}/>
           <h2 className="text-4xl font-black text-[var(--green-dark)] mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Join Our Latest<br/><span className="italic text-[var(--green-mid)]">Upcoming Events</span>
+            {p.headingLine1}<br/><span className="italic text-[var(--green-mid)]">{p.headingItalic}</span>
           </h2>
 
           <div className="space-y-4">
@@ -459,7 +455,7 @@ function Events() {
             ))}
           </div>
 
-          <YellowBtn className="mt-6">View All Events</YellowBtn>
+          <YellowBtn className="mt-6">{p.viewAllButtonText}</YellowBtn>
         </div>
 
         {/* Event image */}
@@ -475,7 +471,7 @@ function Events() {
             <div className="flex justify-between items-center mt-3">
               <span className="text-xs text-gray-400 flex items-center gap-1"><CalendarIcon className="w-3 h-3"/> {p.date}</span>
               <button className="text-[var(--green-mid)] font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
-                Register <ArrowRight className="w-4 h-4"/>
+                {p.registerButtonText} <ArrowRight className="w-4 h-4"/>
               </button>
             </div>
           </div>
@@ -486,21 +482,22 @@ function Events() {
 }
 
 function WorldMap() {
+  const wm = site.worldMap;
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <SectionLabel text="Global Reach"/>
+          <SectionLabel text={wm.sectionLabel}/>
           <h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Global Project <span className="italic text-[var(--green-mid)]">Locations</span>
+            {wm.headingPrefix} <span className="italic text-[var(--green-mid)]">{wm.headingItalic}</span>
           </h2>
-          <p className="text-gray-500 mt-3 max-w-lg mx-auto">{site.worldMap.intro}</p>
+          <p className="text-gray-500 mt-3 max-w-lg mx-auto">{wm.intro}</p>
         </div>
 
         {/* Tab filters */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {["All Regions", "Africa", "Asia", "Americas", "Europe", "Oceania"].map(r => (
-            <button key={r} className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${r === "All Regions" ? "bg-[var(--green-mid)] text-white" : "border border-gray-200 text-gray-500 hover:border-[var(--green-mid)] hover:text-[var(--green-mid)]"}`}>{r}</button>
+          {wm.regionTabs.map((r, i) => (
+            <button key={r} className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${i === 0 ? "bg-[var(--green-mid)] text-white" : "border border-gray-200 text-gray-500 hover:border-[var(--green-mid)] hover:text-[var(--green-mid)]"}`}>{r}</button>
           ))}
         </div>
 
@@ -515,7 +512,7 @@ function WorldMap() {
           <div className="absolute inset-0 bg-[var(--green-mid)]/5"/>
 
           {/* Pin markers */}
-          {mapPins.map(pin => (
+          {wm.pins.map(pin => (
             <div
               key={pin.label}
               className="absolute group cursor-pointer"
@@ -533,7 +530,7 @@ function WorldMap() {
 
         {/* Stats row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-          {site.worldMap.stats.map(s => (
+          {wm.stats.map(s => (
             <div key={s.l} className="bg-[var(--green-mid)] text-white rounded-2xl p-5 text-center">
               <div className="text-3xl font-black text-[var(--yellow)]">{s.v}</div>
               <div className="text-sm text-white/70 mt-1">{s.l}</div>
@@ -546,19 +543,20 @@ function WorldMap() {
 }
 
 function Blog() {
+  const bs = site.blogSection;
   return (
     <section className="py-20 bg-[#F7F7F3]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-wrap justify-between items-end mb-12 gap-4">
           <div>
-            <SectionLabel text="News & Blog"/>
+            <SectionLabel text={bs.sectionLabel}/>
             <h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Our Latest News <span className="italic">&amp; Blogs</span>
+              {bs.headingPrefix} <span className="italic">{bs.headingItalic}</span>
             </h2>
           </div>
           <div className="flex gap-3">
-            {["Latest", "Popular", "Featured"].map(t => (
-              <button key={t} className={`px-4 py-2 rounded-full text-sm font-semibold ${t === "Latest" ? "bg-[var(--green-mid)] text-white" : "border border-gray-200 text-gray-500 hover:border-[var(--green-mid)]"}`}>{t}</button>
+            {bs.filterTabs.map((t, i) => (
+              <button key={t} className={`px-4 py-2 rounded-full text-sm font-semibold ${i === 0 ? "bg-[var(--green-mid)] text-white" : "border border-gray-200 text-gray-500 hover:border-[var(--green-mid)]"}`}>{t}</button>
             ))}
           </div>
         </div>
@@ -574,7 +572,7 @@ function Blog() {
                 <div className="text-xs text-gray-400 mb-3 flex items-center gap-1"><CalendarIcon className="w-3 h-3"/> {b.date}</div>
                 <h3 className="font-bold text-[var(--green-dark)] leading-snug mb-4 line-clamp-3">{b.title}</h3>
                 <button className="text-[var(--green-mid)] font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
-                  Read More <ArrowRight className="w-4 h-4"/>
+                  {bs.readMoreButtonText} <ArrowRight className="w-4 h-4"/>
                 </button>
               </div>
             </div>

@@ -31,6 +31,21 @@ collections:
               - { label: "Accent Gold", name: "accent", widget: "color", enableAlpha: false }
               - { label: "Accent Gold (hover/dark shade)", name: "accentDark", widget: "color", enableAlpha: false }
 
+          - label: "Navigation Menu"
+            name: "nav"
+            widget: "object"
+            hint: "Text shown in the top navigation bar on every page. 'Services', 'Projects', 'Volunteer' and 'Blog' are placeholders until those pages are built, so their labels can be edited but they won't be clickable yet."
+            fields:
+              - { label: '"Home" Link Text', name: "homeLabel", widget: "string" }
+              - { label: '"About" Link Text', name: "aboutLabel", widget: "string" }
+              - { label: '"Services" Link Text', name: "servicesLabel", widget: "string" }
+              - { label: '"Projects" Link Text', name: "projectsLabel", widget: "string" }
+              - { label: '"Volunteer" Link Text', name: "volunteerLabel", widget: "string" }
+              - { label: '"Blog" Link Text', name: "blogLabel", widget: "string" }
+              - { label: '"Pages" Dropdown Text', name: "pagesDropdownLabel", widget: "string" }
+              - { label: '"Contact" Link Text', name: "contactLabel", widget: "string" }
+              - { label: '"Donate Now" Button Text', name: "donateButtonText", widget: "string" }
+
           - label: "Organization"
             name: "org"
             widget: "object"
@@ -38,6 +53,7 @@ collections:
               - { label: "Full Name", name: "name", widget: "string" }
               - { label: "Short Name", name: "shortName", widget: "string" }
               - { label: "Footer About Blurb", name: "footerBlurb", widget: "text" }
+              - { label: '"Our Philosophy" Small Label', name: "philosophyLabel", widget: "string" }
               - { label: "Mission Quote — Line 1", name: "missionLine1", widget: "string" }
               - { label: "Mission Quote — Highlighted Word", name: "missionHighlight", widget: "string" }
               - { label: "Mission Quote — Line 3", name: "missionLine3", widget: "string" }
@@ -82,6 +98,8 @@ collections:
                 fields:
                   - { label: "Value", name: "value", widget: "string" }
                   - { label: "Label", name: "label", widget: "string" }
+              - { label: '"Donate Now" Button Text', name: "donateButtonText", widget: "string" }
+              - { label: '"Learn More" Button Text', name: "learnMoreButtonText", widget: "string" }
 
           - label: "Volunteer Cards Section"
             name: "volunteerCards"
@@ -89,6 +107,7 @@ collections:
             fields:
               - { label: '"In Action" Photo', name: "actionImage", widget: "image" }
               - { label: "Caption Over Photo", name: "actionCaption", widget: "string" }
+              - { label: '"In Action" Small Label', name: "inActionLabel", widget: "string" }
               - label: "Stat Badges"
                 name: "stats"
                 widget: "list"
@@ -96,11 +115,26 @@ collections:
                 fields:
                   - { label: "Value", name: "value", widget: "string" }
                   - { label: "Label", name: "label", widget: "string" }
+              - label: 'Card 1 — "Become a Volunteer"'
+                name: "card1"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Paragraph", name: "paragraph", widget: "text" }
+                  - { label: "Button Text", name: "buttonText", widget: "string" }
+              - label: 'Card 2 — "Ready To Change The World?"'
+                name: "card2"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Paragraph", name: "paragraph", widget: "text" }
+                  - { label: "Button Text", name: "buttonText", widget: "string" }
 
           - label: "About Section"
             name: "about"
             widget: "object"
             fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
               - label: "Photos"
                 name: "images"
                 widget: "object"
@@ -122,6 +156,8 @@ collections:
                   - { label: "Icon", name: "icon", widget: "select", options: ["heart", "globe", "hand"] }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "desc", widget: "text" }
+              - { label: '"Learn More" Button Text', name: "learnMoreButtonText", widget: "string" }
+              - { label: '"Our Impact" Button Text', name: "ourImpactButtonText", widget: "string" }
 
           - label: "Services (\"What We Offer\")"
             name: "services"
@@ -131,6 +167,16 @@ collections:
               - { label: "Icon", name: "icon", widget: "select", options: ["food", "child", "medical", "house"] }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "desc", widget: "text" }
+
+          - label: "What We Offer — Section Text"
+            name: "journey"
+            widget: "object"
+            hint: "The small label and heading shown above the 'Services' cards above."
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: '"Read More" Button Text', name: "readMoreButtonText", widget: "string" }
 
           - label: "Scrolling Ticker Words"
             name: "ticker"
@@ -148,11 +194,35 @@ collections:
               - { label: "Goal (₦)", name: "goal", widget: "number", value_type: "int" }
               - { label: "Photo", name: "img", widget: "image" }
 
+          - label: "Featured Projects — Section Text"
+            name: "featuredProjects"
+            widget: "object"
+            hint: "The small label, heading, badges and buttons shown around the 'Featured Projects' cards above."
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: '"View All Projects" Button Text', name: "viewAllButtonText", widget: "string" }
+              - { label: '"Active" Badge Text', name: "activeBadgeText", widget: "string" }
+              - { label: '"Raised:" Label', name: "raisedLabel", widget: "string" }
+              - { label: '"Goal:" Label', name: "goalLabel", widget: "string" }
+              - { label: '"Donate" Button Text', name: "donateButtonText", widget: "string" }
+              - { label: '"Learn More" Button Text', name: "learnMoreButtonText", widget: "string" }
+              - { label: "Bottom Paragraph", name: "bottomParagraph", widget: "string" }
+
           - label: "Community Section"
             name: "community"
             widget: "object"
             fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Highlighted Word", name: "headingHighlight", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: '"Get Involved" Button Text', name: "getInvolvedButtonText", widget: "string" }
+              - { label: '"Learn More" Button Text', name: "learnMoreButtonText", widget: "string" }
               - { label: '"Happy Donors" Number', name: "donorsCount", widget: "string" }
+              - { label: '"Happy Donors" Label', name: "donorsLabel", widget: "string" }
+              - { label: '"Trusted Partners" Label', name: "trustedPartnersLabel", widget: "string" }
               - label: "Partner Organization Names"
                 name: "partners"
                 widget: "list"
@@ -167,10 +237,21 @@ collections:
               - { label: "Role", name: "role", widget: "string" }
               - { label: "Photo", name: "img", widget: "image" }
 
+          - label: "Volunteers Section — Shared Text"
+            name: "volunteersSection"
+            widget: "object"
+            hint: "This heading and badge are used on both the homepage 'Meet Our Volunteers' section and the About Us page's volunteers section, so they only need editing in one place."
+            fields:
+              - { label: "Small Section Label (homepage only)", name: "homeSectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: '"VOLUNTEER" Photo Badge Text', name: "badgeText", widget: "string" }
+
           - label: "Touching Lives (Mission) Section"
             name: "touchingLives"
             widget: "object"
             fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
               - { label: "Background Photo", name: "bgImage", widget: "image" }
               - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
               - { label: "Heading — Line 2 Prefix", name: "headingLine2Prefix", widget: "string" }
@@ -185,23 +266,41 @@ collections:
                   - { label: "Icon", name: "icon", widget: "select", options: ["heart", "hand", "globe"] }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "desc", widget: "text" }
+              - { label: '"Our Work" Button Text', name: "ourWorkButtonText", widget: "string" }
+              - { label: '"Watch Story" Button Text', name: "watchStoryButtonText", widget: "string" }
 
           - label: "Donation Form"
             name: "donation"
             widget: "object"
             fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
               - { label: "Background Photo", name: "bgImage", widget: "image" }
               - { label: '"Total Funds Raised" Badge', name: "totalRaised", widget: "string" }
+              - { label: '"Total Funds Raised" Label', name: "totalRaisedLabel", widget: "string" }
               - { label: '"Donations" Count Badge', name: "donationsCount", widget: "string" }
+              - { label: '"Donations" Label', name: "donationsLabel", widget: "string" }
+              - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
+              - { label: "Heading — Line 2 Prefix", name: "headingLine2Prefix", widget: "string" }
+              - { label: "Heading — Highlighted Word", name: "headingHighlight", widget: "string" }
+              - { label: "Heading — Suffix", name: "headingSuffix", widget: "string" }
               - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: '"Donation Amount" Label', name: "amountLabel", widget: "string" }
               - label: "Preset Donation Amounts (₦)"
                 name: "presetAmounts"
                 widget: "list"
                 field: { label: "Amount", name: "amount", widget: "string" }
+              - { label: "Custom Amount Placeholder", name: "customAmountPlaceholder", widget: "string" }
+              - { label: "First Name Placeholder", name: "firstNamePlaceholder", widget: "string" }
+              - { label: "Last Name Placeholder", name: "lastNamePlaceholder", widget: "string" }
+              - { label: "Email Placeholder", name: "emailPlaceholder", widget: "string" }
               - label: "Cause Dropdown Options"
                 name: "causes"
                 widget: "list"
                 field: { label: "Cause", name: "cause", widget: "string" }
+              - { label: "Cause Dropdown Default Text", name: "selectCauseDefault", widget: "string" }
+              - { label: "Donate Button — Prefix Word", name: "donateButtonPrefix", widget: "string" }
+              - { label: "Donate Button — Suffix Word", name: "donateButtonSuffix", widget: "string" }
+              - { label: "Secure Donation Caption", name: "secureCaption", widget: "string" }
 
           - label: "Testimonials"
             name: "testimonials"
@@ -213,6 +312,15 @@ collections:
               - { label: "Star Rating (1-5)", name: "stars", widget: "number", value_type: "int", min: 1, max: 5 }
               - { label: "Photo", name: "img", widget: "image" }
               - { label: "Quote", name: "text", widget: "text" }
+
+          - label: "Testimonials Section — Homepage Text"
+            name: "testimonialsSection"
+            widget: "object"
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: "Heading — Suffix", name: "headingSuffix", widget: "string" }
 
           - label: "Upcoming Events"
             name: "events"
@@ -229,16 +337,37 @@ collections:
             name: "eventsPanel"
             widget: "object"
             fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
+              - { label: "Heading — Italic Line", name: "headingItalic", widget: "string" }
               - { label: "Photo", name: "image", widget: "image" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "desc", widget: "text" }
               - { label: "Date", name: "date", widget: "string" }
+              - { label: '"View All Events" Button Text', name: "viewAllButtonText", widget: "string" }
+              - { label: '"Register" Button Text', name: "registerButtonText", widget: "string" }
 
           - label: "Global Reach (World Map) Section"
             name: "worldMap"
             widget: "object"
             fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
               - { label: "Intro Paragraph", name: "intro", widget: "text" }
+              - label: "Region Filter Tabs"
+                name: "regionTabs"
+                widget: "list"
+                field: { label: "Tab Text", name: "tab", widget: "string" }
+              - label: "Map Pin Labels"
+                name: "pins"
+                widget: "list"
+                summary: "{{fields.label}}"
+                hint: "Top/Left control the pin's position on the map (as a percentage) — leave these as they are unless you know what you're changing. The Label is the country/region name shown when hovering a pin."
+                fields:
+                  - { label: "Top Position (%)", name: "top", widget: "string" }
+                  - { label: "Left Position (%)", name: "left", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
               - label: "Stat Badges"
                 name: "stats"
                 widget: "list"
@@ -257,88 +386,182 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Photo", name: "img", widget: "image" }
 
-          - label: "About Us Page"
-            name: "aboutPage"
+          - label: "Blog Section — Section Text"
+            name: "blogSection"
             widget: "object"
-            hint: "Content shown only on the /about page. Note: the photos, bio paragraph, and 'Touching Lives' section on that page are shared with other parts of the site — edit those in the 'Organization', 'About Section', and 'Touching Lives' fields above instead."
             fields:
-              - label: "Page Banner"
-                name: "hero"
-                widget: "object"
-                fields:
-                  - { label: "Banner Background Photo", name: "image", widget: "image" }
-
-              - label: "Intro Section (below banner)"
-                name: "intro"
-                widget: "object"
-                hint: "The photos and bio paragraph shown here come from the 'About Section' fields above."
-                fields:
-                  - { label: "Circular Stat Badge — Value", name: "statBadgeValue", widget: "string" }
-                  - { label: "Circular Stat Badge — Label", name: "statBadgeLabel", widget: "string" }
-                  - label: "3 Feature Rows"
-                    name: "features"
-                    widget: "list"
-                    summary: "{{fields.title}}"
-                    fields:
-                      - { label: "Icon", name: "icon", widget: "select", options: ["fundraising", "donation", "hand"] }
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Description", name: "desc", widget: "text" }
-
-              - label: "Stats Bar"
-                name: "stats"
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - label: "Filter Tabs"
+                name: "filterTabs"
                 widget: "list"
-                summary: "{{fields.value}} — {{fields.label}}"
+                field: { label: "Tab Text", name: "tab", widget: "string" }
+              - { label: '"Read More" Button Text', name: "readMoreButtonText", widget: "string" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: '"Quick Links" Heading', name: "quickLinksHeading", widget: "string" }
+              - label: "Quick Links"
+                name: "quickLinks"
+                widget: "object"
+                hint: "Only 'Home' and 'About Us' link anywhere right now — the rest are placeholders until those pages are built, but you can still edit their text."
                 fields:
-                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: '"Home" Link Text', name: "homeLabel", widget: "string" }
+                  - { label: '"About Us" Link Text', name: "aboutLabel", widget: "string" }
+                  - { label: '"Our Services" Link Text', name: "servicesLabel", widget: "string" }
+                  - { label: '"Projects" Link Text', name: "projectsLabel", widget: "string" }
+                  - { label: '"Volunteer" Link Text', name: "volunteerLabel", widget: "string" }
+                  - { label: '"Donate" Link Text', name: "donateLabel", widget: "string" }
+              - { label: '"Our Causes" Heading', name: "causesHeading", widget: "string" }
+              - label: "Our Causes List"
+                name: "causes"
+                widget: "list"
+                field: { label: "Cause", name: "cause", widget: "string" }
+              - { label: '"Contact Us" Heading', name: "contactHeading", widget: "string" }
+              - { label: '"Working Hours" Label', name: "workingHoursLabel", widget: "string" }
+              - label: "Bottom Policy Links"
+                name: "policyLinks"
+                widget: "list"
+                field: { label: "Link Text", name: "link", widget: "string" }
+
+          - label: "Newsletter Signup Section"
+            name: "newsletter"
+            widget: "object"
+            hint: "The 'Subscribe To Our Newsletter' band shown at the bottom of every page."
+            fields:
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Highlighted Word", name: "headingHighlight", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Email Field Placeholder", name: "placeholder", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+
+      - file: "src/data/aboutPage.json"
+        label: "About Us Page"
+        name: "aboutPage"
+        hint: "Content shown only on the /about page. The photos, bio paragraph, and 'Touching Lives' section on that page are shared with the homepage — edit those under 'Homepage Content' → 'About Section' / 'Touching Lives' instead."
+        fields:
+          - label: "Page Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Banner Background Photo", name: "image", widget: "image" }
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: 'Breadcrumb — "Home" Link Text', name: "breadcrumbHome", widget: "string" }
+              - { label: "Breadcrumb — Current Page Text", name: "breadcrumbCurrent", widget: "string" }
+
+          - label: "Intro Section (below banner)"
+            name: "intro"
+            widget: "object"
+            hint: "The photos and bio paragraph shown here come from the 'About Section' fields in Homepage Content."
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Circular Stat Badge — Value", name: "statBadgeValue", widget: "string" }
+              - { label: "Circular Stat Badge — Label", name: "statBadgeLabel", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - label: "3 Feature Rows"
+                name: "features"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "select", options: ["fundraising", "donation", "hand"] }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+
+          - label: "Stats Bar"
+            name: "stats"
+            widget: "list"
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+          - label: "Mission, Vision & Values"
+            name: "missionVisionValues"
+            widget: "object"
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
+              - { label: "Heading — Italic Line", name: "headingItalic", widget: "string" }
+              - { label: "Section Intro Text", name: "intro", widget: "text" }
+              - label: "Mission"
+                name: "mission"
+                widget: "object"
+                fields:
+                  - { label: "Small Tag", name: "tag", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Bullet Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
+              - label: "Vision"
+                name: "vision"
+                widget: "object"
+                fields:
+                  - { label: "Small Tag", name: "tag", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Bullet Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
+              - label: "Values"
+                name: "values"
+                widget: "object"
+                fields:
+                  - { label: "Small Tag", name: "tag", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+                  - { label: "Bullet Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
+
+          - label: "Touching Lives — Extra (About page only)"
+            name: "touchingLives"
+            widget: "object"
+            hint: "The heading, paragraph, photo, and 3 cards for this section come from the 'Touching Lives' field in Homepage Content. These fields are additional and only appear on the About page."
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: '"Our Success Story" Button Text', name: "successStoryButtonText", widget: "string" }
+              - label: "Progress Bars"
+                name: "progressBars"
+                widget: "list"
+                summary: "{{fields.label}} — {{fields.pct}}%"
+                fields:
                   - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Percent (0-100)", name: "pct", widget: "number", value_type: "int", min: 0, max: 100 }
+              - { label: "\"Years Impact\" Badge Number", name: "yearsBadgeNumber", widget: "string" }
+              - { label: 'Circular Badge — Line 1 (e.g. "Years")', name: "yearsBadgeLabelLine1", widget: "string" }
+              - { label: 'Circular Badge — Line 2 (e.g. "Impact")', name: "yearsBadgeLabelLine2", widget: "string" }
 
-              - label: "Mission, Vision & Values"
-                name: "missionVisionValues"
-                widget: "object"
-                fields:
-                  - { label: "Section Intro Text", name: "intro", widget: "text" }
-                  - label: "Mission"
-                    name: "mission"
-                    widget: "object"
-                    fields:
-                      - { label: "Description", name: "desc", widget: "text" }
-                      - { label: "Bullet Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
-                  - label: "Vision"
-                    name: "vision"
-                    widget: "object"
-                    fields:
-                      - { label: "Description", name: "desc", widget: "text" }
-                      - { label: "Bullet Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
-                  - label: "Values"
-                    name: "values"
-                    widget: "object"
-                    fields:
-                      - { label: "Description", name: "desc", widget: "text" }
-                      - { label: "Bullet Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
+          - label: "Volunteers Section (About page only)"
+            name: "volunteers"
+            widget: "object"
+            hint: "The heading and the volunteer cards themselves are shared — edit the heading under 'Volunteers Section — Shared Text' and the people under 'Volunteers / Team', both in Homepage Content."
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
 
-              - label: "Touching Lives — Extra (About page only)"
-                name: "touchingLives"
-                widget: "object"
-                hint: "The heading, paragraph, photo, and 3 cards for this section come from the 'Touching Lives' field above. These two fields are additional and only appear on the About page."
-                fields:
-                  - label: "Progress Bars"
-                    name: "progressBars"
-                    widget: "list"
-                    summary: "{{fields.label}} — {{fields.pct}}%"
-                    fields:
-                      - { label: "Label", name: "label", widget: "string" }
-                      - { label: "Percent (0-100)", name: "pct", widget: "number", value_type: "int", min: 0, max: 100 }
-                  - { label: "\"Years Impact\" Badge Number", name: "yearsBadgeNumber", widget: "string" }
+          - label: "Testimonials Section (About page only)"
+            name: "testimonials"
+            widget: "object"
+            hint: "The testimonials themselves come from the 'Testimonials' field in Homepage Content."
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: "Heading — Suffix", name: "headingSuffix", widget: "string" }
 
-              - label: "FAQ Section"
-                name: "faq"
-                widget: "object"
+          - label: "FAQ Section"
+            name: "faq"
+            widget: "object"
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
+              - { label: "Heading — Line 2 Prefix", name: "headingLine2Prefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: "Heading — Line 3", name: "headingLine3", widget: "string" }
+              - { label: "Left-side Photo", name: "image", widget: "image" }
+              - { label: 'Photo Overlay — Small Label ("Get Answers")', name: "imageLabelText", widget: "string" }
+              - { label: "Photo Overlay — Caption", name: "imageCaption", widget: "string" }
+              - label: "Questions"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.q}}"
                 fields:
-                  - { label: "Left-side Photo", name: "image", widget: "image" }
-                  - label: "Questions"
-                    name: "items"
-                    widget: "list"
-                    summary: "{{fields.q}}"
-                    fields:
-                      - { label: "Question", name: "q", widget: "string" }
-                      - { label: "Answer", name: "a", widget: "text" }
+                  - { label: "Question", name: "q", widget: "string" }
+                  - { label: "Answer", name: "a", widget: "text" }

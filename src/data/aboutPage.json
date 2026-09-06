@@ -1,0 +1,143 @@
+{
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=600&fit=crop&auto=format",
+    "title": "About Us",
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "About Us"
+  },
+  "intro": {
+    "sectionLabel": "About Our Charity",
+    "statBadgeValue": "3,800+",
+    "statBadgeLabel": "Donations Made",
+    "buttonText": "More About Us",
+    "features": [
+      {
+        "icon": "fundraising",
+        "title": "Fundraising",
+        "desc": "We raise funds transparently, ensuring every naira goes directly to the families and communities who need it most."
+      },
+      {
+        "icon": "donation",
+        "title": "Donation Making",
+        "desc": "Our donation system is secure, efficient, and built around trust — with regular impact reports for every contributor."
+      },
+      {
+        "icon": "hand",
+        "title": "Volunteer Initiatives",
+        "desc": "We mobilise skilled volunteers from across Nigeria and beyond to deliver hands-on support in underserved communities."
+      }
+    ]
+  },
+  "stats": [
+    {
+      "value": "100+",
+      "label": "Community Reviews"
+    },
+    {
+      "value": "100%",
+      "label": "Customer Satisfaction"
+    },
+    {
+      "value": "5+",
+      "label": "Years Of Experience"
+    },
+    {
+      "value": "20+",
+      "label": "Projects Delivered"
+    },
+    {
+      "value": "50+",
+      "label": "Team & Volunteers"
+    }
+  ],
+  "missionVisionValues": {
+    "sectionLabel": "Who We Are",
+    "headingLine1": "Our Mission, Vision",
+    "headingItalic": "Core Values",
+    "intro": "Three pillars that define who we are, what we are working towards, and the principles that guide every decision we make.",
+    "mission": {
+      "tag": "Our Purpose",
+      "title": "Mission",
+      "desc": "To empower underserved communities across Nigeria and Africa through sustainable leadership development, quality education, healthcare access, and poverty alleviation programmes — ensuring that no individual is left behind.",
+      "points": [
+        "Community-led development",
+        "Sustainable programmes",
+        "Inclusive outreach"
+      ]
+    },
+    "vision": {
+      "tag": "Our Future",
+      "title": "Vision",
+      "desc": "A Nigeria and Africa where every community thrives with dignity, opportunity, and hope — where strong, compassionate leaders rise from within to sustain lasting change for generations to come.",
+      "points": [
+        "Thriving communities",
+        "Generational impact",
+        "Dignified living for all"
+      ]
+    },
+    "values": {
+      "tag": "What We Stand For",
+      "title": "Values",
+      "desc": "Integrity, compassion, transparency, and community ownership guide everything we do. We believe in building trust at every level — from our donors to our field teams to the communities we serve.",
+      "points": [
+        "Integrity & transparency",
+        "Compassion-first approach",
+        "Community ownership"
+      ]
+    }
+  },
+  "touchingLives": {
+    "sectionLabel": "Driven From Fundraisers",
+    "successStoryButtonText": "Our Success Story",
+    "yearsBadgeLabelLine1": "Years",
+    "yearsBadgeLabelLine2": "Impact",
+    "progressBars": [
+      {
+        "label": "Service Care",
+        "pct": 82
+      },
+      {
+        "label": "Communities Rebuilt",
+        "pct": 67
+      }
+    ],
+    "yearsBadgeNumber": "5+"
+  },
+  "volunteers": {
+    "sectionLabel": "Our Volunteers"
+  },
+  "testimonials": {
+    "sectionLabel": "Our Testimonials",
+    "headingPrefix": "What Our",
+    "headingItalic": "Community",
+    "headingSuffix": "Is Saying?"
+  },
+  "faq": {
+    "sectionLabel": "Frequently Asked Questions",
+    "headingLine1": "Common Questions",
+    "headingLine2Prefix": "About Our",
+    "headingItalic": "Fundraising",
+    "headingLine3": "Campaigning",
+    "imageLabelText": "Get Answers",
+    "imageCaption": "Your questions help us serve communities better",
+    "image": "https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=700&h=600&fit=crop&auto=format",
+    "items": [
+      {
+        "q": "What Motivates You To Donate To Our Charity?",
+        "a": "Every donation to Ochaworth directly funds life-changing programmes in education, healthcare, and community development. We publish detailed impact reports so you can see exactly where your naira goes — from school supplies to medical outreaches to vocational training for youth."
+      },
+      {
+        "q": "How Did You Hear About Our Organisation?",
+        "a": "Ochaworth has been reaching communities across Nigeria and beyond for over a decade. You may have discovered us through a community event, social media, a partner organisation, or a friend who has experienced our work firsthand."
+      },
+      {
+        "q": "How Frequently Do You Prefer To Volunteer?",
+        "a": "Volunteering schedules are flexible and tailored to your availability. Whether you can commit to a one-day outreach or a six-month programme, we have a role that fits your skills and calendar. Reach out to our volunteer coordination team to find your best fit."
+      },
+      {
+        "q": "What Types Of Projects Does Ochaworth Focus On?",
+        "a": "Our core programme areas include food distribution, child education, medical support, leadership development, poverty reduction, and emergency relief. Every project is designed with community input to ensure it addresses real, local needs."
+      }
+    ]
+  }
+}

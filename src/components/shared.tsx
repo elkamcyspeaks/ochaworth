@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import site from "@/data/site.json";
 
 // ── Icons (inline SVG helpers) — shared across all pages ────────────────────
 
@@ -188,21 +189,22 @@ export function OutlineBtn({ children, className = "", light = false }: { childr
   return <button className={"border-2 font-semibold px-6 py-3 rounded-full transition-colors " + (light ? "border-white text-white hover:bg-white hover:text-[var(--green-mid)]" : "border-[var(--green-mid)] text-[var(--green-mid)] hover:bg-[var(--green-mid)] hover:text-white") + " " + className}>{children}</button>;
 }
 export function Newsletter() {
+  const n = site.newsletter;
   return (
     <section className="bg-[var(--green-mid)] py-16">
       <div className="max-w-3xl mx-auto px-4 text-center">
         <LeafIcon className="w-8 h-8 text-[var(--yellow)] mx-auto mb-4"/>
         <h2 className="text-3xl font-black text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-          Subscribe To Our <span className="text-[var(--yellow)]">Newsletter</span>
+          {n.headingPrefix} <span className="text-[var(--yellow)]">{n.headingHighlight}</span>
         </h2>
-        <p className="text-white/60 mb-8">Stay updated with our latest projects, events, and impact stories from around the world.</p>
+        <p className="text-white/60 mb-8">{n.paragraph}</p>
         <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
           <input
             type="email"
-            placeholder="Enter your email address"
+            placeholder={n.placeholder}
             className="flex-1 px-5 py-3 rounded-full text-sm focus:outline-none text-gray-800 bg-white placeholder-gray-400 border-0"
           />
-          <YellowBtn className="whitespace-nowrap">Subscribe Now</YellowBtn>
+          <YellowBtn className="whitespace-nowrap">{n.buttonText}</YellowBtn>
         </div>
       </div>
     </section>
@@ -210,11 +212,12 @@ export function Newsletter() {
 }
 export function ProgressBar({ raised, goal }: { raised: number; goal: number }) {
   const pct = Math.round((raised / goal) * 100);
+  const fp = site.featuredProjects;
   return (
     <div>
       <div className="flex justify-between text-xs text-gray-500 mb-1">
-        <span>Raised: <strong className="text-[var(--green-mid)]">₦{raised.toLocaleString()}</strong></span>
-        <span>Goal: <strong>₦{goal.toLocaleString()}</strong></span>
+        <span>{fp.raisedLabel} <strong className="text-[var(--green-mid)]">₦{raised.toLocaleString()}</strong></span>
+        <span>{fp.goalLabel} <strong>₦{goal.toLocaleString()}</strong></span>
       </div>
       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
         <div className="h-full bg-[var(--yellow)] rounded-full" style={{ width: pct + "%" }}/>

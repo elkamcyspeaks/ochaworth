@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import site from "@/data/site.json";
+import aboutPageData from "@/data/aboutPage.json";
 import {
   ChevronRight, ChevronDown, ArrowRight, PlayIcon, StarIcon, QuoteIcon,
   TargetIcon, EyeIcon, ShieldIcon, CheckCircle,
@@ -11,11 +12,12 @@ import {
 // ── Sections ──────────────────────────────────────────────────────────────────
 
 function PageHero() {
+  const h = aboutPageData.hero;
   return (
     <section className="relative h-64 md:h-80 flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src={site.aboutPage.hero.image}
+          src={h.image}
           alt="About Us hero"
           className="w-full h-full object-cover object-top"
         />
@@ -25,12 +27,12 @@ function PageHero() {
       <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--yellow)]/20 rounded-full blur-3xl pointer-events-none"/>
       <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
         <h1 className="text-5xl md:text-6xl font-black text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-          About Us
+          {h.title}
         </h1>
         <div className="flex items-center gap-2 text-sm text-white/60">
-          <Link to="/" className="hover:text-[var(--yellow)] transition-colors">Home</Link>
+          <Link to="/" className="hover:text-[var(--yellow)] transition-colors">{h.breadcrumbHome}</Link>
           <ChevronRight className="w-3 h-3"/>
-          <span className="text-[var(--yellow)]">About Us</span>
+          <span className="text-[var(--yellow)]">{h.breadcrumbCurrent}</span>
         </div>
       </div>
     </section>
@@ -39,7 +41,7 @@ function PageHero() {
 
 function AboutIntro() {
   const a = site.about;
-  const intro = site.aboutPage.intro;
+  const intro = aboutPageData.intro;
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -73,7 +75,7 @@ function AboutIntro() {
 
         {/* Content */}
         <div>
-          <SectionLabel text="About Our Charity"/>
+          <SectionLabel text={intro.sectionLabel}/>
           <h2 className="text-4xl lg:text-5xl font-black text-[var(--green-dark)] leading-tight mb-5" style={{ fontFamily: "'Playfair Display', serif" }}>
             {a.headingPrefix}<br/><span className="text-[var(--green-mid)]">{a.headingHighlight}</span> {a.headingSuffix}
           </h2>
@@ -96,7 +98,7 @@ function AboutIntro() {
           </div>
 
           <YellowBtn className="flex items-center gap-2">
-            More About Us <ArrowRight className="w-4 h-4"/>
+            {intro.buttonText} <ArrowRight className="w-4 h-4"/>
           </YellowBtn>
         </div>
       </div>
@@ -105,7 +107,7 @@ function AboutIntro() {
 }
 
 function StatsBar() {
-  const stats = site.aboutPage.stats;
+  const stats = aboutPageData.stats;
   return (
     <section className="bg-[var(--green-dark)] py-10">
       <div className="max-w-7xl mx-auto px-4">
@@ -123,12 +125,10 @@ function StatsBar() {
 }
 
 function MissionVisionValues() {
-  const mvv = site.aboutPage.missionVisionValues;
+  const mvv = aboutPageData.missionVisionValues;
   const cards = [
     {
       icon: <TargetIcon className="w-8 h-8"/>,
-      tag: "Our Purpose",
-      title: "Mission",
       color: "bg-[var(--green-mid)]",
       accent: "text-[var(--yellow)]",
       textColor: "text-white",
@@ -138,8 +138,6 @@ function MissionVisionValues() {
     },
     {
       icon: <EyeIcon className="w-8 h-8"/>,
-      tag: "Our Future",
-      title: "Vision",
       color: "bg-[var(--yellow)]",
       accent: "text-[var(--green-mid)]",
       textColor: "text-[var(--green-dark)]",
@@ -149,8 +147,6 @@ function MissionVisionValues() {
     },
     {
       icon: <ShieldIcon className="w-8 h-8"/>,
-      tag: "What We Stand For",
-      title: "Values",
       color: "bg-white",
       accent: "text-[var(--green-mid)]",
       textColor: "text-[var(--green-dark)]",
@@ -164,9 +160,9 @@ function MissionVisionValues() {
     <section className="py-20 bg-[#F7F7F3]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-14">
-          <SectionLabel text="Who We Are"/>
+          <SectionLabel text={mvv.sectionLabel}/>
           <h2 className="text-4xl lg:text-5xl font-black text-[var(--green-dark)] mt-2 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Our Mission, Vision<br/>& <span className="text-[var(--green-mid)] italic">Core Values</span>
+            {mvv.headingLine1}<br/>& <span className="text-[var(--green-mid)] italic">{mvv.headingItalic}</span>
           </h2>
           <p className="text-gray-500 mt-4 max-w-xl mx-auto text-sm leading-relaxed">
             {mvv.intro}
@@ -213,14 +209,14 @@ function MissionVisionValues() {
 function TouchingLives() {
   const [playing, setPlaying] = useState(false);
   const tl = site.touchingLives;
-  const extra = site.aboutPage.touchingLives;
+  const extra = aboutPageData.touchingLives;
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-10">
           {/* Left */}
           <div>
-            <SectionLabel text="Driven From Fundraisers"/>
+            <SectionLabel text={extra.sectionLabel}/>
             <h2 className="text-4xl font-black text-[var(--green-dark)] leading-tight mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
               {tl.headingLine1}<br/>{tl.headingLine2Prefix} <span className="text-[var(--green-mid)] italic">{tl.headingHighlight}</span><br/>{tl.headingLine3}
             </h2>
@@ -247,7 +243,7 @@ function TouchingLives() {
             </div>
 
             <button className="mt-8 text-[var(--green-mid)] font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
-              Our Success Story <ArrowRight className="w-4 h-4"/>
+              {extra.successStoryButtonText} <ArrowRight className="w-4 h-4"/>
             </button>
           </div>
 
@@ -267,7 +263,7 @@ function TouchingLives() {
             {/* Circular badge */}
             <div className="absolute bottom-5 left-5 bg-[var(--green-mid)] border-2 border-[var(--yellow)] rounded-full w-20 h-20 flex flex-col items-center justify-center">
               <div className="text-[var(--yellow)] font-black text-lg leading-none">{extra.yearsBadgeNumber}</div>
-              <div className="text-white text-[9px] font-semibold text-center leading-tight">Years<br/>Impact</div>
+              <div className="text-white text-[9px] font-semibold text-center leading-tight">{extra.yearsBadgeLabelLine1}<br/>{extra.yearsBadgeLabelLine2}</div>
             </div>
           </div>
         </div>
@@ -289,14 +285,16 @@ function TouchingLives() {
 
 function OurVolunteers() {
   const volunteers = site.volunteers;
+  const vs = site.volunteersSection;
+  const ap = aboutPageData.volunteers;
   return (
     <section className="py-20 bg-[#F7F7F3]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-wrap justify-between items-end mb-12 gap-4">
           <div>
-            <SectionLabel text="Our Volunteers"/>
+            <SectionLabel text={ap.sectionLabel}/>
             <h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Meet Our <span className="text-[var(--green-mid)] italic">Volunteers</span>
+              {vs.headingPrefix} <span className="text-[var(--green-mid)] italic">{vs.headingItalic}</span>
             </h2>
           </div>
         </div>
@@ -306,7 +304,7 @@ function OurVolunteers() {
             <div key={v.name} className="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group">
               <div className="relative overflow-hidden h-64">
                 <img src={v.img} alt={v.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"/>
-                <div className="absolute top-3 right-3 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-3 py-1 rounded-full">VOLUNTEER</div>
+                <div className="absolute top-3 right-3 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-3 py-1 rounded-full">{vs.badgeText}</div>
               </div>
               <div className="p-5">
                 <h4 className="font-bold text-[var(--green-dark)] text-base">{v.name}</h4>
@@ -332,6 +330,7 @@ function OurVolunteers() {
 function Testimonials() {
   const [active, setActive] = useState(0);
   const items = site.testimonials;
+  const t = aboutPageData.testimonials;
 
   return (
     <section className="py-20 bg-white">
@@ -339,9 +338,9 @@ function Testimonials() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
           {/* Featured testimonial */}
           <div className="lg:col-span-2">
-            <SectionLabel text="Our Testimonials"/>
+            <SectionLabel text={t.sectionLabel}/>
             <h2 className="text-4xl font-black text-[var(--green-dark)] mb-8 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-              What Our <span className="text-[var(--green-mid)] italic">Community</span><br/>Is Saying?
+              {t.headingPrefix} <span className="text-[var(--green-mid)] italic">{t.headingItalic}</span><br/>{t.headingSuffix}
             </h2>
 
             <div className="bg-[#F7F7F3] rounded-3xl p-7">
@@ -394,7 +393,7 @@ function Testimonials() {
 
 function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
-  const faq = site.aboutPage.faq;
+  const faq = aboutPageData.faq;
 
   return (
     <section className="py-20 bg-[#F7F7F3]">
@@ -408,17 +407,17 @@ function FAQ() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--green-dark)]/60 to-transparent flex items-end p-7">
             <div>
-              <div className="text-[var(--yellow)] text-xs font-bold tracking-widest uppercase mb-2">Get Answers</div>
-              <p className="text-white font-bold text-lg leading-snug max-w-xs">Your questions help us serve communities better</p>
+              <div className="text-[var(--yellow)] text-xs font-bold tracking-widest uppercase mb-2">{faq.imageLabelText}</div>
+              <p className="text-white font-bold text-lg leading-snug max-w-xs">{faq.imageCaption}</p>
             </div>
           </div>
         </div>
 
         {/* Right accordion */}
         <div>
-          <SectionLabel text="Frequently Asked Questions"/>
+          <SectionLabel text={faq.sectionLabel}/>
           <h2 className="text-4xl font-black text-[var(--green-dark)] mb-8 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Common Questions<br/>About Our <span className="text-[var(--green-mid)] italic">Fundraising</span><br/>Campaigning
+            {faq.headingLine1}<br/>{faq.headingLine2Prefix} <span className="text-[var(--green-mid)] italic">{faq.headingItalic}</span><br/>{faq.headingLine3}
           </h2>
 
           <div className="space-y-3">

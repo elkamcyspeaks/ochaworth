@@ -33,12 +33,12 @@ function TopBar() {
 
 // Pages that exist so far link for real; the rest are placeholders until built.
 const NAV_LINKS: { label: string; to?: string }[] = [
-  { label: "Home", to: "/" },
-  { label: "About", to: "/about" },
-  { label: "Services" },
-  { label: "Projects" },
-  { label: "Volunteer" },
-  { label: "Blog" },
+  { label: site.nav.homeLabel, to: "/" },
+  { label: site.nav.aboutLabel, to: "/about" },
+  { label: site.nav.servicesLabel },
+  { label: site.nav.projectsLabel },
+  { label: site.nav.volunteerLabel },
+  { label: site.nav.blogLabel },
 ];
 
 function NavItem({ label, to, onClick }: { label: string; to?: string; onClick?: () => void }) {
@@ -67,10 +67,10 @@ function Navbar() {
         </Link>
         <div className="hidden lg:flex items-center gap-8 text-sm text-white font-medium">
           {NAV_LINKS.map(n => <NavItem key={n.label} {...n}/>)}
-          <a href="#" className="flex items-center gap-1 hover:text-[var(--yellow)]">Pages <ChevronRight className="w-3 h-3 rotate-90"/></a>
-          <a href="#" className="hover:text-[var(--yellow)]">Contact</a>
+          <a href="#" className="flex items-center gap-1 hover:text-[var(--yellow)]">{site.nav.pagesDropdownLabel} <ChevronRight className="w-3 h-3 rotate-90"/></a>
+          <a href="#" className="hover:text-[var(--yellow)]">{site.nav.contactLabel}</a>
         </div>
-        <div className="hidden lg:flex"><YellowBtn className="text-sm py-2 px-5">Donate Now</YellowBtn></div>
+        <div className="hidden lg:flex"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></div>
         <button className="lg:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             {menuOpen ? <path d="M6 18L18 6M6 6l12 12"/> : <path d="M4 6h16M4 12h16M4 18h16"/>}
@@ -80,8 +80,8 @@ function Navbar() {
       {menuOpen && (
         <div className="lg:hidden bg-[var(--green-dark)] px-4 pb-4 flex flex-col gap-3 text-white text-sm">
           {NAV_LINKS.map(n => <NavItem key={n.label} {...n} onClick={() => setMenuOpen(false)}/>)}
-          <a href="#" className="py-1 hover:text-[var(--yellow)]">Contact</a>
-          <YellowBtn className="mt-2 self-start text-sm py-2 px-5">Donate Now</YellowBtn>
+          <a href="#" className="py-1 hover:text-[var(--yellow)]">{site.nav.contactLabel}</a>
+          <YellowBtn className="mt-2 self-start text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn>
         </div>
       )}
     </nav>
@@ -91,12 +91,12 @@ function Navbar() {
 // ── Footer ────────────────────────────────────────────────────────────────────
 
 const FOOTER_QUICK_LINKS: { label: string; to?: string }[] = [
-  { label: "Home", to: "/" },
-  { label: "About Us", to: "/about" },
-  { label: "Our Services" },
-  { label: "Projects" },
-  { label: "Volunteer" },
-  { label: "Donate" },
+  { label: site.footer.quickLinks.homeLabel, to: "/" },
+  { label: site.footer.quickLinks.aboutLabel, to: "/about" },
+  { label: site.footer.quickLinks.servicesLabel },
+  { label: site.footer.quickLinks.projectsLabel },
+  { label: site.footer.quickLinks.volunteerLabel },
+  { label: site.footer.quickLinks.donateLabel },
 ];
 
 function FooterLink({ label, to }: { label: string; to?: string }) {
@@ -138,7 +138,7 @@ function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-[var(--yellow)] mb-4 text-sm tracking-widest uppercase">Quick Links</h4>
+            <h4 className="font-bold text-[var(--yellow)] mb-4 text-sm tracking-widest uppercase">{site.footer.quickLinksHeading}</h4>
             <ul className="space-y-2 text-sm text-white/60">
               {FOOTER_QUICK_LINKS.map(l => <li key={l.label}><FooterLink {...l}/></li>)}
             </ul>
@@ -146,9 +146,9 @@ function Footer() {
 
           {/* Our Causes */}
           <div>
-            <h4 className="font-bold text-[var(--yellow)] mb-4 text-sm tracking-widest uppercase">Our Causes</h4>
+            <h4 className="font-bold text-[var(--yellow)] mb-4 text-sm tracking-widest uppercase">{site.footer.causesHeading}</h4>
             <ul className="space-y-2 text-sm text-white/60">
-              {["Food Distribution", "Child Education", "Medical Support", "Poverty Reduction", "Clean Water", "Emergency Relief"].map(l => (
+              {site.footer.causes.map(l => (
                 <li key={l}><a href="#" className="hover:text-[var(--yellow)] flex items-center gap-1"><ChevronRight className="w-3 h-3"/> {l}</a></li>
               ))}
             </ul>
@@ -156,7 +156,7 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-[var(--yellow)] mb-4 text-sm tracking-widest uppercase">Contact Us</h4>
+            <h4 className="font-bold text-[var(--yellow)] mb-4 text-sm tracking-widest uppercase">{site.footer.contactHeading}</h4>
             <ul className="space-y-3 text-sm text-white/60">
               <li className="flex gap-2"><MapPinIcon className="w-4 h-4 text-[var(--yellow)] flex-shrink-0 mt-0.5"/> {c.footerAddress}</li>
               <li className="flex gap-2"><PhoneIcon className="w-4 h-4 text-[var(--yellow)] flex-shrink-0"/> {c.phone}</li>
@@ -164,7 +164,7 @@ function Footer() {
             </ul>
 
             <div className="mt-5">
-              <div className="text-xs text-white/40 uppercase tracking-widest mb-2">Working Hours</div>
+              <div className="text-xs text-white/40 uppercase tracking-widest mb-2">{site.footer.workingHoursLabel}</div>
               <div className="text-sm text-white/60">{c.hoursWeekday}</div>
               <div className="text-sm text-white/60">{c.hoursSaturday}</div>
             </div>
@@ -174,9 +174,7 @@ function Footer() {
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/30">
           <p>{o.copyright}</p>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-[var(--yellow)]">Privacy Policy</a>
-            <a href="#" className="hover:text-[var(--yellow)]">Terms of Service</a>
-            <a href="#" className="hover:text-[var(--yellow)]">Cookie Policy</a>
+            {site.footer.policyLinks.map(l => <a key={l} href="#" className="hover:text-[var(--yellow)]">{l}</a>)}
           </div>
         </div>
       </div>
