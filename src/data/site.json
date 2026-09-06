@@ -232,7 +232,7 @@
     }
   ],
   "volunteerCards": {
-    "actionImage": "https://images.unsplash.com/photo-1593113616828-6f22bca04804?w=600&h=400&fit=crop&auto=format",
+    "actionImage": "/images/uploads/349d5ccc-8492-428f-8509-64491fc2afa9.jpg",
     "actionCaption": "Together We Feed Thousands",
     "stats": [
       {
@@ -308,7 +308,7 @@
     ],
     "stats": [
       {
-        "value": "3k+",
+        "value": "100+",
         "label": "Community Members"
       },
       {
@@ -316,7 +316,7 @@
         "label": "Customer Satisfaction"
       },
       {
-        "value": "10+",
+        "value": "5+",
         "label": "Year Organization"
       }
     ]
