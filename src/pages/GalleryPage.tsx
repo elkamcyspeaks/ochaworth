@@ -87,7 +87,7 @@ function GalleryGrid() {
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-400">More photos coming soon.</p>
+          <p className="text-center text-gray-400">{galleryData.emptyStateText}</p>
         )}
       </div>
 

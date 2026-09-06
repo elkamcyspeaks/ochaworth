@@ -107,44 +107,44 @@ function FormSection() {
         <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden shadow-lg border border-gray-100">
           <form onSubmit={handleSubmit} className="flex-1 bg-[#F5F0E8] p-8 lg:p-10">
             <div className="mb-5">
-              <label className={labelCls}>Name</label>
+              <label className={labelCls}>{f.nameLabel}</label>
               <input type="text" placeholder={f.namePlaceholder} value={form.name} onChange={set("name")} className={inputCls} required/>
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-5">
               <div>
-                <label className={labelCls}>Email</label>
+                <label className={labelCls}>{f.emailLabel}</label>
                 <input type="email" placeholder={f.emailPlaceholder} value={form.email} onChange={set("email")} className={inputCls} required/>
               </div>
               <div>
-                <label className={labelCls}>Phone</label>
+                <label className={labelCls}>{f.phoneLabel}</label>
                 <input type="tel" placeholder={f.phonePlaceholder} value={form.phone} onChange={set("phone")} className={inputCls}/>
               </div>
             </div>
 
             <div className="mb-5">
-              <label className={labelCls}>Date Of Birth</label>
+              <label className={labelCls}>{f.dobLabel}</label>
               <input type="text" placeholder={f.dobPlaceholder} value={form.dob} onChange={set("dob")} className={inputCls}/>
             </div>
 
             <div className="mb-5">
-              <label className={labelCls}>Occupation</label>
+              <label className={labelCls}>{f.occupationLabel}</label>
               <input type="text" placeholder={f.occupationPlaceholder} value={form.occupation} onChange={set("occupation")} className={inputCls}/>
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-5">
               <div>
-                <label className={labelCls}>Address</label>
+                <label className={labelCls}>{f.addressLabel}</label>
                 <input type="text" placeholder={f.addressPlaceholder} value={form.address} onChange={set("address")} className={inputCls}/>
               </div>
               <div>
-                <label className={labelCls}>Country/State</label>
+                <label className={labelCls}>{f.countryLabel}</label>
                 <input type="text" placeholder={f.countryPlaceholder} value={form.country} onChange={set("country")} className={inputCls}/>
               </div>
             </div>
 
             <div className="mb-7">
-              <label className={labelCls}>Message</label>
+              <label className={labelCls}>{f.messageLabel}</label>
               <textarea placeholder={f.messagePlaceholder} value={form.message} onChange={set("message")} rows={4} className={inputCls + " resize-none"}/>
             </div>
 

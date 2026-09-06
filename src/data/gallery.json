@@ -26,5 +26,6 @@
       "caption": "Together We Feed Thousands",
       "category": "Food Distribution"
     }
-  ]
+  ],
+  "emptyStateText": "More photos coming soon."
 }

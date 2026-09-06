@@ -658,6 +658,8 @@ collections:
               - { label: "Caption", name: "caption", widget: "string" }
               - { label: "Category Tag", name: "category", widget: "string" }
 
+          - { label: '"No Photos Yet" Message', name: "emptyStateText", widget: "string", hint: "Shown only if every photo above is removed." }
+
       - file: "src/data/volunteerPage.json"
         label: "Volunteer Page"
         name: "volunteerPage"
@@ -701,13 +703,21 @@ collections:
               - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
               - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
               - { label: "Heading — Line 2", name: "headingLine2", widget: "string" }
+              - { label: "Name Field Label", name: "nameLabel", widget: "string" }
               - { label: "Name Field Placeholder", name: "namePlaceholder", widget: "string" }
+              - { label: "Email Field Label", name: "emailLabel", widget: "string" }
               - { label: "Email Field Placeholder", name: "emailPlaceholder", widget: "string" }
+              - { label: "Phone Field Label", name: "phoneLabel", widget: "string" }
               - { label: "Phone Field Placeholder", name: "phonePlaceholder", widget: "string" }
+              - { label: "Date Of Birth Field Label", name: "dobLabel", widget: "string" }
               - { label: "Date Of Birth Field Placeholder", name: "dobPlaceholder", widget: "string" }
+              - { label: "Occupation Field Label", name: "occupationLabel", widget: "string" }
               - { label: "Occupation Field Placeholder", name: "occupationPlaceholder", widget: "string" }
+              - { label: "Address Field Label", name: "addressLabel", widget: "string" }
               - { label: "Address Field Placeholder", name: "addressPlaceholder", widget: "string" }
+              - { label: "Country/State Field Label", name: "countryLabel", widget: "string" }
               - { label: "Country/State Field Placeholder", name: "countryPlaceholder", widget: "string" }
+              - { label: "Message Field Label", name: "messageLabel", widget: "string" }
               - { label: "Message Field Placeholder", name: "messagePlaceholder", widget: "string" }
               - { label: "Submit Button Text", name: "submitButtonText", widget: "string" }
               - { label: '"Sent" Confirmation Button Text', name: "submittedButtonText", widget: "string" }
