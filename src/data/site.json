@@ -1,4 +1,10 @@
 {
+  "theme": {
+    "primaryDark": "#0D2B1D",
+    "primaryMid": "#1B3A2B",
+    "accent": "#F5C842",
+    "accentDark": "#D4A820"
+  },
   "org": {
     "name": "Ochaworth Leadership and Community Development Initiative",
     "shortName": "Ochaworth",

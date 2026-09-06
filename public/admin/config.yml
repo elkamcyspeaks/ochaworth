@@ -21,6 +21,16 @@ collections:
         label: "Homepage Content"
         name: "homepage"
         fields:
+          - label: "Theme Colors"
+            name: "theme"
+            widget: "object"
+            hint: "Changes the color palette across the whole site. The two greens are the dark background/accent color, the gold is used for buttons, highlights, and numbers."
+            fields:
+              - { label: "Primary Dark Green", name: "primaryDark", widget: "color", enableAlpha: false }
+              - { label: "Primary Mid Green", name: "primaryMid", widget: "color", enableAlpha: false }
+              - { label: "Accent Gold", name: "accent", widget: "color", enableAlpha: false }
+              - { label: "Accent Gold (hover/dark shade)", name: "accentDark", widget: "color", enableAlpha: false }
+
           - label: "Organization"
             name: "org"
             widget: "object"
