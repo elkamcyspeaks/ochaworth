@@ -72,18 +72,18 @@
     },
     {
       "beneficiaries": "0",
-      "img": "https://placehold.co/700x480?text=Add+Photo",
+      "img": "/images/uploads/830ce53f-d40e-4c7b-af26-f2be09f90fa3.jpg",
       "impact": "Add the final, real results and impact of this completed program.",
       "partners": [
         "Add Partner Organisation"
       ],
-      "date": "Add Date Range",
+      "date": "Oct 1 - Oct 31",
       "coordinator": "Add Coordinator Name",
-      "status": "completed",
+      "status": "upcoming",
       "goal": 500000,
-      "location": "Add Location",
+      "location": "Jos, Plateau State, Nigeria",
       "raised": 500000,
-      "title": "Sample Completed Program — Replace Me",
+      "title": "Breast Cancer Awareness",
       "images": [
         "https://placehold.co/800x500?text=Add+Photo"
       ],
@@ -91,8 +91,8 @@
         "Add a program objective",
         "Add another program objective"
       ],
-      "description": "Replace this with a real description of a program you've already completed.",
-      "category": "Add Category"
+      "description": "The overarching aim of the project is to advance health equity and reduce breast cancer mortality in Plateau State by establishing sustainable grassroots awareness, facilitating early detection pathways, and providing direct patient navigation support for underserved communities in Jos.\nTo achieve this, the campaign will execute four core, measurable objectives:\n\nObjective 1 (Community Education): Educate and empower 1,000+ youth, students, and low-income community members across Jos North and Jos South LGAs on proper Breast Self-Examination (BSE) protocols, early warning signs, and proactive risk-reduction behaviors by October 31, 2026.\n\nObjective 2 (Clinical Screening and Referral): Facilitate free, high-quality Clinical Breast Examinations (CBE) and provide structured diagnostic navigation and referral pathways for at least 150 low-income, underserved women in target peri-urban communities in Jos.\n\nObjective 3 (Social Justice and Policy Advocacy): Mobilize regional conversations linking healthcare access to structural social justice, presenting a comprehensive policy brief to health stakeholders in Plateau State regarding the elimination of financial barriers to screening.\n\nObjective 4 (Patient Solidarity and Material Support): Mobilize community-led fundraising and material resource provision to provide direct palliative, psychological, and logistical care items to active breast cancer patients currently undergoing therapy at tertiary oncology wards in Jos.\n\nThe campaign specifically channels resources toward high-vulnerability cohorts across Jos and its surrounding demographics:\n\na.\tMarket Women and Low-Income Urban Dwellers: Centered primarily in highly populated local trade hubs (e.g., Terminus Market, Katako Market), where out-of-pocket healthcare expenditures are intensely minimized by economic pressures.\n\nb.\tYouths and Tertiary Students: Targeting female students across major regional institutions (e.g., University of Jos, Plateau State Polytechnic), utilizing peer-led structures to instill lifelong early-detection behaviors.\n\nc.\tOncology Patients, Survivors, and Caregivers: Engaging directly with individuals navigating active therapeutic regimens within regional tertiary hospitals to foster structural peer support groups and ease financial distress.",
+      "category": "Community"
     }
   ],
   "cta": {
