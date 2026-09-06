@@ -1,4 +1,138 @@
 {
+  "grid": {
+    "sectionLabel": "What We Do",
+    "headingPrefix": "All",
+    "headingItalic": "Programs",
+    "allTabLabel": "All Programs",
+    "programsCountSuffix": "programs"
+  },
+  "programs": [
+    {
+      "beneficiaries": "1,000",
+      "img": "/images/uploads/img_1360.jpg",
+      "impact": "Add the real impact this program has had so far.",
+      "partners": [
+        "Bambam Soya Oil"
+      ],
+      "date": "Jun 10",
+      "coordinator": "Add Coordinator Name",
+      "status": "completed",
+      "goal": 1000000,
+      "location": "Langtang North, Plateau State",
+      "raised": 0,
+      "title": "Pad A Girl Child",
+      "images": [
+        "/images/uploads/img_1361.jpg",
+        "/images/uploads/img_1363.jpg",
+        "/images/uploads/img_1368.jpg",
+        "/images/uploads/img_1365.jpg",
+        "/images/uploads/img_1369.jpg",
+        "/images/uploads/img_1371.jpg",
+        "/images/uploads/img_1364.jpg",
+        "/images/uploads/img_1358.jpg",
+        "/images/uploads/img_1367.jpg"
+      ],
+      "objectives": [
+        "Add a program objective",
+        "Add another program objective"
+      ],
+      "description": "Impact in action! \n\nAs part of our Pad A Girl intervention in Langtang North, OCHAWORTHLACDI in partnership with bambam soya oil distributed 350 sanitary pads to girls at Government Secondary School (GSS) Langtang.\n\nEvery pad distributed represents more than menstrual hygiene ... it represents dignity, confidence, and a girl’s right to stay in school without interruption.\n\nTogether, we are breaking stigma, fighting period poverty, and creating a future where no girl is held back by her period.",
+      "category": "Community"
+    },
+    {
+      "beneficiaries": "0 Target",
+      "img": "https://placehold.co/700x480?text=Add+Photo",
+      "impact": "Add current planning/fundraising progress for this upcoming program.",
+      "partners": [
+        "Add Partner Organisation"
+      ],
+      "date": "Add Date Range",
+      "coordinator": "Add Coordinator Name",
+      "status": "upcoming",
+      "goal": 1000000,
+      "location": "Add Location",
+      "raised": 0,
+      "title": "Sample Upcoming Program — Replace Me",
+      "images": [
+        "https://placehold.co/800x500?text=Add+Photo"
+      ],
+      "objectives": [
+        "Add a program objective",
+        "Add another program objective"
+      ],
+      "description": "Replace this with a real description of a program you're planning to launch soon.",
+      "category": "Add Category"
+    },
+    {
+      "beneficiaries": "0",
+      "img": "https://placehold.co/700x480?text=Add+Photo",
+      "impact": "Add the final, real results and impact of this completed program.",
+      "partners": [
+        "Add Partner Organisation"
+      ],
+      "date": "Add Date Range",
+      "coordinator": "Add Coordinator Name",
+      "status": "completed",
+      "goal": 500000,
+      "location": "Add Location",
+      "raised": 500000,
+      "title": "Sample Completed Program — Replace Me",
+      "images": [
+        "https://placehold.co/800x500?text=Add+Photo"
+      ],
+      "objectives": [
+        "Add a program objective",
+        "Add another program objective"
+      ],
+      "description": "Replace this with a real description of a program you've already completed.",
+      "category": "Add Category"
+    }
+  ],
+  "cta": {
+    "backgroundImage": "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=1600&h=600&fit=crop&auto=format",
+    "sectionLabel": "Get Involved",
+    "headingPrefix": "Want To Support Our",
+    "headingItalic": "Programs?",
+    "paragraph": "Every contribution — whether time, skills, or funds — directly fuels these programs and transforms lives across Nigeria and beyond.",
+    "donateButtonText": "Donate Now",
+    "volunteerButtonText": "Become a Volunteer"
+  },
+  "card": {
+    "donateButtonText": "Donate",
+    "detailsButtonText": "Details",
+    "viewImpactButtonText": "View Impact"
+  },
+  "detail": {
+    "detailsHeading": "Program Details",
+    "durationLabel": "Duration",
+    "photosHeading": "Program Photos",
+    "statusLabel": "Status",
+    "coordinatorLabel": "Coordinator",
+    "backButtonText": "Back to Programs",
+    "objectivesHeading": "Program Objectives",
+    "relatedLabel": "More Programs",
+    "allProgramsButtonText": "All Programs",
+    "impactHeadingCompleted": "Program Impact",
+    "beneficiariesLabel": "Beneficiaries",
+    "partnersHeading": "Our Partners",
+    "relatedHeading": "Related Programs",
+    "donateToProgramButtonText": "Donate to This Program",
+    "overviewLabel": "Overview",
+    "locationLabel": "Location",
+    "impactHeadingOngoing": "Impact So Far"
+  },
+  "statusLabels": {
+    "ongoing": "Ongoing",
+    "upcoming": "Upcoming",
+    "completed": "Completed"
+  },
+  "spotlight": {
+    "sectionLabel": "Featured Program",
+    "headingPrefix": "Currently In The",
+    "headingItalic": "Spotlight",
+    "donateButtonText": "Donate Now",
+    "learnMoreButtonText": "Learn More"
+  },
   "hero": {
     "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=700&fit=crop&auto=format",
     "title": "Our Programs",
@@ -11,131 +145,5 @@
     "upcomingLabel": "Upcoming Programs",
     "beneficiariesLabel": "Beneficiaries Reached",
     "beneficiariesValue": "Add Total Beneficiaries"
-  },
-  "spotlight": {
-    "sectionLabel": "Featured Program",
-    "headingPrefix": "Currently In The",
-    "headingItalic": "Spotlight",
-    "donateButtonText": "Donate Now",
-    "learnMoreButtonText": "Learn More"
-  },
-  "grid": {
-    "sectionLabel": "What We Do",
-    "headingPrefix": "All",
-    "headingItalic": "Programs",
-    "allTabLabel": "All Programs",
-    "programsCountSuffix": "programs"
-  },
-  "statusLabels": {
-    "ongoing": "Ongoing",
-    "upcoming": "Upcoming",
-    "completed": "Completed"
-  },
-  "card": {
-    "donateButtonText": "Donate",
-    "detailsButtonText": "Details",
-    "viewImpactButtonText": "View Impact"
-  },
-  "detail": {
-    "backButtonText": "Back to Programs",
-    "overviewLabel": "Overview",
-    "objectivesHeading": "Program Objectives",
-    "impactHeadingOngoing": "Impact So Far",
-    "impactHeadingCompleted": "Program Impact",
-    "photosHeading": "Program Photos",
-    "partnersHeading": "Our Partners",
-    "detailsHeading": "Program Details",
-    "locationLabel": "Location",
-    "durationLabel": "Duration",
-    "beneficiariesLabel": "Beneficiaries",
-    "statusLabel": "Status",
-    "coordinatorLabel": "Coordinator",
-    "donateToProgramButtonText": "Donate to This Program",
-    "allProgramsButtonText": "All Programs",
-    "relatedLabel": "More Programs",
-    "relatedHeading": "Related Programs"
-  },
-  "cta": {
-    "backgroundImage": "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=1600&h=600&fit=crop&auto=format",
-    "sectionLabel": "Get Involved",
-    "headingPrefix": "Want To Support Our",
-    "headingItalic": "Programs?",
-    "paragraph": "Every contribution \u2014 whether time, skills, or funds \u2014 directly fuels these programs and transforms lives across Nigeria and beyond.",
-    "donateButtonText": "Donate Now",
-    "volunteerButtonText": "Become a Volunteer"
-  },
-  "programs": [
-    {
-      "title": "Sample Ongoing Program \u2014 Replace Me",
-      "category": "Add Category",
-      "status": "ongoing",
-      "location": "Add Location",
-      "date": "Add Date Range",
-      "beneficiaries": "0",
-      "raised": 0,
-      "goal": 1000000,
-      "description": "Replace this with a real description of an ongoing program \u2014 what it does and who it helps.",
-      "objectives": [
-        "Add a program objective",
-        "Add another program objective"
-      ],
-      "impact": "Add the real impact this program has had so far.",
-      "coordinator": "Add Coordinator Name",
-      "partners": [
-        "Add Partner Organisation"
-      ],
-      "img": "https://placehold.co/700x480?text=Add+Photo",
-      "images": [
-        "https://placehold.co/800x500?text=Add+Photo"
-      ]
-    },
-    {
-      "title": "Sample Upcoming Program \u2014 Replace Me",
-      "category": "Add Category",
-      "status": "upcoming",
-      "location": "Add Location",
-      "date": "Add Date Range",
-      "beneficiaries": "0 Target",
-      "raised": 0,
-      "goal": 1000000,
-      "description": "Replace this with a real description of a program you're planning to launch soon.",
-      "objectives": [
-        "Add a program objective",
-        "Add another program objective"
-      ],
-      "impact": "Add current planning/fundraising progress for this upcoming program.",
-      "coordinator": "Add Coordinator Name",
-      "partners": [
-        "Add Partner Organisation"
-      ],
-      "img": "https://placehold.co/700x480?text=Add+Photo",
-      "images": [
-        "https://placehold.co/800x500?text=Add+Photo"
-      ]
-    },
-    {
-      "title": "Sample Completed Program \u2014 Replace Me",
-      "category": "Add Category",
-      "status": "completed",
-      "location": "Add Location",
-      "date": "Add Date Range",
-      "beneficiaries": "0",
-      "raised": 500000,
-      "goal": 500000,
-      "description": "Replace this with a real description of a program you've already completed.",
-      "objectives": [
-        "Add a program objective",
-        "Add another program objective"
-      ],
-      "impact": "Add the final, real results and impact of this completed program.",
-      "coordinator": "Add Coordinator Name",
-      "partners": [
-        "Add Partner Organisation"
-      ],
-      "img": "https://placehold.co/700x480?text=Add+Photo",
-      "images": [
-        "https://placehold.co/800x500?text=Add+Photo"
-      ]
-    }
-  ]
+  }
 }
