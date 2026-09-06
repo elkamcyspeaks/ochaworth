@@ -22,19 +22,19 @@
       "category": "Education",
       "date": "Jan 15, 2026",
       "title": "The Real Measure Of Your Wealth Is How Much You'd Be Worth If You Lost All Your Money",
-      "img": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&h=400&fit=crop&auto=format"
+      "img": "/images/uploads/500018f1-6f50-40f9-ad5a-9e75b5cf0201.jpg"
     },
     {
       "category": "Health",
       "date": "Feb 02, 2026",
       "title": "Thousands Of Candles Can Be Lit From A Single Candle And Life Will Never Become Shorter",
-      "img": "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=600&h=400&fit=crop&auto=format"
+      "img": "/images/uploads/img_1356.jpg"
     },
     {
       "category": "Community",
       "date": "Mar 10, 2026",
       "title": "No Act Of Kindness No Matter How Small Is Ever Wasted In Our World",
-      "img": "https://images.unsplash.com/flagged/photo-1555251255-e9a095d6eb9d?w=600&h=400&fit=crop&auto=format"
+      "img": "/images/uploads/img_1367.jpg"
     }
   ],
   "blogSection": {
@@ -231,13 +231,13 @@
   ],
   "eventsPanel": {
     "registerButtonText": "Register",
-    "date": "April 25, 2026",
+    "date": "Oct 1, 2026",
     "sectionLabel": "Upcoming Events",
-    "desc": "Join us for an evening of inspiration, music, and impact. All proceeds go directly to our field programs.",
+    "desc": "This October, we’re dedicating the entire month to raising awareness about breast cancer. We invite you to join and support us as we educate, inspire, and encourage early detection. Together, we can spread hope, save lives, and make a meaningful difference.",
     "headingItalic": "Upcoming Events",
-    "title": "Next Fundraiser Gala",
+    "title": "Breast Cancer Awareness",
     "viewAllButtonText": "View All Events",
-    "image": "https://images.unsplash.com/photo-1710093072228-8c3129f27357?w=700&h=600&fit=crop&auto=format",
+    "image": "/images/uploads/830ce53f-d40e-4c7b-af26-f2be09f90fa3.jpg",
     "headingLine1": "Join Our Latest"
   },
   "about": {
@@ -346,24 +346,24 @@
   },
   "events": [
     {
-      "month": "JAN",
-      "day": "18",
-      "title": "Live The Blessings Of Your Day With Celebration",
-      "location": "Dhaka, Bangladesh",
+      "month": "OCT",
+      "day": "1",
+      "title": "Breast Cancer Awareness",
+      "location": "Jos, Plateau State, Nigeria",
       "time": "9:00 AM - 5:00 PM"
     },
     {
-      "month": "FEB",
-      "day": "19",
-      "title": "Join Us For A Day Of Community And Celebration Of Life",
-      "location": "Nairobi, Kenya",
+      "month": "OCT",
+      "day": "1",
+      "title": "Breast Cancer Awareness",
+      "location": "Jos, Plateau State, Nigeria",
       "time": "10:00 AM - 4:00 PM"
     },
     {
-      "month": "MAR",
-      "day": "20",
-      "title": "Participate In Our Innovative Sessions For All Ages",
-      "location": "Karachi, Pakistan",
+      "month": "Oct",
+      "day": "1",
+      "title": "Breast Cancer Awareness",
+      "location": "Jos, Plateau State, Nigeria",
       "time": "8:00 AM - 6:00 PM"
     }
   ],
