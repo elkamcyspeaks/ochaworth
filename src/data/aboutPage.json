@@ -6,7 +6,7 @@
     "breadcrumbCurrent": "About Us"
   },
   "intro": {
-    "sectionLabel": "About Our Charity",
+    "sectionLabel": "About Our Ochaworth",
     "statBadgeValue": "3,800+",
     "statBadgeLabel": "Donations Made",
     "buttonText": "More About Us",
@@ -113,14 +113,6 @@
     "headingSuffix": "Is Saying?"
   },
   "faq": {
-    "sectionLabel": "Frequently Asked Questions",
-    "headingLine1": "Common Questions",
-    "headingLine2Prefix": "About Our",
-    "headingItalic": "Fundraising",
-    "headingLine3": "Campaigning",
-    "imageLabelText": "Get Answers",
-    "imageCaption": "Your questions help us serve communities better",
-    "image": "https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=700&h=600&fit=crop&auto=format",
     "items": [
       {
         "q": "What Motivates You To Donate To Our Charity?",
@@ -138,6 +130,14 @@
         "q": "What Types Of Projects Does Ochaworth Focus On?",
         "a": "Our core programme areas include food distribution, child education, medical support, leadership development, poverty reduction, and emergency relief. Every project is designed with community input to ensure it addresses real, local needs."
       }
-    ]
+    ],
+    "imageLabelText": "Get Answers",
+    "imageCaption": "Your questions help us serve communities better",
+    "headingLine2Prefix": "About Our",
+    "sectionLabel": "Frequently Asked Questions",
+    "headingItalic": "Fundraising",
+    "image": "https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=700&h=600&fit=crop&auto=format",
+    "headingLine1": "Common Questions",
+    "headingLine3": "Campaigning"
   }
 }
