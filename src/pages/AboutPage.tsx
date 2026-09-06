@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import site from "@/data/site.json";
 import aboutPageData from "@/data/aboutPage.json";
 import {
-  ChevronRight, ChevronDown, ArrowRight, PlayIcon, StarIcon, QuoteIcon, XIcon,
+  ChevronRight, ChevronDown, ArrowRight, PlayIcon, StarIcon, QuoteIcon,
   TargetIcon, EyeIcon, ShieldIcon, CheckCircle,
   FacebookIcon, TwitterIcon, InstagramIcon, YoutubeIcon,
   Icon, SectionLabel, YellowBtn, Newsletter, PageHero,
@@ -179,7 +179,6 @@ function MissionVisionValues() {
 }
 
 function TouchingLives() {
-  const [playing, setPlaying] = useState(false);
   const tl = site.touchingLives;
   const extra = aboutPageData.touchingLives;
   const hasVideo = Boolean(extra.videoUrl);
@@ -220,30 +219,18 @@ function TouchingLives() {
             </button>
           </div>
 
-          {/* Right — image with play button; becomes an embedded YouTube video once clicked (if a video link has been added) */}
+          {/* Right — a real, playable embedded video (if one has been added); otherwise a plain photo */}
           <div className="relative rounded-3xl overflow-hidden h-80 lg:h-96 group bg-black">
-            {playing && hasVideo ? (
-              <>
-                <iframe
-                  src={`${extra.videoUrl}${extra.videoUrl.includes("?") ? "&" : "?"}autoplay=1`}
-                  title="Ochaworth story video"
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-                <button
-                  onClick={() => setPlaying(false)}
-                  aria-label="Close video"
-                  className="absolute top-3 right-3 w-9 h-9 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center text-white z-10 transition-colors"
-                >
-                  <XIcon className="w-4 h-4"/>
-                </button>
-              </>
+            {hasVideo ? (
+              <iframe
+                src={extra.videoUrl}
+                title="Ochaworth story video"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             ) : (
-              <div
-                className={`absolute inset-0 ${hasVideo ? "cursor-pointer" : ""}`}
-                onClick={() => hasVideo && setPlaying(true)}
-              >
+              <div className="absolute inset-0">
                 <img
                   src={tl.bgImage}
                   alt="Our work in the field"
