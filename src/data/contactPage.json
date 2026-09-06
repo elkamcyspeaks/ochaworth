@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&h=700&fit=crop&auto=format",
+    "title": "Contact Us",
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Contact Us"
+  },
+  "section": {
+    "heading": "Contact Information",
+    "paragraph": "Thank you for your interest in Ochaworth. We are excited to hear from you and discuss how we can make a difference together — temporary shelter, education, and community care.",
+    "infoCards": {
+      "callUs": {
+        "title": "Call Us",
+        "sub": "Any time for contact us"
+      },
+      "location": {
+        "title": "Our Location",
+        "sub": "Visit us today!"
+      },
+      "email": {
+        "title": "Official Email",
+        "sub": "Email us for any queries"
+      },
+      "haveQuestions": {
+        "title": "Have Questions?",
+        "sub": "Discover more by visiting us",
+        "value": "Joining Our Community"
+      }
+    },
+    "formHeading": "Get In Touch",
+    "namePlaceholder": "Enter Your Name",
+    "emailPlaceholder": "Email Address",
+    "phonePlaceholder": "Phone Number",
+    "subjectDefaultOption": "Select subjects",
+    "subjects": ["General Inquiry", "Donation Support", "Volunteer Programme", "Partnership", "Media & Press", "Other"],
+    "messagePlaceholder": "Write Message...",
+    "agreementText": "I agree with the privacy policy",
+    "sendButtonText": "Send Message",
+    "sentButtonText": "Message Sent!"
+  },
+  "map": {
+    "embedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=8.8321%2C9.8785%2C8.9521%2C9.9785&layer=mapnik&marker=9.9285%2C8.8921"
+  }
+}

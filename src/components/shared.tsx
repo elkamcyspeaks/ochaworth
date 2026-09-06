@@ -150,6 +150,21 @@ export const DonationIcon = ({ className = "w-6 h-6" }: { className?: string }) 
     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
   </svg>
 );
+export const QuestionIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+    <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+  </svg>
+);
+export const SendIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/>
+  </svg>
+);
+export const ClipboardIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+    <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/>
+  </svg>
+);
 
 // ── Icon lookup (used by CMS-editable "icon" keys) ──────────────────────────
 
@@ -163,6 +178,10 @@ export const ICONS: Record<string, (props: { className?: string }) => ReactNode>
   hand: HandIcon,
   fundraising: FundraisingIcon,
   donation: DonationIcon,
+  phone: PhoneIcon,
+  location: MapPinIcon,
+  mail: MailIcon,
+  question: QuestionIcon,
 };
 export function Icon({ name, className }: { name: string; className?: string }) {
   const Cmp = ICONS[name] ?? HeartIcon;

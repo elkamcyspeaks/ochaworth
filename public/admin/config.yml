@@ -565,3 +565,74 @@ collections:
                 fields:
                   - { label: "Question", name: "q", widget: "string" }
                   - { label: "Answer", name: "a", widget: "text" }
+
+      - file: "src/data/contactPage.json"
+        label: "Contact Us Page"
+        name: "contactPage"
+        hint: "Content shown only on the /contact page."
+        fields:
+          - label: "Page Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Banner Background Photo", name: "image", widget: "image" }
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: 'Breadcrumb — "Home" Link Text', name: "breadcrumbHome", widget: "string" }
+              - { label: "Breadcrumb — Current Page Text", name: "breadcrumbCurrent", widget: "string" }
+
+          - label: "Contact Section"
+            name: "section"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Info Cards"
+                name: "infoCards"
+                widget: "object"
+                hint: "The phone number, address, and email shown here come from 'Contact Info' in Homepage Content — only the small titles/captions below are editable here."
+                fields:
+                  - label: '"Call Us" Card'
+                    name: "callUs"
+                    widget: "object"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Caption", name: "sub", widget: "string" }
+                  - label: '"Our Location" Card'
+                    name: "location"
+                    widget: "object"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Caption", name: "sub", widget: "string" }
+                  - label: '"Official Email" Card'
+                    name: "email"
+                    widget: "object"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Caption", name: "sub", widget: "string" }
+                  - label: '"Have Questions?" Card'
+                    name: "haveQuestions"
+                    widget: "object"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Caption", name: "sub", widget: "string" }
+                      - { label: "Value Text", name: "value", widget: "string" }
+              - { label: "Form Heading", name: "formHeading", widget: "string" }
+              - { label: "Name Field Placeholder", name: "namePlaceholder", widget: "string" }
+              - { label: "Email Field Placeholder", name: "emailPlaceholder", widget: "string" }
+              - { label: "Phone Field Placeholder", name: "phonePlaceholder", widget: "string" }
+              - { label: "Subject Dropdown Default Text", name: "subjectDefaultOption", widget: "string" }
+              - label: "Subject Dropdown Options"
+                name: "subjects"
+                widget: "list"
+                field: { label: "Subject", name: "subject", widget: "string" }
+              - { label: "Message Field Placeholder", name: "messagePlaceholder", widget: "string" }
+              - { label: "Privacy Agreement Checkbox Text", name: "agreementText", widget: "string" }
+              - { label: "Send Button Text", name: "sendButtonText", widget: "string" }
+              - { label: '"Sent" Confirmation Button Text', name: "sentButtonText", widget: "string" }
+
+          - label: "Map Section"
+            name: "map"
+            widget: "object"
+            hint: 'Advanced: paste a new "embed" link from openstreetmap.org (Share → Embed) to move the pin. Leave as-is if unsure.'
+            fields:
+              - { label: "Map Embed URL", name: "embedUrl", widget: "string" }

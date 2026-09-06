@@ -68,7 +68,7 @@ function Navbar() {
         <div className="hidden lg:flex items-center gap-8 text-sm text-white font-medium">
           {NAV_LINKS.map(n => <NavItem key={n.label} {...n}/>)}
           <a href="#" className="flex items-center gap-1 hover:text-[var(--yellow)]">{site.nav.pagesDropdownLabel} <ChevronRight className="w-3 h-3 rotate-90"/></a>
-          <a href="#" className="hover:text-[var(--yellow)]">{site.nav.contactLabel}</a>
+          <NavLink to="/contact" className={({ isActive }) => "transition-colors " + (isActive ? "text-[var(--yellow)]" : "hover:text-[var(--yellow)]")}>{site.nav.contactLabel}</NavLink>
         </div>
         <div className="hidden lg:flex"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></div>
         <button className="lg:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
@@ -80,7 +80,7 @@ function Navbar() {
       {menuOpen && (
         <div className="lg:hidden bg-[var(--green-dark)] px-4 pb-4 flex flex-col gap-3 text-white text-sm">
           {NAV_LINKS.map(n => <NavItem key={n.label} {...n} onClick={() => setMenuOpen(false)}/>)}
-          <a href="#" className="py-1 hover:text-[var(--yellow)]">{site.nav.contactLabel}</a>
+          <NavLink to="/contact" onClick={() => setMenuOpen(false)} className="py-1 hover:text-[var(--yellow)]">{site.nav.contactLabel}</NavLink>
           <YellowBtn className="mt-2 self-start text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn>
         </div>
       )}
