@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import site from "@/data/site.json";
 import aboutPageData from "@/data/aboutPage.json";
 import {
-  ChevronRight, ChevronDown, ArrowRight, PlayIcon, StarIcon, QuoteIcon,
+  ChevronRight, ChevronDown, ArrowRight, PlayIcon, StarIcon, QuoteIcon, XIcon,
   TargetIcon, EyeIcon, ShieldIcon, CheckCircle,
   FacebookIcon, TwitterIcon, InstagramIcon, YoutubeIcon,
   Icon, SectionLabel, YellowBtn, Newsletter, PageHero,
@@ -182,6 +182,7 @@ function TouchingLives() {
   const [playing, setPlaying] = useState(false);
   const tl = site.touchingLives;
   const extra = aboutPageData.touchingLives;
+  const hasVideo = Boolean(extra.videoUrl);
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -219,24 +220,48 @@ function TouchingLives() {
             </button>
           </div>
 
-          {/* Right — image with play button */}
-          <div className="relative rounded-3xl overflow-hidden h-80 lg:h-96 group cursor-pointer" onClick={() => setPlaying(true)}>
-            <img
-              src={tl.bgImage}
-              alt="Our work in the field"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-[var(--green-dark)]/50"/>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className={`w-16 h-16 rounded-full bg-[var(--yellow)] flex items-center justify-center shadow-2xl transition-transform ${playing ? "scale-90" : "group-hover:scale-110"}`}>
-                <PlayIcon className="w-7 h-7 text-[var(--green-dark)] ml-1"/>
+          {/* Right — image with play button; becomes an embedded YouTube video once clicked (if a video link has been added) */}
+          <div className="relative rounded-3xl overflow-hidden h-80 lg:h-96 group bg-black">
+            {playing && hasVideo ? (
+              <>
+                <iframe
+                  src={`${extra.videoUrl}${extra.videoUrl.includes("?") ? "&" : "?"}autoplay=1`}
+                  title="Ochaworth story video"
+                  className="absolute inset-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+                <button
+                  onClick={() => setPlaying(false)}
+                  aria-label="Close video"
+                  className="absolute top-3 right-3 w-9 h-9 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center text-white z-10 transition-colors"
+                >
+                  <XIcon className="w-4 h-4"/>
+                </button>
+              </>
+            ) : (
+              <div
+                className={`absolute inset-0 ${hasVideo ? "cursor-pointer" : ""}`}
+                onClick={() => hasVideo && setPlaying(true)}
+              >
+                <img
+                  src={tl.bgImage}
+                  alt="Our work in the field"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-[var(--green-dark)]/50"/>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-[var(--yellow)] flex items-center justify-center shadow-2xl transition-transform group-hover:scale-110">
+                    <PlayIcon className="w-7 h-7 text-[var(--green-dark)] ml-1"/>
+                  </div>
+                </div>
+                {/* Circular badge */}
+                <div className="absolute bottom-5 left-5 bg-[var(--green-mid)] border-2 border-[var(--yellow)] rounded-full w-20 h-20 flex flex-col items-center justify-center">
+                  <div className="text-[var(--yellow)] font-black text-lg leading-none">{extra.yearsBadgeNumber}</div>
+                  <div className="text-white text-[9px] font-semibold text-center leading-tight">{extra.yearsBadgeLabelLine1}<br/>{extra.yearsBadgeLabelLine2}</div>
+                </div>
               </div>
-            </div>
-            {/* Circular badge */}
-            <div className="absolute bottom-5 left-5 bg-[var(--green-mid)] border-2 border-[var(--yellow)] rounded-full w-20 h-20 flex flex-col items-center justify-center">
-              <div className="text-[var(--yellow)] font-black text-lg leading-none">{extra.yearsBadgeNumber}</div>
-              <div className="text-white text-[9px] font-semibold text-center leading-tight">{extra.yearsBadgeLabelLine1}<br/>{extra.yearsBadgeLabelLine2}</div>
-            </div>
+            )}
           </div>
         </div>
 

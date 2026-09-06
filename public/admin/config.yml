@@ -516,6 +516,11 @@ collections:
             fields:
               - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
               - { label: '"Our Success Story" Button Text', name: "successStoryButtonText", widget: "string" }
+              - label: "YouTube Video (plays when the photo's play button is clicked)"
+                name: "videoUrl"
+                widget: "string"
+                required: false
+                hint: "Paste a YouTube EMBED link, not the regular watch link. On YouTube: Share → Embed, then copy just the link inside the box that starts with https://www.youtube.com/embed/ — do not paste the whole <iframe> code, just that link. Leave this blank to keep the photo as a plain, non-clickable image."
               - label: "Progress Bars"
                 name: "progressBars"
                 widget: "list"
