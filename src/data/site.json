@@ -32,7 +32,7 @@
     }
   ],
   "touchingLives": {
-    "bgImage": "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=1600&h=700&fit=crop&auto=format",
+    "bgImage": "/images/uploads/830ce53f-d40e-4c7b-af26-f2be09f90fa3.jpg",
     "headingLine1": "Touching Lives,",
     "headingLine2Prefix": "Building A",
     "headingHighlight": "Better",
@@ -122,11 +122,11 @@
   },
   "ticker": [
     "Education",
-    "Health",
+    "Breast Cancer",
     "Donation",
     "Volunteer",
     "Community",
-    "Medical Aid",
+    "Pad A Girl",
     "Child Care",
     "Food Relief"
   ],
@@ -138,16 +138,16 @@
   },
   "about": {
     "images": {
-      "main": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=500&h=600&fit=crop&auto=format",
-      "top": "https://images.unsplash.com/photo-1521493959102-bdd6677fdd81?w=400&h=280&fit=crop&auto=format",
-      "bottom": "https://images.unsplash.com/flagged/photo-1555251255-e9a095d6eb9d?w=400&h=280&fit=crop&auto=format"
+      "main": "/images/uploads/whatsapp-image-2026-05-04-at-13.50.22.jpeg",
+      "top": "/images/uploads/830ce53f-d40e-4c7b-af26-f2be09f90fa3.jpg",
+      "bottom": "/images/uploads/73253843-9ecd-4b69-b886-41a01c06703c.jpg"
     },
-    "badgeNumber": "10+",
+    "badgeNumber": "5+",
     "badgeLabel": "Years Of Impact",
     "headingPrefix": "A Trusted Non-Profit",
     "headingHighlight": "Charity",
     "headingSuffix": "Organization",
-    "paragraph": "For over a decade, Ochaworth has been at the forefront of humanitarian work, building bridges between generous donors and communities in need.",
+    "paragraph": "Ochaworth Leadership and Community Development Initiative (CAC/RN: 7290687) is a registered non-governmental organization and network of impactful, youth-led, women’s rights advocates. We are committed to promoting equality and social justice by equipping women and girls to recognize their worth, live it boldly, and birth the “more” within them.",
     "features": [
       {
         "icon": "heart",
@@ -167,7 +167,7 @@
     ]
   },
   "donation": {
-    "bgImage": "https://images.unsplash.com/photo-1593113630400-ea4288922497?w=700&h=800&fit=crop&auto=format",
+    "bgImage": "/images/uploads/73253843-9ecd-4b69-b886-41a01c06703c.jpg",
     "totalRaised": "₦2B+",
     "donationsCount": "3.8k+",
     "paragraph": "Your generosity directly funds education, healthcare, and food relief for families in need.",
@@ -240,7 +240,7 @@
         "label": "Donations Made"
       },
       {
-        "value": "120+",
+        "value": "50+",
         "label": "Active Volunteers"
       },
       {
@@ -248,7 +248,7 @@
         "label": "Countries Reached"
       },
       {
-        "value": "₦2B+",
+        "value": "₦500,000+",
         "label": "Funds Raised"
       }
     ]
@@ -256,21 +256,21 @@
   "projects": [
     {
       "title": "Youth & Medical Support",
-      "location": "Kenya, Africa",
+      "location": "Plateau, Nigeria",
       "raised": 12500,
       "goal": 20000,
       "img": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&h=400&fit=crop&auto=format"
     },
     {
       "title": "Volunteer Summits",
-      "location": "Ethiopia",
+      "location": "Plateau, Nigeria",
       "raised": 8200,
       "goal": 15000,
       "img": "https://images.unsplash.com/photo-1593113616828-6f22bca04804?w=600&h=400&fit=crop&auto=format"
     },
     {
       "title": "Eco-Friendly Initiatives",
-      "location": "Bangladesh",
+      "location": "Plateau, Nigeria",
       "raised": 5100,
       "goal": 10000,
       "img": "https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?w=600&h=400&fit=crop&auto=format"
