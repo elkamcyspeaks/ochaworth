@@ -176,6 +176,17 @@ export const ArrowUpRight = ({ className = "w-6 h-6" }: { className?: string }) 
     <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
   </svg>
 );
+export const UsersIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+    <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+  </svg>
+);
+export const ClockIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+  </svg>
+);
 
 // ── Icon lookup (used by CMS-editable "icon" keys) ──────────────────────────
 
@@ -257,14 +268,14 @@ export function SectionLabel({ text, light = false }: { text: string; light?: bo
     </div>
   );
 }
-export function YellowBtn({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <button className={"bg-[var(--yellow)] text-[var(--green-dark)] font-bold px-6 py-3 rounded-full hover:bg-[var(--yellow-dark)] transition-colors " + className}>{children}</button>;
+export function YellowBtn({ children, className = "", onClick }: { children: ReactNode; className?: string; onClick?: () => void }) {
+  return <button onClick={onClick} className={"bg-[var(--yellow)] text-[var(--green-dark)] font-bold px-6 py-3 rounded-full hover:bg-[var(--yellow-dark)] transition-colors " + className}>{children}</button>;
 }
-export function GreenBtn({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <button className={"bg-[var(--green-mid)] text-white font-semibold px-6 py-3 rounded-full hover:bg-[var(--green-dark)] transition-colors " + className}>{children}</button>;
+export function GreenBtn({ children, className = "", onClick }: { children: ReactNode; className?: string; onClick?: () => void }) {
+  return <button onClick={onClick} className={"bg-[var(--green-mid)] text-white font-semibold px-6 py-3 rounded-full hover:bg-[var(--green-dark)] transition-colors " + className}>{children}</button>;
 }
-export function OutlineBtn({ children, className = "", light = false }: { children: ReactNode; className?: string; light?: boolean }) {
-  return <button className={"border-2 font-semibold px-6 py-3 rounded-full transition-colors " + (light ? "border-white text-white hover:bg-white hover:text-[var(--green-mid)]" : "border-[var(--green-mid)] text-[var(--green-mid)] hover:bg-[var(--green-mid)] hover:text-white") + " " + className}>{children}</button>;
+export function OutlineBtn({ children, className = "", light = false, onClick }: { children: ReactNode; className?: string; light?: boolean; onClick?: () => void }) {
+  return <button onClick={onClick} className={"border-2 font-semibold px-6 py-3 rounded-full transition-colors " + (light ? "border-white text-white hover:bg-white hover:text-[var(--green-mid)]" : "border-[var(--green-mid)] text-[var(--green-mid)] hover:bg-[var(--green-mid)] hover:text-white") + " " + className}>{children}</button>;
 }
 export function Newsletter() {
   const n = site.newsletter;

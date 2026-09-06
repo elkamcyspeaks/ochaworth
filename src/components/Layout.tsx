@@ -85,7 +85,7 @@ function Navbar() {
         <div className="hidden lg:flex items-center gap-8 text-sm text-white font-medium">
           <NavItem label={site.nav.homeLabel} to="/"/>
           <AboutNavItem/>
-          <NavItem label={site.nav.servicesLabel}/>
+          <NavItem label={site.nav.servicesLabel} to="/programs"/>
           <NavItem label={site.nav.galleryLabel} to="/gallery"/>
           <NavLink to="/contact" className={({ isActive }) => "transition-colors " + (isActive ? "text-[var(--yellow)]" : "hover:text-[var(--yellow)]")}>{site.nav.contactLabel}</NavLink>
         </div>
@@ -101,7 +101,7 @@ function Navbar() {
           <NavItem label={site.nav.homeLabel} to="/" onClick={() => setMenuOpen(false)}/>
           <NavItem label={site.nav.aboutLabel} to="/about" onClick={() => setMenuOpen(false)}/>
           <NavLink to="/volunteer" onClick={() => setMenuOpen(false)} className="pl-4 -mt-2 text-white/60 hover:text-[var(--yellow)] text-xs">↳ {site.nav.volunteerLabel}</NavLink>
-          <NavItem label={site.nav.servicesLabel} onClick={() => setMenuOpen(false)}/>
+          <NavItem label={site.nav.servicesLabel} to="/programs" onClick={() => setMenuOpen(false)}/>
           <NavItem label={site.nav.galleryLabel} to="/gallery" onClick={() => setMenuOpen(false)}/>
           <NavLink to="/contact" onClick={() => setMenuOpen(false)} className="py-1 hover:text-[var(--yellow)]">{site.nav.contactLabel}</NavLink>
           <YellowBtn className="mt-2 self-start text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn>

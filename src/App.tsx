@@ -7,6 +7,7 @@ import GalleryPage from "@/pages/GalleryPage";
 import VolunteerPage from "@/pages/VolunteerPage";
 import BecomeVolunteerPage from "@/pages/BecomeVolunteerPage";
 import BecomeMemberPage from "@/pages/BecomeMemberPage";
+import ProgramsPage from "@/pages/ProgramsPage";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="volunteer" element={<VolunteerPage/>}/>
         <Route path="become-a-volunteer" element={<BecomeVolunteerPage/>}/>
         <Route path="become-a-member" element={<BecomeMemberPage/>}/>
+        <Route path="programs" element={<ProgramsPage/>}/>
       </Route>
     </Routes>
   );

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import site from "@/data/site.json";
 import {
   LeafIcon, HeartIcon, HandIcon, StarIcon, ChevronRight, ChevronLeft, GlobeIcon,
@@ -191,7 +192,7 @@ function FeaturedProjects() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-wrap justify-between items-end mb-12 gap-4">
           <div><SectionLabel text={fp.sectionLabel}/><h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>{fp.headingPrefix} <span className="italic">{fp.headingItalic}</span></h2></div>
-          <OutlineBtn>{fp.viewAllButtonText}</OutlineBtn>
+          <Link to="/programs"><OutlineBtn>{fp.viewAllButtonText}</OutlineBtn></Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {site.projects.map(p => (

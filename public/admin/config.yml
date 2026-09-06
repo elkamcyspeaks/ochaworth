@@ -34,7 +34,7 @@ collections:
           - label: "Navigation Menu"
             name: "nav"
             widget: "object"
-            hint: "Text shown in the top navigation bar on every page. 'Volunteer' appears as a drop-down option under 'About' (hover or tap 'About' to reveal it). 'Programs' is a placeholder until that page is built, so its label can be edited but it won't be clickable yet."
+            hint: "Text shown in the top navigation bar on every page. 'Volunteer' appears as a drop-down option under 'About' (hover or tap 'About' to reveal it)."
             fields:
               - { label: '"Home" Link Text', name: "homeLabel", widget: "string" }
               - { label: '"About" Link Text', name: "aboutLabel", widget: "string" }
@@ -738,6 +738,141 @@ collections:
               - { label: "Message Field Placeholder", name: "messagePlaceholder", widget: "string" }
               - { label: "Submit Button Text", name: "submitButtonText", widget: "string" }
               - { label: '"Sent" Confirmation Button Text', name: "submittedButtonText", widget: "string" }
+
+      - file: "src/data/programsPage.json"
+        label: "Programs Page"
+        name: "programsPage"
+        hint: "Content shown on the /programs page, reached from 'Programs' in the top nav. Add, edit, remove, or reorder programs below — the counts, filters, and grouping all update automatically."
+        fields:
+          - label: "Page Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Banner Background Photo", name: "image", widget: "image" }
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: 'Breadcrumb — "Home" Link Text', name: "breadcrumbHome", widget: "string" }
+              - { label: "Breadcrumb — Current Page Text", name: "breadcrumbCurrent", widget: "string" }
+
+          - label: "Stats Bar"
+            name: "stats"
+            widget: "object"
+            hint: "The Total/Currently Running/Upcoming counts are calculated automatically from the programs list below, so only the labels are editable here. \"Beneficiaries Reached\" is entered manually since it adds up figures written in different formats (e.g. \"4,200+\", \"12,400\") that can't be totalled automatically."
+            fields:
+              - { label: '"Total Programs" Label', name: "totalLabel", widget: "string" }
+              - { label: '"Currently Running" Label', name: "ongoingLabel", widget: "string" }
+              - { label: '"Upcoming Programs" Label', name: "upcomingLabel", widget: "string" }
+              - { label: '"Beneficiaries Reached" Label', name: "beneficiariesLabel", widget: "string" }
+              - { label: 'Total Beneficiaries (e.g. "46K+")', name: "beneficiariesValue", widget: "string" }
+
+          - label: "Featured Program Section"
+            name: "spotlight"
+            widget: "object"
+            hint: "The program shown here is picked automatically — the first program below marked \"Ongoing\", or the first program overall if none are marked ongoing."
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: "Donate Button Text", name: "donateButtonText", widget: "string" }
+              - { label: '"Learn More" Button Text', name: "learnMoreButtonText", widget: "string" }
+
+          - label: "All Programs Grid — Section Text"
+            name: "grid"
+            widget: "object"
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: '"All Programs" Filter Tab Text', name: "allTabLabel", widget: "string" }
+              - { label: '"X programs" Count Suffix (shown after the count in each status group)', name: "programsCountSuffix", widget: "string" }
+
+          - label: "Status Labels"
+            name: "statusLabels"
+            widget: "object"
+            hint: "These words appear as filter tabs and as the badge on every program card/detail page, so they only need editing in one place."
+            fields:
+              - { label: '"Ongoing" Label', name: "ongoing", widget: "string" }
+              - { label: '"Upcoming" Label', name: "upcoming", widget: "string" }
+              - { label: '"Completed" Label', name: "completed", widget: "string" }
+
+          - label: "Program Card Buttons"
+            name: "card"
+            widget: "object"
+            fields:
+              - { label: "Donate Button Text", name: "donateButtonText", widget: "string" }
+              - { label: "Details Button Text", name: "detailsButtonText", widget: "string" }
+              - { label: '"View Impact" Button Text (shown instead of Details on completed programs)', name: "viewImpactButtonText", widget: "string" }
+
+          - label: "Program Detail Page — Labels"
+            name: "detail"
+            widget: "object"
+            hint: "Small headings and labels shown when a visitor clicks into one program's full details."
+            fields:
+              - { label: '"Back to Programs" Button Text', name: "backButtonText", widget: "string" }
+              - { label: '"Overview" Label', name: "overviewLabel", widget: "string" }
+              - { label: '"Program Objectives" Heading', name: "objectivesHeading", widget: "string" }
+              - { label: '"Impact So Far" Heading (ongoing/upcoming programs)', name: "impactHeadingOngoing", widget: "string" }
+              - { label: '"Program Impact" Heading (completed programs)', name: "impactHeadingCompleted", widget: "string" }
+              - { label: '"Program Photos" Heading', name: "photosHeading", widget: "string" }
+              - { label: '"Our Partners" Heading', name: "partnersHeading", widget: "string" }
+              - { label: '"Program Details" Sidebar Heading', name: "detailsHeading", widget: "string" }
+              - { label: '"Location" Label', name: "locationLabel", widget: "string" }
+              - { label: '"Duration" Label', name: "durationLabel", widget: "string" }
+              - { label: '"Beneficiaries" Label', name: "beneficiariesLabel", widget: "string" }
+              - { label: '"Status" Label', name: "statusLabel", widget: "string" }
+              - { label: '"Coordinator" Label', name: "coordinatorLabel", widget: "string" }
+              - { label: '"% funded" Suffix', name: "fundedSuffix", widget: "string" }
+              - { label: '"Donate to This Program" Button Text', name: "donateToProgramButtonText", widget: "string" }
+              - { label: '"All Programs" Back Button Text (bottom of sidebar)', name: "allProgramsButtonText", widget: "string" }
+              - { label: '"More Programs" Small Label', name: "relatedLabel", widget: "string" }
+              - { label: '"Related Programs" Heading', name: "relatedHeading", widget: "string" }
+
+          - label: "Bottom CTA Band"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Donate Button Text", name: "donateButtonText", widget: "string" }
+              - { label: '"Become a Volunteer" Button Text', name: "volunteerButtonText", widget: "string" }
+
+          - label: "Programs"
+            name: "programs"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.status}}"
+            hint: "Every program shown on this page and pulled into the homepage's featured program automatically. Fill in real details to replace the sample entries."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Category (e.g. Food, Education, Medical, Community)", name: "category", widget: "string" }
+              - label: "Status"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "Ongoing", value: "ongoing" }
+                  - { label: "Upcoming", value: "upcoming" }
+                  - { label: "Completed", value: "completed" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: 'Date Range (e.g. "Jan 2026 – Present")', name: "date", widget: "string" }
+              - { label: 'Beneficiaries (e.g. "4,200+" or "500 Target")', name: "beneficiaries", widget: "string" }
+              - { label: "Amount Raised (₦)", name: "raised", widget: "number", value_type: "int" }
+              - { label: "Funding Goal (₦)", name: "goal", widget: "number", value_type: "int" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Objectives"
+                name: "objectives"
+                widget: "list"
+                field: { label: "Objective", name: "objective", widget: "string" }
+              - { label: "Impact / Progress", name: "impact", widget: "text" }
+              - { label: "Coordinator Name", name: "coordinator", widget: "string" }
+              - label: "Partner Organisations"
+                name: "partners"
+                widget: "list"
+                field: { label: "Partner", name: "partner", widget: "string" }
+              - { label: "Main Photo (shown on the card)", name: "img", widget: "image" }
+              - label: "Photo Gallery (shown on the program's detail page)"
+                name: "images"
+                widget: "list"
+                field: { label: "Photo", name: "image", widget: "image" }
 
       - file: "src/data/becomeMemberPage.json"
         label: "Become A Member Page"
