@@ -4,7 +4,7 @@ import programsPageData from "@/data/programsPage.json";
 import {
   LeafIcon, ChevronRight, ArrowRight, ArrowUpRight,
   MapPinIcon, CalendarIcon, UsersIcon, ClockIcon, CheckCircle,
-  SectionLabel, YellowBtn, OutlineBtn, ProgressBar, Newsletter, PageHero,
+  SectionLabel, YellowBtn, OutlineBtn, Newsletter, PageHero,
 } from "@/components/shared";
 
 // ── Program data ──────────────────────────────────────────────────────────────
@@ -128,22 +128,17 @@ function Spotlight({ onOpen }: { onOpen: (p: Program) => void }) {
               <h3 className="text-2xl font-black text-[var(--green-dark)] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{p.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">{p.description}</p>
 
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-3 gap-4 mb-6">
                 {[
                   { icon: <MapPinIcon className="w-3.5 h-3.5"/>, text: p.location },
                   { icon: <CalendarIcon className="w-3.5 h-3.5"/>, text: p.date },
                   { icon: <UsersIcon className="w-3.5 h-3.5"/>, text: p.beneficiaries },
-                  { icon: <CheckCircle className="w-3.5 h-3.5"/>, text: Math.min(100, Math.round((p.raised / p.goal) * 100)) + dt.fundedSuffix },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-xs text-gray-500">
                     <span className="text-[var(--green-dark)]">{item.icon}</span>
                     {item.text}
                   </div>
                 ))}
-              </div>
-
-              <div className="mb-6">
-                <ProgressBar raised={p.raised} goal={p.goal}/>
               </div>
             </div>
 
@@ -165,7 +160,6 @@ function Spotlight({ onOpen }: { onOpen: (p: Program) => void }) {
 // ── Program Card ──────────────────────────────────────────────────────────────
 
 function ProgramCard({ p, onOpen }: { p: Program; onOpen: () => void }) {
-  const pct = Math.min(100, Math.round((p.raised / p.goal) * 100));
   return (
     <div
       className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group border border-gray-100 flex flex-col cursor-pointer"
@@ -199,13 +193,6 @@ function ProgramCard({ p, onOpen }: { p: Program; onOpen: () => void }) {
           </div>
         </div>
 
-        <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden mb-4">
-          <div
-            className={`h-full rounded-full ${p.status === "completed" ? "bg-gray-300" : "bg-[var(--yellow)]"}`}
-            style={{ width: pct + "%" }}
-          />
-        </div>
-
         <div className="flex gap-2 mt-auto" onClick={e => e.stopPropagation()}>
           {p.status !== "completed" && (
             <button className="flex-1 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold py-2.5 rounded-full hover:bg-[var(--yellow-dark)] transition-colors">
@@ -227,7 +214,6 @@ function ProgramCard({ p, onOpen }: { p: Program; onOpen: () => void }) {
 // ── Program Detail View ───────────────────────────────────────────────────────
 
 function ProgramDetail({ p, onBack }: { p: Program; onBack: () => void }) {
-  const pct = Math.min(100, Math.round((p.raised / p.goal) * 100));
   const related = programs.filter(r => r.title !== p.title && (r.category === p.category || r.status === p.status)).slice(0, 3);
 
   return (
@@ -341,10 +327,6 @@ function ProgramDetail({ p, onBack }: { p: Program; onBack: () => void }) {
                     <div className="text-gray-700 font-semibold">{p.coordinator}</div>
                   </div>
                 </div>
-              </div>
-
-              <div className="border-t border-gray-100 pt-5">
-                <ProgressBar raised={p.raised} goal={p.goal}/>
               </div>
 
               {p.status !== "completed" && (
