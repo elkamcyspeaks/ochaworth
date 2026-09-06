@@ -820,7 +820,6 @@ collections:
               - { label: '"Beneficiaries" Label', name: "beneficiariesLabel", widget: "string" }
               - { label: '"Status" Label', name: "statusLabel", widget: "string" }
               - { label: '"Coordinator" Label', name: "coordinatorLabel", widget: "string" }
-              - { label: '"% funded" Suffix', name: "fundedSuffix", widget: "string" }
               - { label: '"Donate to This Program" Button Text', name: "donateToProgramButtonText", widget: "string" }
               - { label: '"All Programs" Back Button Text (bottom of sidebar)', name: "allProgramsButtonText", widget: "string" }
               - { label: '"More Programs" Small Label', name: "relatedLabel", widget: "string" }
@@ -830,6 +829,7 @@ collections:
             name: "cta"
             widget: "object"
             fields:
+              - { label: "Background Photo", name: "backgroundImage", widget: "image" }
               - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
               - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
               - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
@@ -855,8 +855,8 @@ collections:
               - { label: "Location", name: "location", widget: "string" }
               - { label: 'Date Range (e.g. "Jan 2026 – Present")', name: "date", widget: "string" }
               - { label: 'Beneficiaries (e.g. "4,200+" or "500 Target")', name: "beneficiaries", widget: "string" }
-              - { label: "Amount Raised (₦)", name: "raised", widget: "number", value_type: "int" }
-              - { label: "Funding Goal (₦)", name: "goal", widget: "number", value_type: "int" }
+              - { label: "Amount Raised (₦)", name: "raised", widget: "number", value_type: "int", hint: "Stored for future use — not currently shown anywhere on the live site." }
+              - { label: "Funding Goal (₦)", name: "goal", widget: "number", value_type: "int", hint: "Stored for future use — not currently shown anywhere on the live site." }
               - { label: "Description", name: "description", widget: "text" }
               - label: "Objectives"
                 name: "objectives"

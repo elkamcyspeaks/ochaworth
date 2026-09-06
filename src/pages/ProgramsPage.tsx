@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import programsPageData from "@/data/programsPage.json";
 import {
-  LeafIcon, ChevronRight, ArrowRight, ArrowUpRight,
+  LeafIcon, ArrowRight, ArrowUpRight,
   MapPinIcon, CalendarIcon, UsersIcon, ClockIcon, CheckCircle,
   SectionLabel, YellowBtn, OutlineBtn, Newsletter, PageHero,
 } from "@/components/shared";
@@ -55,10 +55,6 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 function categoryColor(category: string) {
   return CATEGORY_COLORS[category.toLowerCase()] ?? "bg-gray-100 text-gray-600";
-}
-
-function fmt(n: number) {
-  return "₦" + (n >= 1_000_000 ? (n / 1_000_000).toFixed(1) + "M" : (n / 1000).toFixed(0) + "K");
 }
 
 // ── Stats Bar ─────────────────────────────────────────────────────────────────
@@ -458,7 +454,7 @@ function CTABand() {
     <section className="relative py-20 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=1600&h=600&fit=crop&auto=format"
+          src={cta.backgroundImage}
           alt=""
           className="w-full h-full object-cover"
         />

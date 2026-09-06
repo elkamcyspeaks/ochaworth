@@ -50,23 +50,23 @@
     "beneficiariesLabel": "Beneficiaries",
     "statusLabel": "Status",
     "coordinatorLabel": "Coordinator",
-    "fundedSuffix": "% funded",
     "donateToProgramButtonText": "Donate to This Program",
     "allProgramsButtonText": "All Programs",
     "relatedLabel": "More Programs",
     "relatedHeading": "Related Programs"
   },
   "cta": {
+    "backgroundImage": "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=1600&h=600&fit=crop&auto=format",
     "sectionLabel": "Get Involved",
     "headingPrefix": "Want To Support Our",
     "headingItalic": "Programs?",
-    "paragraph": "Every contribution — whether time, skills, or funds — directly fuels these programs and transforms lives across Nigeria and beyond.",
+    "paragraph": "Every contribution \u2014 whether time, skills, or funds \u2014 directly fuels these programs and transforms lives across Nigeria and beyond.",
     "donateButtonText": "Donate Now",
     "volunteerButtonText": "Become a Volunteer"
   },
   "programs": [
     {
-      "title": "Sample Ongoing Program — Replace Me",
+      "title": "Sample Ongoing Program \u2014 Replace Me",
       "category": "Add Category",
       "status": "ongoing",
       "location": "Add Location",
@@ -74,7 +74,7 @@
       "beneficiaries": "0",
       "raised": 0,
       "goal": 1000000,
-      "description": "Replace this with a real description of an ongoing program — what it does and who it helps.",
+      "description": "Replace this with a real description of an ongoing program \u2014 what it does and who it helps.",
       "objectives": [
         "Add a program objective",
         "Add another program objective"
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "title": "Sample Upcoming Program — Replace Me",
+      "title": "Sample Upcoming Program \u2014 Replace Me",
       "category": "Add Category",
       "status": "upcoming",
       "location": "Add Location",
@@ -114,7 +114,7 @@
       ]
     },
     {
-      "title": "Sample Completed Program — Replace Me",
+      "title": "Sample Completed Program \u2014 Replace Me",
       "category": "Add Category",
       "status": "completed",
       "location": "Add Location",
