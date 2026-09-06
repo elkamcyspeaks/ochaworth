@@ -1,21 +1,21 @@
 {
-  "theme": {
-    "primaryDark": "#0D2B1D",
-    "primaryMid": "#1B3A2B",
-    "accent": "#F5C842",
-    "accentDark": "#D4A820"
-  },
   "contact": {
     "youtube": "#",
     "facebook": "https://web.facebook.com/owlacdi",
-    "hoursSaturday": "Sat: 10:00AM \u2013 4:00PM",
+    "hoursSaturday": "Sat: 10:00AM – 4:00PM",
     "phone": "(+234) 0808 065 5923",
     "instagram": "https://www.instagram.com/ocha.worthlacdi?stkn=MXdubGFwejlkNGlkYg==",
     "twitter": "https://x.com/ochaworthlacdi?s=11",
     "topBarAddress": "Jos, Plateau State, Nigeria",
-    "hoursWeekday": "Mon \u2013 Fri: 9:00AM \u2013 6:00PM",
+    "hoursWeekday": "Mon – Fri: 9:00AM – 6:00PM",
     "footerAddress": "No. B5 Emerald Royal Plaza Zaramaganda-Rayfield Road Jos, Plateau State, Nigeria",
     "email": "ochaworthlacdi@gmail.com"
+  },
+  "journey": {
+    "sectionLabel": "What We Offer",
+    "headingPrefix": "Our Journey Of",
+    "headingItalic": "Compassion",
+    "readMoreButtonText": "Read More"
   },
   "blog": [
     {
@@ -37,13 +37,27 @@
       "img": "https://images.unsplash.com/flagged/photo-1555251255-e9a095d6eb9d?w=600&h=400&fit=crop&auto=format"
     }
   ],
+  "blogSection": {
+    "sectionLabel": "News & Blog",
+    "headingPrefix": "Our Latest News",
+    "headingItalic": "& Blogs",
+    "filterTabs": [
+      "Latest",
+      "Popular",
+      "Featured"
+    ],
+    "readMoreButtonText": "Read More"
+  },
+  "nav": {
+    "homeLabel": "Home",
+    "aboutLabel": "About",
+    "volunteerLabel": "Volunteer",
+    "servicesLabel": "Programs",
+    "galleryLabel": "Gallery",
+    "contactLabel": "Contact",
+    "donateButtonText": "Donate Now"
+  },
   "touchingLives": {
-    "bgImage": "/images/uploads/830ce53f-d40e-4c7b-af26-f2be09f90fa3.jpg",
-    "headingLine1": "Touching Lives,",
-    "headingLine2Prefix": "Building A",
-    "headingHighlight": "Better",
-    "headingLine3": "Tomorrow",
-    "paragraph": "Every project we undertake is a testament to the power of collective compassion and sustainable change.",
     "cards": [
       {
         "icon": "heart",
@@ -61,20 +75,44 @@
         "desc": "Secure, instant donations that reach those in need fast."
       }
     ],
+    "watchStoryButtonText": "Watch Story",
+    "paragraph": "Every project we undertake is a testament to the power of collective compassion and sustainable change.",
+    "headingLine2Prefix": "Building A",
     "sectionLabel": "Our Mission",
+    "headingHighlight": "Better",
+    "bgImage": "/images/uploads/830ce53f-d40e-4c7b-af26-f2be09f90fa3.jpg",
+    "headingLine1": "Touching Lives,",
     "ourWorkButtonText": "Our Work",
-    "watchStoryButtonText": "Watch Story"
+    "headingLine3": "Tomorrow"
   },
   "org": {
-    "name": "Ochaworth Leadership and Community Development Initiative",
-    "shortName": "Ochaworth",
     "footerBlurb": "A global humanitarian organization committed to building a more just and compassionate world for all people.",
-    "missionLine1": "Generosity Is The",
+    "philosophyLabel": "Our Philosophy",
+    "shortName": "Ochaworth",
+    "copyright": "© 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved.",
     "missionHighlight": "Cornerstone",
+    "name": "Ochaworth Leadership and Community Development Initiative",
+    "missionLine1": "Generosity Is The",
     "missionLine3": "Of Prosperity.",
-    "missionAttribution": "\u2014 Ochaworth Foundation Mission Statement",
-    "copyright": "\u00a9 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved.",
-    "philosophyLabel": "Our Philosophy"
+    "missionAttribution": "— Ochaworth Foundation Mission Statement"
+  },
+  "featuredProjects": {
+    "goalLabel": "Goal:",
+    "bottomParagraph": "We Are Pursuing 80+ Additional Goals In Support Of Transparency",
+    "activeBadgeText": "Active",
+    "donateButtonText": "Donate",
+    "sectionLabel": "Our Projects",
+    "headingItalic": "Causes",
+    "headingPrefix": "Featured Projects &",
+    "learnMoreButtonText": "Learn More",
+    "viewAllButtonText": "View All Projects",
+    "raisedLabel": "Raised:"
+  },
+  "theme": {
+    "primaryDark": "#b8317e",
+    "primaryMid": "#50285a",
+    "accent": "#e68c32",
+    "accentDark": "#D4A820"
   },
   "volunteers": [
     {
@@ -100,6 +138,7 @@
   ],
   "community": {
     "donorsCount": "15k+",
+    "donorsLabel": "Happy Donors",
     "partners": [
       "UNICEF",
       "WHO",
@@ -108,14 +147,13 @@
       "Save The Children",
       "OXFAM"
     ],
-    "sectionLabel": "Join Our Network",
-    "headingPrefix": "Join Our",
-    "headingHighlight": "Community",
     "paragraph": "Become part of a global movement. Whether you donate, volunteer, or spread the word, every action counts.",
-    "getInvolvedButtonText": "Get Involved",
+    "sectionLabel": "Join Our Network",
+    "headingHighlight": "Community",
+    "trustedPartnersLabel": "Trusted Partners",
+    "headingPrefix": "Join Our",
     "learnMoreButtonText": "Learn More",
-    "donorsLabel": "Happy Donors",
-    "trustedPartnersLabel": "Trusted Partners"
+    "getInvolvedButtonText": "Get Involved"
   },
   "worldMap": {
     "intro": "Our projects span 6 continents, touching lives in 40+ countries across the developing world.",
@@ -192,28 +230,31 @@
     "Food Relief"
   ],
   "eventsPanel": {
-    "image": "https://images.unsplash.com/photo-1710093072228-8c3129f27357?w=700&h=600&fit=crop&auto=format",
-    "title": "Next Fundraiser Gala",
-    "desc": "Join us for an evening of inspiration, music, and impact. All proceeds go directly to our field programs.",
+    "registerButtonText": "Register",
     "date": "April 25, 2026",
     "sectionLabel": "Upcoming Events",
-    "headingLine1": "Join Our Latest",
+    "desc": "Join us for an evening of inspiration, music, and impact. All proceeds go directly to our field programs.",
     "headingItalic": "Upcoming Events",
+    "title": "Next Fundraiser Gala",
     "viewAllButtonText": "View All Events",
-    "registerButtonText": "Register"
+    "image": "https://images.unsplash.com/photo-1710093072228-8c3129f27357?w=700&h=600&fit=crop&auto=format",
+    "headingLine1": "Join Our Latest"
   },
   "about": {
+    "badgeNumber": "5+",
+    "paragraph": "Ochaworth Leadership and Community Development Initiative (CAC/RN: 7290687) is a registered non-governmental organization and network of impactful, youth-led, women’s rights advocates. We are committed to promoting equality and social justice by equipping women and girls to recognize their worth, live it boldly, and birth the “more” within them.",
+    "sectionLabel": "About Our Organization",
+    "ourImpactButtonText": "Our Impact",
+    "badgeLabel": "Years Of Impact",
+    "headingHighlight": "Charity",
+    "headingSuffix": "Organization",
+    "headingPrefix": "A Trusted Non-Profit",
+    "learnMoreButtonText": "Learn More",
     "images": {
       "main": "/images/uploads/whatsapp-image-2026-05-04-at-13.50.22.jpeg",
       "top": "/images/uploads/830ce53f-d40e-4c7b-af26-f2be09f90fa3.jpg",
       "bottom": "/images/uploads/73253843-9ecd-4b69-b886-41a01c06703c.jpg"
     },
-    "badgeNumber": "5+",
-    "badgeLabel": "Years Of Impact",
-    "headingPrefix": "A Trusted Non-Profit",
-    "headingHighlight": "Charity",
-    "headingSuffix": "Organization",
-    "paragraph": "Ochaworth Leadership and Community Development Initiative (CAC/RN: 7290687) is a registered non-governmental organization and network of impactful, youth-led, women\u2019s rights advocates. We are committed to promoting equality and social justice by equipping women and girls to recognize their worth, live it boldly, and birth the \u201cmore\u201d within them.",
     "features": [
       {
         "icon": "heart",
@@ -230,45 +271,48 @@
         "title": "Support Worldwide",
         "desc": "Our reach spans 40+ countries, creating impact where it matters most."
       }
-    ],
-    "sectionLabel": "About Our Organization",
-    "learnMoreButtonText": "Learn More",
-    "ourImpactButtonText": "Our Impact"
+    ]
+  },
+  "testimonialsSection": {
+    "sectionLabel": "Testimonials",
+    "headingPrefix": "What Our",
+    "headingItalic": "Community",
+    "headingSuffix": "Is Saying!"
   },
   "donation": {
-    "bgImage": "/images/uploads/73253843-9ecd-4b69-b886-41a01c06703c.jpg",
-    "totalRaised": "\u20a62B+",
-    "donationsCount": "3.8k+",
-    "paragraph": "Your generosity directly funds education, healthcare, and food relief for families in need.",
-    "presetAmounts": [
-      "10",
-      "25",
-      "50",
-      "100",
-      "250"
-    ],
     "causes": [
       "Food Distribution",
       "Child Education",
       "Medical Support",
       "Poverty Reduction"
     ],
-    "sectionLabel": "Make A Donation",
-    "headingLine1": "Making A Difference,",
-    "headingLine2Prefix": "One",
-    "headingHighlight": "Donation",
-    "headingSuffix": "At A Time.",
-    "amountLabel": "Donation Amount",
     "customAmountPlaceholder": "Custom amount",
-    "firstNamePlaceholder": "First Name",
-    "lastNamePlaceholder": "Last Name",
-    "emailPlaceholder": "Email Address",
-    "selectCauseDefault": "Select a cause",
-    "donateButtonPrefix": "Donate",
-    "donateButtonSuffix": "Now",
+    "paragraph": "Your generosity directly funds education, healthcare, and food relief for families in need.",
+    "donationsCount": "3.8k+",
+    "headingLine2Prefix": "One",
     "secureCaption": "Secure & encrypted donation",
+    "sectionLabel": "Make A Donation",
+    "lastNamePlaceholder": "Last Name",
+    "headingHighlight": "Donation",
+    "donateButtonSuffix": "Now",
+    "donationsLabel": "Donations",
+    "donateButtonPrefix": "Donate",
+    "headingSuffix": "At A Time.",
+    "selectCauseDefault": "Select a cause",
+    "bgImage": "/images/uploads/73253843-9ecd-4b69-b886-41a01c06703c.jpg",
+    "emailPlaceholder": "Email Address",
+    "firstNamePlaceholder": "First Name",
     "totalRaisedLabel": "Total Funds Raised",
-    "donationsLabel": "Donations"
+    "headingLine1": "Making A Difference,",
+    "amountLabel": "Donation Amount",
+    "totalRaised": "₦2B+",
+    "presetAmounts": [
+      "10",
+      "25",
+      "50",
+      "100",
+      "250"
+    ]
   },
   "testimonials": [
     {
@@ -293,6 +337,13 @@
       "text": "As a community partner, the support has been extraordinary. They listen, they adapt, and they deliver results that truly uplift our people."
     }
   ],
+  "newsletter": {
+    "headingPrefix": "Subscribe To Our",
+    "headingHighlight": "Newsletter",
+    "paragraph": "Stay updated with our latest projects, events, and impact stories from around the world.",
+    "placeholder": "Enter your email address",
+    "buttonText": "Subscribe Now"
+  },
   "events": [
     {
       "month": "JAN",
@@ -333,7 +384,7 @@
         "label": "Countries Reached"
       },
       {
-        "value": "\u20a6500,000+",
+        "value": "₦500,000+",
         "label": "Funds Raised"
       }
     ],
@@ -419,78 +470,6 @@
     "donateButtonText": "Donate Now",
     "learnMoreButtonText": "Learn More"
   },
-  "services": [
-    {
-      "icon": "food",
-      "title": "Food Distribution",
-      "desc": "Providing nutritious meals to families and individuals facing food insecurity across communities."
-    },
-    {
-      "icon": "child",
-      "title": "Child Education",
-      "desc": "Ensuring every child has access to quality education and learning opportunities for a brighter future."
-    },
-    {
-      "icon": "medical",
-      "title": "Medical Support",
-      "desc": "Delivering essential healthcare services and medical supplies to underserved populations worldwide."
-    },
-    {
-      "icon": "house",
-      "title": "Poverty Reduction",
-      "desc": "Empowering communities with sustainable programs that break the cycle of poverty for generations."
-    }
-  ],
-  "journey": {
-    "sectionLabel": "What We Offer",
-    "headingPrefix": "Our Journey Of",
-    "headingItalic": "Compassion",
-    "readMoreButtonText": "Read More"
-  },
-  "featuredProjects": {
-    "sectionLabel": "Our Projects",
-    "headingPrefix": "Featured Projects &",
-    "headingItalic": "Causes",
-    "viewAllButtonText": "View All Projects",
-    "activeBadgeText": "Active",
-    "raisedLabel": "Raised:",
-    "goalLabel": "Goal:",
-    "donateButtonText": "Donate",
-    "learnMoreButtonText": "Learn More",
-    "bottomParagraph": "We Are Pursuing 80+ Additional Goals In Support Of Transparency"
-  },
-  "volunteersSection": {
-    "homeSectionLabel": "Our Team",
-    "headingPrefix": "Meet Our",
-    "headingItalic": "Volunteers",
-    "badgeText": "VOLUNTEER"
-  },
-  "testimonialsSection": {
-    "sectionLabel": "Testimonials",
-    "headingPrefix": "What Our",
-    "headingItalic": "Community",
-    "headingSuffix": "Is Saying!"
-  },
-  "blogSection": {
-    "sectionLabel": "News & Blog",
-    "headingPrefix": "Our Latest News",
-    "headingItalic": "& Blogs",
-    "filterTabs": [
-      "Latest",
-      "Popular",
-      "Featured"
-    ],
-    "readMoreButtonText": "Read More"
-  },
-  "nav": {
-    "homeLabel": "Home",
-    "aboutLabel": "About",
-    "volunteerLabel": "Volunteer",
-    "servicesLabel": "Programs",
-    "galleryLabel": "Gallery",
-    "contactLabel": "Contact",
-    "donateButtonText": "Donate Now"
-  },
   "footer": {
     "quickLinksHeading": "Quick Links",
     "quickLinks": {
@@ -518,11 +497,32 @@
       "Cookie Policy"
     ]
   },
-  "newsletter": {
-    "headingPrefix": "Subscribe To Our",
-    "headingHighlight": "Newsletter",
-    "paragraph": "Stay updated with our latest projects, events, and impact stories from around the world.",
-    "placeholder": "Enter your email address",
-    "buttonText": "Subscribe Now"
-  }
+  "volunteersSection": {
+    "homeSectionLabel": "Our Team",
+    "headingPrefix": "Meet Our",
+    "headingItalic": "Volunteers",
+    "badgeText": "VOLUNTEER"
+  },
+  "services": [
+    {
+      "icon": "food",
+      "title": "Food Distribution",
+      "desc": "Providing nutritious meals to families and individuals facing food insecurity across communities."
+    },
+    {
+      "icon": "child",
+      "title": "Child Education",
+      "desc": "Ensuring every child has access to quality education and learning opportunities for a brighter future."
+    },
+    {
+      "icon": "medical",
+      "title": "Medical Support",
+      "desc": "Delivering essential healthcare services and medical supplies to underserved populations worldwide."
+    },
+    {
+      "icon": "house",
+      "title": "Poverty Reduction",
+      "desc": "Empowering communities with sustainable programs that break the cycle of poverty for generations."
+    }
+  ]
 }
