@@ -679,3 +679,35 @@ collections:
             fields:
               - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
               - { label: '"Become A Volunteer" Button Text', name: "buttonText", widget: "string" }
+
+      - file: "src/data/becomeVolunteerPage.json"
+        label: "Become A Volunteer Page"
+        name: "becomeVolunteerPage"
+        hint: "Content shown only on the /become-a-volunteer page, reached from the 'Become A Volunteer' button on the Volunteer page. This form is visual only for now (no email backend yet) — same as the Contact page's form. The illustration panel's caption is your real mission quote, pulled from the 'Mission Quote' fields under Homepage Content → Organization."
+        fields:
+          - label: "Page Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Banner Background Photo", name: "image", widget: "image" }
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: 'Breadcrumb — "Home" Link Text', name: "breadcrumbHome", widget: "string" }
+              - { label: "Breadcrumb — Current Page Text", name: "breadcrumbCurrent", widget: "string" }
+
+          - label: "Application Form"
+            name: "form"
+            widget: "object"
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
+              - { label: "Heading — Line 2", name: "headingLine2", widget: "string" }
+              - { label: "Name Field Placeholder", name: "namePlaceholder", widget: "string" }
+              - { label: "Email Field Placeholder", name: "emailPlaceholder", widget: "string" }
+              - { label: "Phone Field Placeholder", name: "phonePlaceholder", widget: "string" }
+              - { label: "Date Of Birth Field Placeholder", name: "dobPlaceholder", widget: "string" }
+              - { label: "Occupation Field Placeholder", name: "occupationPlaceholder", widget: "string" }
+              - { label: "Address Field Placeholder", name: "addressPlaceholder", widget: "string" }
+              - { label: "Country/State Field Placeholder", name: "countryPlaceholder", widget: "string" }
+              - { label: "Message Field Placeholder", name: "messagePlaceholder", widget: "string" }
+              - { label: "Submit Button Text", name: "submitButtonText", widget: "string" }
+              - { label: '"Sent" Confirmation Button Text', name: "submittedButtonText", widget: "string" }

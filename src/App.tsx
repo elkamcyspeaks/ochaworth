@@ -5,6 +5,7 @@ import AboutPage from "@/pages/AboutPage";
 import ContactPage from "@/pages/ContactPage";
 import GalleryPage from "@/pages/GalleryPage";
 import VolunteerPage from "@/pages/VolunteerPage";
+import BecomeVolunteerPage from "@/pages/BecomeVolunteerPage";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="contact" element={<ContactPage/>}/>
         <Route path="gallery" element={<GalleryPage/>}/>
         <Route path="volunteer" element={<VolunteerPage/>}/>
+        <Route path="become-a-volunteer" element={<BecomeVolunteerPage/>}/>
       </Route>
     </Routes>
   );

@@ -80,7 +80,7 @@ function VolunteersSection() {
             <h2 className="text-4xl md:text-5xl font-black text-[var(--green-dark)] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
               {vs.headingPrefix} <span className="italic">{vs.headingItalic}</span>
             </h2>
-            <Link to="/contact">
+            <Link to="/become-a-volunteer">
               <YellowBtn>{tp.buttonText}</YellowBtn>
             </Link>
           </div>
