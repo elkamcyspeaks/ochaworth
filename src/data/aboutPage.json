@@ -110,10 +110,46 @@
     "badgeText": "BOARD MEMBER",
     "ctaButtonText": "Become A Member",
     "members": [
-      { "name": "Board Member 1", "role": "Add Their Role", "img": "https://placehold.co/500x600?text=Add+Photo" },
-      { "name": "Board Member 2", "role": "Add Their Role", "img": "https://placehold.co/500x600?text=Add+Photo" },
-      { "name": "Board Member 3", "role": "Add Their Role", "img": "https://placehold.co/500x600?text=Add+Photo" },
-      { "name": "Board Member 4", "role": "Add Their Role", "img": "https://placehold.co/500x600?text=Add+Photo" }
+      {
+        "name": "Dirmicit",
+        "role": "Add Their Role",
+        "img": "/images/uploads/img_3972.jpg"
+      },
+      {
+        "name": "Nankpak Cirfat",
+        "role": "Add Their Role",
+        "img": "/images/uploads/img_8904.jpg"
+      },
+      {
+        "name": "Seye",
+        "role": "Add Their Role",
+        "img": "/images/uploads/whatsapp-image-2026-05-04-at-14.27.53-1-.jpeg"
+      },
+      {
+        "name": "Nankur",
+        "role": "Add Their Role",
+        "img": "/images/uploads/whatsapp-image-2026-08-19-at-10.21.03-1-.jpeg"
+      },
+      {
+        "name": "Jil Nanbyen",
+        "role": "Add Their Role",
+        "img": "/images/uploads/whatsapp-image-2026-08-20-at-09.09.50-1-.jpeg"
+      },
+      {
+        "name": "Mercy Omale",
+        "role": "Add Their Role",
+        "img": "/images/uploads/whatsapp-image-2026-05-04-at-14.52.26-1-.jpeg"
+      },
+      {
+        "name": "Deborah",
+        "role": "Add Their Role",
+        "img": "/images/uploads/whatsapp-image-2026-08-17-at-17.58.14.jpeg"
+      },
+      {
+        "name": "Esther",
+        "role": "Add Their Role",
+        "img": "/images/uploads/whatsapp-image-2026-05-04-at-14.40.27-1-.jpeg"
+      }
     ]
   },
   "testimonials": {
@@ -123,14 +159,6 @@
     "headingSuffix": "Is Saying?"
   },
   "faq": {
-    "sectionLabel": "Frequently Asked Questions",
-    "headingLine1": "Common Questions",
-    "headingLine2Prefix": "About Our",
-    "headingItalic": "Fundraising",
-    "headingLine3": "Campaigning",
-    "imageLabelText": "Get Answers",
-    "imageCaption": "Your questions help us serve communities better",
-    "image": "https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=700&h=600&fit=crop&auto=format",
     "items": [
       {
         "q": "What Motivates You To Donate To Our Charity?",
@@ -148,6 +176,14 @@
         "q": "What Types Of Projects Does Ochaworth Focus On?",
         "a": "Our core programme areas include food distribution, child education, medical support, leadership development, poverty reduction, and emergency relief. Every project is designed with community input to ensure it addresses real, local needs."
       }
-    ]
+    ],
+    "imageLabelText": "Get Answers",
+    "imageCaption": "Your questions help us serve communities better",
+    "headingLine2Prefix": "About Our",
+    "sectionLabel": "Frequently Asked Questions",
+    "headingItalic": "Fundraising",
+    "image": "https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=700&h=600&fit=crop&auto=format",
+    "headingLine1": "Common Questions",
+    "headingLine3": "Campaigning"
   }
 }
