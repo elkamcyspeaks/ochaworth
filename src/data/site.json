@@ -1,0 +1,161 @@
+{
+  "org": {
+    "name": "Ochaworth Leadership and Community Development Initiative",
+    "shortName": "Ochaworth",
+    "footerBlurb": "A global humanitarian organization committed to building a more just and compassionate world for all people.",
+    "missionLine1": "Generosity Is The",
+    "missionHighlight": "Cornerstone",
+    "missionLine3": "Of Prosperity.",
+    "missionAttribution": "— Ochaworth Foundation Mission Statement",
+    "copyright": "© 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved."
+  },
+  "contact": {
+    "email": "info@deen.org",
+    "phone": "+1 (800) 123-4567",
+    "topBarAddress": "123 Charity Lane, Dhaka",
+    "footerAddress": "123 Charity Lane, Dhaka, Bangladesh",
+    "hoursWeekday": "Mon – Fri: 9:00AM – 6:00PM",
+    "hoursSaturday": "Sat: 10:00AM – 4:00PM",
+    "facebook": "#",
+    "twitter": "#",
+    "instagram": "#",
+    "youtube": "#"
+  },
+  "hero": {
+    "slides": [
+      {
+        "image": "https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=1600&h=1000&fit=crop&auto=format",
+        "label": "We Are Here To Donate",
+        "line1": "Donate Today,",
+        "highlight": "Transform",
+        "italic": "Lives",
+        "line3": "Forever!",
+        "sub": "Join us in our mission to create lasting change. Every contribution, big or small, transforms lives and builds stronger communities."
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1593113616828-6f22bca04804?w=1600&h=1000&fit=crop&auto=format",
+        "label": "Feed The Hungry",
+        "line1": "Together We Can",
+        "highlight": "End",
+        "italic": "Hunger",
+        "line3": "Worldwide!",
+        "sub": "Our food distribution programs reach thousands of families every week. Your generosity fills empty plates and restores hope."
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=1000&fit=crop&auto=format",
+        "label": "Educate A Child",
+        "line1": "Empower A Child,",
+        "highlight": "Change",
+        "italic": "A",
+        "line3": "Generation!",
+        "sub": "Education is the most powerful tool to break the cycle of poverty. Help us send every child to school."
+      }
+    ],
+    "stats": [
+      { "value": "3k+", "label": "Community Members" },
+      { "value": "100%", "label": "Customer Satisfaction" },
+      { "value": "10+", "label": "Year Organization" }
+    ]
+  },
+  "volunteerCards": {
+    "actionImage": "https://images.unsplash.com/photo-1593113616828-6f22bca04804?w=600&h=400&fit=crop&auto=format",
+    "actionCaption": "Together We Feed Thousands",
+    "stats": [
+      { "value": "3,800+", "label": "Donations Made" },
+      { "value": "120+", "label": "Active Volunteers" },
+      { "value": "40+", "label": "Countries Reached" },
+      { "value": "₦2B+", "label": "Funds Raised" }
+    ]
+  },
+  "about": {
+    "images": {
+      "main": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=500&h=600&fit=crop&auto=format",
+      "top": "https://images.unsplash.com/photo-1521493959102-bdd6677fdd81?w=400&h=280&fit=crop&auto=format",
+      "bottom": "https://images.unsplash.com/flagged/photo-1555251255-e9a095d6eb9d?w=400&h=280&fit=crop&auto=format"
+    },
+    "badgeNumber": "10+",
+    "badgeLabel": "Years Of Impact",
+    "headingPrefix": "A Trusted Non-Profit",
+    "headingHighlight": "Charity",
+    "headingSuffix": "Organization",
+    "paragraph": "For over a decade, Ochaworth has been at the forefront of humanitarian work, building bridges between generous donors and communities in need.",
+    "features": [
+      { "icon": "heart", "title": "Genuine Helping", "desc": "We ensure every donation reaches those who need it most with full transparency." },
+      { "icon": "globe", "title": "Community Building", "desc": "Fostering self-reliant communities through skill development and empowerment." },
+      { "icon": "hand", "title": "Support Worldwide", "desc": "Our reach spans 40+ countries, creating impact where it matters most." }
+    ]
+  },
+  "services": [
+    { "icon": "food", "title": "Food Distribution", "desc": "Providing nutritious meals to families and individuals facing food insecurity across communities." },
+    { "icon": "child", "title": "Child Education", "desc": "Ensuring every child has access to quality education and learning opportunities for a brighter future." },
+    { "icon": "medical", "title": "Medical Support", "desc": "Delivering essential healthcare services and medical supplies to underserved populations worldwide." },
+    { "icon": "house", "title": "Poverty Reduction", "desc": "Empowering communities with sustainable programs that break the cycle of poverty for generations." }
+  ],
+  "ticker": ["Education", "Health", "Donation", "Volunteer", "Community", "Medical Aid", "Child Care", "Food Relief"],
+  "projects": [
+    { "title": "Youth & Medical Support", "location": "Kenya, Africa", "raised": 12500, "goal": 20000, "img": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&h=400&fit=crop&auto=format" },
+    { "title": "Volunteer Summits", "location": "Ethiopia", "raised": 8200, "goal": 15000, "img": "https://images.unsplash.com/photo-1593113616828-6f22bca04804?w=600&h=400&fit=crop&auto=format" },
+    { "title": "Eco-Friendly Initiatives", "location": "Bangladesh", "raised": 5100, "goal": 10000, "img": "https://images.unsplash.com/photo-1459183885421-5cc683b8dbba?w=600&h=400&fit=crop&auto=format" }
+  ],
+  "community": {
+    "donorsCount": "15k+",
+    "partners": ["UNICEF", "WHO", "UNHCR", "WFP", "Save The Children", "OXFAM"]
+  },
+  "volunteers": [
+    { "name": "Sarah Johnson", "role": "Community Lead", "img": "https://images.unsplash.com/photo-1596422219551-adac8612092f?w=400&h=500&fit=crop&auto=format" },
+    { "name": "Michael Chen", "role": "Medical Volunteer", "img": "https://images.unsplash.com/photo-1547496613-4e19af6736dc?w=400&h=500&fit=crop&auto=format" },
+    { "name": "Amina Osei", "role": "Education Coordinator", "img": "https://images.unsplash.com/photo-1507427100689-2bf8574e32d4?w=400&h=500&fit=crop&auto=format" },
+    { "name": "David Reyes", "role": "Field Operations", "img": "https://images.unsplash.com/photo-1758599668209-783bd3691ec8?w=400&h=500&fit=crop&auto=format" }
+  ],
+  "touchingLives": {
+    "bgImage": "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=1600&h=700&fit=crop&auto=format",
+    "headingLine1": "Touching Lives,",
+    "headingLine2Prefix": "Building A",
+    "headingHighlight": "Better",
+    "headingLine3": "Tomorrow",
+    "paragraph": "Every project we undertake is a testament to the power of collective compassion and sustainable change.",
+    "cards": [
+      { "icon": "heart", "title": "Giving Love & Joy", "desc": "Spreading compassion through every act of giving." },
+      { "icon": "hand", "title": "Secure Volunteering", "desc": "Safe, structured opportunities to make a real difference." },
+      { "icon": "globe", "title": "Donate Online", "desc": "Secure, instant donations that reach those in need fast." }
+    ]
+  },
+  "donation": {
+    "bgImage": "https://images.unsplash.com/photo-1593113630400-ea4288922497?w=700&h=800&fit=crop&auto=format",
+    "totalRaised": "₦2B+",
+    "donationsCount": "3.8k+",
+    "paragraph": "Your generosity directly funds education, healthcare, and food relief for families in need.",
+    "presetAmounts": ["10", "25", "50", "100", "250"],
+    "causes": ["Food Distribution", "Child Education", "Medical Support", "Poverty Reduction"]
+  },
+  "testimonials": [
+    { "name": "Alex James", "role": "Donor", "stars": 5, "img": "https://images.unsplash.com/photo-1596422219551-adac8612092f?w=100&h=100&fit=crop&auto=format", "text": "This organization has transformed my perspective on giving. The transparency and genuine impact they create is unlike any other organization I have supported." },
+    { "name": "Priya Sharma", "role": "Volunteer", "stars": 5, "img": "https://images.unsplash.com/photo-1758599668429-121d54188b9c?w=100&h=100&fit=crop&auto=format", "text": "Volunteering here was a life-changing experience. Every project is thoughtfully planned and the local impact is deeply meaningful and lasting." },
+    { "name": "Omar Hassan", "role": "Community Partner", "stars": 5, "img": "https://images.unsplash.com/photo-1647538061429-0adc75ad664f?w=100&h=100&fit=crop&auto=format", "text": "As a community partner, the support has been extraordinary. They listen, they adapt, and they deliver results that truly uplift our people." }
+  ],
+  "events": [
+    { "month": "JAN", "day": "18", "title": "Live The Blessings Of Your Day With Celebration", "location": "Dhaka, Bangladesh", "time": "9:00 AM - 5:00 PM" },
+    { "month": "FEB", "day": "19", "title": "Join Us For A Day Of Community And Celebration Of Life", "location": "Nairobi, Kenya", "time": "10:00 AM - 4:00 PM" },
+    { "month": "MAR", "day": "20", "title": "Participate In Our Innovative Sessions For All Ages", "location": "Karachi, Pakistan", "time": "8:00 AM - 6:00 PM" }
+  ],
+  "eventsPanel": {
+    "image": "https://images.unsplash.com/photo-1710093072228-8c3129f27357?w=700&h=600&fit=crop&auto=format",
+    "title": "Next Fundraiser Gala",
+    "desc": "Join us for an evening of inspiration, music, and impact. All proceeds go directly to our field programs.",
+    "date": "April 25, 2026"
+  },
+  "worldMap": {
+    "intro": "Our projects span 6 continents, touching lives in 40+ countries across the developing world.",
+    "stats": [
+      { "v": "40+", "l": "Countries" },
+      { "v": "200+", "l": "Active Projects" },
+      { "v": "500k+", "l": "Lives Impacted" },
+      { "v": "6", "l": "Continents" }
+    ]
+  },
+  "blog": [
+    { "category": "Education", "date": "Jan 15, 2026", "title": "The Real Measure Of Your Wealth Is How Much You'd Be Worth If You Lost All Your Money", "img": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&h=400&fit=crop&auto=format" },
+    { "category": "Health", "date": "Feb 02, 2026", "title": "Thousands Of Candles Can Be Lit From A Single Candle And Life Will Never Become Shorter", "img": "https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?w=600&h=400&fit=crop&auto=format" },
+    { "category": "Community", "date": "Mar 10, 2026", "title": "No Act Of Kindness No Matter How Small Is Ever Wasted In Our World", "img": "https://images.unsplash.com/flagged/photo-1555251255-e9a095d6eb9d?w=600&h=400&fit=crop&auto=format" }
+  ]
+}

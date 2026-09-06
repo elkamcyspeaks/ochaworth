@@ -1,0 +1,248 @@
+backend:
+  name: github
+  repo: elkamcyspeaks/ochaworth
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+# Lets you upload real photos through the editor (e.g. to replace the
+# Unsplash stock images) instead of only pasting URLs.
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+logo_url: "/images/uploads/logo-full-original.png"
+
+collections:
+  - name: "site"
+    label: "Website Content"
+    files:
+      - file: "src/data/site.json"
+        label: "Homepage Content"
+        name: "homepage"
+        fields:
+          - label: "Organization"
+            name: "org"
+            widget: "object"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Short Name", name: "shortName", widget: "string" }
+              - { label: "Footer About Blurb", name: "footerBlurb", widget: "text" }
+              - { label: "Mission Quote — Line 1", name: "missionLine1", widget: "string" }
+              - { label: "Mission Quote — Highlighted Word", name: "missionHighlight", widget: "string" }
+              - { label: "Mission Quote — Line 3", name: "missionLine3", widget: "string" }
+              - { label: "Mission Quote Attribution", name: "missionAttribution", widget: "string" }
+              - { label: "Footer Copyright Text", name: "copyright", widget: "string" }
+
+          - label: "Contact Info"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email Address", name: "email", widget: "string" }
+              - { label: "Phone Number", name: "phone", widget: "string" }
+              - { label: "Top Bar Address (short)", name: "topBarAddress", widget: "string" }
+              - { label: "Footer Address (full)", name: "footerAddress", widget: "string" }
+              - { label: "Weekday Hours", name: "hoursWeekday", widget: "string" }
+              - { label: "Saturday Hours", name: "hoursSaturday", widget: "string" }
+              - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+              - { label: "Twitter / X URL", name: "twitter", widget: "string", required: false }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
+
+          - label: "Hero (homepage top banner)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - label: "Slides"
+                name: "slides"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Background Photo", name: "image", widget: "image" }
+                  - { label: "Small Label Above Heading", name: "label", widget: "string" }
+                  - { label: "Heading — Line 1", name: "line1", widget: "string" }
+                  - { label: "Heading — Highlighted Word (gold)", name: "highlight", widget: "string" }
+                  - { label: "Heading — Italic Word", name: "italic", widget: "string" }
+                  - { label: "Heading — Line 3", name: "line3", widget: "string" }
+                  - { label: "Subtext Paragraph", name: "sub", widget: "text" }
+              - label: "Stat Badges"
+                name: "stats"
+                widget: "list"
+                summary: "{{fields.value}} — {{fields.label}}"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+
+          - label: "Volunteer Cards Section"
+            name: "volunteerCards"
+            widget: "object"
+            fields:
+              - { label: '"In Action" Photo', name: "actionImage", widget: "image" }
+              - { label: "Caption Over Photo", name: "actionCaption", widget: "string" }
+              - label: "Stat Badges"
+                name: "stats"
+                widget: "list"
+                summary: "{{fields.value}} — {{fields.label}}"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - label: "Photos"
+                name: "images"
+                widget: "object"
+                fields:
+                  - { label: "Main Photo", name: "main", widget: "image" }
+                  - { label: "Top-Right Photo", name: "top", widget: "image" }
+                  - { label: "Bottom-Right Photo", name: "bottom", widget: "image" }
+              - { label: '"Years Of Impact" Number', name: "badgeNumber", widget: "string" }
+              - { label: "Badge Label", name: "badgeLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Highlighted Word", name: "headingHighlight", widget: "string" }
+              - { label: "Heading — Suffix", name: "headingSuffix", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Feature Rows"
+                name: "features"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "select", options: ["heart", "globe", "hand"] }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+
+          - label: "Services (\"What We Offer\")"
+            name: "services"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: "icon", widget: "select", options: ["food", "child", "medical", "house"] }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+
+          - label: "Scrolling Ticker Words"
+            name: "ticker"
+            widget: "list"
+            field: { label: "Word", name: "word", widget: "string" }
+
+          - label: "Featured Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.location}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Amount Raised (₦)", name: "raised", widget: "number", value_type: "int" }
+              - { label: "Goal (₦)", name: "goal", widget: "number", value_type: "int" }
+              - { label: "Photo", name: "img", widget: "image" }
+
+          - label: "Community Section"
+            name: "community"
+            widget: "object"
+            fields:
+              - { label: '"Happy Donors" Number', name: "donorsCount", widget: "string" }
+              - label: "Partner Organization Names"
+                name: "partners"
+                widget: "list"
+                field: { label: "Name", name: "name", widget: "string" }
+
+          - label: "Volunteers / Team"
+            name: "volunteers"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Photo", name: "img", widget: "image" }
+
+          - label: "Touching Lives (Mission) Section"
+            name: "touchingLives"
+            widget: "object"
+            fields:
+              - { label: "Background Photo", name: "bgImage", widget: "image" }
+              - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
+              - { label: "Heading — Line 2 Prefix", name: "headingLine2Prefix", widget: "string" }
+              - { label: "Heading — Highlighted Word", name: "headingHighlight", widget: "string" }
+              - { label: "Heading — Line 3", name: "headingLine3", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "select", options: ["heart", "hand", "globe"] }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "desc", widget: "text" }
+
+          - label: "Donation Form"
+            name: "donation"
+            widget: "object"
+            fields:
+              - { label: "Background Photo", name: "bgImage", widget: "image" }
+              - { label: '"Total Funds Raised" Badge', name: "totalRaised", widget: "string" }
+              - { label: '"Donations" Count Badge', name: "donationsCount", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Preset Donation Amounts (₦)"
+                name: "presetAmounts"
+                widget: "list"
+                field: { label: "Amount", name: "amount", widget: "string" }
+              - label: "Cause Dropdown Options"
+                name: "causes"
+                widget: "list"
+                field: { label: "Cause", name: "cause", widget: "string" }
+
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Star Rating (1-5)", name: "stars", widget: "number", value_type: "int", min: 1, max: 5 }
+              - { label: "Photo", name: "img", widget: "image" }
+              - { label: "Quote", name: "text", widget: "text" }
+
+          - label: "Upcoming Events"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Month (e.g. JAN)", name: "month", widget: "string" }
+              - { label: "Day", name: "day", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Time", name: "time", widget: "string" }
+
+          - label: "Events Panel (photo card beside Events list)"
+            name: "eventsPanel"
+            widget: "object"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Date", name: "date", widget: "string" }
+
+          - label: "Global Reach (World Map) Section"
+            name: "worldMap"
+            widget: "object"
+            fields:
+              - { label: "Intro Paragraph", name: "intro", widget: "text" }
+              - label: "Stat Badges"
+                name: "stats"
+                widget: "list"
+                summary: "{{fields.v}} — {{fields.l}}"
+                fields:
+                  - { label: "Value", name: "v", widget: "string" }
+                  - { label: "Label", name: "l", widget: "string" }
+
+          - label: "Blog Posts"
+            name: "blog"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Photo", name: "img", widget: "image" }
