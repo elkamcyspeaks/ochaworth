@@ -256,3 +256,89 @@ collections:
               - { label: "Date", name: "date", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Photo", name: "img", widget: "image" }
+
+          - label: "About Us Page"
+            name: "aboutPage"
+            widget: "object"
+            hint: "Content shown only on the /about page. Note: the photos, bio paragraph, and 'Touching Lives' section on that page are shared with other parts of the site — edit those in the 'Organization', 'About Section', and 'Touching Lives' fields above instead."
+            fields:
+              - label: "Page Banner"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - { label: "Banner Background Photo", name: "image", widget: "image" }
+
+              - label: "Intro Section (below banner)"
+                name: "intro"
+                widget: "object"
+                hint: "The photos and bio paragraph shown here come from the 'About Section' fields above."
+                fields:
+                  - { label: "Circular Stat Badge — Value", name: "statBadgeValue", widget: "string" }
+                  - { label: "Circular Stat Badge — Label", name: "statBadgeLabel", widget: "string" }
+                  - label: "3 Feature Rows"
+                    name: "features"
+                    widget: "list"
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "Icon", name: "icon", widget: "select", options: ["fundraising", "donation", "hand"] }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Description", name: "desc", widget: "text" }
+
+              - label: "Stats Bar"
+                name: "stats"
+                widget: "list"
+                summary: "{{fields.value}} — {{fields.label}}"
+                fields:
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+
+              - label: "Mission, Vision & Values"
+                name: "missionVisionValues"
+                widget: "object"
+                fields:
+                  - { label: "Section Intro Text", name: "intro", widget: "text" }
+                  - label: "Mission"
+                    name: "mission"
+                    widget: "object"
+                    fields:
+                      - { label: "Description", name: "desc", widget: "text" }
+                      - { label: "Bullet Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
+                  - label: "Vision"
+                    name: "vision"
+                    widget: "object"
+                    fields:
+                      - { label: "Description", name: "desc", widget: "text" }
+                      - { label: "Bullet Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
+                  - label: "Values"
+                    name: "values"
+                    widget: "object"
+                    fields:
+                      - { label: "Description", name: "desc", widget: "text" }
+                      - { label: "Bullet Points", name: "points", widget: "list", field: { label: "Point", name: "point", widget: "string" } }
+
+              - label: "Touching Lives — Extra (About page only)"
+                name: "touchingLives"
+                widget: "object"
+                hint: "The heading, paragraph, photo, and 3 cards for this section come from the 'Touching Lives' field above. These two fields are additional and only appear on the About page."
+                fields:
+                  - label: "Progress Bars"
+                    name: "progressBars"
+                    widget: "list"
+                    summary: "{{fields.label}} — {{fields.pct}}%"
+                    fields:
+                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "Percent (0-100)", name: "pct", widget: "number", value_type: "int", min: 0, max: 100 }
+                  - { label: "\"Years Impact\" Badge Number", name: "yearsBadgeNumber", widget: "string" }
+
+              - label: "FAQ Section"
+                name: "faq"
+                widget: "object"
+                fields:
+                  - { label: "Left-side Photo", name: "image", widget: "image" }
+                  - label: "Questions"
+                    name: "items"
+                    widget: "list"
+                    summary: "{{fields.q}}"
+                    fields:
+                      - { label: "Question", name: "q", widget: "string" }
+                      - { label: "Answer", name: "a", widget: "text" }
