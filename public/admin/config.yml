@@ -527,17 +527,29 @@ collections:
               - { label: 'Circular Badge — Line 1 (e.g. "Years")', name: "yearsBadgeLabelLine1", widget: "string" }
               - { label: 'Circular Badge — Line 2 (e.g. "Impact")', name: "yearsBadgeLabelLine2", widget: "string" }
 
-          - label: "Volunteers Section (About page only)"
-            name: "volunteers"
+          - label: "Board Members Section"
+            name: "board"
             widget: "object"
-            hint: "The heading and the volunteer cards themselves are shared — edit the heading under 'Volunteers Section — Shared Text' and the people under 'Volunteers / Team', both in Homepage Content."
+            hint: "This section is fully independent — it does not share people with the Volunteers/Team shown on the Home and Volunteer pages, so add, edit, remove, or reorder board members here without affecting those."
             fields:
-              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Small Pill Label (shown above the heading)", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Words", name: "headingItalic", widget: "string" }
+              - { label: "Photo Badge Text", name: "badgeText", widget: "string" }
+              - { label: '"Become A Member" Button Text', name: "ctaButtonText", widget: "string" }
+              - label: "Board Members"
+                name: "members"
+                widget: "list"
+                summary: "{{fields.name}} — {{fields.role}}"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Role", name: "role", widget: "string" }
+                  - { label: "Photo", name: "img", widget: "image" }
 
           - label: "Testimonials Section (About page only)"
             name: "testimonials"
             widget: "object"
-            hint: "The testimonials themselves come from the 'Testimonials' field in Homepage Content."
+            hint: "Only the heading text below belongs to this page. The testimonial quotes, names, roles, photos and star ratings are shared with other places they may appear, so they're edited once under Website Content → Homepage Content → 'Testimonials'."
             fields:
               - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
               - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
@@ -686,6 +698,46 @@ collections:
         label: "Become A Volunteer Page"
         name: "becomeVolunteerPage"
         hint: "Content shown only on the /become-a-volunteer page, reached from the 'Become A Volunteer' button on the Volunteer page. This form is visual only for now (no email backend yet) — same as the Contact page's form. The illustration panel's caption is your real mission quote, pulled from the 'Mission Quote' fields under Homepage Content → Organization."
+        fields:
+          - label: "Page Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Banner Background Photo", name: "image", widget: "image" }
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: 'Breadcrumb — "Home" Link Text', name: "breadcrumbHome", widget: "string" }
+              - { label: "Breadcrumb — Current Page Text", name: "breadcrumbCurrent", widget: "string" }
+
+          - label: "Application Form"
+            name: "form"
+            widget: "object"
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
+              - { label: "Heading — Line 2", name: "headingLine2", widget: "string" }
+              - { label: "Name Field Label", name: "nameLabel", widget: "string" }
+              - { label: "Name Field Placeholder", name: "namePlaceholder", widget: "string" }
+              - { label: "Email Field Label", name: "emailLabel", widget: "string" }
+              - { label: "Email Field Placeholder", name: "emailPlaceholder", widget: "string" }
+              - { label: "Phone Field Label", name: "phoneLabel", widget: "string" }
+              - { label: "Phone Field Placeholder", name: "phonePlaceholder", widget: "string" }
+              - { label: "Date Of Birth Field Label", name: "dobLabel", widget: "string" }
+              - { label: "Date Of Birth Field Placeholder", name: "dobPlaceholder", widget: "string" }
+              - { label: "Occupation Field Label", name: "occupationLabel", widget: "string" }
+              - { label: "Occupation Field Placeholder", name: "occupationPlaceholder", widget: "string" }
+              - { label: "Address Field Label", name: "addressLabel", widget: "string" }
+              - { label: "Address Field Placeholder", name: "addressPlaceholder", widget: "string" }
+              - { label: "Country/State Field Label", name: "countryLabel", widget: "string" }
+              - { label: "Country/State Field Placeholder", name: "countryPlaceholder", widget: "string" }
+              - { label: "Message Field Label", name: "messageLabel", widget: "string" }
+              - { label: "Message Field Placeholder", name: "messagePlaceholder", widget: "string" }
+              - { label: "Submit Button Text", name: "submitButtonText", widget: "string" }
+              - { label: '"Sent" Confirmation Button Text', name: "submittedButtonText", widget: "string" }
+
+      - file: "src/data/becomeMemberPage.json"
+        label: "Become A Member Page"
+        name: "becomeMemberPage"
+        hint: "Content shown only on the /become-a-member page, reached from the 'Become A Member' button on the About Us page. This form is visual only for now (no email backend yet) — same as the Contact page's form. The illustration panel's caption is your real mission quote, pulled from the 'Mission Quote' fields under Homepage Content → Organization."
         fields:
           - label: "Page Banner"
             name: "hero"

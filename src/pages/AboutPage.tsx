@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import site from "@/data/site.json";
 import aboutPageData from "@/data/aboutPage.json";
 import {
@@ -254,28 +255,31 @@ function TouchingLives() {
   );
 }
 
-function OurVolunteers() {
-  const volunteers = site.volunteers;
-  const vs = site.volunteersSection;
-  const ap = aboutPageData.volunteers;
+function BoardMembers() {
+  const board = aboutPageData.board;
   return (
     <section className="py-20 bg-[#F7F7F3]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-wrap justify-between items-end mb-12 gap-4">
           <div>
-            <SectionLabel text={ap.sectionLabel}/>
+            <SectionLabel text={board.sectionLabel}/>
             <h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>
-              {vs.headingPrefix} <span className="text-[var(--green-mid)] italic">{vs.headingItalic}</span>
+              {board.headingPrefix} <span className="text-[var(--green-mid)] italic">{board.headingItalic}</span>
             </h2>
           </div>
+          <Link to="/become-a-member">
+            <YellowBtn className="flex items-center gap-2">
+              {board.ctaButtonText} <ArrowRight className="w-4 h-4"/>
+            </YellowBtn>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-          {volunteers.map(v => (
+          {board.members.map(v => (
             <div key={v.name} className="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group">
               <div className="relative overflow-hidden h-64">
                 <img src={v.img} alt={v.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"/>
-                <div className="absolute top-3 right-3 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-3 py-1 rounded-full">{vs.badgeText}</div>
+                <div className="absolute top-3 right-3 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-3 py-1 rounded-full">{board.badgeText}</div>
               </div>
               <div className="p-5">
                 <h4 className="font-bold text-[var(--green-dark)] text-base">{v.name}</h4>
@@ -438,7 +442,7 @@ export default function AboutPage() {
       <StatsBar/>
       <MissionVisionValues/>
       <TouchingLives/>
-      <OurVolunteers/>
+      <BoardMembers/>
       <Testimonials/>
       <FAQ/>
       <Newsletter/>
