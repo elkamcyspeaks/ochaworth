@@ -8,12 +8,12 @@
   "contact": {
     "youtube": "#",
     "facebook": "https://web.facebook.com/owlacdi",
-    "hoursSaturday": "Sat: 10:00AM – 4:00PM",
+    "hoursSaturday": "Sat: 10:00AM \u2013 4:00PM",
     "phone": "(+234) 0808 065 5923",
     "instagram": "https://www.instagram.com/ocha.worthlacdi?stkn=MXdubGFwejlkNGlkYg==",
     "twitter": "https://x.com/ochaworthlacdi?s=11",
     "topBarAddress": "Jos, Plateau State, Nigeria",
-    "hoursWeekday": "Mon – Fri: 9:00AM – 6:00PM",
+    "hoursWeekday": "Mon \u2013 Fri: 9:00AM \u2013 6:00PM",
     "footerAddress": "No. B5 Emerald Royal Plaza Zaramaganda-Rayfield Road Jos, Plateau State, Nigeria",
     "email": "ochaworthlacdi@gmail.com"
   },
@@ -72,8 +72,8 @@
     "missionLine1": "Generosity Is The",
     "missionHighlight": "Cornerstone",
     "missionLine3": "Of Prosperity.",
-    "missionAttribution": "— Ochaworth Foundation Mission Statement",
-    "copyright": "© 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved.",
+    "missionAttribution": "\u2014 Ochaworth Foundation Mission Statement",
+    "copyright": "\u00a9 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved.",
     "philosophyLabel": "Our Philosophy"
   },
   "volunteers": [
@@ -213,7 +213,7 @@
     "headingPrefix": "A Trusted Non-Profit",
     "headingHighlight": "Charity",
     "headingSuffix": "Organization",
-    "paragraph": "Ochaworth Leadership and Community Development Initiative (CAC/RN: 7290687) is a registered non-governmental organization and network of impactful, youth-led, women’s rights advocates. We are committed to promoting equality and social justice by equipping women and girls to recognize their worth, live it boldly, and birth the “more” within them.",
+    "paragraph": "Ochaworth Leadership and Community Development Initiative (CAC/RN: 7290687) is a registered non-governmental organization and network of impactful, youth-led, women\u2019s rights advocates. We are committed to promoting equality and social justice by equipping women and girls to recognize their worth, live it boldly, and birth the \u201cmore\u201d within them.",
     "features": [
       {
         "icon": "heart",
@@ -237,7 +237,7 @@
   },
   "donation": {
     "bgImage": "/images/uploads/73253843-9ecd-4b69-b886-41a01c06703c.jpg",
-    "totalRaised": "₦2B+",
+    "totalRaised": "\u20a62B+",
     "donationsCount": "3.8k+",
     "paragraph": "Your generosity directly funds education, healthcare, and food relief for families in need.",
     "presetAmounts": [
@@ -333,7 +333,7 @@
         "label": "Countries Reached"
       },
       {
-        "value": "₦500,000+",
+        "value": "\u20a6500,000+",
         "label": "Funds Raised"
       }
     ],
@@ -485,6 +485,7 @@
   "nav": {
     "homeLabel": "Home",
     "aboutLabel": "About",
+    "volunteerLabel": "Volunteer",
     "servicesLabel": "Programs",
     "galleryLabel": "Gallery",
     "contactLabel": "Contact",

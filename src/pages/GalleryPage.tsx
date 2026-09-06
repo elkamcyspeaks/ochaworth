@@ -1,55 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import galleryData from "@/data/gallery.json";
 import {
   ChevronRight, ChevronLeft, XIcon, ArrowUpRight,
-  Newsletter,
+  Newsletter, PageHero,
 } from "@/components/shared";
 
 // ── Sections ──────────────────────────────────────────────────────────────────
-
-function PageHero() {
-  const h = galleryData.hero;
-  return (
-    <section className="relative h-64 md:h-80 flex items-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src={h.image}
-          alt="Gallery hero"
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[var(--green-dark)]/80"/>
-      </div>
-
-      {/* Yellow paint splatter accent — left side */}
-      <div className="absolute left-0 top-0 bottom-0 w-44 pointer-events-none z-10 overflow-hidden">
-        <svg viewBox="0 0 175 320" className="absolute left-0 top-0 w-full h-full" preserveAspectRatio="xMinYMid slice">
-          <path d="M-10,80 C10,40 60,20 90,50 C120,80 130,120 110,160 C95,195 115,235 95,270 C75,305 30,310 10,285 C-10,260 -5,220 5,190 C15,160 -30,120 -10,80Z" fill="var(--yellow)" opacity="0.95"/>
-          <circle cx="105" cy="55"  r="28" fill="var(--yellow)" opacity="0.80"/>
-          <circle cx="130" cy="110" r="18" fill="var(--yellow)" opacity="0.65"/>
-          <circle cx="115" cy="185" r="14" fill="var(--yellow)" opacity="0.55"/>
-          <circle cx="95"  cy="295" r="20" fill="var(--yellow)" opacity="0.60"/>
-          <circle cx="140" cy="155" r="9"  fill="var(--yellow)" opacity="0.42"/>
-          <circle cx="148" cy="230" r="7"  fill="var(--yellow)" opacity="0.35"/>
-          <circle cx="60"  cy="20"  r="12" fill="var(--yellow)" opacity="0.50"/>
-          <ellipse cx="30" cy="315" rx="18" ry="10" fill="var(--yellow)" opacity="0.70"/>
-          <ellipse cx="65" cy="318" rx="10" ry="6"  fill="var(--yellow)" opacity="0.55"/>
-        </svg>
-      </div>
-
-      <div className="relative z-20 max-w-7xl mx-auto px-4 w-full pl-36 md:pl-48">
-        <h1 className="text-5xl md:text-6xl font-black text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-          {h.title}
-        </h1>
-        <div className="flex items-center gap-2 text-sm text-white/60">
-          <Link to="/" className="hover:text-[var(--yellow)] transition-colors">{h.breadcrumbHome}</Link>
-          <ChevronRight className="w-3 h-3"/>
-          <span className="text-[var(--yellow)]">{h.breadcrumbCurrent}</span>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 type Photo = { image: string; caption: string; category: string };
 
@@ -147,7 +103,12 @@ function GalleryGrid() {
 export default function GalleryPage() {
   return (
     <>
-      <PageHero/>
+      <PageHero
+        image={galleryData.hero.image}
+        title={galleryData.hero.title}
+        breadcrumbHome={galleryData.hero.breadcrumbHome}
+        breadcrumbCurrent={galleryData.hero.breadcrumbCurrent}
+      />
       <GalleryGrid/>
       <Newsletter/>
     </>

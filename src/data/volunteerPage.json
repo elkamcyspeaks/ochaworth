@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1547496613-4e19af6736dc?w=1600&h=700&fit=crop&auto=format",
+    "title": "Volunteer With Us",
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Volunteer"
+  },
+  "intro": {
+    "sectionLabel": "Get Involved"
+  },
+  "team": {
+    "sectionLabel": "Our Team"
+  },
+  "form": {
+    "heading": "Volunteer Application",
+    "paragraph": "Tell us a little about yourself and how you'd like to help — we'll be in touch about opportunities that fit.",
+    "namePlaceholder": "Enter Your Name",
+    "emailPlaceholder": "Email Address",
+    "phonePlaceholder": "Phone Number",
+    "interestDefaultOption": "Select an area of interest",
+    "availabilityDefaultOption": "Select your availability",
+    "availabilityOptions": ["Weekdays", "Weekends", "Evenings", "Flexible / Anytime"],
+    "messagePlaceholder": "Tell us why you'd like to volunteer...",
+    "agreementText": "I agree to be contacted about volunteer opportunities",
+    "submitButtonText": "Submit Application",
+    "submittedButtonText": "Application Sent!"
+  }
+}

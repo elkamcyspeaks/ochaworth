@@ -34,10 +34,11 @@ collections:
           - label: "Navigation Menu"
             name: "nav"
             widget: "object"
-            hint: "Text shown in the top navigation bar on every page. 'Programs' is a placeholder until that page is built, so its label can be edited but it won't be clickable yet."
+            hint: "Text shown in the top navigation bar on every page. 'Volunteer' appears as a drop-down option under 'About' (hover or tap 'About' to reveal it). 'Programs' is a placeholder until that page is built, so its label can be edited but it won't be clickable yet."
             fields:
               - { label: '"Home" Link Text', name: "homeLabel", widget: "string" }
               - { label: '"About" Link Text', name: "aboutLabel", widget: "string" }
+              - { label: '"Volunteer" Link Text (drop-down under About)', name: "volunteerLabel", widget: "string" }
               - { label: '"Programs" Link Text', name: "servicesLabel", widget: "string" }
               - { label: '"Gallery" Link Text', name: "galleryLabel", widget: "string" }
               - { label: '"Contact" Link Text', name: "contactLabel", widget: "string" }
@@ -656,3 +657,52 @@ collections:
               - { label: "Photo", name: "image", widget: "image" }
               - { label: "Caption", name: "caption", widget: "string" }
               - { label: "Category Tag", name: "category", widget: "string" }
+
+      - file: "src/data/volunteerPage.json"
+        label: "Volunteer Page"
+        name: "volunteerPage"
+        hint: "Content shown only on the /volunteer page, reached from the 'About' drop-down in the nav bar. The 'Become a Volunteer' pitch, action photo, impact numbers, and the team photos/names/roles come from Homepage Content — edit those under 'Volunteer Cards Section' and 'Volunteers / Team' instead."
+        fields:
+          - label: "Page Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Banner Background Photo", name: "image", widget: "image" }
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: 'Breadcrumb — "Home" Link Text', name: "breadcrumbHome", widget: "string" }
+              - { label: "Breadcrumb — Current Page Text", name: "breadcrumbCurrent", widget: "string" }
+
+          - label: "\"Become A Volunteer\" Section (Volunteer page only)"
+            name: "intro"
+            widget: "object"
+            hint: "The heading, paragraph, photo, and stats in this section come from 'Volunteer Cards Section' in Homepage Content. This field is additional and only appears on the Volunteer page."
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+
+          - label: "Team Section (Volunteer page only)"
+            name: "team"
+            widget: "object"
+            hint: "The heading and the volunteer cards themselves are shared — edit the heading under 'Volunteers Section — Shared Text' and the people under 'Volunteers / Team', both in Homepage Content."
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+
+          - label: "Application Form"
+            name: "form"
+            widget: "object"
+            hint: "This form is visual only for now (no email backend yet) — the same as the Contact page's form. The 'Area of Interest' options shown here come from 'Our Causes' in Homepage Content → Footer."
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Name Field Placeholder", name: "namePlaceholder", widget: "string" }
+              - { label: "Email Field Placeholder", name: "emailPlaceholder", widget: "string" }
+              - { label: "Phone Field Placeholder", name: "phonePlaceholder", widget: "string" }
+              - { label: "Interest Dropdown Default Text", name: "interestDefaultOption", widget: "string" }
+              - { label: "Availability Dropdown Default Text", name: "availabilityDefaultOption", widget: "string" }
+              - label: "Availability Dropdown Options"
+                name: "availabilityOptions"
+                widget: "list"
+                field: { label: "Option", name: "option", widget: "string" }
+              - { label: "Message Field Placeholder", name: "messagePlaceholder", widget: "string" }
+              - { label: "Agreement Checkbox Text", name: "agreementText", widget: "string" }
+              - { label: "Submit Button Text", name: "submitButtonText", widget: "string" }
+              - { label: '"Sent" Confirmation Button Text', name: "submittedButtonText", widget: "string" }

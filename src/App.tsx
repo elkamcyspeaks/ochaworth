@@ -4,6 +4,7 @@ import Home from "@/pages/Home";
 import AboutPage from "@/pages/AboutPage";
 import ContactPage from "@/pages/ContactPage";
 import GalleryPage from "@/pages/GalleryPage";
+import VolunteerPage from "@/pages/VolunteerPage";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="about" element={<AboutPage/>}/>
         <Route path="contact" element={<ContactPage/>}/>
         <Route path="gallery" element={<GalleryPage/>}/>
+        <Route path="volunteer" element={<VolunteerPage/>}/>
       </Route>
     </Routes>
   );

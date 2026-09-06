@@ -4,7 +4,7 @@ import logoImg from "@/imports/logo-full-original.png";
 import site from "@/data/site.json";
 import {
   MailIcon, PhoneIcon, MapPinIcon, FacebookIcon, TwitterIcon, InstagramIcon, YoutubeIcon,
-  ChevronRight, YellowBtn,
+  ChevronRight, ChevronDown, YellowBtn,
 } from "./shared";
 
 // ── Top utility bar ──────────────────────────────────────────────────────────
@@ -31,14 +31,6 @@ function TopBar() {
 
 // ── Main navigation ───────────────────────────────────────────────────────────
 
-// Pages that exist so far link for real; "Programs" is a placeholder until built.
-const NAV_LINKS: { label: string; to?: string }[] = [
-  { label: site.nav.homeLabel, to: "/" },
-  { label: site.nav.aboutLabel, to: "/about" },
-  { label: site.nav.servicesLabel },
-  { label: site.nav.galleryLabel, to: "/gallery" },
-];
-
 function NavItem({ label, to, onClick }: { label: string; to?: string; onClick?: () => void }) {
   if (!to) {
     return <a href="#" onClick={onClick} className="hover:text-[var(--yellow)] transition-colors">{label}</a>;
@@ -55,6 +47,33 @@ function NavItem({ label, to, onClick }: { label: string; to?: string; onClick?:
   );
 }
 
+// "About" links straight to /about as always; hovering it (desktop) also
+// reveals "Volunteer" underneath as a sub-item, since Volunteer doesn't need
+// its own top-level nav slot.
+function AboutNavItem() {
+  return (
+    <div className="relative group py-2 -my-2">
+      <NavLink
+        to="/about"
+        className={({ isActive }) => "flex items-center gap-1 transition-colors " + (isActive ? "text-[var(--yellow)]" : "hover:text-[var(--yellow)]")}
+      >
+        {site.nav.aboutLabel}
+        <ChevronDown className="w-3 h-3"/>
+      </NavLink>
+      <div className="absolute left-0 top-full pt-2 hidden group-hover:block z-50">
+        <div className="bg-[var(--green-dark)] rounded-lg shadow-xl py-2 min-w-[160px]">
+          <NavLink
+            to="/volunteer"
+            className={({ isActive }) => "block px-4 py-2 text-sm transition-colors " + (isActive ? "text-[var(--yellow)]" : "text-white hover:text-[var(--yellow)] hover:bg-white/5")}
+          >
+            {site.nav.volunteerLabel}
+          </NavLink>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -64,7 +83,10 @@ function Navbar() {
           <img src={logoImg} alt="Ochaworth" className="h-12 w-auto object-contain"/>
         </Link>
         <div className="hidden lg:flex items-center gap-8 text-sm text-white font-medium">
-          {NAV_LINKS.map(n => <NavItem key={n.label} {...n}/>)}
+          <NavItem label={site.nav.homeLabel} to="/"/>
+          <AboutNavItem/>
+          <NavItem label={site.nav.servicesLabel}/>
+          <NavItem label={site.nav.galleryLabel} to="/gallery"/>
           <NavLink to="/contact" className={({ isActive }) => "transition-colors " + (isActive ? "text-[var(--yellow)]" : "hover:text-[var(--yellow)]")}>{site.nav.contactLabel}</NavLink>
         </div>
         <div className="hidden lg:flex"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></div>
@@ -76,7 +98,11 @@ function Navbar() {
       </div>
       {menuOpen && (
         <div className="lg:hidden bg-[var(--green-dark)] px-4 pb-4 flex flex-col gap-3 text-white text-sm">
-          {NAV_LINKS.map(n => <NavItem key={n.label} {...n} onClick={() => setMenuOpen(false)}/>)}
+          <NavItem label={site.nav.homeLabel} to="/" onClick={() => setMenuOpen(false)}/>
+          <NavItem label={site.nav.aboutLabel} to="/about" onClick={() => setMenuOpen(false)}/>
+          <NavLink to="/volunteer" onClick={() => setMenuOpen(false)} className="pl-4 -mt-2 text-white/60 hover:text-[var(--yellow)] text-xs">↳ {site.nav.volunteerLabel}</NavLink>
+          <NavItem label={site.nav.servicesLabel} onClick={() => setMenuOpen(false)}/>
+          <NavItem label={site.nav.galleryLabel} to="/gallery" onClick={() => setMenuOpen(false)}/>
           <NavLink to="/contact" onClick={() => setMenuOpen(false)} className="py-1 hover:text-[var(--yellow)]">{site.nav.contactLabel}</NavLink>
           <YellowBtn className="mt-2 self-start text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn>
         </div>

@@ -1,54 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import site from "@/data/site.json";
 import contactPageData from "@/data/contactPage.json";
 import {
-  ChevronRight, CheckIcon, SendIcon, ClipboardIcon,
-  Icon, Newsletter,
+  CheckIcon, SendIcon, ClipboardIcon,
+  Icon, Newsletter, PageHero,
 } from "@/components/shared";
 
 // ── Sections ──────────────────────────────────────────────────────────────────
-
-function PageHero() {
-  const h = contactPageData.hero;
-  return (
-    <section className="relative h-64 md:h-80 flex items-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src={h.image}
-          alt="Contact Us hero"
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[var(--green-dark)]/75"/>
-      </div>
-
-      {/* Yellow paint splatter accent — left side */}
-      <div className="absolute left-0 top-0 bottom-0 w-48 pointer-events-none z-10 overflow-hidden">
-        <svg viewBox="0 0 200 400" className="absolute left-0 top-0 h-full w-auto opacity-90" preserveAspectRatio="xMinYMid slice">
-          <ellipse cx="30" cy="200" rx="80" ry="180" fill="var(--yellow)" opacity="0.85"/>
-          <circle cx="90" cy="80" r="30" fill="var(--yellow)" opacity="0.7"/>
-          <circle cx="110" cy="320" r="20" fill="var(--yellow)" opacity="0.6"/>
-          <circle cx="60" cy="150" r="12" fill="var(--yellow)" opacity="0.5"/>
-          <circle cx="130" cy="220" r="8" fill="var(--yellow)" opacity="0.4"/>
-          <circle cx="80" cy="350" r="14" fill="var(--yellow)" opacity="0.5"/>
-          <circle cx="140" cy="130" r="10" fill="var(--yellow)" opacity="0.35"/>
-          <circle cx="50" cy="60" r="18" fill="var(--yellow)" opacity="0.55"/>
-        </svg>
-      </div>
-
-      <div className="relative z-20 max-w-7xl mx-auto px-4 w-full pl-16 md:pl-24">
-        <h1 className="text-5xl md:text-6xl font-black text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-          {h.title}
-        </h1>
-        <div className="flex items-center gap-2 text-sm text-white/60">
-          <Link to="/" className="hover:text-[var(--yellow)] transition-colors">{h.breadcrumbHome}</Link>
-          <ChevronRight className="w-3 h-3"/>
-          <span className="text-[var(--yellow)]">{h.breadcrumbCurrent}</span>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function ContactSection() {
   const s = contactPageData.section;
@@ -201,7 +159,12 @@ function MapSection() {
 export default function ContactPage() {
   return (
     <>
-      <PageHero/>
+      <PageHero
+        image={contactPageData.hero.image}
+        title={contactPageData.hero.title}
+        breadcrumbHome={contactPageData.hero.breadcrumbHome}
+        breadcrumbCurrent={contactPageData.hero.breadcrumbCurrent}
+      />
       <ContactSection/>
       <MapSection/>
       <Newsletter/>

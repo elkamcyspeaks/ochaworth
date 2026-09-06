@@ -1,43 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import site from "@/data/site.json";
 import aboutPageData from "@/data/aboutPage.json";
 import {
   ChevronRight, ChevronDown, ArrowRight, PlayIcon, StarIcon, QuoteIcon,
   TargetIcon, EyeIcon, ShieldIcon, CheckCircle,
   FacebookIcon, TwitterIcon, InstagramIcon, YoutubeIcon,
-  Icon, SectionLabel, YellowBtn, Newsletter,
+  Icon, SectionLabel, YellowBtn, Newsletter, PageHero,
 } from "@/components/shared";
 
 // ── Sections ──────────────────────────────────────────────────────────────────
-
-function PageHero() {
-  const h = aboutPageData.hero;
-  return (
-    <section className="relative h-64 md:h-80 flex items-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src={h.image}
-          alt="About Us hero"
-          className="w-full h-full object-cover object-top"
-        />
-        <div className="absolute inset-0 bg-[var(--green-dark)]/80"/>
-      </div>
-      {/* Yellow accent blob */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--yellow)]/20 rounded-full blur-3xl pointer-events-none"/>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
-        <h1 className="text-5xl md:text-6xl font-black text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
-          {h.title}
-        </h1>
-        <div className="flex items-center gap-2 text-sm text-white/60">
-          <Link to="/" className="hover:text-[var(--yellow)] transition-colors">{h.breadcrumbHome}</Link>
-          <ChevronRight className="w-3 h-3"/>
-          <span className="text-[var(--yellow)]">{h.breadcrumbCurrent}</span>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function AboutIntro() {
   const a = site.about;
@@ -457,7 +428,12 @@ function FAQ() {
 export default function AboutPage() {
   return (
     <>
-      <PageHero/>
+      <PageHero
+        image={aboutPageData.hero.image}
+        title={aboutPageData.hero.title}
+        breadcrumbHome={aboutPageData.hero.breadcrumbHome}
+        breadcrumbCurrent={aboutPageData.hero.breadcrumbCurrent}
+      />
       <AboutIntro/>
       <StatsBar/>
       <MissionVisionValues/>
