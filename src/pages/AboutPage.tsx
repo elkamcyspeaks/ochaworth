@@ -298,8 +298,58 @@ function BoardMembers() {
                 <p className="text-sm text-gray-400 mb-4">{v.role}</p>
                 <div className="flex items-center justify-between">
                   <div className="flex gap-2">
-                    {[FacebookIcon, TwitterIcon, InstagramIcon, YoutubeIcon].map((SocialIcon, i) => (
-                      <a key={i} href="#" className="w-7 h-7 bg-gray-100 rounded-full flex items-center justify-center hover:bg-[var(--yellow)] transition-colors">
+                    {[
+                      { Icon: FacebookIcon, href: v.facebook },
+                      { Icon: TwitterIcon, href: v.twitter },
+                      { Icon: InstagramIcon, href: v.instagram },
+                      { Icon: YoutubeIcon, href: v.youtube },
+                    ].filter(s => s.href).map(({ Icon: SocialIcon, href }, i) => (
+                      <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-7 h-7 bg-gray-100 rounded-full flex items-center justify-center hover:bg-[var(--yellow)] transition-colors">
+                        <SocialIcon className="w-3 h-3 text-[var(--green-mid)]"/>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function StateCoordinators() {
+  const sc = aboutPageData.stateCoordinators;
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="mb-12">
+          <SectionLabel text={sc.sectionLabel}/>
+          <h2 className="text-4xl font-black text-[var(--green-dark)]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            {sc.headingPrefix} <span className="text-[var(--green-mid)] italic">{sc.headingItalic}</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          {sc.members.map(v => (
+            <div key={v.name} className="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group">
+              <div className="relative overflow-hidden h-64">
+                <img src={v.img} alt={v.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"/>
+                <div className="absolute top-3 right-3 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-3 py-1 rounded-full">{sc.badgeText}</div>
+              </div>
+              <div className="p-5">
+                <h4 className="font-bold text-[var(--green-dark)] text-base">{v.name}</h4>
+                <p className="text-sm text-gray-400 mb-4">{v.role}</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-2">
+                    {[
+                      { Icon: FacebookIcon, href: v.facebook },
+                      { Icon: TwitterIcon, href: v.twitter },
+                      { Icon: InstagramIcon, href: v.instagram },
+                      { Icon: YoutubeIcon, href: v.youtube },
+                    ].filter(s => s.href).map(({ Icon: SocialIcon, href }, i) => (
+                      <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-7 h-7 bg-gray-100 rounded-full flex items-center justify-center hover:bg-[var(--yellow)] transition-colors">
                         <SocialIcon className="w-3 h-3 text-[var(--green-mid)]"/>
                       </a>
                     ))}
@@ -455,6 +505,7 @@ export default function AboutPage() {
       <MissionVisionValues/>
       <TouchingLives/>
       <BoardMembers/>
+      <StateCoordinators/>
       <Testimonials/>
       <FAQ/>
       <Newsletter/>

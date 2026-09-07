@@ -550,6 +550,32 @@ collections:
                   - { label: "Name", name: "name", widget: "string" }
                   - { label: "Role", name: "role", widget: "string" }
                   - { label: "Photo", name: "img", widget: "image" }
+                  - { label: "Facebook URL", name: "facebook", widget: "string", required: false, hint: "Leave blank to hide the Facebook icon for this person." }
+                  - { label: "Twitter/X URL", name: "twitter", widget: "string", required: false, hint: "Leave blank to hide the Twitter/X icon for this person." }
+                  - { label: "Instagram URL", name: "instagram", widget: "string", required: false, hint: "Leave blank to hide the Instagram icon for this person." }
+                  - { label: "YouTube URL", name: "youtube", widget: "string", required: false, hint: "Leave blank to hide the YouTube icon for this person." }
+
+          - label: "State Coordinators Section"
+            name: "stateCoordinators"
+            widget: "object"
+            hint: "Shown right below Board Members on the About page. This is its own separate list — it does not share people with Board Members, Volunteers/Team, or anywhere else."
+            fields:
+              - { label: "Small Pill Label (shown above the heading)", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Words", name: "headingItalic", widget: "string" }
+              - { label: "Photo Badge Text", name: "badgeText", widget: "string" }
+              - label: "State Coordinators"
+                name: "members"
+                widget: "list"
+                summary: "{{fields.name}} — {{fields.role}}"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: 'Role / State Covered (e.g. "Lagos State Coordinator")', name: "role", widget: "string" }
+                  - { label: "Photo", name: "img", widget: "image" }
+                  - { label: "Facebook URL", name: "facebook", widget: "string", required: false, hint: "Leave blank to hide the Facebook icon for this person." }
+                  - { label: "Twitter/X URL", name: "twitter", widget: "string", required: false, hint: "Leave blank to hide the Twitter/X icon for this person." }
+                  - { label: "Instagram URL", name: "instagram", widget: "string", required: false, hint: "Leave blank to hide the Instagram icon for this person." }
+                  - { label: "YouTube URL", name: "youtube", widget: "string", required: false, hint: "Leave blank to hide the YouTube icon for this person." }
 
           - label: "Testimonials Section (About page only)"
             name: "testimonials"
