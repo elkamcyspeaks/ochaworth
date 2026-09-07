@@ -208,19 +208,23 @@
   "faq": {
     "items": [
       {
-        "q": "Is Ochaworth Registered?",
+        "q": "What Does Ochaworth do?",
         "a": "Every donation to Ochaworth directly funds life-changing programmes in education, healthcare, and community development. We publish detailed impact reports so you can see exactly where your naira goes — from school supplies to medical outreaches to vocational training for youth."
       },
       {
-        "q": "How Do I Become A Member ?",
+        "q": "How can i donate or support Ochaworth?",
         "a": "Ochaworth has been reaching communities across Nigeria and beyond for over a decade. You may have discovered us through a community event, social media, a partner organisation, or a friend who has experienced our work firsthand."
       },
       {
-        "q": "How Can I Volunteer?",
+        "q": "How can i become a volunteer ?",
         "a": "Volunteering schedules are flexible and tailored to your availability. Whether you can commit to a one-day outreach or a six-month programme, we have a role that fits your skills and calendar. Reach out to our volunteer coordination team to find your best fit."
       },
       {
-        "q": "What Types Of Projects Does Ochaworth Focus On?",
+        "q": "How are donations used?",
+        "a": "Our core programme areas include food distribution, child education, medical support, leadership development, poverty reduction, and emergency relief. Every project is designed with community input to ensure it addresses real, local needs."
+      },
+      {
+        "q": "How can someone apply for or receive your support?",
         "a": "Our core programme areas include food distribution, child education, medical support, leadership development, poverty reduction, and emergency relief. Every project is designed with community input to ensure it addresses real, local needs."
       }
     ],
