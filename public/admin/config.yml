@@ -424,6 +424,13 @@ collections:
                 name: "policyLinks"
                 widget: "list"
                 field: { label: "Link Text", name: "link", widget: "string" }
+              - label: 'Footer Credit Line (e.g. "Designed & Built by ...")'
+                name: "credit"
+                widget: "object"
+                hint: "Shown at the very bottom of the footer, right next to the copyright text."
+                fields:
+                  - { label: "Credit Text", name: "text", widget: "string" }
+                  - { label: "Link URL (e.g. your Instagram, X/Twitter, LinkedIn, or portfolio)", name: "url", widget: "string", required: false, hint: "Leave blank to show the credit text as plain, non-clickable text instead of a link." }
 
           - label: "Newsletter Signup Section"
             name: "newsletter"

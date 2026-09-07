@@ -195,7 +195,19 @@ function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/30">
-          <p>{o.copyright}</p>
+          <div className="flex items-center gap-2 flex-wrap justify-center">
+            <p>{o.copyright}</p>
+            {site.footer.credit?.text && (
+              <>
+                <span className="hidden sm:inline">·</span>
+                {site.footer.credit.url ? (
+                  <a href={site.footer.credit.url} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--yellow)]">{site.footer.credit.text}</a>
+                ) : (
+                  <span>{site.footer.credit.text}</span>
+                )}
+              </>
+            )}
+          </div>
           <div className="flex gap-5">
             {site.footer.policyLinks.map(l => <a key={l} href="#" className="hover:text-[var(--yellow)]">{l}</a>)}
           </div>

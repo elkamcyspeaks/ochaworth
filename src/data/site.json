@@ -503,7 +503,11 @@
       "Privacy Policy",
       "Terms of Service",
       "Cookie Policy"
-    ]
+    ],
+    "credit": {
+      "text": "Designed & Built by El Kamcy",
+      "url": ""
+    }
   },
   "volunteersSection": {
     "homeSectionLabel": "Our Team",
