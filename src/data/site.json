@@ -176,46 +176,46 @@
       }
     ],
     "sectionLabel": "Global Reach",
-    "headingPrefix": "Global Project",
+    "headingPrefix": "Other States Chapter",
     "headingItalic": "Locations",
     "regionTabs": [
       "All Regions",
-      "Africa",
-      "Asia",
-      "Americas",
-      "Europe",
-      "Oceania"
+      "Jos, Plateau State",
+      "Enugu",
+      "Abuja",
+      "Nasarawa",
+      "Kogi"
     ],
     "pins": [
       {
         "top": "35%",
         "left": "22%",
-        "label": "USA"
+        "label": "Jos, Plateau State"
       },
       {
         "top": "28%",
         "left": "48%",
-        "label": "Europe"
+        "label": "Abuja"
       },
       {
         "top": "48%",
         "left": "52%",
-        "label": "Africa"
+        "label": "Kogi"
       },
       {
         "top": "38%",
         "left": "68%",
-        "label": "South Asia"
+        "label": "Nasarawa"
       },
       {
         "top": "55%",
         "left": "75%",
-        "label": "SE Asia"
+        "label": "Enugu"
       },
       {
         "top": "62%",
         "left": "32%",
-        "label": "South America"
+        "label": "Adamawa"
       }
     ]
   },
