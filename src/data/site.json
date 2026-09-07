@@ -316,24 +316,24 @@
   },
   "testimonials": [
     {
-      "name": "Alex James",
+      "name": "Yakubu Jame",
       "role": "Donor",
       "stars": 5,
-      "img": "https://images.unsplash.com/photo-1596422219551-adac8612092f?w=100&h=100&fit=crop&auto=format",
+      "img": "/images/uploads/_-33-.jpeg",
       "text": "This organization has transformed my perspective on giving. The transparency and genuine impact they create is unlike any other organization I have supported."
     },
     {
-      "name": "Priya Sharma",
+      "name": "Mary James",
       "role": "Volunteer",
       "stars": 5,
-      "img": "https://images.unsplash.com/photo-1758599668429-121d54188b9c?w=100&h=100&fit=crop&auto=format",
+      "img": "/images/uploads/professional-photo-done-by-ai.jpeg",
       "text": "Volunteering here was a life-changing experience. Every project is thoughtfully planned and the local impact is deeply meaningful and lasting."
     },
     {
-      "name": "Omar Hassan",
+      "name": "Nan Mark",
       "role": "Community Partner",
       "stars": 5,
-      "img": "https://images.unsplash.com/photo-1647538061429-0adc75ad664f?w=100&h=100&fit=crop&auto=format",
+      "img": "/images/uploads/inspiration-for-your-photoshoots.jpeg",
       "text": "As a community partner, the support has been extraordinary. They listen, they adapt, and they deliver results that truly uplift our people."
     }
   ],
