@@ -7,11 +7,24 @@
   },
   "section": {
     "heading": "Contact Information",
+    "phonePlaceholder": "Phone Number",
+    "subjects": [
+      "General Inquiry",
+      "Donation Support",
+      "Volunteer Programme",
+      "Partnership",
+      "Media & Press",
+      "Other"
+    ],
+    "sendButtonText": "Send Message",
+    "namePlaceholder": "Enter Your Name",
+    "subjectDefaultOption": "Select subjects",
+    "messagePlaceholder": "Write Message...",
     "paragraph": "Thank you for your interest in Ochaworth. We are excited to hear from you and discuss how we can make a difference together — temporary shelter, education, and community care.",
     "infoCards": {
       "callUs": {
         "title": "Call Us",
-        "sub": "Any time for contact us"
+        "sub": "Talk to us"
       },
       "location": {
         "title": "Our Location",
@@ -27,16 +40,10 @@
         "value": "Joining Our Community"
       }
     },
-    "formHeading": "Get In Touch",
-    "namePlaceholder": "Enter Your Name",
     "emailPlaceholder": "Email Address",
-    "phonePlaceholder": "Phone Number",
-    "subjectDefaultOption": "Select subjects",
-    "subjects": ["General Inquiry", "Donation Support", "Volunteer Programme", "Partnership", "Media & Press", "Other"],
-    "messagePlaceholder": "Write Message...",
+    "sentButtonText": "Message Sent!",
     "agreementText": "I agree with the privacy policy",
-    "sendButtonText": "Send Message",
-    "sentButtonText": "Message Sent!"
+    "formHeading": "Get In Touch"
   },
   "map": {
     "embedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=8.8321%2C9.8785%2C8.9521%2C9.9785&layer=mapnik&marker=9.9285%2C8.8921"
