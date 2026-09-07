@@ -1,98 +1,4 @@
 {
-  "hero": {
-    "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=600&fit=crop&auto=format",
-    "title": "About Us",
-    "breadcrumbHome": "Home",
-    "breadcrumbCurrent": "About Us"
-  },
-  "intro": {
-    "sectionLabel": "About Our Charity",
-    "statBadgeValue": "3,800+",
-    "statBadgeLabel": "Donations Made",
-    "buttonText": "More About Us",
-    "features": [
-      {
-        "icon": "fundraising",
-        "title": "Fundraising",
-        "desc": "We raise funds transparently, ensuring every naira goes directly to the families and communities who need it most."
-      },
-      {
-        "icon": "donation",
-        "title": "Donation Making",
-        "desc": "Our donation system is secure, efficient, and built around trust — with regular impact reports for every contributor."
-      },
-      {
-        "icon": "hand",
-        "title": "Volunteer Initiatives",
-        "desc": "We mobilise skilled volunteers from across Nigeria and beyond to deliver hands-on support in underserved communities."
-      }
-    ]
-  },
-  "stats": [
-    {
-      "value": "100+",
-      "label": "Community Reviews"
-    },
-    {
-      "value": "100%",
-      "label": "Customer Satisfaction"
-    },
-    {
-      "value": "5+",
-      "label": "Years Of Experience"
-    },
-    {
-      "value": "20+",
-      "label": "Projects Delivered"
-    },
-    {
-      "value": "50+",
-      "label": "Team & Volunteers"
-    }
-  ],
-  "missionVisionValues": {
-    "sectionLabel": "Who We Are",
-    "headingLine1": "Our Mission, Vision",
-    "headingItalic": "Core Values",
-    "intro": "Three pillars that define who we are, what we are working towards, and the principles that guide every decision we make.",
-    "mission": {
-      "tag": "Our Purpose",
-      "title": "Mission",
-      "desc": "To promote and protect the rights of women and girls through advocacy, empowerment, mentoring, and leadership development, working to eliminate gender-based violence.",
-      "points": [
-        "Community-led development",
-        "Sustainable programmes",
-        "Inclusive outreach"
-      ]
-    },
-    "vision": {
-      "tag": "Our Future",
-      "title": "Vision",
-      "desc": "We envision a world where every woman and girl knows her worth, claims her rights, and lives free from injustice, discrimination, and inequality.",
-      "points": [
-        "Thriving communities",
-        "Generational impact",
-        "Dignified living for all"
-      ]
-    },
-    "values": {
-      "tag": "What We Stand For",
-      "title": "Values",
-      "desc": "\n\n\n\n\n\n\n",
-      "points": [
-        "Gender Equality",
-        "Gender Justice",
-        "Solidarity & Partnership",
-        "Advocacy",
-        "⁠Leadership & Mentorship",
-        "Empowerment",
-        "Non-Violence",
-        "Integrity",
-        "Excellence",
-        "Networking"
-      ]
-    }
-  },
   "touchingLives": {
     "sectionLabel": "Driven From Fundraisers",
     "successStoryButtonText": "Our Success Story",
@@ -122,9 +28,9 @@
         "name": "Dirmicit",
         "role": "Add Their Role",
         "img": "/images/uploads/img_3972.jpg",
-        "facebook": "",
-        "twitter": "",
-        "instagram": "",
+        "facebook": "https://www.facebook.com/share/19hUQipFxw/?mibextid=wwXIfr",
+        "twitter": "https://x.com/dpyentam?s=11",
+        "instagram": "https://www.instagram.com/dirmicit_binyir_pyentam?stkn=MTBlNnNoZmtxbmtwdQ==",
         "youtube": ""
       },
       {
@@ -183,39 +89,28 @@
       }
     ]
   },
-  "testimonials": {
-    "sectionLabel": "Our Testimonials",
-    "headingPrefix": "What Our",
-    "headingItalic": "Community",
-    "headingSuffix": "Is Saying?"
-  },
-  "faq": {
-    "items": [
+  "intro": {
+    "sectionLabel": "About Our Charity",
+    "statBadgeValue": "3,800+",
+    "statBadgeLabel": "Donations Made",
+    "buttonText": "More About Us",
+    "features": [
       {
-        "q": "Is Ochaworth Registered?",
-        "a": "Every donation to Ochaworth directly funds life-changing programmes in education, healthcare, and community development. We publish detailed impact reports so you can see exactly where your naira goes — from school supplies to medical outreaches to vocational training for youth."
+        "icon": "fundraising",
+        "title": "Fundraising",
+        "desc": "We raise funds transparently, ensuring every naira goes directly to the families and communities who need it most."
       },
       {
-        "q": "How Do I Become A Member ?",
-        "a": "Ochaworth has been reaching communities across Nigeria and beyond for over a decade. You may have discovered us through a community event, social media, a partner organisation, or a friend who has experienced our work firsthand."
+        "icon": "donation",
+        "title": "Donation Making",
+        "desc": "Our donation system is secure, efficient, and built around trust — with regular impact reports for every contributor."
       },
       {
-        "q": "How Can I Volunteer?",
-        "a": "Volunteering schedules are flexible and tailored to your availability. Whether you can commit to a one-day outreach or a six-month programme, we have a role that fits your skills and calendar. Reach out to our volunteer coordination team to find your best fit."
-      },
-      {
-        "q": "What Types Of Projects Does Ochaworth Focus On?",
-        "a": "Our core programme areas include food distribution, child education, medical support, leadership development, poverty reduction, and emergency relief. Every project is designed with community input to ensure it addresses real, local needs."
+        "icon": "hand",
+        "title": "Volunteer Initiatives",
+        "desc": "We mobilise skilled volunteers from across Nigeria and beyond to deliver hands-on support in underserved communities."
       }
-    ],
-    "imageLabelText": "Get Answers",
-    "imageCaption": "Your questions help us serve communities better",
-    "headingLine2Prefix": "About",
-    "sectionLabel": "Frequently Asked Questions",
-    "headingItalic": "Ochaworth",
-    "image": "/images/uploads/img_1377.jpg",
-    "headingLine1": "Common Questions",
-    "headingLine3": "& What We Do"
+    ]
   },
   "stateCoordinators": {
     "sectionLabel": "Our Team",
@@ -224,9 +119,9 @@
     "badgeText": "STATE COORDINATOR",
     "members": [
       {
-        "name": "Coordinator 1",
-        "role": "Add Their State/Role",
-        "img": "https://placehold.co/500x600?text=Add+Photo",
+        "name": "Deborah",
+        "role": "Cordinator Adamawa state",
+        "img": "/images/uploads/whatsapp-image-2026-08-17-at-17.58.14.jpeg",
         "facebook": "",
         "twitter": "",
         "instagram": "",
@@ -260,5 +155,110 @@
         "youtube": ""
       }
     ]
-  }
+  },
+  "testimonials": {
+    "sectionLabel": "Our Testimonials",
+    "headingPrefix": "What Our",
+    "headingItalic": "Community",
+    "headingSuffix": "Is Saying?"
+  },
+  "missionVisionValues": {
+    "sectionLabel": "Who We Are",
+    "headingLine1": "Our Mission, Vision",
+    "headingItalic": "Core Values",
+    "intro": "Three pillars that define who we are, what we are working towards, and the principles that guide every decision we make.",
+    "mission": {
+      "tag": "Our Purpose",
+      "title": "Mission",
+      "desc": "To promote and protect the rights of women and girls through advocacy, empowerment, mentoring, and leadership development, working to eliminate gender-based violence.",
+      "points": [
+        "Community-led development",
+        "Sustainable programmes",
+        "Inclusive outreach"
+      ]
+    },
+    "vision": {
+      "tag": "Our Future",
+      "title": "Vision",
+      "desc": "We envision a world where every woman and girl knows her worth, claims her rights, and lives free from injustice, discrimination, and inequality.",
+      "points": [
+        "Thriving communities",
+        "Generational impact",
+        "Dignified living for all"
+      ]
+    },
+    "values": {
+      "tag": "What We Stand For",
+      "title": "Values",
+      "desc": "\n\n\n\n\n\n\n",
+      "points": [
+        "Gender Equality",
+        "Gender Justice",
+        "Solidarity & Partnership",
+        "Advocacy",
+        "⁠Leadership & Mentorship",
+        "Empowerment",
+        "Non-Violence",
+        "Integrity",
+        "Excellence",
+        "Networking"
+      ]
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "Is Ochaworth Registered?",
+        "a": "Every donation to Ochaworth directly funds life-changing programmes in education, healthcare, and community development. We publish detailed impact reports so you can see exactly where your naira goes — from school supplies to medical outreaches to vocational training for youth."
+      },
+      {
+        "q": "How Do I Become A Member ?",
+        "a": "Ochaworth has been reaching communities across Nigeria and beyond for over a decade. You may have discovered us through a community event, social media, a partner organisation, or a friend who has experienced our work firsthand."
+      },
+      {
+        "q": "How Can I Volunteer?",
+        "a": "Volunteering schedules are flexible and tailored to your availability. Whether you can commit to a one-day outreach or a six-month programme, we have a role that fits your skills and calendar. Reach out to our volunteer coordination team to find your best fit."
+      },
+      {
+        "q": "What Types Of Projects Does Ochaworth Focus On?",
+        "a": "Our core programme areas include food distribution, child education, medical support, leadership development, poverty reduction, and emergency relief. Every project is designed with community input to ensure it addresses real, local needs."
+      }
+    ],
+    "imageLabelText": "Get Answers",
+    "imageCaption": "Your questions help us serve communities better",
+    "headingLine2Prefix": "About",
+    "sectionLabel": "Frequently Asked Questions",
+    "headingItalic": "Ochaworth",
+    "image": "/images/uploads/img_1377.jpg",
+    "headingLine1": "Common Questions",
+    "headingLine3": "& What We Do"
+  },
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=600&fit=crop&auto=format",
+    "title": "About Us",
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "About Us"
+  },
+  "stats": [
+    {
+      "value": "100+",
+      "label": "Community Reviews"
+    },
+    {
+      "value": "100%",
+      "label": "Customer Satisfaction"
+    },
+    {
+      "value": "5+",
+      "label": "Years Of Experience"
+    },
+    {
+      "value": "20+",
+      "label": "Projects Delivered"
+    },
+    {
+      "value": "50+",
+      "label": "Team & Volunteers"
+    }
+  ]
 }
