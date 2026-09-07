@@ -433,8 +433,8 @@
   "hero": {
     "slides": [
       {
-        "image": "https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=1600&h=1000&fit=crop&auto=format",
-        "label": "Ochaworth 1",
+        "image": "/images/uploads/500018f1-6f50-40f9-ad5a-9e75b5cf0201.jpg",
+        "label": "Ochaworth",
         "line1": "Donate Today,",
         "highlight": "Transform",
         "italic": "Lives",
@@ -442,8 +442,8 @@
         "sub": "Join us in our mission to create lasting change. Every contribution, big or small, transforms lives and builds stronger communities."
       },
       {
-        "image": "https://images.unsplash.com/photo-1593113616828-6f22bca04804?w=1600&h=1000&fit=crop&auto=format",
-        "label": "Ochaworth 2",
+        "image": "/images/uploads/img_1360.jpg",
+        "label": "Pad A Girl",
         "line1": "Together We Can",
         "highlight": "End",
         "italic": "Hunger",
@@ -451,8 +451,8 @@
         "sub": "Our food distribution programs reach thousands of families every week. Your generosity fills empty plates and restores hope."
       },
       {
-        "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=1000&fit=crop&auto=format",
-        "label": "Ochaworth 3",
+        "image": "/images/uploads/img_1376.jpg",
+        "label": "World Cancer Day Walk",
         "line1": "Empower A Child,",
         "highlight": "Change",
         "italic": "A",
