@@ -111,6 +111,13 @@ function Navbar() {
   );
 }
 
+// If someone pastes a link into the CMS without "https://" in front (e.g. just
+// their handle, or "instagram.com/name"), treat it as an external link anyway
+// instead of letting the browser resolve it as a path on this site.
+function externalUrl(url: string) {
+  return /^https?:\/\//i.test(url) ? url : `https://${url}`;
+}
+
 // ── Footer ────────────────────────────────────────────────────────────────────
 
 const FOOTER_QUICK_LINKS: { label: string; to?: string }[] = [
@@ -201,7 +208,7 @@ function Footer() {
               <>
                 <span className="hidden sm:inline">·</span>
                 {site.footer.credit.url ? (
-                  <a href={site.footer.credit.url} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--yellow)]">{site.footer.credit.text}</a>
+                  <a href={externalUrl(site.footer.credit.url)} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--yellow)]">{site.footer.credit.text}</a>
                 ) : (
                   <span>{site.footer.credit.text}</span>
                 )}
