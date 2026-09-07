@@ -119,24 +119,44 @@
     "ctaButtonText": "Become A Member",
     "members": [
       {
-        "name": "Board Member 1",
+        "name": "Dirmicit",
         "role": "Add Their Role",
-        "img": "https://placehold.co/500x600?text=Add+Photo"
+        "img": "/images/uploads/img_3972.jpg"
       },
       {
-        "name": "Board Member 2",
+        "name": "Cirfat",
         "role": "Add Their Role",
-        "img": "https://placehold.co/500x600?text=Add+Photo"
+        "img": "/images/uploads/img_8904.jpg"
       },
       {
-        "name": "Board Member 3",
+        "name": "Seye",
         "role": "Add Their Role",
-        "img": "https://placehold.co/500x600?text=Add+Photo"
+        "img": "/images/uploads/whatsapp-image-2026-05-04-at-14.27.53-1-.jpeg"
       },
       {
-        "name": "Board Member 4",
+        "name": "Esther",
         "role": "Add Their Role",
-        "img": "https://placehold.co/500x600?text=Add+Photo"
+        "img": "/images/uploads/whatsapp-image-2026-05-04-at-14.40.27-1-.jpeg"
+      },
+      {
+        "name": "Deborah",
+        "role": "Add Their Role",
+        "img": "/images/uploads/whatsapp-image-2026-08-17-at-17.58.14.jpeg"
+      },
+      {
+        "name": "Mercy Omale",
+        "role": "Add Their Role",
+        "img": "/images/uploads/whatsapp-image-2026-05-04-at-14.52.26-1-.jpeg"
+      },
+      {
+        "name": "Jil",
+        "role": "Add Their Role",
+        "img": "/images/uploads/whatsapp-image-2026-08-20-at-09.09.50-1-.jpeg"
+      },
+      {
+        "name": "Nankur",
+        "role": "Add Their Role",
+        "img": "/images/uploads/whatsapp-image-2026-08-19-at-10.21.03-1-.jpeg"
       }
     ]
   },
