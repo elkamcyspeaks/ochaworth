@@ -2,12 +2,12 @@
   "contact": {
     "youtube": "#",
     "facebook": "https://web.facebook.com/owlacdi",
-    "hoursSaturday": "Sat: 10:00AM \u2013 4:00PM",
+    "hoursSaturday": "Sat: 10:00AM – 4:00PM",
     "phone": "(+234) 0808 065 5923",
     "instagram": "https://www.instagram.com/ocha.worthlacdi?stkn=MXdubGFwejlkNGlkYg==",
     "twitter": "https://x.com/ochaworthlacdi?s=11",
     "topBarAddress": "Jos, Plateau State, Nigeria",
-    "hoursWeekday": "Mon \u2013 Fri: 9:00AM \u2013 6:00PM",
+    "hoursWeekday": "Mon – Fri: 9:00AM – 6:00PM",
     "footerAddress": "No. B5 Emerald Royal Plaza Zaramaganda-Rayfield Road Jos, Plateau State, Nigeria",
     "email": "ochaworthlacdi@gmail.com"
   },
@@ -90,12 +90,12 @@
     "footerBlurb": "Ochaworth leadership and community development initiative, a youth-led, community-based social justice and equal rights movement committed to advancing equity, health, and human dignity in Nigeria.",
     "philosophyLabel": "Our Philosophy",
     "shortName": "Ochaworth",
-    "copyright": "\u00a9 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved.",
+    "copyright": "© 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved.",
     "missionHighlight": "Cornerstone",
     "name": "Ochaworth Leadership and Community Development Initiative",
     "missionLine1": "Generosity Is The",
     "missionLine3": "Of Prosperity.",
-    "missionAttribution": "\u2014 Ochaworth Foundation Mission Statement"
+    "missionAttribution": "— Ochaworth Foundation Mission Statement"
   },
   "featuredProjects": {
     "goalLabel": "Goal:",
@@ -242,7 +242,7 @@
     "registerButtonText": "Register",
     "date": "Oct 1, 2026",
     "sectionLabel": "Upcoming Events",
-    "desc": "This October, we\u2019re dedicating the entire month to raising awareness about breast cancer. We invite you to join and support us as we educate, inspire, and encourage early detection. Together, we can spread hope, save lives, and make a meaningful difference.",
+    "desc": "This October, we’re dedicating the entire month to raising awareness about breast cancer. We invite you to join and support us as we educate, inspire, and encourage early detection. Together, we can spread hope, save lives, and make a meaningful difference.",
     "headingItalic": "Upcoming Events",
     "title": "Breast Cancer Awareness",
     "viewAllButtonText": "View All Events",
@@ -251,7 +251,7 @@
   },
   "about": {
     "badgeNumber": "5+",
-    "paragraph": "Ochaworth Leadership and Community Development Initiative (CAC/RN: 7290687) is a registered non-governmental organization and network of impactful, youth-led, women\u2019s rights advocates. We are committed to promoting equality and social justice by equipping women and girls to recognize their worth, live it boldly, and birth the \u201cmore\u201d within them.",
+    "paragraph": "Ochaworth Leadership and Community Development Initiative (CAC/RN: 7290687) is a registered non-governmental organization and network of impactful, youth-led, women’s rights advocates. We are committed to promoting equality and social justice by equipping women and girls to recognize their worth, live it boldly, and birth the “more” within them.",
     "sectionLabel": "About Our Organization",
     "ourImpactButtonText": "Our Impact",
     "badgeLabel": "Years Of Impact",
@@ -304,26 +304,26 @@
     "lastNamePlaceholder": "Last Name",
     "headingHighlight": "Donation",
     "donateButtonSuffix": "Now",
+    "thankYouMessage": "Thank you! We've received your donation details and will be in touch shortly to complete it.",
     "donationsLabel": "Donations",
     "donateButtonPrefix": "Donate",
     "headingSuffix": "At A Time.",
     "selectCauseDefault": "Select a cause",
+    "thankYouButtonText": "Thank You!",
     "bgImage": "/images/uploads/73253843-9ecd-4b69-b886-41a01c06703c.jpg",
     "emailPlaceholder": "Email Address",
     "firstNamePlaceholder": "First Name",
     "totalRaisedLabel": "Total Funds Raised",
     "headingLine1": "Making A Difference,",
     "amountLabel": "Donation Amount",
-    "totalRaised": "\u20a62B+",
+    "totalRaised": "₦2B+",
     "presetAmounts": [
       "10",
       "25",
       "50",
       "100",
       "250"
-    ],
-    "thankYouButtonText": "Thank You!",
-    "thankYouMessage": "Thank you! We've received your donation details and will be in touch shortly to complete it."
+    ]
   },
   "testimonials": [
     {
@@ -396,7 +396,7 @@
         "label": "Countries Reached"
       },
       {
-        "value": "\u20a6500,000+",
+        "value": "₦500,000+",
         "label": "Funds Raised"
       }
     ],
@@ -456,10 +456,10 @@
       {
         "image": "/images/uploads/img_1360.jpg",
         "label": "Pad A Girl",
-        "line1": "Together We Can",
-        "highlight": "End",
-        "italic": "Hunger",
-        "line3": "Worldwide!",
+        "line1": "Together For A",
+        "highlight": "Period",
+        "italic": "Friendly",
+        "line3": "World!",
         "sub": "Our food distribution programs reach thousands of families every week. Your generosity fills empty plates and restores hope."
       },
       {
