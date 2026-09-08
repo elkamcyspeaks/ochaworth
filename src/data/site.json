@@ -380,8 +380,8 @@
     }
   ],
   "volunteerCards": {
-    "actionImage": "/images/uploads/349d5ccc-8492-428f-8509-64491fc2afa9.jpg",
-    "actionCaption": "Together We Feed Thousands",
+    "actionImage": "/images/uploads/whatsapp-image-2026-05-04-at-13.50.22.jpeg",
+    "actionCaption": "Together We End Sexual & GBV",
     "stats": [
       {
         "value": "3,800+",
@@ -401,13 +401,13 @@
       }
     ],
     "card1": {
-      "heading": "Become a Volunteer",
-      "paragraph": "Join our growing network of compassionate volunteers making a real difference every day.",
+      "heading": "Become a Volunteer/Member",
+      "paragraph": "Join our team or any of our growing network/chapters in Nigeria",
       "buttonText": "Join Us"
     },
     "card2": {
       "heading": "Ready To Change The World?",
-      "paragraph": "Your support fuels projects that feed, educate, and heal communities across the globe.",
+      "paragraph": "Your support fuels projects that rehabilitates and reintegrate survivors of Gender Based Violence (GBV), feed widows & orphans, educate the less privileged, Pad a Girl child, Create Cancer awareness and heal communities across the Nation.",
       "buttonText": "Get Started"
     },
     "inActionLabel": "In Action"
@@ -451,7 +451,7 @@
         "highlight": "Transform",
         "italic": "Lives",
         "line3": "Forever!",
-        "sub": "Join us in our mission to create lasting change. Every contribution, big or small, transforms lives and builds stronger communities."
+        "sub": "Join our mission to promote and protect the rights of women and girls through advocacy, empowerment, mentoring, and leadership development, working to eliminate gender-based violence."
       },
       {
         "image": "/images/uploads/img_1360.jpg",
