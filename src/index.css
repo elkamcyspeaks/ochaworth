@@ -6,6 +6,10 @@ html, body, #root {
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --green-dark: #0D2B1D;
   --green-mid: #1B3A2B;

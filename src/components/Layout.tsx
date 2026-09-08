@@ -9,6 +9,13 @@ import {
 
 // ── Top utility bar ──────────────────────────────────────────────────────────
 
+// A social link field counts as "set" only if it's a real value — this hides
+// the icon entirely when it's blank, or stuck on a placeholder like "#" (the
+// same kind of leftover value that broke the footer credit link earlier).
+function isRealLink(url?: string): url is string {
+  return !!url && url.trim() !== "" && url.trim() !== "#";
+}
+
 function TopBar() {
   return (
     <div className="bg-[var(--green-dark)] text-white text-xs py-2 px-4">
@@ -19,10 +26,14 @@ function TopBar() {
           <span className="flex items-center gap-1"><MapPinIcon className="w-3 h-3 text-[var(--yellow)]"/> {site.contact.topBarAddress}</span>
         </div>
         <div className="flex items-center gap-3">
-          <a href={site.contact.facebook} className="hover:text-[var(--yellow)]"><FacebookIcon/></a>
-          <a href={site.contact.twitter} className="hover:text-[var(--yellow)]"><TwitterIcon/></a>
-          <a href={site.contact.instagram} className="hover:text-[var(--yellow)]"><InstagramIcon/></a>
-          <a href={site.contact.youtube} className="hover:text-[var(--yellow)]"><YoutubeIcon/></a>
+          {[
+            { Icon: FacebookIcon, href: site.contact.facebook },
+            { Icon: TwitterIcon, href: site.contact.twitter },
+            { Icon: InstagramIcon, href: site.contact.instagram },
+            { Icon: YoutubeIcon, href: site.contact.youtube },
+          ].filter(s => isRealLink(s.href)).map(({ Icon: SocialIcon, href }, i) => (
+            <a key={i} href={externalUrl(href)} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--yellow)]"><SocialIcon/></a>
+          ))}
         </div>
       </div>
     </div>
@@ -87,9 +98,10 @@ function Navbar() {
           <AboutNavItem/>
           <NavItem label={site.nav.servicesLabel} to="/programs"/>
           <NavItem label={site.nav.galleryLabel} to="/gallery"/>
+          <NavItem label={site.nav.blogLabel ?? "Blog"} to="/blog"/>
           <NavLink to="/contact" className={({ isActive }) => "transition-colors " + (isActive ? "text-[var(--yellow)]" : "hover:text-[var(--yellow)]")}>{site.nav.contactLabel}</NavLink>
         </div>
-        <div className="hidden lg:flex"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></div>
+        <a href="/#donate" className="hidden lg:flex"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></a>
         <button className="lg:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             {menuOpen ? <path d="M6 18L18 6M6 6l12 12"/> : <path d="M4 6h16M4 12h16M4 18h16"/>}
@@ -103,8 +115,9 @@ function Navbar() {
           <NavLink to="/volunteer" onClick={() => setMenuOpen(false)} className="pl-4 -mt-2 text-white/60 hover:text-[var(--yellow)] text-xs">↳ {site.nav.volunteerLabel}</NavLink>
           <NavItem label={site.nav.servicesLabel} to="/programs" onClick={() => setMenuOpen(false)}/>
           <NavItem label={site.nav.galleryLabel} to="/gallery" onClick={() => setMenuOpen(false)}/>
+          <NavItem label={site.nav.blogLabel ?? "Blog"} to="/blog" onClick={() => setMenuOpen(false)}/>
           <NavLink to="/contact" onClick={() => setMenuOpen(false)} className="py-1 hover:text-[var(--yellow)]">{site.nav.contactLabel}</NavLink>
-          <YellowBtn className="mt-2 self-start text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn>
+          <a href="/#donate" onClick={() => setMenuOpen(false)} className="mt-2 self-start"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></a>
         </div>
       )}
     </nav>
@@ -120,19 +133,34 @@ function externalUrl(url: string) {
 
 // ── Footer ────────────────────────────────────────────────────────────────────
 
-const FOOTER_QUICK_LINKS: { label: string; to?: string }[] = [
+const FOOTER_QUICK_LINKS: { label: string; to?: string; anchor?: string }[] = [
   { label: site.footer.quickLinks.homeLabel, to: "/" },
   { label: site.footer.quickLinks.aboutLabel, to: "/about" },
-  { label: site.footer.quickLinks.servicesLabel },
-  { label: site.footer.quickLinks.projectsLabel },
-  { label: site.footer.quickLinks.volunteerLabel },
-  { label: site.footer.quickLinks.donateLabel },
+  { label: site.footer.quickLinks.servicesLabel, to: "/programs" },
+  { label: site.footer.quickLinks.projectsLabel, to: "/gallery" },
+  { label: site.footer.quickLinks.volunteerLabel, to: "/volunteer" },
+  { label: site.footer.quickLinks.donateLabel, anchor: "/#donate" },
 ];
 
-function FooterLink({ label, to }: { label: string; to?: string }) {
+// Matches a footer "policy link" label (a plain, freely-editable list of
+// strings in the CMS) to the real page it should open. Falls back to the
+// Contact page for any label that doesn't match a known policy page, so a
+// renamed or newly added entry never links to a dead "#".
+function policyLinkTo(label: string): string {
+  const l = label.toLowerCase();
+  if (l.includes("privacy")) return "/privacy-policy";
+  if (l.includes("terms")) return "/terms-of-service";
+  if (l.includes("cookie")) return "/cookie-policy";
+  return "/contact";
+}
+
+function FooterLink({ label, to, anchor }: { label: string; to?: string; anchor?: string }) {
   const content = <><ChevronRight className="w-3 h-3"/> {label}</>;
+  if (anchor) {
+    return <a href={anchor} className="hover:text-[var(--yellow)] flex items-center gap-1">{content}</a>;
+  }
   if (!to) {
-    return <a href="#" className="hover:text-[var(--yellow)] flex items-center gap-1">{content}</a>;
+    return <span className="flex items-center gap-1 text-white/30 cursor-default">{content}</span>;
   }
   return <Link to={to} className="hover:text-[var(--yellow)] flex items-center gap-1">{content}</Link>;
 }
@@ -158,8 +186,8 @@ function Footer() {
                 { Icon: TwitterIcon, href: c.twitter },
                 { Icon: InstagramIcon, href: c.instagram },
                 { Icon: YoutubeIcon, href: c.youtube },
-              ].map(({ Icon: SocialIcon, href }, i) => (
-                <a key={i} href={href} className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-[var(--yellow)] hover:text-[var(--green-dark)] transition-colors">
+              ].filter(s => isRealLink(s.href)).map(({ Icon: SocialIcon, href }, i) => (
+                <a key={i} href={externalUrl(href)} target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-[var(--yellow)] hover:text-[var(--green-dark)] transition-colors">
                   <SocialIcon className="w-4 h-4"/>
                 </a>
               ))}
@@ -179,7 +207,7 @@ function Footer() {
             <h4 className="font-bold text-[var(--yellow)] mb-4 text-sm tracking-widest uppercase">{site.footer.causesHeading}</h4>
             <ul className="space-y-2 text-sm text-white/60">
               {site.footer.causes.map(l => (
-                <li key={l}><a href="#" className="hover:text-[var(--yellow)] flex items-center gap-1"><ChevronRight className="w-3 h-3"/> {l}</a></li>
+                <li key={l}><Link to="/programs" className="hover:text-[var(--yellow)] flex items-center gap-1"><ChevronRight className="w-3 h-3"/> {l}</Link></li>
               ))}
             </ul>
           </div>
@@ -216,7 +244,7 @@ function Footer() {
             )}
           </div>
           <div className="flex gap-5">
-            {site.footer.policyLinks.map(l => <a key={l} href="#" className="hover:text-[var(--yellow)]">{l}</a>)}
+            {site.footer.policyLinks.map(l => <Link key={l} to={policyLinkTo(l)} className="hover:text-[var(--yellow)]">{l}</Link>)}
           </div>
         </div>
       </div>

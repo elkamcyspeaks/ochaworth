@@ -2,12 +2,12 @@
   "contact": {
     "youtube": "#",
     "facebook": "https://web.facebook.com/owlacdi",
-    "hoursSaturday": "Sat: 10:00AM – 4:00PM",
+    "hoursSaturday": "Sat: 10:00AM \u2013 4:00PM",
     "phone": "(+234) 0808 065 5923",
     "instagram": "https://www.instagram.com/ocha.worthlacdi?stkn=MXdubGFwejlkNGlkYg==",
     "twitter": "https://x.com/ochaworthlacdi?s=11",
     "topBarAddress": "Jos, Plateau State, Nigeria",
-    "hoursWeekday": "Mon – Fri: 9:00AM – 6:00PM",
+    "hoursWeekday": "Mon \u2013 Fri: 9:00AM \u2013 6:00PM",
     "footerAddress": "No. B5 Emerald Royal Plaza Zaramaganda-Rayfield Road Jos, Plateau State, Nigeria",
     "email": "ochaworthlacdi@gmail.com"
   },
@@ -55,7 +55,8 @@
     "servicesLabel": "Programs",
     "galleryLabel": "Gallery",
     "contactLabel": "Contact",
-    "donateButtonText": "Donate Now"
+    "donateButtonText": "Donate Now",
+    "blogLabel": "Blog"
   },
   "touchingLives": {
     "cards": [
@@ -89,12 +90,12 @@
     "footerBlurb": "Ochaworth leadership and community development initiative, a youth-led, community-based social justice and equal rights movement committed to advancing equity, health, and human dignity in Nigeria.",
     "philosophyLabel": "Our Philosophy",
     "shortName": "Ochaworth",
-    "copyright": "© 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved.",
+    "copyright": "\u00a9 2026 Ochaworth Leadership and Community Development Initiative. All rights reserved.",
     "missionHighlight": "Cornerstone",
     "name": "Ochaworth Leadership and Community Development Initiative",
     "missionLine1": "Generosity Is The",
     "missionLine3": "Of Prosperity.",
-    "missionAttribution": "— Ochaworth Foundation Mission Statement"
+    "missionAttribution": "\u2014 Ochaworth Foundation Mission Statement"
   },
   "featuredProjects": {
     "goalLabel": "Goal:",
@@ -118,22 +119,30 @@
     {
       "name": "Sarah Johnson",
       "role": "Community Lead",
-      "img": "https://images.unsplash.com/photo-1596422219551-adac8612092f?w=400&h=500&fit=crop&auto=format"
+      "img": "https://images.unsplash.com/photo-1596422219551-adac8612092f?w=400&h=500&fit=crop&auto=format",
+      "facebook": "",
+      "twitter": ""
     },
     {
       "name": "Michael Chen",
       "role": "Medical Volunteer",
-      "img": "https://images.unsplash.com/photo-1547496613-4e19af6736dc?w=400&h=500&fit=crop&auto=format"
+      "img": "https://images.unsplash.com/photo-1547496613-4e19af6736dc?w=400&h=500&fit=crop&auto=format",
+      "facebook": "",
+      "twitter": ""
     },
     {
       "name": "Amina Osei",
       "role": "Education Coordinator",
-      "img": "https://images.unsplash.com/photo-1507427100689-2bf8574e32d4?w=400&h=500&fit=crop&auto=format"
+      "img": "https://images.unsplash.com/photo-1507427100689-2bf8574e32d4?w=400&h=500&fit=crop&auto=format",
+      "facebook": "",
+      "twitter": ""
     },
     {
       "name": "David Reyes",
       "role": "Field Operations",
-      "img": "https://images.unsplash.com/photo-1758599668209-783bd3691ec8?w=400&h=500&fit=crop&auto=format"
+      "img": "https://images.unsplash.com/photo-1758599668209-783bd3691ec8?w=400&h=500&fit=crop&auto=format",
+      "facebook": "",
+      "twitter": ""
     }
   ],
   "community": {
@@ -233,7 +242,7 @@
     "registerButtonText": "Register",
     "date": "Oct 1, 2026",
     "sectionLabel": "Upcoming Events",
-    "desc": "This October, we’re dedicating the entire month to raising awareness about breast cancer. We invite you to join and support us as we educate, inspire, and encourage early detection. Together, we can spread hope, save lives, and make a meaningful difference.",
+    "desc": "This October, we\u2019re dedicating the entire month to raising awareness about breast cancer. We invite you to join and support us as we educate, inspire, and encourage early detection. Together, we can spread hope, save lives, and make a meaningful difference.",
     "headingItalic": "Upcoming Events",
     "title": "Breast Cancer Awareness",
     "viewAllButtonText": "View All Events",
@@ -242,7 +251,7 @@
   },
   "about": {
     "badgeNumber": "5+",
-    "paragraph": "Ochaworth Leadership and Community Development Initiative (CAC/RN: 7290687) is a registered non-governmental organization and network of impactful, youth-led, women’s rights advocates. We are committed to promoting equality and social justice by equipping women and girls to recognize their worth, live it boldly, and birth the “more” within them.",
+    "paragraph": "Ochaworth Leadership and Community Development Initiative (CAC/RN: 7290687) is a registered non-governmental organization and network of impactful, youth-led, women\u2019s rights advocates. We are committed to promoting equality and social justice by equipping women and girls to recognize their worth, live it boldly, and birth the \u201cmore\u201d within them.",
     "sectionLabel": "About Our Organization",
     "ourImpactButtonText": "Our Impact",
     "badgeLabel": "Years Of Impact",
@@ -305,14 +314,16 @@
     "totalRaisedLabel": "Total Funds Raised",
     "headingLine1": "Making A Difference,",
     "amountLabel": "Donation Amount",
-    "totalRaised": "₦2B+",
+    "totalRaised": "\u20a62B+",
     "presetAmounts": [
       "10",
       "25",
       "50",
       "100",
       "250"
-    ]
+    ],
+    "thankYouButtonText": "Thank You!",
+    "thankYouMessage": "Thank you! We've received your donation details and will be in touch shortly to complete it."
   },
   "testimonials": [
     {
@@ -342,7 +353,8 @@
     "headingHighlight": "Newsletter",
     "paragraph": "Stay updated with our latest projects, events, and impact stories from around the world.",
     "placeholder": "Enter your email address",
-    "buttonText": "Subscribe Now"
+    "buttonText": "Subscribe Now",
+    "subscribedButtonText": "Subscribed!"
   },
   "events": [
     {
@@ -384,7 +396,7 @@
         "label": "Countries Reached"
       },
       {
-        "value": "₦500,000+",
+        "value": "\u20a6500,000+",
         "label": "Funds Raised"
       }
     ],

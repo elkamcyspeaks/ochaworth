@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import site from "@/data/site.json";
+import { blogPosts, BlogCard } from "./BlogPage";
+import blogPageData from "@/data/blogPage.json";
 import {
   LeafIcon, HeartIcon, HandIcon, StarIcon, ChevronRight, ChevronLeft, GlobeIcon,
   PhoneIcon, MailIcon, MapPinIcon, CalendarIcon, FacebookIcon, TwitterIcon,
@@ -38,8 +40,8 @@ function Hero() {
           </h1>
           <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-lg">{s.sub}</p>
           <div className="flex flex-wrap gap-4">
-            <YellowBtn className="flex items-center gap-2"><HeartIcon className="w-4 h-4"/> {site.hero.donateButtonText}</YellowBtn>
-            <OutlineBtn light className="flex items-center gap-2">{site.hero.learnMoreButtonText} <ArrowRight className="w-4 h-4"/></OutlineBtn>
+            <a href="/#donate"><YellowBtn className="flex items-center gap-2"><HeartIcon className="w-4 h-4"/> {site.hero.donateButtonText}</YellowBtn></a>
+            <Link to="/about"><OutlineBtn light className="flex items-center gap-2">{site.hero.learnMoreButtonText} <ArrowRight className="w-4 h-4"/></OutlineBtn></Link>
           </div>
           <div className="flex flex-wrap gap-8 mt-14">
             {site.hero.stats.map(stat => (
@@ -75,13 +77,13 @@ function VolunteerCards() {
             <div className="w-14 h-14 bg-[var(--yellow)] rounded-full flex items-center justify-center"><HandIcon className="w-7 h-7 text-[var(--green-dark)]"/></div>
             <h3 className="text-xl font-bold">{vc.card1.heading}</h3>
             <p className="text-white/70 text-sm leading-relaxed">{vc.card1.paragraph}</p>
-            <button className="text-[var(--yellow)] font-semibold text-sm flex items-center gap-1">{vc.card1.buttonText} <ArrowRight className="w-4 h-4"/></button>
+            <Link to="/become-a-volunteer" className="text-[var(--yellow)] font-semibold text-sm flex items-center gap-1">{vc.card1.buttonText} <ArrowRight className="w-4 h-4"/></Link>
           </div>
           <div className="bg-[var(--yellow)] rounded-2xl p-8 flex flex-col items-start gap-4 hover:shadow-xl transition-shadow">
             <div className="w-14 h-14 bg-[var(--green-mid)] rounded-full flex items-center justify-center"><GlobeIcon className="w-7 h-7 text-[var(--yellow)]"/></div>
             <h3 className="text-xl font-bold text-[var(--green-dark)]">{vc.card2.heading}</h3>
             <p className="text-[var(--green-dark)]/70 text-sm leading-relaxed">{vc.card2.paragraph}</p>
-            <button className="text-[var(--green-mid)] font-semibold text-sm flex items-center gap-1">{vc.card2.buttonText} <ArrowRight className="w-4 h-4"/></button>
+            <Link to="/volunteer" className="text-[var(--green-mid)] font-semibold text-sm flex items-center gap-1">{vc.card2.buttonText} <ArrowRight className="w-4 h-4"/></Link>
           </div>
           <div className="rounded-2xl overflow-hidden relative min-h-[280px] group">
             <img src={vc.actionImage} alt="Volunteers" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
@@ -135,7 +137,7 @@ function About() {
               </div>
             ))}
           </div>
-          <div className="flex gap-4 mt-8"><YellowBtn>{a.learnMoreButtonText}</YellowBtn><GreenBtn>{a.ourImpactButtonText}</GreenBtn></div>
+          <div className="flex gap-4 mt-8"><Link to="/about"><YellowBtn>{a.learnMoreButtonText}</YellowBtn></Link><Link to="/programs"><GreenBtn>{a.ourImpactButtonText}</GreenBtn></Link></div>
         </div>
       </div>
     </section>
@@ -157,7 +159,7 @@ function Journey() {
               <div className={"w-16 h-16 rounded-xl flex items-center justify-center mb-5 transition-colors " + (i % 2 === 0 ? "bg-[var(--yellow)]/20 text-[var(--green-mid)] group-hover:bg-[var(--yellow)] group-hover:text-[var(--green-dark)]" : "bg-[var(--green-mid)]/10 text-[var(--green-mid)] group-hover:bg-[var(--yellow)] group-hover:text-[var(--green-dark)]")}><Icon name={s.icon} className="w-10 h-10"/></div>
               <h3 className="text-lg font-bold text-[var(--green-dark)] mb-3 group-hover:text-white">{s.title}</h3>
               <p className="text-sm text-gray-500 leading-relaxed group-hover:text-white/70">{s.desc}</p>
-              <button className="mt-4 text-[var(--green-mid)] group-hover:text-[var(--yellow)] text-sm font-semibold flex items-center gap-1">{j.readMoreButtonText} <ArrowRight className="w-4 h-4"/></button>
+              <Link to="/programs" className="mt-4 text-[var(--green-mid)] group-hover:text-[var(--yellow)] text-sm font-semibold flex items-center gap-1">{j.readMoreButtonText} <ArrowRight className="w-4 h-4"/></Link>
             </div>
           ))}
         </div>
@@ -205,7 +207,10 @@ function FeaturedProjects() {
                 <div className="flex items-center gap-1 text-gray-400 text-xs mb-2"><MapPinIcon className="w-3 h-3"/> {p.location}</div>
                 <h3 className="font-bold text-[var(--green-dark)] text-lg mb-4">{p.title}</h3>
                 <ProgressBar raised={p.raised} goal={p.goal}/>
-                <div className="flex gap-3 mt-5"><YellowBtn className="flex-1 py-2 text-sm text-center">{fp.donateButtonText}</YellowBtn><OutlineBtn className="flex-1 py-2 text-sm text-center">{fp.learnMoreButtonText}</OutlineBtn></div>
+                <div className="flex gap-3 mt-5">
+                  <a href="/#donate" className="flex-1"><YellowBtn className="w-full py-2 text-sm text-center">{fp.donateButtonText}</YellowBtn></a>
+                  <Link to="/programs" className="flex-1"><OutlineBtn className="w-full py-2 text-sm text-center">{fp.learnMoreButtonText}</OutlineBtn></Link>
+                </div>
               </div>
             </div>
           ))}
@@ -226,7 +231,7 @@ function Community() {
             <SectionLabel text={c.sectionLabel} light/>
             <h2 className="text-4xl lg:text-5xl font-black text-white mt-2" style={{ fontFamily: "'Playfair Display', serif" }}>{c.headingPrefix} <span className="text-[var(--yellow)]">{c.headingHighlight}</span></h2>
             <p className="text-white/70 mt-4 max-w-md leading-relaxed">{c.paragraph}</p>
-            <div className="flex gap-4 mt-6"><YellowBtn>{c.getInvolvedButtonText}</YellowBtn><OutlineBtn light>{c.learnMoreButtonText}</OutlineBtn></div>
+            <div className="flex gap-4 mt-6"><Link to="/become-a-volunteer"><YellowBtn>{c.getInvolvedButtonText}</YellowBtn></Link><Link to="/about"><OutlineBtn light>{c.learnMoreButtonText}</OutlineBtn></Link></div>
           </div>
           <div className="text-center"><div className="text-8xl font-black text-[var(--yellow)]">{c.donorsCount}</div><div className="text-white text-lg font-semibold mt-2">{c.donorsLabel}</div></div>
         </div>
@@ -254,8 +259,12 @@ function Volunteers() {
                 <img src={v.img} alt={v.name} className="w-full h-72 object-cover object-top group-hover:scale-105 transition-transform duration-500"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--green-dark)]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                   <div className="flex gap-2">
-                    <a href="#" className="w-8 h-8 bg-[var(--yellow)] rounded-full flex items-center justify-center"><FacebookIcon className="w-3 h-3 text-[var(--green-dark)]"/></a>
-                    <a href="#" className="w-8 h-8 bg-[var(--yellow)] rounded-full flex items-center justify-center"><TwitterIcon className="w-3 h-3 text-[var(--green-dark)]"/></a>
+                    {[
+                      { Icon: FacebookIcon, href: v.facebook },
+                      { Icon: TwitterIcon, href: v.twitter },
+                    ].filter(s => s.href).map(({ Icon: SocialIcon, href }, i) => (
+                      <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-[var(--yellow)] rounded-full flex items-center justify-center"><SocialIcon className="w-3 h-3 text-[var(--green-dark)]"/></a>
+                    ))}
                   </div>
                 </div>
                 <div className="absolute top-3 right-3 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-2 py-1 rounded-full">{vs.badgeText}</div>
@@ -286,7 +295,7 @@ function TouchingLives() {
               {t.headingLine1}<br/>{t.headingLine2Prefix} <span className="text-[var(--yellow)]">{t.headingHighlight}</span><br/>{t.headingLine3}
             </h2>
             <p className="text-white/70 mt-5 leading-relaxed max-w-md">{t.paragraph}</p>
-            <div className="flex gap-4 mt-8"><YellowBtn>{t.ourWorkButtonText}</YellowBtn><OutlineBtn light>{t.watchStoryButtonText}</OutlineBtn></div>
+            <div className="flex gap-4 mt-8"><Link to="/programs"><YellowBtn>{t.ourWorkButtonText}</YellowBtn></Link><Link to="/about"><OutlineBtn light>{t.watchStoryButtonText}</OutlineBtn></Link></div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {t.cards.map(c => (
@@ -307,8 +316,16 @@ function DonationForm() {
   const d = site.donation;
   const [amount, setAmount] = useState(d.presetAmounts[2] ?? "50");
   const [custom, setCustom] = useState("");
+  const [sent, setSent] = useState(false);
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSent(true);
+    setTimeout(() => setSent(false), 4000);
+  }
+
   return (
-    <section className="py-20 bg-[#F7F7F3]">
+    <section id="donate" className="py-20 bg-[#F7F7F3] scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="relative">
           <img src={d.bgImage} alt="" className="rounded-3xl w-full h-[500px] object-cover"/>
@@ -325,28 +342,35 @@ function DonationForm() {
           <SectionLabel text={d.sectionLabel}/>
           <h2 className="text-4xl font-black text-[var(--green-dark)] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{d.headingLine1}<br/>{d.headingLine2Prefix} <span className="text-[var(--green-mid)] italic">{d.headingHighlight}</span> {d.headingSuffix}</h2>
           <p className="text-gray-500 mb-8 leading-relaxed">{d.paragraph}</p>
-          <div className="mb-5">
-            <label className="block text-sm font-semibold text-[var(--green-dark)] mb-2">{d.amountLabel}</label>
-            <div className="flex flex-wrap gap-3 mb-3">
-              {d.presetAmounts.map(a => (
-                <button key={a} onClick={() => { setAmount(a); setCustom(""); }} className={"px-5 py-2 rounded-full border-2 font-bold text-sm transition-colors " + (amount === a && !custom ? "bg-[var(--green-mid)] text-white border-[var(--green-mid)]" : "border-gray-300 text-gray-600 hover:border-[var(--green-mid)]")}>₦{a}</button>
-              ))}
+          <form onSubmit={handleSubmit}>
+            <div className="mb-5">
+              <label className="block text-sm font-semibold text-[var(--green-dark)] mb-2">{d.amountLabel}</label>
+              <div className="flex flex-wrap gap-3 mb-3">
+                {d.presetAmounts.map(a => (
+                  <button type="button" key={a} onClick={() => { setAmount(a); setCustom(""); }} className={"px-5 py-2 rounded-full border-2 font-bold text-sm transition-colors " + (amount === a && !custom ? "bg-[var(--green-mid)] text-white border-[var(--green-mid)]" : "border-gray-300 text-gray-600 hover:border-[var(--green-mid)]")}>₦{a}</button>
+                ))}
+              </div>
+              <input type="number" placeholder={d.customAmountPlaceholder} value={custom} onChange={e => { setCustom(e.target.value); setAmount(""); }} className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
             </div>
-            <input type="number" placeholder={d.customAmountPlaceholder} value={custom} onChange={e => { setCustom(e.target.value); setAmount(""); }} className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <input placeholder={d.firstNamePlaceholder} className="border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
-            <input placeholder={d.lastNamePlaceholder} className="border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
-          </div>
-          <input placeholder={d.emailPlaceholder} className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] mb-4"/>
-          <select className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] text-gray-600 mb-6">
-            <option>{d.selectCauseDefault}</option>
-            {d.causes.map(c => <option key={c}>{c}</option>)}
-          </select>
-          <YellowBtn className="w-full flex items-center justify-center gap-2 py-4 text-base">
-            <HeartIcon className="w-5 h-5"/> {d.donateButtonPrefix} ₦{custom || amount} {d.donateButtonSuffix}
-          </YellowBtn>
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              <input placeholder={d.firstNamePlaceholder} required className="border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
+              <input placeholder={d.lastNamePlaceholder} required className="border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"/>
+            </div>
+            <input type="email" placeholder={d.emailPlaceholder} required className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] mb-4"/>
+            <select className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] text-gray-600 mb-6">
+              <option>{d.selectCauseDefault}</option>
+              {d.causes.map(c => <option key={c}>{c}</option>)}
+            </select>
+            <YellowBtn className="w-full flex items-center justify-center gap-2 py-4 text-base">
+              <HeartIcon className="w-5 h-5"/> {sent ? (d.thankYouButtonText ?? "Thank You!") : `${d.donateButtonPrefix} ₦${custom || amount} ${d.donateButtonSuffix}`}
+            </YellowBtn>
+          </form>
           <p className="text-center text-xs text-gray-400 mt-3 flex items-center justify-center gap-1"><CheckIcon className="w-3 h-3"/> {d.secureCaption}</p>
+          {sent && (
+            <p className="text-center text-sm text-[var(--green-mid)] font-semibold mt-3">
+              {d.thankYouMessage ?? "Thank you! We've received your donation details and will be in touch shortly to complete it."}
+            </p>
+          )}
         </div>
       </div>
     </section>
@@ -456,7 +480,7 @@ function Events() {
             ))}
           </div>
 
-          <YellowBtn className="mt-6">{p.viewAllButtonText}</YellowBtn>
+          <Link to="/programs"><YellowBtn className="mt-6">{p.viewAllButtonText}</YellowBtn></Link>
         </div>
 
         {/* Event image */}
@@ -471,9 +495,9 @@ function Events() {
             <div className="text-sm text-gray-500">{p.desc}</div>
             <div className="flex justify-between items-center mt-3">
               <span className="text-xs text-gray-400 flex items-center gap-1"><CalendarIcon className="w-3 h-3"/> {p.date}</span>
-              <button className="text-[var(--green-mid)] font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+              <Link to="/contact" className="text-[var(--green-mid)] font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
                 {p.registerButtonText} <ArrowRight className="w-4 h-4"/>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -545,6 +569,15 @@ function WorldMap() {
 
 function Blog() {
   const bs = site.blogSection;
+  // Show featured posts first, then fill up to 3 with the latest others — every
+  // post lives under the new Blog Posts section on the dashboard now, so this
+  // teaser (and the full /blog page) update automatically as posts are added.
+  const featured = blogPosts.filter(p => p.featured);
+  const rest = blogPosts.filter(p => !p.featured);
+  const shown = [...featured, ...rest].slice(0, 3);
+
+  if (shown.length === 0) return null;
+
   return (
     <section className="py-20 bg-[#F7F7F3]">
       <div className="max-w-7xl mx-auto px-4">
@@ -555,28 +588,12 @@ function Blog() {
               {bs.headingPrefix} <span className="italic">{bs.headingItalic}</span>
             </h2>
           </div>
-          <div className="flex gap-3">
-            {bs.filterTabs.map((t, i) => (
-              <button key={t} className={`px-4 py-2 rounded-full text-sm font-semibold ${i === 0 ? "bg-[var(--green-mid)] text-white" : "border border-gray-200 text-gray-500 hover:border-[var(--green-mid)]"}`}>{t}</button>
-            ))}
-          </div>
+          <Link to="/blog"><OutlineBtn>{blogPageData.viewAllButtonText}</OutlineBtn></Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {site.blog.map(b => (
-            <div key={b.title} className="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group">
-              <div className="overflow-hidden h-48 relative">
-                <img src={b.img} alt={b.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-                <div className="absolute top-4 left-4 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold px-3 py-1 rounded-full">{b.category}</div>
-              </div>
-              <div className="p-6">
-                <div className="text-xs text-gray-400 mb-3 flex items-center gap-1"><CalendarIcon className="w-3 h-3"/> {b.date}</div>
-                <h3 className="font-bold text-[var(--green-dark)] leading-snug mb-4 line-clamp-3">{b.title}</h3>
-                <button className="text-[var(--green-mid)] font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
-                  {bs.readMoreButtonText} <ArrowRight className="w-4 h-4"/>
-                </button>
-              </div>
-            </div>
+          {shown.map(post => (
+            <BlogCard key={post.slug} post={post} readMoreText={bs.readMoreButtonText}/>
           ))}
         </div>
       </div>

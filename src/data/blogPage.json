@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1600&h=600&fit=crop&auto=format",
+    "title": "Blog & News",
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Blog"
+  },
+  "intro": {
+    "sectionLabel": "Our Blog",
+    "headingPrefix": "Stories From",
+    "headingItalic": "The Field",
+    "paragraph": "Updates, stories, and lessons from the communities we work with — written by our team and volunteers."
+  },
+  "allCategoryLabel": "All Posts",
+  "readMoreButtonText": "Read More",
+  "viewAllButtonText": "View All Posts",
+  "detail": {
+    "backButtonText": "Back To Blog",
+    "shareLabel": "Share This Post",
+    "recentPostsHeading": "Recent Posts",
+    "categoryLabel": "Category",
+    "authorLabel": "Written By"
+  },
+  "cta": {
+    "sectionLabel": "Stay Connected",
+    "headingPrefix": "Have A Story",
+    "headingItalic": "To Share?",
+    "paragraph": "If you've volunteered, partnered, or benefited from an Ochaworth programme, we'd love to feature your story on the blog.",
+    "buttonText": "Get In Touch",
+    "backgroundImage": "https://images.unsplash.com/photo-1524749292158-7540c2494485?w=1600&h=600&fit=crop&auto=format"
+  }
+}

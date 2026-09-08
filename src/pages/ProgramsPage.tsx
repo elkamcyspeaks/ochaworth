@@ -139,9 +139,11 @@ function Spotlight({ onOpen }: { onOpen: (p: Program) => void }) {
             </div>
 
             <div className="flex gap-3">
-              <YellowBtn className="flex items-center gap-2 text-sm py-3">
-                {sp.donateButtonText} <ArrowUpRight className="w-4 h-4"/>
-              </YellowBtn>
+              <a href="/#donate">
+                <YellowBtn className="flex items-center gap-2 text-sm py-3">
+                  {sp.donateButtonText} <ArrowUpRight className="w-4 h-4"/>
+                </YellowBtn>
+              </a>
               <OutlineBtn className="flex items-center gap-2 text-sm py-3" onClick={() => onOpen(p)}>
                 {sp.learnMoreButtonText} <ArrowRight className="w-4 h-4"/>
               </OutlineBtn>
@@ -191,9 +193,9 @@ function ProgramCard({ p, onOpen }: { p: Program; onOpen: () => void }) {
 
         <div className="flex gap-2 mt-auto" onClick={e => e.stopPropagation()}>
           {p.status !== "completed" && (
-            <button className="flex-1 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold py-2.5 rounded-full hover:bg-[var(--yellow-dark)] transition-colors">
+            <a href="/#donate" onClick={e => e.stopPropagation()} className="flex-1 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold py-2.5 rounded-full hover:bg-[var(--yellow-dark)] transition-colors text-center">
               {cd.donateButtonText}
-            </button>
+            </a>
           )}
           <button
             onClick={onOpen}
@@ -326,9 +328,9 @@ function ProgramDetail({ p, onBack }: { p: Program; onBack: () => void }) {
               </div>
 
               {p.status !== "completed" && (
-                <button className="w-full flex items-center justify-center gap-2 bg-[var(--yellow)] text-[var(--green-dark)] font-bold py-3 rounded-full hover:bg-[var(--yellow-dark)] transition-colors text-sm">
+                <a href="/#donate" className="w-full flex items-center justify-center gap-2 bg-[var(--yellow)] text-[var(--green-dark)] font-bold py-3 rounded-full hover:bg-[var(--yellow-dark)] transition-colors text-sm">
                   {dt.donateToProgramButtonText} <ArrowUpRight className="w-4 h-4"/>
-                </button>
+                </a>
               )}
               <button
                 onClick={onBack}
@@ -469,9 +471,11 @@ function CTABand() {
           {cta.paragraph}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <YellowBtn className="flex items-center gap-2">
-            {cta.donateButtonText} <ArrowUpRight className="w-4 h-4"/>
-          </YellowBtn>
+          <a href="/#donate">
+            <YellowBtn className="flex items-center gap-2">
+              {cta.donateButtonText} <ArrowUpRight className="w-4 h-4"/>
+            </YellowBtn>
+          </a>
           <Link to="/become-a-volunteer">
             <OutlineBtn light className="flex items-center gap-2">
               {cta.volunteerButtonText} <ArrowRight className="w-4 h-4"/>

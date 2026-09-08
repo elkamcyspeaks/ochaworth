@@ -41,6 +41,7 @@ collections:
               - { label: '"Volunteer" Link Text (drop-down under About)', name: "volunteerLabel", widget: "string" }
               - { label: '"Programs" Link Text', name: "servicesLabel", widget: "string" }
               - { label: '"Gallery" Link Text', name: "galleryLabel", widget: "string" }
+              - { label: '"Blog" Link Text', name: "blogLabel", widget: "string", default: "Blog" }
               - { label: '"Contact" Link Text', name: "contactLabel", widget: "string" }
               - { label: '"Donate Now" Button Text', name: "donateButtonText", widget: "string" }
 
@@ -68,10 +69,10 @@ collections:
               - { label: "Footer Address (full)", name: "footerAddress", widget: "string" }
               - { label: "Weekday Hours", name: "hoursWeekday", widget: "string" }
               - { label: "Saturday Hours", name: "hoursSaturday", widget: "string" }
-              - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
-              - { label: "Twitter / X URL", name: "twitter", widget: "string", required: false }
-              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
-              - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
+              - { label: "Facebook URL", name: "facebook", widget: "string", required: false, hint: 'Paste the FULL link, starting with "https://". Leave blank (or "#") to hide this icon in the top bar and footer.' }
+              - { label: "Twitter / X URL", name: "twitter", widget: "string", required: false, hint: 'Paste the FULL link, starting with "https://". Leave blank (or "#") to hide this icon in the top bar and footer.' }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false, hint: 'Paste the FULL link, starting with "https://". Leave blank (or "#") to hide this icon in the top bar and footer.' }
+              - { label: "YouTube URL", name: "youtube", widget: "string", required: false, hint: 'Paste the FULL link, starting with "https://". Leave blank (or "#") to hide this icon in the top bar and footer.' }
 
           - label: "Hero (homepage top banner)"
             name: "hero"
@@ -234,6 +235,8 @@ collections:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Role", name: "role", widget: "string" }
               - { label: "Photo", name: "img", widget: "image" }
+              - { label: "Facebook URL", name: "facebook", widget: "string", required: false, hint: "Leave blank to hide the Facebook icon for this person." }
+              - { label: "Twitter/X URL", name: "twitter", widget: "string", required: false, hint: "Leave blank to hide the Twitter/X icon for this person." }
 
           - label: "Volunteers Section — Shared Text"
             name: "volunteersSection"
@@ -299,6 +302,8 @@ collections:
               - { label: "Donate Button — Prefix Word", name: "donateButtonPrefix", widget: "string" }
               - { label: "Donate Button — Suffix Word", name: "donateButtonSuffix", widget: "string" }
               - { label: "Secure Donation Caption", name: "secureCaption", widget: "string" }
+              - { label: "Button Text After Submitting", name: "thankYouButtonText", widget: "string", hint: "Shown on the Donate button for a few seconds right after someone submits the form (no payment gateway is connected yet, so this just confirms their details were received)." }
+              - { label: "Message Shown After Submitting", name: "thankYouMessage", widget: "text" }
 
           - label: "Testimonials"
             name: "testimonials"
@@ -374,27 +379,14 @@ collections:
                   - { label: "Value", name: "v", widget: "string" }
                   - { label: "Label", name: "l", widget: "string" }
 
-          - label: "Blog Posts"
-            name: "blog"
-            widget: "list"
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Category", name: "category", widget: "string" }
-              - { label: "Date", name: "date", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Photo", name: "img", widget: "image" }
-
           - label: "Blog Section — Section Text"
             name: "blogSection"
             widget: "object"
+            hint: "The posts themselves now live under their own 'Blog Posts' section in the sidebar (so you can add or remove as many as you like) — this is just the heading text shown above them here on the homepage."
             fields:
               - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
               - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
               - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
-              - label: "Filter Tabs"
-                name: "filterTabs"
-                widget: "list"
-                field: { label: "Tab Text", name: "tab", widget: "string" }
               - { label: '"Read More" Button Text', name: "readMoreButtonText", widget: "string" }
 
           - label: "Footer"
@@ -446,6 +438,7 @@ collections:
               - { label: "Paragraph", name: "paragraph", widget: "text" }
               - { label: "Email Field Placeholder", name: "placeholder", widget: "string" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Text After Subscribing", name: "subscribedButtonText", widget: "string" }
 
       - file: "src/data/aboutPage.json"
         label: "About Us Page"
@@ -950,3 +943,100 @@ collections:
               - { label: "Message Field Placeholder", name: "messagePlaceholder", widget: "string" }
               - { label: "Submit Button Text", name: "submitButtonText", widget: "string" }
               - { label: '"Sent" Confirmation Button Text', name: "submittedButtonText", widget: "string" }
+
+      - file: "src/data/blogPage.json"
+        label: "Blog Page"
+        name: "blogPage"
+        hint: "Content shown around the blog list and each blog post's page (banner, intro text, and the 'Have A Story To Share?' band at the bottom). The posts themselves are added under their own 'Blog Posts' section in the sidebar."
+        fields:
+          - label: "Page Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Banner Background Photo", name: "image", widget: "image" }
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: 'Breadcrumb — "Home" Link Text', name: "breadcrumbHome", widget: "string" }
+              - { label: "Breadcrumb — Current Page Text", name: "breadcrumbCurrent", widget: "string" }
+
+          - label: "Intro Text"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+
+          - { label: '"All Posts" Filter Tab Text', name: "allCategoryLabel", widget: "string" }
+          - { label: '"Read More" Button Text', name: "readMoreButtonText", widget: "string" }
+          - { label: '"View All Posts" Button Text (shown on the homepage teaser)', name: "viewAllButtonText", widget: "string" }
+
+          - label: "Individual Post Page — Section Text"
+            name: "detail"
+            widget: "object"
+            fields:
+              - { label: '"Back To Blog" Button Text', name: "backButtonText", widget: "string" }
+              - { label: '"Share This Post" Label', name: "shareLabel", widget: "string" }
+              - { label: '"Recent Posts" Sidebar Heading', name: "recentPostsHeading", widget: "string" }
+              - { label: "Category Label", name: "categoryLabel", widget: "string" }
+              - { label: '"Written By" Label', name: "authorLabel", widget: "string" }
+
+          - label: '"Have A Story To Share?" Band'
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Background Photo", name: "backgroundImage", widget: "image" }
+              - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
+              - { label: "Heading — Prefix", name: "headingPrefix", widget: "string" }
+              - { label: "Heading — Italic Word", name: "headingItalic", widget: "string" }
+              - { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+
+      - file: "src/data/legalPages.json"
+        label: "Legal Pages"
+        name: "legalPages"
+        hint: "Simple starting templates for your Privacy Policy, Terms of Service, and Cookie Policy pages, linked from the footer. These are general templates — have them reviewed by a qualified professional before relying on them as your organisation's official policies."
+        fields:
+          - label: "Privacy Policy"
+            name: "privacyPolicy"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Last Updated", name: "lastUpdated", widget: "string" }
+              - { label: "Body Text", name: "body", widget: "text", hint: "Leave a blank line between paragraphs." }
+          - label: "Terms Of Service"
+            name: "termsOfService"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Last Updated", name: "lastUpdated", widget: "string" }
+              - { label: "Body Text", name: "body", widget: "text", hint: "Leave a blank line between paragraphs." }
+          - label: "Cookie Policy"
+            name: "cookiePolicy"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Last Updated", name: "lastUpdated", widget: "string" }
+              - { label: "Body Text", name: "body", widget: "text", hint: "Leave a blank line between paragraphs." }
+
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "src/data/blog"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    identifier_field: "title"
+    summary: "{{title}} — {{date}}"
+    hint: "Every post here shows up automatically on the /blog page and in the homepage's 'News & Blog' section (the most recent or featured ones) — no other setup needed."
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Excerpt (short teaser shown on cards)", name: "excerpt", widget: "text" }
+      - { label: "Cover Photo", name: "coverImage", widget: "image" }
+      - { label: "Category", name: "category", widget: "string", hint: "e.g. Education, Health, Community — used for the filter tabs on the blog page." }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "string", hint: 'Free text, e.g. "Jan 15, 2026" — used to sort posts, newest first.' }
+      - { label: "Feature On Homepage", name: "featured", widget: "boolean", default: false, hint: "Featured posts are shown first in the homepage 'News & Blog' teaser." }
+      - { label: "Body", name: "body", widget: "text", hint: "Leave a blank line between paragraphs." }

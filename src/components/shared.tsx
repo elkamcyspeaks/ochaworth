@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode, type FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
 import site from "@/data/site.json";
 
@@ -279,6 +279,16 @@ export function OutlineBtn({ children, className = "", light = false, onClick }:
 }
 export function Newsletter() {
   const n = site.newsletter;
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    setSubscribed(true);
+    setEmail("");
+    setTimeout(() => setSubscribed(false), 4000);
+  }
+
   return (
     <section className="bg-[var(--green-mid)] py-16">
       <div className="max-w-3xl mx-auto px-4 text-center">
@@ -287,14 +297,17 @@ export function Newsletter() {
           {n.headingPrefix} <span className="text-[var(--yellow)]">{n.headingHighlight}</span>
         </h2>
         <p className="text-white/60 mb-8">{n.paragraph}</p>
-        <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
           <input
             type="email"
+            required
+            value={email}
+            onChange={e => setEmail(e.target.value)}
             placeholder={n.placeholder}
             className="flex-1 px-5 py-3 rounded-full text-sm focus:outline-none text-gray-800 bg-white placeholder-gray-400 border-0"
           />
-          <YellowBtn className="whitespace-nowrap">{n.buttonText}</YellowBtn>
-        </div>
+          <YellowBtn className="whitespace-nowrap">{subscribed ? (n.subscribedButtonText ?? "Subscribed!") : n.buttonText}</YellowBtn>
+        </form>
       </div>
     </section>
   );

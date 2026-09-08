@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import site from "@/data/site.json";
 import volunteerPageData from "@/data/volunteerPage.json";
 import {
-  FacebookIcon, TwitterIcon, InstagramIcon, YoutubeIcon,
+  FacebookIcon, TwitterIcon,
   SectionLabel, YellowBtn, Newsletter, PageHero,
 } from "@/components/shared";
 
@@ -30,10 +30,13 @@ function Starburst({ className = "" }: { className?: string }) {
 // loads — purely decorative, not tied to any real per-person data.
 const CARD_BACKDROPS = ["var(--yellow)", "var(--green-mid)", "#C8B8D8", "#A8C8A0"];
 
-type Volunteer = { name: string; role: string; img: string };
+type Volunteer = { name: string; role: string; img: string; facebook?: string; twitter?: string };
 
 function VolunteerCard({ volunteer, backdrop, badgeText }: { volunteer: Volunteer; backdrop: string; badgeText: string }) {
-  const socials = [FacebookIcon, TwitterIcon, InstagramIcon, YoutubeIcon];
+  const socials = [
+    { Icon: FacebookIcon, href: volunteer.facebook },
+    { Icon: TwitterIcon, href: volunteer.twitter },
+  ].filter(s => s.href);
   return (
     <div className="rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
       <div className="relative h-52 overflow-hidden" style={{ backgroundColor: backdrop }}>
@@ -45,17 +48,21 @@ function VolunteerCard({ volunteer, backdrop, badgeText }: { volunteer: Voluntee
       <div className="px-4 pt-3.5 pb-4 text-center">
         <h3 className="font-bold text-[var(--green-dark)] text-base leading-tight">{volunteer.name}</h3>
         <p className="text-[var(--green-mid)] text-xs mt-0.5 mb-3">{volunteer.role}</p>
-        <div className="flex justify-center gap-2">
-          {socials.map((Icon, i) => (
-            <a
-              key={i}
-              href="#"
-              className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-[var(--green-dark)] hover:text-white hover:border-[var(--green-dark)] transition-colors"
-            >
-              <Icon/>
-            </a>
-          ))}
-        </div>
+        {socials.length > 0 && (
+          <div className="flex justify-center gap-2">
+            {socials.map(({ Icon: SocialIcon, href }, i) => (
+              <a
+                key={i}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-7 h-7 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-[var(--green-dark)] hover:text-white hover:border-[var(--green-dark)] transition-colors"
+              >
+                <SocialIcon/>
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

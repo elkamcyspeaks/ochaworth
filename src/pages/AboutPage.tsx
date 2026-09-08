@@ -69,9 +69,11 @@ function AboutIntro() {
             ))}
           </div>
 
-          <YellowBtn className="flex items-center gap-2">
-            {intro.buttonText} <ArrowRight className="w-4 h-4"/>
-          </YellowBtn>
+          <Link to="/programs">
+            <YellowBtn className="flex items-center gap-2">
+              {intro.buttonText} <ArrowRight className="w-4 h-4"/>
+            </YellowBtn>
+          </Link>
         </div>
       </div>
     </section>
@@ -214,9 +216,9 @@ function TouchingLives() {
               ))}
             </div>
 
-            <button className="mt-8 text-[var(--green-mid)] font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+            <Link to="/blog" className="mt-8 text-[var(--green-mid)] font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
               {extra.successStoryButtonText} <ArrowRight className="w-4 h-4"/>
-            </button>
+            </Link>
           </div>
 
           {/* Right — a real, playable embedded video (if one has been added); otherwise a plain photo */}
