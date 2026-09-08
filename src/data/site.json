@@ -524,24 +524,29 @@
   },
   "services": [
     {
-      "icon": "food",
-      "title": "Food Distribution",
-      "desc": "Providing nutritious meals to families and individuals facing food insecurity across communities."
+      "icon": "child",
+      "title": "Empower Women & Girls",
+      "desc": "We equip women and girls to lead, make informed decisions, and claim their rights through our leadership boothcamps, right educstion workshop, life skill training, and the feminist fronteir podcast."
     },
     {
       "icon": "child",
-      "title": "Child Education",
-      "desc": "Ensuring every child has access to quality education and learning opportunities for a brighter future."
-    },
-    {
-      "icon": "medical",
-      "title": "Medical Support",
-      "desc": "Delivering essential healthcare services and medical supplies to underserved populations worldwide."
+      "title": "Stomp Out Cancer Initiative",
+      "desc": "We sensitize the populace on cancer prevention and early detection through our community health outreaches, cancer education, screening linkages, teach self exams, family history drives, free screening and cancer walk."
     },
     {
       "icon": "house",
-      "title": "Poverty Reduction",
-      "desc": "Empowering communities with sustainable programs that break the cycle of poverty for generations."
+      "title": "Save Spaces and Access Project",
+      "desc": "We provide menstrual health education and pad distribution drives, save space hubs for counselling and skills training though pad a girl school outreaches and partner with clinics for sexual and reproductive health right referrals."
+    },
+    {
+      "icon": "house",
+      "title": "Widows and Orphans Dignity Iniative",
+      "desc": "We provide legal protect, ecomonic independence for widows and orphans through \"Know the law\" clinic for inheritance rights, widow corporatives for income generaiton, school support for orphans, and town meetings with traditional leaders."
+    },
+    {
+      "icon": "child",
+      "title": "SafeHer: End Gender-Based Violence",
+      "desc": "Prevent, respond to, and advocate against all forms of violence against women and girls though our holistic action such as referral pathways, Medical/legal/psychological services, emergency safe space partnerships, community sensitization on GBV laws, skills training, start up kit for survivors to rebuild financial independence, annual 16 days activism campaigns, GBV reporting to track trends and inform policy."
     }
   ]
 }
