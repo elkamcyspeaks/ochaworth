@@ -23,6 +23,15 @@ function ContactSection() {
         name: form.name, email: form.email, phone: form.phone,
         subject: form.subject, message: form.message,
       });
+      // Fire-and-forget: send the visitor a confirmation email. This is
+      // deliberately NOT awaited into the try/catch above — the Netlify
+      // Forms submission (already logged) is what "sent" depends on, so a
+      // Resend hiccup here should never show the visitor a false error.
+      fetch("/.netlify/functions/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "contact", email: form.email, name: form.name }),
+      }).catch(err => console.error("Contact confirmation email failed:", err));
       setStatus("sent");
       setForm({ name: "", email: "", phone: "", subject: "", message: "", agreed: false });
       setTimeout(() => setStatus("idle"), 3500);

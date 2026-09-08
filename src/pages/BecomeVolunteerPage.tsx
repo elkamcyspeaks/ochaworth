@@ -94,6 +94,15 @@ function FormSection() {
     setStatus("sending");
     try {
       await submitToNetlify("become-a-volunteer", form);
+      // Fire-and-forget: send the applicant a confirmation email. Not
+      // awaited into the try/catch above — the Netlify Forms submission
+      // (already logged) is what "sent" depends on, so a Resend hiccup here
+      // should never show the applicant a false error.
+      fetch("/.netlify/functions/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "become-a-volunteer", email: form.email, name: form.name }),
+      }).catch(err => console.error("Become A Volunteer confirmation email failed:", err));
       setStatus("sent");
       setForm({ name: "", email: "", phone: "", dob: "", occupation: "", address: "", country: "", message: "" });
       setTimeout(() => setStatus("idle"), 3500);
