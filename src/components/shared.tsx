@@ -325,6 +325,18 @@ export function FormErrorNote({ email, light = false }: { email?: string; light?
   );
 }
 
+// Newsletter signup does two independent things on submit:
+//   1. Logs to Netlify Forms (submitToNetlify), the same way Contact/Become
+//      A Member/Become A Volunteer do — this is what makes every subscriber
+//      show up under Site configuration > Forms > newsletter in Netlify, so
+//      Emmanuel has a running list he can see (and export) at any time.
+//   2. Calls our own Netlify Function (netlify/functions/subscribe.js),
+//      which emails the subscriber a "you're now subscribed" confirmation
+//      via Resend, using a secret API key that only lives on the server,
+//      never in the browser.
+// The confirmation email's wording lives in that function file — changing
+// it means shipping a small code update, since (unlike Mailchimp/Brevo)
+// there's no separate dashboard where Emmanuel can edit it himself.
 export function Newsletter() {
   const n = site.newsletter;
   const [email, setEmail] = useState("");
@@ -334,7 +346,27 @@ export function Newsletter() {
     e.preventDefault();
     setStatus("sending");
     try {
-      await submitToNetlify("newsletter", { email });
+      const [logResult, emailResult] = await Promise.allSettled([
+        submitToNetlify("newsletter", { email }),
+        fetch("/.netlify/functions/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        }),
+      ]);
+
+      // The confirmation email is the part the visitor actually notices, so
+      // that's what determines success/failure here. The Netlify Forms log
+      // is just bookkeeping for Emmanuel — if that one call fails, it isn't
+      // worth showing the visitor an error over, just note it in the console.
+      if (logResult.status === "rejected") {
+        console.error("Newsletter: Netlify Forms log failed:", logResult.reason);
+      }
+      const emailOk = emailResult.status === "fulfilled" && emailResult.value.ok;
+      if (!emailOk) {
+        throw new Error("Subscription confirmation email failed");
+      }
+
       setStatus("sent");
       setEmail("");
       setTimeout(() => setStatus("idle"), 4000);

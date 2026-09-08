@@ -29,6 +29,13 @@
       capture submissions and (once turned on in the Netlify dashboard under
       Site configuration > Forms) email a notification for each one.
       These never display and are never filled in by a visitor directly.
+
+      The Newsletter form ALSO, separately, posts to a Netlify Function (see
+      netlify/functions/subscribe.js) that emails the subscriber a "you're
+      now subscribed" confirmation via Resend. That's a second, independent
+      step — this hidden form here is only what makes every subscriber's
+      email address show up under Site configuration > Forms in Netlify, the
+      same way Contact/Become A Member/Become A Volunteer already do.
     -->
     <form name="newsletter" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="email" name="email"/>

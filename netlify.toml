@@ -5,6 +5,9 @@
 [build.environment]
   NODE_VERSION = "22"
 
+[functions]
+  directory = "netlify/functions"
+
 # Support client-side routing for future pages (e.g. React Router)
 [[redirects]]
   from = "/*"
