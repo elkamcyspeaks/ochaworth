@@ -18,5 +18,47 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!--
+      Hidden forms for Netlify Forms.
+      Netlify's build bot only sees this static HTML file, never the React
+      app that actually renders and submits these forms — so each real form
+      (Newsletter, Contact, Become A Member, Become A Volunteer) needs a
+      matching copy here with the same name and field names. This is what
+      lets Netlify know these forms exist and what to expect, so it can
+      capture submissions and (once turned on in the Netlify dashboard under
+      Site configuration > Forms) email a notification for each one.
+      These never display and are never filled in by a visitor directly.
+    -->
+    <form name="newsletter" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="email" name="email"/>
+    </form>
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name"/>
+      <input type="email" name="email"/>
+      <input type="tel" name="phone"/>
+      <input type="text" name="subject"/>
+      <textarea name="message"></textarea>
+    </form>
+    <form name="become-a-member" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name"/>
+      <input type="email" name="email"/>
+      <input type="tel" name="phone"/>
+      <input type="text" name="dob"/>
+      <input type="text" name="occupation"/>
+      <input type="text" name="address"/>
+      <input type="text" name="country"/>
+      <textarea name="message"></textarea>
+    </form>
+    <form name="become-a-volunteer" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name"/>
+      <input type="email" name="email"/>
+      <input type="tel" name="phone"/>
+      <input type="text" name="dob"/>
+      <input type="text" name="occupation"/>
+      <input type="text" name="address"/>
+      <input type="text" name="country"/>
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>

@@ -4,6 +4,7 @@ import contactPageData from "@/data/contactPage.json";
 import {
   CheckIcon, SendIcon, ClipboardIcon,
   Icon, Newsletter, PageHero,
+  submitToNetlify, Honeypot, FormErrorNote,
 } from "@/components/shared";
 
 // ── Sections ──────────────────────────────────────────────────────────────────
@@ -12,12 +13,22 @@ function ContactSection() {
   const s = contactPageData.section;
   const c = site.contact;
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "", agreed: false });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3500);
+    setStatus("sending");
+    try {
+      await submitToNetlify("contact", {
+        name: form.name, email: form.email, phone: form.phone,
+        subject: form.subject, message: form.message,
+      });
+      setStatus("sent");
+      setForm({ name: "", email: "", phone: "", subject: "", message: "", agreed: false });
+      setTimeout(() => setStatus("idle"), 3500);
+    } catch {
+      setStatus("error");
+    }
   }
 
   // The first three cards mirror the real contact details already entered under
@@ -66,22 +77,35 @@ function ContactSection() {
               {s.formHeading}
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+              className="space-y-4"
+            >
+              <input type="hidden" name="form-name" value="contact"/>
+              <Honeypot/>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="name"
                   placeholder={s.namePlaceholder}
                   value={form.name}
                   onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] placeholder-gray-400"
+                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] placeholder-gray-400 disabled:opacity-60"
+                  disabled={status === "sending"}
                   required
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder={s.emailPlaceholder}
                   value={form.email}
                   onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] placeholder-gray-400"
+                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] placeholder-gray-400 disabled:opacity-60"
+                  disabled={status === "sending"}
                   required
                 />
               </div>
@@ -89,15 +113,19 @@ function ContactSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="tel"
+                  name="phone"
                   placeholder={s.phonePlaceholder}
                   value={form.phone}
                   onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
-                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] placeholder-gray-400"
+                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] placeholder-gray-400 disabled:opacity-60"
+                  disabled={status === "sending"}
                 />
                 <select
+                  name="subject"
                   value={form.subject}
                   onChange={e => setForm(f => ({ ...f, subject: e.target.value }))}
-                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] text-gray-500"
+                  className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] text-gray-500 disabled:opacity-60"
+                  disabled={status === "sending"}
                 >
                   <option value="">{s.subjectDefaultOption}</option>
                   {s.subjects.map(sub => <option key={sub} value={sub}>{sub}</option>)}
@@ -105,11 +133,13 @@ function ContactSection() {
               </div>
 
               <textarea
+                name="message"
                 placeholder={s.messagePlaceholder}
                 rows={4}
                 value={form.message}
                 onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] placeholder-gray-400 resize-none"
+                className="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] placeholder-gray-400 resize-none disabled:opacity-60"
+                disabled={status === "sending"}
                 required
               />
 
@@ -125,12 +155,14 @@ function ContactSection() {
 
               <button
                 type="submit"
-                className="flex items-center gap-2 bg-[var(--green-mid)] text-white font-bold px-8 py-3 rounded-full hover:bg-[var(--green-dark)] transition-colors text-sm"
+                disabled={status === "sending"}
+                className="flex items-center gap-2 bg-[var(--green-mid)] text-white font-bold px-8 py-3 rounded-full hover:bg-[var(--green-dark)] transition-colors text-sm disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {sent ? s.sentButtonText : s.sendButtonText}
-                {!sent && <SendIcon className="w-4 h-4"/>}
-                {sent && <CheckIcon className="w-3 h-3"/>}
+                {status === "sent" ? s.sentButtonText : status === "sending" ? "Sending…" : s.sendButtonText}
+                {status === "idle" && <SendIcon className="w-4 h-4"/>}
+                {status === "sent" && <CheckIcon className="w-3 h-3"/>}
               </button>
+              {status === "error" && <FormErrorNote email={site.contact?.email}/>}
             </form>
           </div>
         </div>

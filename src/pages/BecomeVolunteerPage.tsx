@@ -4,6 +4,7 @@ import becomeVolunteerPageData from "@/data/becomeVolunteerPage.json";
 import {
   ArrowUpRight, CheckIcon,
   SectionLabel, Newsletter, PageHero,
+  submitToNetlify, Honeypot, FormErrorNote,
 } from "@/components/shared";
 
 // ── Decorative volunteer illustration ─────────────────────────────────────────
@@ -68,10 +69,10 @@ function VolunteerIllustration() {
 }
 
 // ── Form Section ──────────────────────────────────────────────────────────────
-// Visual only for now (no email backend set up yet) — same pattern already
-// agreed for the Contact page's form.
+// Submits via Netlify Forms — see submitToNetlify in shared.tsx and the
+// matching hidden static form ("become-a-volunteer") in index.html.
 
-const inputCls = "w-full bg-white border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[var(--green-dark)] transition-colors";
+const inputCls = "w-full bg-white border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[var(--green-dark)] transition-colors disabled:opacity-60";
 const labelCls = "block text-sm font-semibold text-[var(--green-dark)] mb-1.5";
 
 function FormSection() {
@@ -81,17 +82,24 @@ function FormSection() {
     name: "", email: "", phone: "", dob: "",
     occupation: "", address: "", country: "", message: "",
   });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   function set(k: keyof typeof form) {
     return (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       setForm(s => ({ ...s, [k]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3500);
+    setStatus("sending");
+    try {
+      await submitToNetlify("become-a-volunteer", form);
+      setStatus("sent");
+      setForm({ name: "", email: "", phone: "", dob: "", occupation: "", address: "", country: "", message: "" });
+      setTimeout(() => setStatus("idle"), 3500);
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -105,54 +113,64 @@ function FormSection() {
         </div>
 
         <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-          <form onSubmit={handleSubmit} className="flex-1 bg-[#F5F0E8] p-8 lg:p-10">
+          <form
+            name="become-a-volunteer"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+            className="flex-1 bg-[#F5F0E8] p-8 lg:p-10"
+          >
+            <input type="hidden" name="form-name" value="become-a-volunteer"/>
+            <Honeypot/>
             <div className="mb-5">
               <label className={labelCls}>{f.nameLabel}</label>
-              <input type="text" placeholder={f.namePlaceholder} value={form.name} onChange={set("name")} className={inputCls} required/>
+              <input type="text" name="name" placeholder={f.namePlaceholder} value={form.name} onChange={set("name")} className={inputCls} disabled={status === "sending"} required/>
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-5">
               <div>
                 <label className={labelCls}>{f.emailLabel}</label>
-                <input type="email" placeholder={f.emailPlaceholder} value={form.email} onChange={set("email")} className={inputCls} required/>
+                <input type="email" name="email" placeholder={f.emailPlaceholder} value={form.email} onChange={set("email")} className={inputCls} disabled={status === "sending"} required/>
               </div>
               <div>
                 <label className={labelCls}>{f.phoneLabel}</label>
-                <input type="tel" placeholder={f.phonePlaceholder} value={form.phone} onChange={set("phone")} className={inputCls}/>
+                <input type="tel" name="phone" placeholder={f.phonePlaceholder} value={form.phone} onChange={set("phone")} className={inputCls} disabled={status === "sending"}/>
               </div>
             </div>
 
             <div className="mb-5">
               <label className={labelCls}>{f.dobLabel}</label>
-              <input type="text" placeholder={f.dobPlaceholder} value={form.dob} onChange={set("dob")} className={inputCls}/>
+              <input type="text" name="dob" placeholder={f.dobPlaceholder} value={form.dob} onChange={set("dob")} className={inputCls} disabled={status === "sending"}/>
             </div>
 
             <div className="mb-5">
               <label className={labelCls}>{f.occupationLabel}</label>
-              <input type="text" placeholder={f.occupationPlaceholder} value={form.occupation} onChange={set("occupation")} className={inputCls}/>
+              <input type="text" name="occupation" placeholder={f.occupationPlaceholder} value={form.occupation} onChange={set("occupation")} className={inputCls} disabled={status === "sending"}/>
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-5">
               <div>
                 <label className={labelCls}>{f.addressLabel}</label>
-                <input type="text" placeholder={f.addressPlaceholder} value={form.address} onChange={set("address")} className={inputCls}/>
+                <input type="text" name="address" placeholder={f.addressPlaceholder} value={form.address} onChange={set("address")} className={inputCls} disabled={status === "sending"}/>
               </div>
               <div>
                 <label className={labelCls}>{f.countryLabel}</label>
-                <input type="text" placeholder={f.countryPlaceholder} value={form.country} onChange={set("country")} className={inputCls}/>
+                <input type="text" name="country" placeholder={f.countryPlaceholder} value={form.country} onChange={set("country")} className={inputCls} disabled={status === "sending"}/>
               </div>
             </div>
 
             <div className="mb-7">
               <label className={labelCls}>{f.messageLabel}</label>
-              <textarea placeholder={f.messagePlaceholder} value={form.message} onChange={set("message")} rows={4} className={inputCls + " resize-none"}/>
+              <textarea name="message" placeholder={f.messagePlaceholder} value={form.message} onChange={set("message")} rows={4} className={inputCls + " resize-none"} disabled={status === "sending"}/>
             </div>
 
-            <button type="submit" className="flex items-center gap-2 bg-[var(--green-dark)] text-white font-bold px-7 py-3 rounded-full hover:bg-[var(--green-mid)] transition-colors text-sm">
-              {sent ? f.submittedButtonText : f.submitButtonText}
-              {!sent && <ArrowUpRight className="w-4 h-4"/>}
-              {sent && <CheckIcon className="w-3 h-3"/>}
+            <button type="submit" disabled={status === "sending"} className="flex items-center gap-2 bg-[var(--green-dark)] text-white font-bold px-7 py-3 rounded-full hover:bg-[var(--green-mid)] transition-colors text-sm disabled:opacity-60 disabled:cursor-not-allowed">
+              {status === "sent" ? f.submittedButtonText : status === "sending" ? "Sending…" : f.submitButtonText}
+              {status === "idle" && <ArrowUpRight className="w-4 h-4"/>}
+              {status === "sent" && <CheckIcon className="w-3 h-3"/>}
             </button>
+            {status === "error" && <FormErrorNote email={site.contact?.email}/>}
           </form>
 
           {/* Right — illustration panel, captioned with Ochaworth's own mission line rather than a generic stock caption */}

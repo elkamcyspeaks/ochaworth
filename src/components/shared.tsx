@@ -268,8 +268,8 @@ export function SectionLabel({ text, light = false }: { text: string; light?: bo
     </div>
   );
 }
-export function YellowBtn({ children, className = "", onClick }: { children: ReactNode; className?: string; onClick?: () => void }) {
-  return <button onClick={onClick} className={"bg-[var(--yellow)] text-[var(--green-dark)] font-bold px-6 py-3 rounded-full hover:bg-[var(--yellow-dark)] transition-colors " + className}>{children}</button>;
+export function YellowBtn({ children, className = "", onClick, disabled }: { children: ReactNode; className?: string; onClick?: () => void; disabled?: boolean }) {
+  return <button onClick={onClick} disabled={disabled} className={"bg-[var(--yellow)] text-[var(--green-dark)] font-bold px-6 py-3 rounded-full hover:bg-[var(--yellow-dark)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed " + className}>{children}</button>;
 }
 export function GreenBtn({ children, className = "", onClick }: { children: ReactNode; className?: string; onClick?: () => void }) {
   return <button onClick={onClick} className={"bg-[var(--green-mid)] text-white font-semibold px-6 py-3 rounded-full hover:bg-[var(--green-dark)] transition-colors " + className}>{children}</button>;
@@ -277,16 +277,70 @@ export function GreenBtn({ children, className = "", onClick }: { children: Reac
 export function OutlineBtn({ children, className = "", light = false, onClick }: { children: ReactNode; className?: string; light?: boolean; onClick?: () => void }) {
   return <button onClick={onClick} className={"border-2 font-semibold px-6 py-3 rounded-full transition-colors " + (light ? "border-white text-white hover:bg-white hover:text-[var(--green-mid)]" : "border-[var(--green-mid)] text-[var(--green-mid)] hover:bg-[var(--green-mid)] hover:text-white") + " " + className}>{children}</button>;
 }
+// ── Netlify Forms helper ───────────────────────────────────────────────────
+// Ochaworth's site is hosted on Netlify, which can capture form submissions
+// with no server code of ours — see the hidden static forms in index.html
+// (Netlify's build bot reads those to know which forms/fields to expect).
+// This just AJAX-posts the real, editable React form's data to that same
+// endpoint so the page never has to reload. Submissions land in the Netlify
+// dashboard, and Emmanuel can turn on an email notification for each form
+// himself under Netlify: Site configuration > Forms > Form notifications.
+export async function submitToNetlify(formName: string, data: Record<string, string>): Promise<void> {
+  const body = new URLSearchParams({ "form-name": formName, ...data }).toString();
+  const res = await fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body,
+  });
+  if (!res.ok) {
+    throw new Error(`Form submission failed (status ${res.status})`);
+  }
+}
+
+// Spam trap: real visitors never see or fill this field (hidden via CSS),
+// but simple spam bots that fill in every field they find will trip it, and
+// Netlify silently discards those submissions. Purely a Netlify Forms
+// convention — matches the `netlify-honeypot="bot-field"` set on each form.
+export function Honeypot() {
+  return (
+    <p className="hidden" aria-hidden="true">
+      <label>
+        Leave this field blank
+        <input name="bot-field" tabIndex={-1} autoComplete="off"/>
+      </label>
+    </p>
+  );
+}
+
+export function FormErrorNote({ email, light = false }: { email?: string; light?: boolean }) {
+  return (
+    <p
+      className={
+        "text-sm mt-3 rounded-lg px-4 py-2 inline-block " +
+        (light ? "text-red-100 bg-red-500/20" : "text-red-700 bg-red-50 border border-red-200")
+      }
+    >
+      Something went wrong sending that — please try again{email ? <> or email us directly at <a href={`mailto:${email}`} className="underline">{email}</a></> : null}.
+    </p>
+  );
+}
+
 export function Newsletter() {
   const n = site.newsletter;
   const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    setSubscribed(true);
-    setEmail("");
-    setTimeout(() => setSubscribed(false), 4000);
+    setStatus("sending");
+    try {
+      await submitToNetlify("newsletter", { email });
+      setStatus("sent");
+      setEmail("");
+      setTimeout(() => setStatus("idle"), 4000);
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -297,17 +351,31 @@ export function Newsletter() {
           {n.headingPrefix} <span className="text-[var(--yellow)]">{n.headingHighlight}</span>
         </h2>
         <p className="text-white/60 mb-8">{n.paragraph}</p>
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+        <form
+          name="newsletter"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+          className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
+        >
+          <input type="hidden" name="form-name" value="newsletter"/>
+          <Honeypot/>
           <input
             type="email"
             required
+            name="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder={n.placeholder}
-            className="flex-1 px-5 py-3 rounded-full text-sm focus:outline-none text-gray-800 bg-white placeholder-gray-400 border-0"
+            disabled={status === "sending"}
+            className="flex-1 px-5 py-3 rounded-full text-sm focus:outline-none text-gray-800 bg-white placeholder-gray-400 border-0 disabled:opacity-70"
           />
-          <YellowBtn className="whitespace-nowrap">{subscribed ? (n.subscribedButtonText ?? "Subscribed!") : n.buttonText}</YellowBtn>
+          <YellowBtn className="whitespace-nowrap" disabled={status === "sending"}>
+            {status === "sent" ? (n.subscribedButtonText ?? "Subscribed!") : status === "sending" ? "Sending…" : n.buttonText}
+          </YellowBtn>
         </form>
+        {status === "error" && <FormErrorNote email={site.contact?.email} light/>}
       </div>
     </section>
   );
