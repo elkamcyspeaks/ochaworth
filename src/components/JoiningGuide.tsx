@@ -12,8 +12,9 @@ export default function JoiningGuide({ member = false }: { member?: boolean }) {
         <li>
           <strong>1. Introduce yourself</strong>
           <span>
-            Share how you would like to contribute. Optional details can be left
-            blank.
+            {member
+              ? "Share how you would like to contribute. Optional details can be left blank."
+              : "Share how you would like to contribute and complete all the fields below."}
           </span>
         </li>
         <li>
@@ -32,7 +33,7 @@ export default function JoiningGuide({ member = false }: { member?: boolean }) {
           </span>
         </li>
       </ol>
-      <p className="text-sm">
+      {member ? <p className="text-sm">
         {member
           ? "Looking for hands-on community work?"
           : "Interested in organisational membership?"}{" "}
@@ -43,7 +44,15 @@ export default function JoiningGuide({ member = false }: { member?: boolean }) {
           {member ? "Explore volunteering" : "Enquire about membership"}
         </Link>
         .
-      </p>
+      </p> : (
+        <aside className="experience-membership-cta" aria-labelledby="membership-cta-title">
+          <div>
+            <h3 id="membership-cta-title">Interested in becoming a member?</h3>
+            <p>Explore another way to support Ochaworth’s mission. Ask our team about membership and how you can contribute.</p>
+          </div>
+          <Link className="experience-button" to="/become-a-member">Enquire about membership <span aria-hidden="true">↗</span></Link>
+        </aside>
+      )}
     </div>
   )
 }

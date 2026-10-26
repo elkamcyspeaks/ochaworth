@@ -126,6 +126,7 @@ function FormSection() {
         </div>
 
         <JoiningGuide member={false}/>
+        <p className="text-sm text-gray-600 mb-5">All fields are required.</p>
         <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden border border-gray-200">
           {status==="sent" && <div className="experience-success flex-1 p-8" role="status" ref={confirmation} tabIndex={-1}><h3>Thank you for your interest.</h3><p>Your enquiry has been received. The team will review your details and contact you about the next steps. You do not need to apply again.</p><button type="button" className="experience-link" onClick={()=>setStatus("idle")}>Start another enquiry →</button></div>}
           <form hidden={status==="sent"}
@@ -149,35 +150,35 @@ function FormSection() {
                 <input type="email" id="becomevolunteerpage-email" name="email" placeholder={f.emailPlaceholder} value={form.email} onChange={set("email")} className={inputCls} disabled={status === "sending"} required/>
               </div>
               <div>
-                <label htmlFor="becomevolunteerpage-phone" className={labelCls}>{f.phoneLabel} <span className="font-normal text-gray-500">(optional)</span></label>
-                <input type="tel" id="becomevolunteerpage-phone" name="phone" placeholder={f.phonePlaceholder} value={form.phone} onChange={set("phone")} className={inputCls} disabled={status === "sending"}/>
+                <label htmlFor="becomevolunteerpage-phone" className={labelCls}>{f.phoneLabel}</label>
+                <input type="tel" id="becomevolunteerpage-phone" name="phone" placeholder={f.phonePlaceholder} value={form.phone} onChange={set("phone")} className={inputCls} disabled={status === "sending"} required/>
               </div>
             </div>
 
             <div className="mb-5">
-              <label htmlFor="becomevolunteerpage-dob" className={labelCls}>{f.dobLabel} <span className="font-normal text-gray-500">(optional)</span></label>
-              <input type="date" id="becomevolunteerpage-dob" name="dob" placeholder={f.dobPlaceholder} value={form.dob} onChange={set("dob")} className={inputCls} disabled={status === "sending"}/>
+              <label htmlFor="becomevolunteerpage-dob" className={labelCls}>{f.dobLabel}</label>
+              <input type="date" id="becomevolunteerpage-dob" name="dob" placeholder={f.dobPlaceholder} value={form.dob} onChange={set("dob")} className={inputCls} disabled={status === "sending"} required/>
             </div>
 
             <div className="mb-5">
-              <label htmlFor="becomevolunteerpage-occupation" className={labelCls}>{f.occupationLabel} <span className="font-normal text-gray-500">(optional)</span></label>
-              <input type="text" id="becomevolunteerpage-occupation" name="occupation" placeholder={f.occupationPlaceholder} value={form.occupation} onChange={set("occupation")} className={inputCls} disabled={status === "sending"}/>
+              <label htmlFor="becomevolunteerpage-occupation" className={labelCls}>{f.occupationLabel}</label>
+              <input type="text" id="becomevolunteerpage-occupation" name="occupation" placeholder={f.occupationPlaceholder} value={form.occupation} onChange={set("occupation")} className={inputCls} disabled={status === "sending"} required/>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
               <div>
-                <label htmlFor="becomevolunteerpage-address" className={labelCls}>{f.addressLabel} <span className="font-normal text-gray-500">(optional)</span></label>
-                <input type="text" id="becomevolunteerpage-address" name="address" placeholder={f.addressPlaceholder} value={form.address} onChange={set("address")} className={inputCls} disabled={status === "sending"}/>
+                <label htmlFor="becomevolunteerpage-address" className={labelCls}>{f.addressLabel}</label>
+                <input type="text" id="becomevolunteerpage-address" name="address" placeholder={f.addressPlaceholder} value={form.address} onChange={set("address")} className={inputCls} disabled={status === "sending"} required/>
               </div>
               <div>
-                <label htmlFor="becomevolunteerpage-country" className={labelCls}>{f.countryLabel} <span className="font-normal text-gray-500">(optional)</span></label>
-                <input type="text" id="becomevolunteerpage-country" name="country" placeholder={f.countryPlaceholder} value={form.country} onChange={set("country")} className={inputCls} disabled={status === "sending"}/>
+                <label htmlFor="becomevolunteerpage-country" className={labelCls}>{f.countryLabel}</label>
+                <input type="text" id="becomevolunteerpage-country" name="country" placeholder={f.countryPlaceholder} value={form.country} onChange={set("country")} className={inputCls} disabled={status === "sending"} required/>
               </div>
             </div>
 
             <div className="mb-7">
-              <label htmlFor="becomevolunteerpage-message" className={labelCls}>{f.messageLabel} <span className="font-normal text-gray-500">(optional)</span></label>
-              <textarea id="becomevolunteerpage-message" name="message" placeholder={f.messagePlaceholder} value={form.message} onChange={set("message")} rows={4} className={inputCls + " resize-none"} disabled={status === "sending"}/>
+              <label htmlFor="becomevolunteerpage-message" className={labelCls}>{f.messageLabel}</label>
+              <textarea id="becomevolunteerpage-message" name="message" placeholder={f.messagePlaceholder} value={form.message} onChange={set("message")} rows={4} className={inputCls + " resize-none"} disabled={status === "sending"} required/>
             </div>
 
             <button type="submit" disabled={status === "sending"} className="flex items-center gap-2 bg-[var(--green-dark)] text-white font-bold px-7 py-3 rounded-full hover:bg-[var(--green-mid)] transition-colors text-sm disabled:opacity-60 disabled:cursor-not-allowed">
