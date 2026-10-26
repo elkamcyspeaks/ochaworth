@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import { useSearchParams } from "react-router-dom"
 import galleryData from "@/data/gallery.json"
 import {
   ChevronRight,
@@ -297,6 +298,8 @@ export function GalleryGrid({
   )
 }
 export default function GalleryPage() {
+  const [params] = useSearchParams();
+  const collection = params.get("collection") || galleryData.featuredAlbum;
   return (
     <>
       <PageHero
@@ -305,7 +308,7 @@ export default function GalleryPage() {
         breadcrumbHome={galleryData.hero.breadcrumbHome}
         breadcrumbCurrent={galleryData.hero.breadcrumbCurrent}
       />
-      <GalleryGrid />
+      <GalleryGrid key={collection} featuredAlbum={collection} />
       <Newsletter />
     </>
   )

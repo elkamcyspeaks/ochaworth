@@ -1,4 +1,5 @@
-import { useState } from "react";
+import JoiningGuide from "@/components/JoiningGuide";
+import { useState, useEffect, useRef } from "react";
 import site from "@/data/site.json";
 import becomeVolunteerPageData from "@/data/becomeVolunteerPage.json";
 import {
@@ -84,6 +85,9 @@ function FormSection() {
   });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
+  const confirmation=useRef<HTMLDivElement>(null);
+  useEffect(()=>{if(status==="sent")confirmation.current?.focus();},[status]);
+
   function set(k: keyof typeof form) {
     return (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       setForm(s => ({ ...s, [k]: e.target.value }));
@@ -105,7 +109,7 @@ function FormSection() {
       }).catch(err => console.error("Become A Volunteer confirmation email failed:", err));
       setStatus("sent");
       setForm({ name: "", email: "", phone: "", dob: "", occupation: "", address: "", country: "", message: "" });
-      setTimeout(() => setStatus("idle"), 3500);
+
     } catch {
       setStatus("error");
     }
@@ -121,57 +125,59 @@ function FormSection() {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-          <form
+        <JoiningGuide member={false}/>
+        <div className="flex flex-col lg:flex-row rounded-3xl overflow-hidden border border-gray-200">
+          {status==="sent" && <div className="experience-success flex-1 p-8" role="status" ref={confirmation} tabIndex={-1}><h3>Thank you for your interest.</h3><p>Your enquiry has been received. The team will review your details and contact you about the next steps. You do not need to apply again.</p><button type="button" className="experience-link" onClick={()=>setStatus("idle")}>Start another enquiry →</button></div>}
+          <form hidden={status==="sent"}
             name="become-a-volunteer"
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
-            className="flex-1 bg-[#F5F0E8] p-8 lg:p-10"
+            className="flex-1 bg-[#F7F7F3] p-5 sm:p-8 lg:p-10"
           >
             <input type="hidden" name="form-name" value="become-a-volunteer"/>
             <Honeypot/>
             <div className="mb-5">
-              <label className={labelCls}>{f.nameLabel}</label>
-              <input type="text" name="name" placeholder={f.namePlaceholder} value={form.name} onChange={set("name")} className={inputCls} disabled={status === "sending"} required/>
+              <label htmlFor="becomevolunteerpage-name" className={labelCls}>{f.nameLabel}</label>
+              <input type="text" id="becomevolunteerpage-name" name="name" placeholder={f.namePlaceholder} value={form.name} onChange={set("name")} className={inputCls} disabled={status === "sending"} required/>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
               <div>
-                <label className={labelCls}>{f.emailLabel}</label>
-                <input type="email" name="email" placeholder={f.emailPlaceholder} value={form.email} onChange={set("email")} className={inputCls} disabled={status === "sending"} required/>
+                <label htmlFor="becomevolunteerpage-email" className={labelCls}>{f.emailLabel}</label>
+                <input type="email" id="becomevolunteerpage-email" name="email" placeholder={f.emailPlaceholder} value={form.email} onChange={set("email")} className={inputCls} disabled={status === "sending"} required/>
               </div>
               <div>
-                <label className={labelCls}>{f.phoneLabel}</label>
-                <input type="tel" name="phone" placeholder={f.phonePlaceholder} value={form.phone} onChange={set("phone")} className={inputCls} disabled={status === "sending"}/>
+                <label htmlFor="becomevolunteerpage-phone" className={labelCls}>{f.phoneLabel} <span className="font-normal text-gray-500">(optional)</span></label>
+                <input type="tel" id="becomevolunteerpage-phone" name="phone" placeholder={f.phonePlaceholder} value={form.phone} onChange={set("phone")} className={inputCls} disabled={status === "sending"}/>
               </div>
             </div>
 
             <div className="mb-5">
-              <label className={labelCls}>{f.dobLabel}</label>
-              <input type="text" name="dob" placeholder={f.dobPlaceholder} value={form.dob} onChange={set("dob")} className={inputCls} disabled={status === "sending"}/>
+              <label htmlFor="becomevolunteerpage-dob" className={labelCls}>{f.dobLabel} <span className="font-normal text-gray-500">(optional)</span></label>
+              <input type="date" id="becomevolunteerpage-dob" name="dob" placeholder={f.dobPlaceholder} value={form.dob} onChange={set("dob")} className={inputCls} disabled={status === "sending"}/>
             </div>
 
             <div className="mb-5">
-              <label className={labelCls}>{f.occupationLabel}</label>
-              <input type="text" name="occupation" placeholder={f.occupationPlaceholder} value={form.occupation} onChange={set("occupation")} className={inputCls} disabled={status === "sending"}/>
+              <label htmlFor="becomevolunteerpage-occupation" className={labelCls}>{f.occupationLabel} <span className="font-normal text-gray-500">(optional)</span></label>
+              <input type="text" id="becomevolunteerpage-occupation" name="occupation" placeholder={f.occupationPlaceholder} value={form.occupation} onChange={set("occupation")} className={inputCls} disabled={status === "sending"}/>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
               <div>
-                <label className={labelCls}>{f.addressLabel}</label>
-                <input type="text" name="address" placeholder={f.addressPlaceholder} value={form.address} onChange={set("address")} className={inputCls} disabled={status === "sending"}/>
+                <label htmlFor="becomevolunteerpage-address" className={labelCls}>{f.addressLabel} <span className="font-normal text-gray-500">(optional)</span></label>
+                <input type="text" id="becomevolunteerpage-address" name="address" placeholder={f.addressPlaceholder} value={form.address} onChange={set("address")} className={inputCls} disabled={status === "sending"}/>
               </div>
               <div>
-                <label className={labelCls}>{f.countryLabel}</label>
-                <input type="text" name="country" placeholder={f.countryPlaceholder} value={form.country} onChange={set("country")} className={inputCls} disabled={status === "sending"}/>
+                <label htmlFor="becomevolunteerpage-country" className={labelCls}>{f.countryLabel} <span className="font-normal text-gray-500">(optional)</span></label>
+                <input type="text" id="becomevolunteerpage-country" name="country" placeholder={f.countryPlaceholder} value={form.country} onChange={set("country")} className={inputCls} disabled={status === "sending"}/>
               </div>
             </div>
 
             <div className="mb-7">
-              <label className={labelCls}>{f.messageLabel}</label>
-              <textarea name="message" placeholder={f.messagePlaceholder} value={form.message} onChange={set("message")} rows={4} className={inputCls + " resize-none"} disabled={status === "sending"}/>
+              <label htmlFor="becomevolunteerpage-message" className={labelCls}>{f.messageLabel} <span className="font-normal text-gray-500">(optional)</span></label>
+              <textarea id="becomevolunteerpage-message" name="message" placeholder={f.messagePlaceholder} value={form.message} onChange={set("message")} rows={4} className={inputCls + " resize-none"} disabled={status === "sending"}/>
             </div>
 
             <button type="submit" disabled={status === "sending"} className="flex items-center gap-2 bg-[var(--green-dark)] text-white font-bold px-7 py-3 rounded-full hover:bg-[var(--green-mid)] transition-colors text-sm disabled:opacity-60 disabled:cursor-not-allowed">
@@ -182,18 +188,10 @@ function FormSection() {
             {status === "error" && <FormErrorNote email={site.contact?.email}/>}
           </form>
 
-          {/* Right — illustration panel, captioned with Ochaworth's own mission line rather than a generic stock caption */}
-          <div className="w-full lg:w-80 bg-[#F9C4A8] flex flex-col items-center justify-between relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-32 bg-[#F5B49A] rounded-b-full opacity-40"/>
-            <div className="relative z-10 flex-1 flex items-center justify-center px-6 pt-8 pb-4 w-full">
-              <VolunteerIllustration/>
-            </div>
-            <div className="relative z-10 w-full bg-[#F9C4A8] px-6 py-6 text-center">
-              <p className="text-3xl font-black leading-tight" style={{ color: "#E8521A", fontFamily: "'Playfair Display', serif" }}>
-                {o.missionLine1}<br/>{o.missionHighlight} {o.missionLine3}
-              </p>
-            </div>
-          </div>
+          <figure className="w-full lg:w-80 bg-[var(--green-dark)] flex flex-col">
+            <img src={becomeVolunteerPageData.hero.image} alt="Participants at an Ochaworth community awareness activity" loading="lazy" className="w-full h-64 lg:h-full object-cover min-h-64"/>
+            <figcaption className="p-6 text-white text-sm">People, purpose and community. Explore how you can be part of the work.</figcaption>
+          </figure>
         </div>
       </div>
     </section>

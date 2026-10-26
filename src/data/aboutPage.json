@@ -22,7 +22,7 @@
     "headingPrefix": "Meet",
     "headingItalic": "The Team",
     "badgeText": "BOARD MEMBER",
-    "ctaButtonText": "Become A Member",
+    "ctaButtonText": "Enquire About Membership",
     "members": [
       {
         "name": "Dirmicit",
@@ -238,7 +238,7 @@
     "headingLine3": "& What We Do"
   },
   "hero": {
-    "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=600&fit=crop&auto=format",
+    "image": "/images/uploads/breast-cancer-awareness-c0e5d87682e0.webp",
     "title": "About Us",
     "breadcrumbHome": "Home",
     "breadcrumbCurrent": "About Us"

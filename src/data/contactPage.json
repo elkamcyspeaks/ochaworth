@@ -1,6 +1,6 @@
 {
   "hero": {
-    "image": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&h=700&fit=crop&auto=format",
+    "image": "/images/uploads/breast-cancer-awareness-8614ee873049.webp",
     "title": "Contact Us",
     "breadcrumbHome": "Home",
     "breadcrumbCurrent": "Contact Us"
@@ -20,7 +20,7 @@
     "namePlaceholder": "Enter Your Name",
     "subjectDefaultOption": "Select subjects",
     "messagePlaceholder": "Write Message...",
-    "paragraph": "Thank you for your interest in Ochaworth. We are excited to hear from you and discuss how we can make a difference together — temporary shelter, education, and community care.",
+    "paragraph": "Have a question about our programs, volunteering, membership or partnerships? Get in touch with the Ochaworth team.",
     "infoCards": {
       "callUs": {
         "title": "Call Us",
