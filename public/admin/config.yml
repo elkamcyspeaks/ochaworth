@@ -685,8 +685,9 @@ collections:
       - file: "src/data/gallery.json"
         label: "Gallery Page"
         name: "gallery"
-        hint: "Content shown only on the /gallery page. Add, remove, or reorder photos below — the grid and lightbox update automatically for any number of photos."
+        hint: "Manage gallery photos and collections. Give photos from the same campaign the same Collection name. Earlier photos stay in Earlier activities unless you assign another collection."
         fields:
+          - { label: "Featured collection", name: "featuredAlbum", widget: "string", required: false, hint: "Exact collection name to show first, such as October 2026 campaign. Leave blank to show all photos." }
           - label: "Page Banner"
             name: "hero"
             widget: "object"
@@ -702,8 +703,11 @@ collections:
             summary: "{{fields.caption}}"
             fields:
               - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Lightweight preview (optional)", name: "thumbnail", widget: "image", required: false, hint: "Used in the grid; the Photo opens full-size. When replacing a Photo, replace or clear this preview too." }
               - { label: "Caption", name: "caption", widget: "string" }
+              - { label: "Image description", name: "alt", widget: "string", required: false, hint: "Describe what is visible for screen-reader users. The caption is used if this is blank." }
               - { label: "Category Tag", name: "category", widget: "string" }
+              - { label: "Collection", name: "album", widget: "string", required: false, hint: "Use October 2026 campaign for this campaign. Blank photos appear in Earlier activities." }
 
           - { label: '"No Photos Yet" Message', name: "emptyStateText", widget: "string", hint: "Shown only if every photo above is removed." }
 

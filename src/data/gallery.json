@@ -1,81 +1,1660 @@
 {
   "hero": {
-    "image": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1600&h=700&fit=crop&auto=format",
+    "image": "/images/uploads/breast-cancer-awareness-c0e5d87682e0.webp",
     "title": "Gallery",
     "breadcrumbHome": "Home",
     "breadcrumbCurrent": "Gallery"
   },
   "photos": [
     {
+      "image": "/images/uploads/breast-cancer-awareness-8614ee873049.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-8614ee873049-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0eadd84dc916.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0eadd84dc916-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-1b493e4c860b.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-1b493e4c860b-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-7a323b1017f2.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-7a323b1017f2-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 872,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-e8b59659cd61.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-e8b59659cd61-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-ed926f61acaf.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-ed926f61acaf-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-dc1432e81cf4.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-dc1432e81cf4-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-21ee943b7825.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-21ee943b7825-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-f692f8ad331c.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-f692f8ad331c-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-1d9a96f9aa7e.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-1d9a96f9aa7e-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-caf31ac8ef5d.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-caf31ac8ef5d-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-d8655e9bc322.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-d8655e9bc322-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-c9f16ba15172.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-c9f16ba15172-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-59439810361a.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-59439810361a-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-3d452a476801.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-3d452a476801-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-bdd2cb8ee72b.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-bdd2cb8ee72b-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-70eb7039db81.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-70eb7039db81-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-ca8a7990ac93.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-ca8a7990ac93-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-8bd3634bd5ac.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-8bd3634bd5ac-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-485816a611eb.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-485816a611eb-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 598
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-2d87e636f482.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-2d87e636f482-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 772
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-8fca77b74d6c.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-8fca77b74d6c-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-8b31ed82f808.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-8b31ed82f808-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-c0e5d87682e0.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-c0e5d87682e0-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 568
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-90c96b5447c5.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-90c96b5447c5-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-1aa8548c143b.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-1aa8548c143b-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-43b490b7cd5e.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-43b490b7cd5e-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-be0bedda0b3e.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-be0bedda0b3e-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-9d6623d8ef7b.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-9d6623d8ef7b-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-db1339e0f5e5.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-db1339e0f5e5-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-8542dfb24f63.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-8542dfb24f63-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-bb4555496dae.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-bb4555496dae-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-bdd49b1f8f4f.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-bdd49b1f8f4f-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-339b62febadb.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-339b62febadb-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-a558325756d3.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-a558325756d3-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-c82421367d59.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-c82421367d59-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-de79a07da2df.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-de79a07da2df-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-3443b70114ab.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-3443b70114ab-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-4bf68065be63.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-4bf68065be63-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-d1c7b9b8f4ae.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-d1c7b9b8f4ae-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-b24d4fe4ec82.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-b24d4fe4ec82-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-e9429ef436b7.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-e9429ef436b7-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-80a29375b7d5.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-80a29375b7d5-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-7d6ec953fe76.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-7d6ec953fe76-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-83469c58c760.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-83469c58c760-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-ddcc01fe03c4.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-ddcc01fe03c4-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-84450c2d03e4.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-84450c2d03e4-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-4c5423be08b6.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-4c5423be08b6-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-183214ec6c89.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-183214ec6c89-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0686b155c767.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0686b155c767-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-7084fae14b45.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-7084fae14b45-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-8f2c2d6b11a9.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-8f2c2d6b11a9-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-fd16d229338f.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-fd16d229338f-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-f84f9416f128.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-f84f9416f128-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-2a64e338f205.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-2a64e338f205-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0a9bd1b298f1.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0a9bd1b298f1-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 642
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-a648432f7196.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-a648432f7196-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-ee0f64172413.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-ee0f64172413-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-822e2f80497f.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-822e2f80497f-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0509b58bc516.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0509b58bc516-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-f1a73e17cfea.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-f1a73e17cfea-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-baf878ddc936.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-baf878ddc936-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-41073778c165.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-41073778c165-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-d5756437e804.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-d5756437e804-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-b0698b5e16e3.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-b0698b5e16e3-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-326618c4be26.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-326618c4be26-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-8641a06d0013.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-8641a06d0013-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-201421910cc9.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-201421910cc9-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 864,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-d5b13eccadaa.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-d5b13eccadaa-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-4debebabd14d.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-4debebabd14d-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0ed8f73adf26.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0ed8f73adf26-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-b61f51b1a989.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-b61f51b1a989-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0210cbb786d7.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0210cbb786d7-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-e6d09f2fcce5.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-e6d09f2fcce5-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-bf9c35699695.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-bf9c35699695-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-3cfa21258da1.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-3cfa21258da1-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-65304ae262d8.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-65304ae262d8-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-a54675ed3002.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-a54675ed3002-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-1da902b4aafa.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-1da902b4aafa-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-31121e561646.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-31121e561646-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-656e79c828c2.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-656e79c828c2-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-ba69bbcc7b36.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-ba69bbcc7b36-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-7f33c9d91b1c.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-7f33c9d91b1c-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-39093fe49747.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-39093fe49747-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-afb6f603b9a8.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-afb6f603b9a8-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-120f946f0081.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-120f946f0081-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-4da563d8eae9.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-4da563d8eae9-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-a189d76def08.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-a189d76def08-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-49e444a7fb41.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-49e444a7fb41-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-6bd719895f11.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-6bd719895f11-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-d544056cb598.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-d544056cb598-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-61845a2f309b.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-61845a2f309b-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-532ba2ea52ec.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-532ba2ea52ec-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-5504a81130e6.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-5504a81130e6-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-e024e0c07be9.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-e024e0c07be9-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-d3b54a5a54b0.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-d3b54a5a54b0-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-a88d5f4d3bad.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-a88d5f4d3bad-preview.webp",
+      "caption": "Sharing breast cancer awareness",
+      "alt": "A speaker addressing participants during a breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-a015c85d45be.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-a015c85d45be-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-55e6e1902c2a.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-55e6e1902c2a-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-b8a85c59fbd9.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-b8a85c59fbd9-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-23695c0470db.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-23695c0470db-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-c31a3b58804e.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-c31a3b58804e-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-87918e7bf91e.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-87918e7bf91e-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-b91f22d61637.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-b91f22d61637-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-71c3862ff59f.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-71c3862ff59f-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-8850cdcc86f4.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-8850cdcc86f4-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-920bdf0bf4f7.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-920bdf0bf4f7-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0c203fd202a1.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0c203fd202a1-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0836d601c290.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0836d601c290-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0007e1876379.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0007e1876379-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-4e176dc2f246.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-4e176dc2f246-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-a0d03b736e75.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-a0d03b736e75-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-16e42d4b86b2.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-16e42d4b86b2-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-54054754f067.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-54054754f067-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-d0c929c16934.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-d0c929c16934-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-9766faf0ed13.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-9766faf0ed13-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-f0d2f1ed1e23.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-f0d2f1ed1e23-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-c8eb0a280b36.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-c8eb0a280b36-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0ffe8a0d5cd3.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0ffe8a0d5cd3-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-0557fbc2e8d9.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-0557fbc2e8d9-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-588cd169e6c3.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-588cd169e6c3-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-2d8e0e04eb26.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-2d8e0e04eb26-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-515d8068be39.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-515d8068be39-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-8429c7e77362.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-8429c7e77362-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-4218273e10bc.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-4218273e10bc-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-7619dfce9a3b.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-7619dfce9a3b-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-1f8a29433fa3.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-1f8a29433fa3-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1600,
+      "height": 1066
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-2d564b8b25aa.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-2d564b8b25aa-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-2454495a04b8.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-2454495a04b8-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-510ab1a373ee.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-510ab1a373ee-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-2cf9c281156b.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-2cf9c281156b-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-492c2d3467ce.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-492c2d3467ce-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-afd0d2fefca7.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-afd0d2fefca7-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-739c91a9ca2d.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-739c91a9ca2d-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-93c18322d868.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-93c18322d868-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-722e67fb884f.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-722e67fb884f-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-19ac2aa45c0e.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-19ac2aa45c0e-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-4671dd2c3822.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-4671dd2c3822-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-4d97df24c492.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-4d97df24c492-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-64f242e94100.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-64f242e94100-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-15ae3119d961.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-15ae3119d961-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-2343c7c3b96b.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-2343c7c3b96b-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-208048a13208.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-208048a13208-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-2214ddd5e112.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-2214ddd5e112-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-85246bbcaae4.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-85246bbcaae4-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-16c21c2d329e.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-16c21c2d329e-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-f43bb095a8b7.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-f43bb095a8b7-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-aedaf45edef2.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-aedaf45edef2-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-7b3abc34ff08.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-7b3abc34ff08-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1066,
+      "height": 1600
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-9d7306000fe7.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-9d7306000fe7-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-cfdf4357af8f.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-cfdf4357af8f-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-5eadb88fb5a9.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-5eadb88fb5a9-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-9b2c5f9009e6.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-9b2c5f9009e6-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-24ce16994a3e.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-24ce16994a3e-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-c28610bf0a7e.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-c28610bf0a7e-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-fab5ff930728.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-fab5ff930728-preview.webp",
+      "caption": "Breast cancer awareness walk",
+      "alt": "Participants carrying breast cancer awareness placards during a community walk",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "image": "/images/uploads/breast-cancer-awareness-d0f3ef3d1185.webp",
+      "thumbnail": "/images/uploads/breast-cancer-awareness-d0f3ef3d1185-preview.webp",
+      "caption": "Community breast cancer awareness",
+      "alt": "Participants gathered for an Ochaworth breast cancer awareness activity",
+      "category": "Breast Cancer Awareness",
+      "album": "October 2026 campaign",
+      "width": 1080,
+      "height": 720
+    },
+    {
       "image": "/images/uploads/whatsapp-image-2026-05-04-at-13.50.22.jpeg",
       "caption": "Empower Women, End Violence Campaign",
-      "category": "Advocacy"
+      "category": "Advocacy",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/830ce53f-d40e-4c7b-af26-f2be09f90fa3.jpg",
       "caption": "United By Unique Community Walk",
-      "category": "Community"
+      "category": "Community",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/73253843-9ecd-4b69-b886-41a01c06703c.jpg",
       "caption": "World Cancer Day Awareness Walk",
-      "category": "Health"
+      "category": "Health",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/349d5ccc-8492-428f-8509-64491fc2afa9.jpg",
       "caption": "Cancer Day Walk",
-      "category": "Food Distribution"
+      "category": "Food Distribution",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/img_1356.jpg",
       "caption": "Pad A Girl",
-      "category": "Community"
-    },
-    {
-      "image": "/images/uploads/img_1356.jpg",
-      "caption": "Pad A Girl",
-      "category": "Community"
+      "category": "Community",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/img_1360.jpg",
       "caption": "Pad A Girl",
-      "category": "Community"
+      "category": "Community",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/img_1363.jpg",
       "caption": "Pad A Girl",
-      "category": "Community"
+      "category": "Community",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/img_1367.jpg",
       "caption": "Pad A Girl",
-      "category": "Community"
+      "category": "Community",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/img_1370.jpg",
       "caption": "Pad A Girl",
-      "category": "Community"
+      "category": "Community",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/img_1366.jpg",
       "caption": "Pad A Girl",
-      "category": "Community"
+      "category": "Community",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/img_1358.jpg",
       "caption": "Pad A Girl",
-      "category": "Community"
+      "category": "Community",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/img_1369.jpg",
       "caption": "Pad A Girl",
-      "category": "Community"
+      "category": "Community",
+      "album": "Earlier activities"
     },
     {
       "image": "/images/uploads/8c48fdaa-20f6-4f21-b504-2dd9983a466f.jpg",
       "caption": "Cancer Day Walk",
-      "category": "Community"
+      "category": "Community",
+      "album": "Earlier activities"
     }
   ],
-  "emptyStateText": "More photos coming soon."
+  "emptyStateText": "More photos coming soon.",
+  "featuredAlbum": "October 2026 campaign"
 }
