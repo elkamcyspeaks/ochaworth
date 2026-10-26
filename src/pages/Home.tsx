@@ -35,7 +35,7 @@ function Hero() {
   }
   const s = heroSlides[current]
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="experience-hero relative min-h-[90vh] flex items-center overflow-hidden">
       {heroSlides.map((sl, i) => (
         <div
           key={i}
@@ -47,13 +47,13 @@ function Hero() {
             alt=""
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--green-dark)]/95 via-[var(--green-dark)]/75 to-transparent" />
+          <div className="experience-hero-overlay absolute inset-0 bg-gradient-to-r from-[var(--green-dark)]/95 via-[var(--green-dark)]/75 to-transparent" />
         </div>
       ))}
       <div className="absolute right-0 top-0 bottom-0 w-1/3 pointer-events-none hidden lg:block z-10">
         <div className="absolute right-0 top-0 bottom-0 w-full bg-[var(--yellow)]/10 rounded-l-full" />
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 w-full">
+      <div className="experience-hero-content relative z-10 max-w-7xl mx-auto px-4 py-20 w-full">
         <div
           className="max-w-2xl transition-all duration-500"
           style={{
@@ -63,7 +63,7 @@ function Hero() {
         >
           <SectionLabel text={s.label} light />
           <h1
-            className="text-5xl lg:text-7xl font-black text-white leading-tight mb-6"
+            className="experience-hero-title text-5xl lg:text-7xl font-black text-white leading-tight mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {s.line1}
@@ -73,23 +73,19 @@ function Hero() {
             <br />
             {s.line3}
           </h1>
-          <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-lg">
+          <p className="experience-hero-copy text-white/80 text-lg leading-relaxed mb-8 max-w-lg">
             {s.sub}
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="experience-hero-actions flex flex-wrap gap-4">
             <a href="/#donate">
-              <YellowBtn className="flex items-center gap-2">
                 <HeartIcon className="w-4 h-4" /> {site.hero.donateButtonText}
-              </YellowBtn>
             </a>
             <Link to="/about">
-              <OutlineBtn light className="flex items-center gap-2">
                 {site.hero.learnMoreButtonText}{" "}
                 <ArrowRight className="w-4 h-4" />
-              </OutlineBtn>
             </Link>
           </div>
-          <div className="flex flex-wrap gap-8 mt-14">
+          <div className="experience-hero-stats flex flex-wrap gap-8 mt-14">
             {site.hero.stats.map((stat) => (
               <div key={stat.label} className="text-white">
                 <div className="text-3xl font-black text-[var(--yellow)]">
@@ -101,8 +97,9 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4">
+      <div className="experience-hero-controls absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4">
         <button
+          aria-label="Previous slide"
           onClick={() => slide(-1)}
           className="w-10 h-10 rounded-full bg-white/20 hover:bg-[var(--yellow)] flex items-center justify-center text-white hover:text-[var(--green-dark)]"
         >
@@ -112,6 +109,8 @@ function Hero() {
           {heroSlides.map((_, i) => (
             <button
               key={i}
+              aria-label={"Show slide " + (i + 1)}
+              aria-current={i === current ? "true" : undefined}
               onClick={() => {
                 if (!animating) {
                   setAnimating(true)
@@ -131,13 +130,14 @@ function Hero() {
           ))}
         </div>
         <button
+          aria-label="Next slide"
           onClick={() => slide(1)}
           className="w-10 h-10 rounded-full bg-white/20 hover:bg-[var(--yellow)] flex items-center justify-center text-white hover:text-[var(--green-dark)]"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>
-      <div className="absolute top-8 right-8 z-20 text-white/50 text-sm font-mono">
+      <div className="experience-hero-counter absolute top-8 right-8 z-20 text-white/50 text-sm font-mono">
         {String(current + 1).padStart(2, "0")} /{" "}
         {String(heroSlides.length).padStart(2, "0")}
       </div>
