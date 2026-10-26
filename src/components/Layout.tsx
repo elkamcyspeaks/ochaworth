@@ -101,7 +101,7 @@ function Navbar() {
           <NavItem label={site.nav.blogLabel ?? "Blog"} to="/blog"/>
           <NavLink to="/contact" className={({ isActive }) => "transition-colors " + (isActive ? "text-[var(--yellow)]" : "hover:text-[var(--yellow)]")}>{site.nav.contactLabel}</NavLink>
         </div>
-        <a href="/#donate" className="hidden lg:flex"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></a>
+        <a href={site.donation.paymentUrl} className="hidden lg:flex"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></a>
         <button className="lg:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             {menuOpen ? <path d="M6 18L18 6M6 6l12 12"/> : <path d="M4 6h16M4 12h16M4 18h16"/>}
@@ -117,7 +117,7 @@ function Navbar() {
           <NavItem label={site.nav.galleryLabel} to="/gallery" onClick={() => setMenuOpen(false)}/>
           <NavItem label={site.nav.blogLabel ?? "Blog"} to="/blog" onClick={() => setMenuOpen(false)}/>
           <NavLink to="/contact" onClick={() => setMenuOpen(false)} className="py-1 hover:text-[var(--yellow)]">{site.nav.contactLabel}</NavLink>
-          <a href="/#donate" onClick={() => setMenuOpen(false)} className="mt-2 self-start"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></a>
+          <a href={site.donation.paymentUrl} onClick={() => setMenuOpen(false)} className="mt-2 self-start"><YellowBtn className="text-sm py-2 px-5">{site.nav.donateButtonText}</YellowBtn></a>
         </div>
       )}
     </nav>
@@ -139,7 +139,7 @@ const FOOTER_QUICK_LINKS: { label: string; to?: string; anchor?: string }[] = [
   { label: site.footer.quickLinks.servicesLabel, to: "/programs" },
   { label: site.footer.quickLinks.projectsLabel, to: "/gallery" },
   { label: site.footer.quickLinks.volunteerLabel, to: "/volunteer" },
-  { label: site.footer.quickLinks.donateLabel, anchor: "/#donate" },
+  { label: site.footer.quickLinks.donateLabel, anchor: site.donation.paymentUrl },
 ];
 
 // Matches a footer "policy link" label (a plain, freely-editable list of

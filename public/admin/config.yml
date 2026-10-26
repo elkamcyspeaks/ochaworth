@@ -270,10 +270,11 @@ collections:
               - { label: '"Our Work" Button Text', name: "ourWorkButtonText", widget: "string" }
               - { label: '"Watch Story" Button Text', name: "watchStoryButtonText", widget: "string" }
 
-          - label: "Donation Form"
+          - label: "Donations"
             name: "donation"
             widget: "object"
             fields:
+              - { label: "Paystack Donation Page URL", name: "paymentUrl", widget: "string", pattern: ["^https://paystack[.]shop/pay/[a-zA-Z0-9_-]+/?$", "Enter a Paystack payment-page URL"], hint: "Destination for all Donate buttons. Donors choose their amount and complete payment on Paystack." }
               - { label: "Small Section Label", name: "sectionLabel", widget: "string" }
               - { label: "Background Photo", name: "bgImage", widget: "image" }
               - { label: '"Total Funds Raised" Badge', name: "totalRaised", widget: "string" }
@@ -285,25 +286,6 @@ collections:
               - { label: "Heading — Highlighted Word", name: "headingHighlight", widget: "string" }
               - { label: "Heading — Suffix", name: "headingSuffix", widget: "string" }
               - { label: "Paragraph", name: "paragraph", widget: "text" }
-              - { label: '"Donation Amount" Label', name: "amountLabel", widget: "string" }
-              - label: "Preset Donation Amounts (₦)"
-                name: "presetAmounts"
-                widget: "list"
-                field: { label: "Amount", name: "amount", widget: "string" }
-              - { label: "Custom Amount Placeholder", name: "customAmountPlaceholder", widget: "string" }
-              - { label: "First Name Placeholder", name: "firstNamePlaceholder", widget: "string" }
-              - { label: "Last Name Placeholder", name: "lastNamePlaceholder", widget: "string" }
-              - { label: "Email Placeholder", name: "emailPlaceholder", widget: "string" }
-              - label: "Cause Dropdown Options"
-                name: "causes"
-                widget: "list"
-                field: { label: "Cause", name: "cause", widget: "string" }
-              - { label: "Cause Dropdown Default Text", name: "selectCauseDefault", widget: "string" }
-              - { label: "Donate Button — Prefix Word", name: "donateButtonPrefix", widget: "string" }
-              - { label: "Donate Button — Suffix Word", name: "donateButtonSuffix", widget: "string" }
-              - { label: "Secure Donation Caption", name: "secureCaption", widget: "string" }
-              - { label: "Button Text After Submitting", name: "thankYouButtonText", widget: "string", hint: "Shown on the Donate button for a few seconds right after someone submits the form (no payment gateway is connected yet, so this just confirms their details were received)." }
-              - { label: "Message Shown After Submitting", name: "thankYouMessage", widget: "text" }
 
           - label: "Testimonials"
             name: "testimonials"

@@ -10,9 +10,7 @@ import {
   ChevronRight,
   ChevronLeft,
   ArrowRight,
-  CheckIcon,
   SectionLabel,
-  YellowBtn,
   OutlineBtn,
   Newsletter,
 } from "@/components/shared"
@@ -77,7 +75,7 @@ function Hero() {
             {s.sub}
           </p>
           <div className="experience-hero-actions flex flex-wrap gap-4">
-            <a href="/#donate">
+            <a href={site.donation.paymentUrl}>
                 <HeartIcon className="w-4 h-4" /> {site.hero.donateButtonText}
             </a>
             <Link to="/about">
@@ -338,16 +336,6 @@ function GetInvolved() {
 }
 function DonationForm() {
   const d = site.donation
-  const [amount, setAmount] = useState(d.presetAmounts[2] ?? "50")
-  const [custom, setCustom] = useState("")
-  const [sent, setSent] = useState(false)
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setSent(true)
-    setTimeout(() => setSent(false), 4000)
-  }
-
   return (
     <section id="donate" className="py-20 bg-[#F7F7F3] scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -389,82 +377,11 @@ function DonationForm() {
             {d.headingSuffix}
           </h2>
           <p className="text-gray-500 mb-8 leading-relaxed">{d.paragraph}</p>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-5">
-              <label className="block text-sm font-semibold text-[var(--green-dark)] mb-2">
-                {d.amountLabel}
-              </label>
-              <div className="flex flex-wrap gap-3 mb-3">
-                {d.presetAmounts.map((a) => (
-                  <button
-                    type="button"
-                    key={a}
-                    onClick={() => {
-                      setAmount(a)
-                      setCustom("")
-                    }}
-                    className={
-                      "px-5 py-2 rounded-full border-2 font-bold text-sm transition-colors " +
-                      (amount === a && !custom
-                        ? "bg-[var(--green-mid)] text-white border-[var(--green-mid)]"
-                        : "border-gray-300 text-gray-600 hover:border-[var(--green-mid)]")
-                    }
-                  >
-                    ₦{a}
-                  </button>
-                ))}
-              </div>
-              <input
-                type="number"
-                placeholder={d.customAmountPlaceholder}
-                value={custom}
-                onChange={(e) => {
-                  setCustom(e.target.value)
-                  setAmount("")
-                }}
-                className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"
-              />
-            </div>
-            <div className="grid grid-cols-2 gap-4 mb-4">
-              <input
-                placeholder={d.firstNamePlaceholder}
-                required
-                className="border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"
-              />
-              <input
-                placeholder={d.lastNamePlaceholder}
-                required
-                className="border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)]"
-              />
-            </div>
-            <input
-              type="email"
-              placeholder={d.emailPlaceholder}
-              required
-              className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] mb-4"
-            />
-            <select className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--green-mid)] text-gray-600 mb-6">
-              <option>{d.selectCauseDefault}</option>
-              {d.causes.map((c) => (
-                <option key={c}>{c}</option>
-              ))}
-            </select>
-            <YellowBtn className="w-full flex items-center justify-center gap-2 py-4 text-base">
-              <HeartIcon className="w-5 h-5" />{" "}
-              {sent
-                ? (d.thankYouButtonText ?? "Thank You!")
-                : `${d.donateButtonPrefix} ₦${custom || amount} ${d.donateButtonSuffix}`}
-            </YellowBtn>
-          </form>
-          <p className="text-center text-xs text-gray-400 mt-3 flex items-center justify-center gap-1">
-            <CheckIcon className="w-3 h-3" /> {d.secureCaption}
-          </p>
-          {sent && (
-            <p className="text-center text-sm text-[var(--green-mid)] font-semibold mt-3">
-              {d.thankYouMessage ??
-                "Thank you! We've received your donation details and will be in touch shortly to complete it."}
-            </p>
-          )}
+          <p className="text-gray-600 mb-5 leading-relaxed">Choose your donation amount and enter your details securely on Paystack.</p>
+          <a href={d.paymentUrl} className="inline-flex w-full items-center justify-center gap-2 min-h-12 bg-[var(--yellow)] text-[var(--green-dark)] font-bold px-6 py-4 rounded-full hover:bg-[var(--yellow-dark)] transition-colors focus-visible:outline-2 focus-visible:outline-offset-4">
+            <HeartIcon className="w-5 h-5" /> Donate securely with Paystack <ArrowRight className="w-4 h-4" />
+          </a>
+          <p className="text-center text-xs text-gray-500 mt-3">You will continue to Paystack to complete your donation.</p>
         </div>
       </div>
     </section>

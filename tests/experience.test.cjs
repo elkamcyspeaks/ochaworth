@@ -297,3 +297,24 @@ test("campaign collection links open the requested gallery collection", async ()
   assert.equal(document.querySelectorAll(".gallery-masonry button").length, 13)
   await app.done()
 })
+
+test("donation entry points open the supplied Paystack page without a false payment confirmation", async () => {
+  const url = "https://paystack.shop/pay/4cb1wajbea"
+  for (const file of ["src/pages/Home.tsx", "src/pages/ProgramsPage.tsx", "src/components/Layout.tsx"]) {
+    const app = setup()
+    await app.render(file)
+    const links = [...document.querySelectorAll("a")]
+    const donationLinks = links.filter(a => /donat/i.test(a.textContent))
+    assert.ok(donationLinks.length > 0, file)
+    for (const link of donationLinks) assert.equal(link.getAttribute("href"), url, file)
+    assert.equal(links.some(a => a.getAttribute("href") === "/#donate"), false)
+    if (file.endsWith("Home.tsx")) {
+      const section = document.getElementById("donate")
+      assert.equal(section.querySelector("form"), null)
+      assert.match(section.textContent, /continue to Paystack/)
+      assert.doesNotMatch(section.textContent, /received your donation|Thank You!/)
+    }
+    assert.equal(app.calls.length, 0)
+    await app.done()
+  }
+})

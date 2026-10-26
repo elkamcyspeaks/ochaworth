@@ -1,3 +1,4 @@
+import site from "@/data/site.json";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import programsPageData from "@/data/programsPage.json";
@@ -120,7 +121,7 @@ function Spotlight({ onOpen }: { onOpen: (p: Program) => void }) {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <a href="/#donate">
+              <a href={site.donation.paymentUrl}>
                 <YellowBtn className="flex items-center gap-2 text-sm py-3">
                   {sp.donateButtonText} <ArrowUpRight className="w-4 h-4"/>
                 </YellowBtn>
@@ -174,7 +175,7 @@ function ProgramCard({ p, onOpen }: { p: Program; onOpen: () => void }) {
 
         <div className="flex gap-2 mt-auto" onClick={e => e.stopPropagation()}>
           {p.status !== "completed" && (
-            <a href="/#donate" onClick={e => e.stopPropagation()} className="flex-1 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold py-2.5 rounded-full hover:bg-[var(--yellow-dark)] transition-colors text-center">
+            <a href={site.donation.paymentUrl} onClick={e => e.stopPropagation()} className="flex-1 bg-[var(--yellow)] text-[var(--green-dark)] text-xs font-bold py-2.5 rounded-full hover:bg-[var(--yellow-dark)] transition-colors text-center">
               {cd.donateButtonText}
             </a>
           )}
@@ -310,7 +311,7 @@ function ProgramDetail({ p, onBack, onOpen }: { p: Program; onBack: () => void; 
               </div>
 
               {p.status !== "completed" && (
-                <a href="/#donate" className="w-full flex items-center justify-center gap-2 bg-[var(--yellow)] text-[var(--green-dark)] font-bold py-3 rounded-full hover:bg-[var(--yellow-dark)] transition-colors text-sm">
+                <a href={site.donation.paymentUrl} className="w-full flex items-center justify-center gap-2 bg-[var(--yellow)] text-[var(--green-dark)] font-bold py-3 rounded-full hover:bg-[var(--yellow-dark)] transition-colors text-sm">
                   {dt.donateToProgramButtonText} <ArrowUpRight className="w-4 h-4"/>
                 </a>
               )}
@@ -453,7 +454,7 @@ function CTABand() {
           {cta.paragraph}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="/#donate">
+          <a href={site.donation.paymentUrl}>
             <YellowBtn className="flex items-center gap-2">
               {cta.donateButtonText} <ArrowUpRight className="w-4 h-4"/>
             </YellowBtn>
