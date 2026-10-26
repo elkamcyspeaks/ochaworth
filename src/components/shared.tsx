@@ -224,33 +224,17 @@ export function PageHero({
   breadcrumbCurrent: string;
 }) {
   return (
-    <section className="relative h-64 md:h-80 flex items-center overflow-hidden">
+    <section className="relative min-h-52 md:min-h-64 py-12 flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img src={image} alt={`${title} hero`} className="w-full h-full object-cover object-center"/>
         <div className="absolute inset-0 bg-[var(--green-dark)]/80"/>
       </div>
 
-      {/* Yellow paint splatter accent — left side */}
-      <div className="absolute left-0 top-0 bottom-0 w-44 pointer-events-none z-10 overflow-hidden">
-        <svg viewBox="0 0 175 320" className="absolute left-0 top-0 w-full h-full" preserveAspectRatio="xMinYMid slice">
-          <path d="M-10,80 C10,40 60,20 90,50 C120,80 130,120 110,160 C95,195 115,235 95,270 C75,305 30,310 10,285 C-10,260 -5,220 5,190 C15,160 -30,120 -10,80Z" fill="var(--yellow)" opacity="0.95"/>
-          <circle cx="105" cy="55"  r="28" fill="var(--yellow)" opacity="0.80"/>
-          <circle cx="130" cy="110" r="18" fill="var(--yellow)" opacity="0.65"/>
-          <circle cx="115" cy="185" r="14" fill="var(--yellow)" opacity="0.55"/>
-          <circle cx="95"  cy="295" r="20" fill="var(--yellow)" opacity="0.60"/>
-          <circle cx="140" cy="155" r="9"  fill="var(--yellow)" opacity="0.42"/>
-          <circle cx="148" cy="230" r="7"  fill="var(--yellow)" opacity="0.35"/>
-          <circle cx="60"  cy="20"  r="12" fill="var(--yellow)" opacity="0.50"/>
-          <ellipse cx="30" cy="315" rx="18" ry="10" fill="var(--yellow)" opacity="0.70"/>
-          <ellipse cx="65" cy="318" rx="10" ry="6"  fill="var(--yellow)" opacity="0.55"/>
-        </svg>
-      </div>
-
-      <div className="relative z-20 max-w-7xl mx-auto px-4 w-full pl-36 md:pl-48">
-        <h1 className="text-5xl md:text-6xl font-black text-white mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+      <div className="relative z-20 experience-container">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-3 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
           {title}
         </h1>
-        <div className="flex items-center gap-2 text-sm text-white/60">
+        <div className="flex flex-wrap items-center gap-2 text-sm text-white/80">
           <Link to="/" className="hover:text-[var(--yellow)] transition-colors">{breadcrumbHome}</Link>
           <ChevronRight className="w-3 h-3"/>
           <span className="text-[var(--yellow)]">{breadcrumbCurrent}</span>
@@ -269,13 +253,13 @@ export function SectionLabel({ text, light = false }: { text: string; light?: bo
   );
 }
 export function YellowBtn({ children, className = "", onClick, disabled }: { children: ReactNode; className?: string; onClick?: () => void; disabled?: boolean }) {
-  return <button onClick={onClick} disabled={disabled} className={"bg-[var(--yellow)] text-[var(--green-dark)] font-bold px-6 py-3 rounded-full hover:bg-[var(--yellow-dark)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed " + className}>{children}</button>;
+  return <button onClick={onClick} disabled={disabled} className={"inline-flex items-center justify-center gap-2 min-h-11 bg-[var(--yellow)] text-[var(--green-dark)] font-bold px-6 py-3 rounded-full hover:bg-[var(--yellow-dark)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed " + className}>{children}</button>;
 }
 export function GreenBtn({ children, className = "", onClick }: { children: ReactNode; className?: string; onClick?: () => void }) {
-  return <button onClick={onClick} className={"bg-[var(--green-mid)] text-white font-semibold px-6 py-3 rounded-full hover:bg-[var(--green-dark)] transition-colors " + className}>{children}</button>;
+  return <button onClick={onClick} className={"inline-flex items-center justify-center gap-2 min-h-11 bg-[var(--green-mid)] text-white font-semibold px-6 py-3 rounded-full hover:bg-[var(--green-dark)] transition-colors " + className}>{children}</button>;
 }
 export function OutlineBtn({ children, className = "", light = false, onClick }: { children: ReactNode; className?: string; light?: boolean; onClick?: () => void }) {
-  return <button onClick={onClick} className={"border-2 font-semibold px-6 py-3 rounded-full transition-colors " + (light ? "border-white text-white hover:bg-white hover:text-[var(--green-mid)]" : "border-[var(--green-mid)] text-[var(--green-mid)] hover:bg-[var(--green-mid)] hover:text-white") + " " + className}>{children}</button>;
+  return <button onClick={onClick} className={"inline-flex items-center justify-center gap-2 min-h-11 border-2 font-semibold px-6 py-3 rounded-full transition-colors " + (light ? "border-white text-white hover:bg-white hover:text-[var(--green-mid)]" : "border-[var(--green-mid)] text-[var(--green-mid)] hover:bg-[var(--green-mid)] hover:text-white") + " " + className}>{children}</button>;
 }
 // ── Netlify Forms helper ───────────────────────────────────────────────────
 // Ochaworth's site is hosted on Netlify, which can capture form submissions
@@ -314,7 +298,7 @@ export function Honeypot() {
 
 export function FormErrorNote({ email, light = false }: { email?: string; light?: boolean }) {
   return (
-    <p
+    <p role="alert"
       className={
         "text-sm mt-3 rounded-lg px-4 py-2 inline-block " +
         (light ? "text-red-100 bg-red-500/20" : "text-red-700 bg-red-50 border border-red-200")

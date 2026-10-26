@@ -37,7 +37,8 @@
         "Add another program objective"
       ],
       "description": "Impact in action! \n\nAs part of our Pad A Girl intervention in Langtang North, OCHAWORTHLACDI in partnership with bambam soya oil distributed 350 sanitary pads to girls at Government Secondary School (GSS) Langtang.\n\nEvery pad distributed represents more than menstrual hygiene ... it represents dignity, confidence, and a girl’s right to stay in school without interruption.\n\nTogether, we are breaking stigma, fighting period poverty, and creating a future where no girl is held back by her period.\n\nChanging lives, one girl at a time !!!❤️\n\nOur Pad A Girl intervention continued at Government Secondary School (GSS) Shishiri, Langtang North, where girls received sanitary pads and menstrual health education.\n\nIn collaboration with @bambamsoyaoil , we are helping girls manage their periods with dignity, stay in school, and pursue their dreams without interruption.\n\nTogether, we’re breaking stigma, ending period poverty, and creating a future where every girl has the support she needs to thrive.",
-      "category": "Community"
+      "category": "Community",
+      "slug": "pad-a-girl-child"
     },
     {
       "beneficiaries": "200",
@@ -68,31 +69,40 @@
         "Add another program objective"
       ],
       "description": "OWLACDI and the Plateau Health Ministry are really pushing for cancer awareness and early detection in Plateau State. The message is clear: cancer isn’t a death sentence if caught early and treated properly.\n\nSome key takeaways:\n- *United by Unique*: Emphasizing personalized care and collective action against cancer.\n- *Awareness and Screening*: Many still lack basic knowledge about cancer; promoting early detection and screenings is crucial.\n- *Government Support*: Need for prioritized cancer research, treatment, and affordable care, especially for vulnerable groups.\n- *Prevention*: Vaccination, healthy lifestyles, and avoiding risk factors can reduce cancer risk.\n\nThe Plateau State Government is strengthening cancer prevention and control through public awareness, screenings, and collaborations. What’s your take on how communities can support cancer awareness?",
-      "category": "Community"
+      "category": "Community",
+      "slug": "world-cancer-day-walk"
     },
     {
       "beneficiaries": "0",
-      "img": "/images/uploads/830ce53f-d40e-4c7b-af26-f2be09f90fa3.jpg",
+      "img": "/images/uploads/breast-cancer-awareness-21ee943b7825.webp",
       "impact": "Add the final, real results and impact of this completed program.",
       "partners": [
         "Add Partner Organisation"
       ],
-      "date": "Oct 1 - Oct 31",
+      "date": "1–31 October 2026",
       "coordinator": "Add Coordinator Name",
-      "status": "upcoming",
+      "status": "ongoing",
       "goal": 500000,
       "location": "Jos, Plateau State, Nigeria",
       "raised": 500000,
       "title": "Breast Cancer Awareness",
       "images": [
-        "https://placehold.co/800x500?text=Add+Photo"
+        "/images/uploads/breast-cancer-awareness-8614ee873049.webp",
+        "/images/uploads/breast-cancer-awareness-dc1432e81cf4.webp",
+        "/images/uploads/breast-cancer-awareness-d8655e9bc322.webp",
+        "/images/uploads/breast-cancer-awareness-c0e5d87682e0.webp"
       ],
       "objectives": [
         "Add a program objective",
         "Add another program objective"
       ],
       "description": "The overarching aim of the project is to advance health equity and reduce breast cancer mortality in Plateau State by establishing sustainable grassroots awareness, facilitating early detection pathways, and providing direct patient navigation support for underserved communities in Jos.\nTo achieve this, the campaign will execute four core, measurable objectives:\n\nObjective 1 (Community Education): Educate and empower 1,000+ youth, students, and low-income community members across Jos North and Jos South LGAs on proper Breast Self-Examination (BSE) protocols, early warning signs, and proactive risk-reduction behaviors by October 31, 2026.\n\nObjective 2 (Clinical Screening and Referral): Facilitate free, high-quality Clinical Breast Examinations (CBE) and provide structured diagnostic navigation and referral pathways for at least 150 low-income, underserved women in target peri-urban communities in Jos.\n\nObjective 3 (Social Justice and Policy Advocacy): Mobilize regional conversations linking healthcare access to structural social justice, presenting a comprehensive policy brief to health stakeholders in Plateau State regarding the elimination of financial barriers to screening.\n\nObjective 4 (Patient Solidarity and Material Support): Mobilize community-led fundraising and material resource provision to provide direct palliative, psychological, and logistical care items to active breast cancer patients currently undergoing therapy at tertiary oncology wards in Jos.\n\nThe campaign specifically channels resources toward high-vulnerability cohorts across Jos and its surrounding demographics:\n\na.\tMarket Women and Low-Income Urban Dwellers: Centered primarily in highly populated local trade hubs (e.g., Terminus Market, Katako Market), where out-of-pocket healthcare expenditures are intensely minimized by economic pressures.\n\nb.\tYouths and Tertiary Students: Targeting female students across major regional institutions (e.g., University of Jos, Plateau State Polytechnic), utilizing peer-led structures to instill lifelong early-detection behaviors.\n\nc.\tOncology Patients, Survivors, and Caregivers: Engaging directly with individuals navigating active therapeutic regimens within regional tertiary hospitals to foster structural peer support groups and ease financial distress.",
-      "category": "Community"
+      "category": "Community",
+      "slug": "breast-cancer-awareness",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-31",
+      "summary": "A month of community breast cancer awareness, education and support in Jos, Plateau State.",
+      "galleryCollection": "October 2026 campaign"
     },
     {
       "beneficiaries": "300",
@@ -106,7 +116,8 @@
       "raised": 200000,
       "title": "Her Worth, Her Rights Program",
       "description": "Aligned to Objective 1: Empower women and girls to achieve full potential and human rights  \n\nWhat we do: Leadership bootcamps, rights education workshops, life-skills training for girls and young women and The Feminist Frontier Podcast (FFP)\n\nActivities: School clubs, community dialogues, “Know Your Rights” campaigns, mentorship matching.  \n\nOutcome: Women and girls equipped to lead, make informed decisions, and claim their rights.  ",
-      "category": "Education"
+      "category": "Education",
+      "slug": "her-worth-her-rights-program"
     },
     {
       "beneficiaries": "150",
@@ -120,7 +131,8 @@
       "raised": 1000000,
       "title": "Stomp Out BREAST Cancer Initiative",
       "description": "Aligned to Objective 2: Breast cancer prevention and early detection  \n\nWhat we do: Community health outreach focused on breast cancer education and screening linkages.  \n\nActivities: Monthly sensitization in markets/churches/schools, teach self-exams, family history drives, partner with clinics for free screening days every October.  \n\nOutcome: Increased early detection and reduced stigma around women’s health. ",
-      "category": "COMMUNITY"
+      "category": "COMMUNITY",
+      "slug": "stomp-out-breast-cancer-initiative"
     },
     {
       "beneficiaries": "100",
@@ -134,7 +146,8 @@
       "raised": 0,
       "title": "Green Voices for Change",
       "description": "Aligned to Objective 3: Climate change understanding and sustainable development  \n\nWhat we do: Climate literacy and action programs that center women as environmental leaders.  \n\nActivities: Community climate workshops, tree-planting + clean energy demos, women-led recycling/upcycling projects, train male allies as climate champions.  \n\nOutcome: Communities adopt sustainable practices and women drive local climate solutions.  ",
-      "category": "COMMUNITY"
+      "category": "COMMUNITY",
+      "slug": "green-voices-for-change"
     }
   ],
   "cta": {
@@ -183,7 +196,7 @@
     "learnMoreButtonText": "Learn More"
   },
   "hero": {
-    "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&h=700&fit=crop&auto=format",
+    "image": "/images/uploads/breast-cancer-awareness-dc1432e81cf4.webp",
     "title": "Our Programs",
     "breadcrumbHome": "Home",
     "breadcrumbCurrent": "Our Programs"

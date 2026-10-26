@@ -52,3 +52,62 @@ html {
 
 /* Transitions */
 a, button { transition: all 0.2s ease; }
+
+/* Shared spacing and components for the refreshed public pages. */
+.experience-container{width:100%;max-width:80rem;margin-inline:auto;padding-inline:1rem}
+.experience-section{padding-block:clamp(3.5rem,6vw,5.5rem)}
+.experience-muted{background:#f7f7f3}
+.experience-heading{font-family:"Playfair Display",serif;font-size:clamp(1.85rem,3.6vw,2.85rem);font-weight:700;line-height:1.18;color:var(--green-dark);margin:0 0 1.25rem;max-width:24ch;text-wrap:balance}
+.experience-copy{color:#536159;font-size:1rem;line-height:1.85;margin-bottom:1.5rem}
+.experience-intro{max-width:65ch;margin-bottom:2rem}
+.experience-eyebrow{display:block;color:#43594a;font-size:.75rem;font-weight:600;line-height:1.6;margin-bottom:.75rem}
+.experience-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.experience-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:1.25rem}
+.experience-section-top{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;margin-bottom:2rem}
+.experience-link{display:inline-flex;align-items:center;justify-content:flex-start;gap:.5rem;color:var(--green-mid);font-size:.875rem;font-weight:600;min-height:2.75rem;line-height:1.5}
+.experience-link:hover{text-decoration:underline}
+.experience-link svg,.experience-button svg{width:1rem;height:1rem;flex-shrink:0}
+.experience-button{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:var(--yellow);color:var(--green-dark);padding:.85rem 1.35rem;border-radius:999px;font-size:.875rem;font-weight:700;min-height:2.9rem;text-align:center;line-height:1.5}
+.experience-button:hover{background:var(--yellow-dark)}
+.experience-button:disabled{opacity:.65;cursor:wait}
+.experience-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.experience-card{border:1px solid #e0e6e1;border-radius:1.25rem;background:white;overflow:hidden;display:flex;flex-direction:column}
+.experience-card img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.experience-card-body{padding:1.5rem;display:flex;flex-direction:column;flex:1}
+.experience-card h3,.experience-chapters h3{font-size:1.2rem;line-height:1.4;font-weight:700;color:var(--green-dark);margin-bottom:.8rem}
+.experience-card p{color:#536159;font-size:.9rem;line-height:1.8;margin-bottom:1rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.experience-card .experience-link{margin-top:auto}
+.experience-campaign{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;background:#eef4f0;border-radius:1.5rem;overflow:hidden}
+.experience-campaign>img{width:100%;height:100%;min-height:24rem;object-fit:cover}
+.experience-campaign>div{padding:clamp(1.5rem,3vw,3rem)}
+.experience-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
+.experience-chapters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.experience-chapters article{border:1px solid #dde5df;border-radius:1rem;background:white;padding:1.5rem}
+.experience-chapters article>span{display:inline-flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:#eef4f0;color:var(--green-mid);margin-bottom:1rem}
+.experience-contact{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+.experience-contact-details{display:grid;gap:1.25rem;margin-block:2rem}
+.experience-contact-details dt{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#536159;margin-bottom:.3rem}
+.experience-contact-details dd{font-size:.95rem;line-height:1.7;color:var(--green-dark);overflow-wrap:anywhere}
+.experience-contact-details a:hover{text-decoration:underline}
+.experience-form-panel{padding:clamp(1.25rem,3vw,2.5rem);background:#f3f6f3;border:1px solid #e0e6e1;border-radius:1.5rem;min-width:0}
+.experience-form{display:grid;gap:1.25rem}
+.experience-form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.experience-form label{display:block;font-size:.875rem;font-weight:600;color:var(--green-dark);min-width:0}
+.experience-form label span{font-weight:400;color:#58665e}
+.experience-form input:not([type=checkbox]),.experience-form textarea,.experience-form select{display:block;width:100%;margin-top:.5rem;background:white;border:1px solid #c9d3cc;border-radius:.65rem;padding:.8rem;font-size:1rem;font-weight:400;min-width:0;color:#243e2c}
+.experience-form textarea{resize:vertical}
+.experience-form .experience-consent{display:flex;align-items:flex-start;gap:.7rem}
+.experience-consent input{width:1.1rem;height:1.1rem;flex-shrink:0;margin-top:.2rem;accent-color:var(--green-mid)}
+.experience-consent label{font-weight:400;line-height:1.7}
+.experience-form .experience-button{justify-self:start}
+.experience-success{color:var(--green-dark);line-height:1.8;background:#eef4f0;border-radius:1rem;padding:1.5rem}
+.experience-success h3{font-weight:700;font-size:1.25rem;margin-bottom:.75rem}
+.experience-joining-guide{margin-bottom:2rem;color:#536159;line-height:1.8}
+.experience-joining-guide>p{max-width:75ch;margin-bottom:1.25rem}
+.experience-joining-guide ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:1.25rem}
+.experience-joining-guide li{border:1px solid #dfe6e0;background:#f7f7f3;padding:1.25rem;border-radius:1rem;font-size:.875rem}
+.experience-joining-guide strong,.experience-joining-guide span{display:block}
+.experience-joining-guide strong{color:var(--green-dark);margin-bottom:.4rem}
+.experience-form :focus-visible,.experience-link:focus-visible,.experience-button:focus-visible{outline:3px solid var(--green-mid);outline-offset:4px}
+@media(max-width:900px){.experience-card-grid,.experience-chapters{grid-template-columns:repeat(2,minmax(0,1fr))}.experience-campaign{grid-template-columns:1fr}.experience-campaign>img{height:auto;min-height:0;aspect-ratio:16/9}.experience-contact{grid-template-columns:1fr}}
+@media(max-width:640px){.experience-split,.experience-card-grid,.experience-chapters,.experience-form-row,.experience-joining-guide ol{grid-template-columns:1fr}.experience-section-top{align-items:start;flex-direction:column}.experience-card-body{padding:1.25rem}.experience-button{max-width:100%}.experience-heading{max-width:100%}}

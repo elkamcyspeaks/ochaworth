@@ -736,7 +736,7 @@ collections:
       - file: "src/data/becomeVolunteerPage.json"
         label: "Become A Volunteer Page"
         name: "becomeVolunteerPage"
-        hint: "Content shown only on the /become-a-volunteer page, reached from the 'Become A Volunteer' button on the Volunteer page. This form is visual only for now (no email backend yet) — same as the Contact page's form. The illustration panel's caption is your real mission quote, pulled from the 'Mission Quote' fields under Homepage Content → Organization."
+        hint: "Content shown only on the /become-a-volunteer page, reached from the 'Become A Volunteer' button on the Volunteer page. Submissions are saved in Netlify Forms. The photo panel uses this page’s banner photo. Applicants see the process before applying and a persistent confirmation after submission."
         fields:
           - label: "Page Banner"
             name: "hero"
@@ -878,6 +878,11 @@ collections:
             hint: "Every program shown on this page and pulled into the homepage's featured program automatically. Fill in real details to replace the sample entries."
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "URL slug", name: "slug", widget: "string", required: false, pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Use lowercase words separated by hyphens"], hint: "Keep stable after sharing. Blank derives a link from the title." }
+              - { label: "Short summary", name: "summary", widget: "text", required: false }
+              - { label: "Start date", name: "startDate", widget: "datetime", required: false, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "End date", name: "endDate", widget: "datetime", required: false, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", hint: "With both dates set, the status updates automatically using the date in Nigeria." }
+              - { label: "Gallery collection", name: "galleryCollection", widget: "string", required: false, hint: "Exact collection name from Gallery, such as October 2026 campaign." }
               - { label: "Category (e.g. Food, Education, Medical, Community)", name: "category", widget: "string" }
               - label: "Status"
                 name: "status"
@@ -911,7 +916,7 @@ collections:
       - file: "src/data/becomeMemberPage.json"
         label: "Become A Member Page"
         name: "becomeMemberPage"
-        hint: "Content shown only on the /become-a-member page, reached from the 'Become A Member' button on the About Us page. This form is visual only for now (no email backend yet) — same as the Contact page's form. The illustration panel's caption is your real mission quote, pulled from the 'Mission Quote' fields under Homepage Content → Organization."
+        hint: "Content shown only on the /become-a-member page, reached from the 'Become A Member' button on the About Us page. Submissions are saved in Netlify Forms. The photo panel uses this page’s banner photo. Applicants see the process before applying and a persistent confirmation after submission."
         fields:
           - label: "Page Banner"
             name: "hero"
@@ -1022,6 +1027,81 @@ collections:
               - { label: "Page Title", name: "title", widget: "string" }
               - { label: "Last Updated", name: "lastUpdated", widget: "string" }
               - { label: "Body Text", name: "body", widget: "text", hint: "Leave a blank line between paragraphs." }
+
+      - file: src/data/homeExperience.json
+        label: Homepage Layout & Campaign
+        name: homeExperience
+        hint: Content for the streamlined homepage. Mission paragraph, hero, donation
+          and blog settings remain under Homepage Content.
+        fields:
+          - label: Mission
+            name: mission
+            widget: object
+            fields:
+              - label: label
+                name: label
+                widget: string
+              - label: title
+                name: title
+                widget: string
+              - label: image
+                name: image
+                widget: image
+          - label: Campaign
+            name: campaign
+            widget: object
+            fields:
+              - label: label
+                name: label
+                widget: string
+              - label: title
+                name: title
+                widget: string
+              - label: text
+                name: text
+                widget: text
+              - label: image
+                name: image
+                widget: image
+              - label: alt
+                name: alt
+                widget: string
+              - label: programSlug
+                name: programSlug
+                widget: string
+              - label: collection
+                name: collection
+                widget: string
+          - label: Chapters
+            name: chapters
+            widget: object
+            fields:
+              - label: label
+                name: label
+                widget: string
+              - label: title
+                name: title
+                widget: string
+              - label: text
+                name: text
+                widget: text
+              - label: locations
+                name: locations
+                widget: list
+                field:
+                  label: Location
+                  name: location
+                  widget: string
+          - label: Involvement
+            name: involvement
+            widget: object
+            fields:
+              - label: title
+                name: title
+                widget: string
+              - label: text
+                name: text
+                widget: text
 
   - name: "blog"
     label: "Blog Posts"

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import programsPageData from "@/data/programsPage.json";
 import {
   LeafIcon, ArrowRight, ArrowUpRight,
@@ -9,27 +9,8 @@ import {
 
 // ── Program data ──────────────────────────────────────────────────────────────
 
-type Status = "ongoing" | "upcoming" | "completed";
+import { programs, programSlug, programPath, type Program, type Status } from "@/lib/programs";
 
-interface Program {
-  title: string;
-  category: string;
-  status: Status;
-  location: string;
-  date: string;
-  beneficiaries: string;
-  raised: number;
-  goal: number;
-  description: string;
-  objectives: string[];
-  impact: string;
-  coordinator: string;
-  partners: string[];
-  img: string;
-  images: string[];
-}
-
-const programs = programsPageData.programs as Program[];
 const st = programsPageData.statusLabels;
 const dt = programsPageData.detail;
 const cd = programsPageData.card;
@@ -71,7 +52,7 @@ function StatsBar() {
   ];
   return (
     <section className="bg-[var(--green-dark)] py-10">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <div key={i} className="flex items-center gap-4">
@@ -98,7 +79,7 @@ function Spotlight({ onOpen }: { onOpen: (p: Program) => void }) {
   if (!p) return null;
   return (
     <section className="py-20 bg-[#F7F7F3]">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4">
         <SectionLabel text={sp.sectionLabel}/>
         <h2 className="text-3xl md:text-4xl font-black text-[var(--green-dark)] mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>
           {sp.headingPrefix} <span className="italic text-[var(--green-mid)]">{sp.headingItalic}</span>
@@ -119,12 +100,12 @@ function Spotlight({ onOpen }: { onOpen: (p: Program) => void }) {
           </div>
 
           {/* Content */}
-          <div className="bg-white p-8 lg:p-10 flex flex-col justify-between">
+          <div className="bg-white p-6 sm:p-8 lg:p-10 flex flex-col justify-between gap-6">
             <div>
               <h3 className="text-2xl font-black text-[var(--green-dark)] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{p.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed mb-6">{p.description}</p>
+              <p className="text-gray-500 text-sm leading-relaxed mb-6">{p.summary || p.description.split("\n")[0]}</p>
 
-              <div className="grid grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                 {[
                   { icon: <MapPinIcon className="w-3.5 h-3.5"/>, text: p.location },
                   { icon: <CalendarIcon className="w-3.5 h-3.5"/>, text: p.date },
@@ -138,7 +119,7 @@ function Spotlight({ onOpen }: { onOpen: (p: Program) => void }) {
               </div>
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               <a href="/#donate">
                 <YellowBtn className="flex items-center gap-2 text-sm py-3">
                   {sp.donateButtonText} <ArrowUpRight className="w-4 h-4"/>
@@ -164,7 +145,7 @@ function ProgramCard({ p, onOpen }: { p: Program; onOpen: () => void }) {
       onClick={onOpen}
     >
       <div className="relative h-48 overflow-hidden flex-shrink-0">
-        <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+        <img src={p.img} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"/>
         <div className={`absolute top-3 left-3 flex items-center gap-1.5 ${statusBadge[p.status]} text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm`}>
           <span className={`w-1.5 h-1.5 rounded-full ${statusDot[p.status]} ${p.status === "ongoing" ? "animate-pulse" : ""}`}/>
@@ -176,17 +157,17 @@ function ProgramCard({ p, onOpen }: { p: Program; onOpen: () => void }) {
       </div>
 
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="font-bold text-[var(--green-dark)] text-base leading-snug mb-2">{p.title}</h3>
-        <p className="text-gray-400 text-xs leading-relaxed mb-4 line-clamp-2 flex-1">{p.description}</p>
+        <h3 className="font-bold text-[var(--green-dark)] text-base leading-snug mb-2"><Link to={programPath(p)} onClick={e=>e.stopPropagation()}>{p.title}</Link></h3>
+        <p className="text-gray-600 text-xs leading-relaxed mb-4 line-clamp-2 flex-1">{p.description}</p>
 
         <div className="space-y-1.5 mb-4">
-          <div className="flex items-center gap-1.5 text-xs text-gray-400">
+          <div className="flex items-center gap-1.5 text-xs text-gray-600">
             <MapPinIcon className="w-3.5 h-3.5 text-[var(--green-dark)]"/> {p.location}
           </div>
-          <div className="flex items-center gap-1.5 text-xs text-gray-400">
+          <div className="flex items-center gap-1.5 text-xs text-gray-600">
             <CalendarIcon className="w-3.5 h-3.5 text-[var(--green-dark)]"/> {p.date}
           </div>
-          <div className="flex items-center gap-1.5 text-xs text-gray-400">
+          <div className="flex items-center gap-1.5 text-xs text-gray-600">
             <UsersIcon className="w-3.5 h-3.5 text-[var(--green-dark)]"/> {p.beneficiaries}
           </div>
         </div>
@@ -211,7 +192,7 @@ function ProgramCard({ p, onOpen }: { p: Program; onOpen: () => void }) {
 
 // ── Program Detail View ───────────────────────────────────────────────────────
 
-function ProgramDetail({ p, onBack }: { p: Program; onBack: () => void }) {
+function ProgramDetail({ p, onBack, onOpen }: { p: Program; onBack: () => void; onOpen: (p: Program) => void }) {
   const related = programs.filter(r => r.title !== p.title && (r.category === p.category || r.status === p.status)).slice(0, 3);
 
   return (
@@ -248,7 +229,7 @@ function ProgramDetail({ p, onBack }: { p: Program; onBack: () => void }) {
                 <LeafIcon className="w-4 h-4"/>
                 <span className="text-xs font-semibold tracking-widest uppercase">{dt.overviewLabel}</span>
               </div>
-              <p className="text-gray-600 leading-relaxed text-[15px]">{p.description}</p>
+              <div className="space-y-4 text-gray-600 leading-relaxed text-[15px]">{p.description.split(/\n\s*\n/).map((paragraph,i)=><p key={i} className="whitespace-pre-line">{paragraph}</p>)}</div>
             </div>
 
             <div>
@@ -272,6 +253,7 @@ function ProgramDetail({ p, onBack }: { p: Program; onBack: () => void }) {
               <p className="text-gray-600 text-sm leading-relaxed">{p.impact}</p>
             </div>
 
+            {p.galleryCollection && <Link className="experience-button" to={"/gallery?collection="+encodeURIComponent(p.galleryCollection)}>View the campaign photo collection <ArrowRight/></Link>}
             {p.images.length > 0 && (
               <div>
                 <h3 className="text-xl font-black text-[var(--green-dark)] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{dt.photosHeading}</h3>
@@ -313,7 +295,7 @@ function ProgramDetail({ p, onBack }: { p: Program; onBack: () => void }) {
                   <div key={row.label} className="flex items-start gap-3">
                     <span className="text-[var(--green-dark)] mt-0.5 flex-shrink-0">{row.icon}</span>
                     <div>
-                      <div className="text-xs text-gray-400 font-medium">{row.label}</div>
+                      <div className="text-xs text-gray-600 font-medium">{row.label}</div>
                       <div className="text-gray-700 font-semibold">{row.val}</div>
                     </div>
                   </div>
@@ -321,7 +303,7 @@ function ProgramDetail({ p, onBack }: { p: Program; onBack: () => void }) {
                 <div className="flex items-start gap-3">
                   <LeafIcon className="w-4 h-4 text-[var(--green-dark)] mt-0.5 flex-shrink-0"/>
                   <div>
-                    <div className="text-xs text-gray-400 font-medium">{dt.coordinatorLabel}</div>
+                    <div className="text-xs text-gray-600 font-medium">{dt.coordinatorLabel}</div>
                     <div className="text-gray-700 font-semibold">{p.coordinator}</div>
                   </div>
                 </div>
@@ -351,7 +333,7 @@ function ProgramDetail({ p, onBack }: { p: Program; onBack: () => void }) {
             <h3 className="text-2xl font-black text-[var(--green-dark)] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>{dt.relatedHeading}</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {related.map(r => (
-                <ProgramCard key={r.title} p={r} onOpen={() => { window.scrollTo(0, 0); }}/>
+                <ProgramCard key={r.title} p={r} onOpen={() => onOpen(r)}/>
               ))}
             </div>
           </div>
@@ -381,7 +363,7 @@ function ProgramsGrid({ onOpen }: { onOpen: (p: Program) => void }) {
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
             <SectionLabel text={g.sectionLabel}/>
@@ -434,7 +416,7 @@ function ProgramsGrid({ onOpen }: { onOpen: (p: Program) => void }) {
                     {group.label}
                   </span>
                   <div className="flex-1 h-px bg-gray-100"/>
-                  <span className="text-xs text-gray-400">{group.items.length} {g.programsCountSuffix}</span>
+                  <span className="text-xs text-gray-600">{group.items.length} {g.programsCountSuffix}</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {group.items.map(p => <ProgramCard key={p.title} p={p} onOpen={() => onOpen(p)}/>)}
@@ -462,7 +444,7 @@ function CTABand() {
         />
         <div className="absolute inset-0 bg-[var(--green-dark)]/85"/>
       </div>
-      <div className="relative max-w-6xl mx-auto px-6 text-center">
+      <div className="relative max-w-7xl mx-auto px-4 text-center">
         <SectionLabel text={cta.sectionLabel} light/>
         <h2 className="text-4xl md:text-5xl font-black text-white mb-5 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
           {cta.headingPrefix} <span className="text-[var(--yellow)] italic">{cta.headingItalic}</span>
@@ -490,15 +472,18 @@ function CTABand() {
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export default function ProgramsPage() {
-  const [selected, setSelected] = useState<Program | null>(null);
-
-  function open(p: Program) { setSelected(p); window.scrollTo({ top: 0, behavior: "smooth" }); }
-  function back() { setSelected(null); window.scrollTo({ top: 0, behavior: "smooth" }); }
+  const { slug } = useParams<{slug: string}>();
+  const navigate = useNavigate();
+  const selected = slug ? programs.find(p=>programSlug(p)===slug) : undefined;
+  useEffect(()=>{ window.scrollTo({top:0,behavior:"instant"}); },[slug]);
+  function open(p: Program) { navigate(programPath(p)); }
+  function back() { navigate("/programs"); }
+  if(slug && !selected) return <section className="experience-section"><div className="experience-container"><h1 className="experience-heading">Program not found</h1><p className="experience-copy">This program may have moved. Explore our current programs below.</p><Link className="experience-button" to="/programs">Browse programs</Link></div></section>;
 
   if (selected) {
     return (
       <>
-        <ProgramDetail p={selected} onBack={back}/>
+        <ProgramDetail p={selected} onBack={back} onOpen={open}/>
         <Newsletter/>
       </>
     );

@@ -1,0 +1,33 @@
+{
+  "mission": {
+    "label": "Who we are",
+    "title": "Helping women and girls know their worth—and live it.",
+    "image": "/images/uploads/breast-cancer-awareness-59439810361a.webp"
+  },
+  "campaign": {
+    "label": "October 2026 campaign",
+    "title": "Together for breast cancer awareness",
+    "text": "A closer look at the October 2026 community campaign: the conversations, people and shared commitment behind the work.",
+    "image": "/images/uploads/breast-cancer-awareness-c0e5d87682e0.webp",
+    "alt": "A group gathered for the October breast cancer awareness campaign",
+    "programSlug": "breast-cancer-awareness",
+    "collection": "October 2026 campaign"
+  },
+  "chapters": {
+    "label": "Our Nigerian network",
+    "title": "Local chapters. Shared purpose.",
+    "text": "Connect with Ochaworth through our chapter network. Contact the team to ask about local activities, volunteering or partnerships.",
+    "locations": [
+      "Jos, Plateau State",
+      "Enugu",
+      "Abuja",
+      "Nasarawa",
+      "Kogi",
+      "Adamawa"
+    ]
+  },
+  "involvement": {
+    "title": "There is a place for you in this work.",
+    "text": "Give your time, explore membership or bring your organisation’s ideas to a conversation with our team."
+  }
+}

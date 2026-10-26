@@ -20,9 +20,9 @@ function TopBar() {
   return (
     <div className="bg-[var(--green-dark)] text-white text-xs py-2 px-4">
       <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-        <div className="flex items-center gap-4">
-          <span className="flex items-center gap-1"><MailIcon className="w-3 h-3 text-[var(--yellow)]"/> {site.contact.email}</span>
-          <span className="flex items-center gap-1"><PhoneIcon className="w-3 h-3 text-[var(--yellow)]"/> {site.contact.phone}</span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <span className="flex items-center gap-1"><MailIcon className="w-3 h-3 text-[var(--yellow)]"/> <a href={"mailto:"+site.contact.email}>{site.contact.email}</a></span>
+          <span className="flex items-center gap-1"><PhoneIcon className="w-3 h-3 text-[var(--yellow)]"/> <a href={"tel:+234"+site.contact.phone.replace(/\D/g,"").replace(/^2340?/,"")}>{site.contact.phone}</a></span>
           <span className="flex items-center gap-1"><MapPinIcon className="w-3 h-3 text-[var(--yellow)]"/> {site.contact.topBarAddress}</span>
         </div>
         <div className="flex items-center gap-3">
@@ -217,8 +217,8 @@ function Footer() {
             <h4 className="font-bold text-[var(--yellow)] mb-4 text-sm tracking-widest uppercase">{site.footer.contactHeading}</h4>
             <ul className="space-y-3 text-sm text-white/60">
               <li className="flex gap-2"><MapPinIcon className="w-4 h-4 text-[var(--yellow)] flex-shrink-0 mt-0.5"/> {c.footerAddress}</li>
-              <li className="flex gap-2"><PhoneIcon className="w-4 h-4 text-[var(--yellow)] flex-shrink-0"/> {c.phone}</li>
-              <li className="flex gap-2"><MailIcon className="w-4 h-4 text-[var(--yellow)] flex-shrink-0"/> {c.email}</li>
+              <li className="flex gap-2"><PhoneIcon className="w-4 h-4 text-[var(--yellow)] flex-shrink-0"/> <a href={"tel:+234"+c.phone.replace(/\D/g,"").replace(/^2340?/,"")}>{c.phone}</a></li>
+              <li className="flex gap-2"><MailIcon className="w-4 h-4 text-[var(--yellow)] flex-shrink-0"/> <a href={"mailto:"+c.email}>{c.email}</a></li>
             </ul>
 
             <div className="mt-5">

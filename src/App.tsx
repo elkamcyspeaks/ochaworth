@@ -25,7 +25,7 @@ export default function App() {
         <Route path="volunteer" element={<VolunteerPage/>}/>
         <Route path="become-a-volunteer" element={<BecomeVolunteerPage/>}/>
         <Route path="become-a-member" element={<BecomeMemberPage/>}/>
-        <Route path="programs" element={<ProgramsPage/>}/>
+        <Route path="programs/:slug?" element={<ProgramsPage/>}/>
         <Route path="blog" element={<BlogPage/>}/>
         <Route path="blog/:slug" element={<BlogPostPage/>}/>
         <Route path="privacy-policy" element={<PrivacyPolicyPage/>}/>
